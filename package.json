@@ -1,0 +1,41 @@
+{
+    "name": "sambal-jsonld",
+    "version": "0.0.10",
+    "description": "Sambal CLI tools",
+    "main": "dist/src/index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chen4119/sambal-cli"
+    },
+    "author": "Wan Chun Chen",
+    "license": "MIT",
+    "keywords": [
+        "web components",
+        "lit-html",
+        "litelement",
+        "customElements",
+        "static site generator",
+        "data partition"
+    ],
+    "engines": {
+        "node": ">=8.0.0"
+    },
+    "bin": {
+        "sambal": "./bin/sambal"
+    },
+    "scripts": {
+        "start": "ts-node src/index.ts",
+        "test": "ts-node src/index.ts schema howto ./test.json --full",
+        "build": "tsc"
+    },
+    "dependencies": {
+        "lodash": "4.17.11"
+    },
+    "devDependencies": {
+        "@types/node": "10.12.10",
+        "@types/lodash": "4.14.118",
+        "tslint": "5.11.0",
+        "ts-node": "7.0.1",
+        "typescript": "3.5.3"
+    }
+}
