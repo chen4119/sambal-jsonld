@@ -1,27 +1,20 @@
 {
     "name": "sambal-jsonld",
-    "version": "0.0.10",
-    "description": "Sambal CLI tools",
+    "version": "0.0.1",
+    "description": "Sambal json-ld and schema.org utilities",
     "main": "dist/src/index.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/chen4119/sambal-cli"
+        "url": "https://github.com/chen4119/sambal-jsonld"
     },
     "author": "Wan Chun Chen",
     "license": "MIT",
     "keywords": [
-        "web components",
-        "lit-html",
-        "litelement",
-        "customElements",
-        "static site generator",
-        "data partition"
+        "json-ld",
+        "schema.org"
     ],
     "engines": {
         "node": ">=8.0.0"
-    },
-    "bin": {
-        "sambal": "./bin/sambal"
     },
     "scripts": {
         "start": "ts-node src/index.ts",

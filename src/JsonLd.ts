@@ -10,16 +10,34 @@ export type Link = {
     node: Node
 }
 
+export type Term = {
+    id?: string,
+    type?: string
+}
 
 class JsonLd {
-    private termIRIMap: Map<string, string> = new Map<string, string>();
+    private vocab: string;
+    private contextRef: string;
+    private contextTermMap: Map<string, Term> = new Map<string, Term>();
     private graph: Map<string, Node> = new Map<string, Node>();
     constructor(private json: any) {
         this.parse(json);
     }
 
+    /*
     toCompactJsonLd(context?: any) {
 
+    }*/
+
+    getTermId(propKey: string): string {
+        if (this.contextTermMap.has(propKey)) {
+            return this.contextTermMap.get(propKey).id;
+        }
+        return propKey;
+    }
+
+    getTermValue(termId: string) {
+        return this.json[termId];
     }
 
     get graphMap(): Map<string, Node> {
@@ -41,13 +59,26 @@ class JsonLd {
     }
 
     private parseContext(context: any) {
+        if (typeof(context) === "string") {
+            this.contextRef = context;
+        } else if (Array.isArray(context)) {
+            context.forEach(c => this.parseContext(c));
+        } else if (typeof(context) === "object") {
+            this.parseContextObject(context);
+        }
+    }
+
+    private parseContextObject(context: object) {
         for (const key of Object.keys(context)) {
             const contextValue = context[key];
             if (typeof(contextValue) === "string") {
-                this.termIRIMap.set(key, contextValue);
+                this.contextTermMap.set(key, {id: contextValue});
             } else {
                 if (contextValue[JSONLD_ID]) {
-                    this.termIRIMap.set(key, contextValue[JSONLD_ID]);
+                    this.contextTermMap.set(key, {
+                        id: contextValue[JSONLD_ID],
+                        type: contextValue[JSONLD_TYPE]
+                    });
                 }
             }
         }
@@ -136,7 +167,7 @@ class JsonLd {
         } else if(propKey.indexOf(":") >= 0) {
             const splitted = propKey.split(":");
             const prefix = splitted[0];
-            return this.termIRIMap.has(prefix);
+            return this.contextTermMap.has(prefix);
         }
         return false;
     }
@@ -148,11 +179,13 @@ class JsonLd {
         const splitted = propKey.split(":");
         const prefix = splitted[0];
         const suffix = splitted[1];
-        const context = this.termIRIMap.get(prefix);
-        if (context.endsWith("#") || context.endsWith("/")) {
-            return `${context}${suffix}`;
+        const context = this.contextTermMap.get(prefix);
+        if (context.id) {
+            if (context.id.endsWith("#") || context.id.endsWith("/")) {
+                return `${context.id}${suffix}`;
+            }
+            return `${context.id}/${suffix}`;
         }
-        return `${context}/${suffix}`;
     }
 }
 

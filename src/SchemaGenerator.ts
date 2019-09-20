@@ -2,7 +2,7 @@ import fs from "fs";
 import ts from "typescript";
 import {makeVariableStatement, EXPORT_MODIFIER, objectToObjectLiteral, makeArrayLiteral, makeStringLiteral, makeIdentifier, makeNew} from "./AstFactory";
 import JsonLd, {Node, Link} from "./JsonLd";
-import {JSONLD_ID, JSONLD_TYPE, JSONLD_VALUE, SCHEMA_CONTEXT, SAMBAL_ID, SAMBAL_NAME, SAMBAL_PARENT, SAMBAL_VALUES} from "./Constants";
+import {JSONLD_ID, JSONLD_TYPE, JSONLD_VALUE, SCHEMA_CONTEXT, SAMBAL_ID, SAMBAL_NAME, SAMBAL_PARENT, SAMBAL_VALUES, SCHEMA_ENUMERATION} from "./Constants";
 
 const SUBCLASS_EDGE = "http://www.w3.org/2000/01/rdf-schema#subClassOf";
 const LABEL_EDGE = "http://www.w3.org/2000/01/rdf-schema#label";
@@ -14,7 +14,7 @@ const SUPERSEDEDBY_EDGE = `${SCHEMA_CONTEXT}/supersededBy`;
 const DOMAIN_INCLUDES_EDGE = `${SCHEMA_CONTEXT}/domainIncludes`;
 const RANGE_INCLUDES_EDGE = `${SCHEMA_CONTEXT}/rangeIncludes`;
 const PART_OF_EDGE = `${SCHEMA_CONTEXT}/isPartOf`;
-const ENUMERATION = `${SCHEMA_CONTEXT}/Enumeration`;
+
 
 
 type SchemaProperty = {
@@ -39,23 +39,19 @@ type SchemaEnumeration = {
 class SchemaGenerator {
     private classPropertiesMap: Map<string, SchemaClass> = new Map<string, SchemaClass>();
     private enumValuesMap: Map<string, SchemaEnumeration> = new Map<string, SchemaEnumeration>();
-    constructor(private schemas: string[], private output: string) {
+    constructor(private schema: string, private output: string) {
         
     }
 
     run() {
-        const graphMaps: Map<string, Node>[] = [];
-        for (const schema of this.schemas) {
-            const content = fs.readFileSync(schema, "utf-8");
-            const schemaJson = JSON.parse(content);
-            const jsonLd = new JsonLd(schemaJson);
-            graphMaps.push(jsonLd.graphMap);
-        }
-        this.iterateAllClasses(graphMaps);
-        for (const graph of graphMaps) {
-            this.iterateAllProperties(graph);
-            this.iterateEnumValues(graph);
-        }
+
+        const content = fs.readFileSync(this.schema, "utf-8");
+        const schemaJson = JSON.parse(content);
+        const jsonLd = new JsonLd(schemaJson);
+
+        this.iterateAllClasses(jsonLd.graphMap);
+        this.iterateAllProperties(jsonLd.graphMap);
+        this.iterateEnumValues(jsonLd.graphMap);
 
         console.log(this.classPropertiesMap.size);
         console.log(this.enumValuesMap.size);
@@ -91,47 +87,36 @@ class SchemaGenerator {
         statements.push(stmt);
     }
 
-    private iterateAllClasses(allGraphs: Map<string, Node>[]) {
-        for (const graph of allGraphs) {
-            for (const node of graph.values()) {
-                if (node.data[JSONLD_TYPE] === CLASS && !this.ignoreNode(node)) {
-                    const parents = this.getParents(node);
-                    const isEnumeration = this.isEnumeration(parents, allGraphs);
-                    if (isEnumeration) {
-                        this.addEnumClass(node, parents);
-                    } else {
-                        this.addClass(node, parents);
-                    }
+    private iterateAllClasses(graph: Map<string, Node>) {
+        for (const node of graph.values()) {
+            if (node.data[JSONLD_TYPE] === CLASS && !this.ignoreNode(node)) {
+                const parents = this.getParents(node);
+                const isEnumeration = this.isEnumeration(parents, graph);
+                if (isEnumeration) {
+                    this.addEnumClass(node, parents);
+                } else {
+                    this.addClass(node, parents);
                 }
-            }    
+            }
         }
     }
 
-    private isEnumeration(parents: string[], allGraphs: Map<string, Node>[]) {
+    private isEnumeration(parents: string[], graph: Map<string, Node>) {
         for (const parent of parents) {
-            if (parent === ENUMERATION) {
+            if (parent === SCHEMA_ENUMERATION) {
                 return true;
             }
-            const parentNode = this.findNode(allGraphs, parent);
-            if (!parentNode) {
+            if (!graph.has(parent)) {
                 console.error(`Cannot find id: ${parent}`);
                 return false;
             }
-            const isEnum = this.isEnumeration(this.getParents(parentNode), allGraphs);
+            const parentNode = graph.get(parent);
+            const isEnum = this.isEnumeration(this.getParents(parentNode), graph);
             if (isEnum) {
                 return true;
             }
         }
         return false;
-    }
-
-    private findNode(allGraphs: Map<string, Node>[], nodeId: string) {
-        for (const graph of allGraphs) {
-            if (graph.has(nodeId)) {
-                return graph.get(nodeId);
-            }
-        }
-        return null;
     }
 
     private iterateEnumValues(graphMap: Map<string, Node>) {
