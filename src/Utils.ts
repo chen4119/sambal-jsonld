@@ -5,6 +5,7 @@ import {
     SCHEMA_CONTEXT,
     JSONLD_CONTEXT,
     JSONLD_TYPE,
+    JSONLD_ID,
     SAMBAL_NAME,
     SAMBAL_ID,
     SCHEMA_PRIMITIVE_SET,
@@ -27,8 +28,22 @@ export function getSchemaOrgParentTypes(typeId: string) {
     return parents;
 }
 
-export function hydrateJson(json: any, context?: any) {
-
+export async function hydrateJsonLd(json: any, fetcher: (url) => Promise<any>, context?: any) {
+    if (Array.isArray(json)) {
+        const resolvedArray = [];
+        for (const item of json) {
+            resolvedArray.push(await hydrateJsonLd(item, fetcher, context));
+        }
+        return resolvedArray;
+    } else if (typeof(json) === "object") {
+        for (const propName of Object.keys(json)) {
+            const propValue = await hydrateJsonLd(json[propName], fetcher, context);
+            json[propName] = propValue;
+        }
+        const jsonld = jsonToJsonLd(json, context);
+        return await jsonld.resolveJson(fetcher);
+    }
+    return json;
 }
 
 export function toSchemOrgJsonLd(json: any, type: string, context?: any) {
@@ -41,7 +56,7 @@ export function toSchemOrgJsonLd(json: any, type: string, context?: any) {
     const parents = [];
     getParentTypes(schema, parents);
     
-    const jsonld = jsonToJsonLd(json, SCHEMA_CONTEXT, typeName);
+    const jsonld = jsonToJsonLd(json, context ? context : SCHEMA_CONTEXT, typeName);
     let schemaOrgJsonLd;
     if (context === SCHEMA_CONTEXT) {
         schemaOrgJsonLd = {
@@ -49,7 +64,7 @@ export function toSchemOrgJsonLd(json: any, type: string, context?: any) {
         };
     } else {
         schemaOrgJsonLd = {
-            [JSONLD_CONTEXT]: context === SCHEMA_CONTEXT,
+            [JSONLD_CONTEXT]: SCHEMA_CONTEXT,
             [JSONLD_TYPE]: typeName
         };
     }
@@ -87,7 +102,6 @@ function populateSchemaProps(schemaOrgJsonLd: any, json: JsonLd, schema: any) {
 }
 
 function getPropValue(propName: string, propTypes: string[], json: JsonLd) {
-    // const termId = `${SCHEMA_CONTEXT}/${propName}`;
     const termId = json.getTermId(propName);
     const termValue = json.getTermValue(termId);
     if (typeof(termValue) !== "undefined" && termValue !== null) {
@@ -134,78 +148,6 @@ function isEnumeration(typeId: string) {
     }
     return false;
 }
-
-/*
-export function validateJsonLd(jsonLd: any, parentContext?: string) {
-    let context = getJsonContext(jsonLd);
-    context = context ? context : parentContext;
-    let type = getJsonType(jsonLd);
-    type = type ? type : null;
-    const schemaId = `${context}/${type}`.toLowerCase();
-    if (schemaMap.has(schemaId)) {
-        const schema = schemaMap.get(schemaId);
-        const parents = [];
-        getParentTypes(schema, parents);
-        const validatedJsonLd: any = {
-            [JSONLD_TYPE]: schema["_id"]
-        };
-        if (context !== parentContext) {
-            validatedJsonLd[JSONLD_CONTEXT] = context;
-        }
-        buildValidatedJsonLd(validatedJsonLd, jsonLd, context, schema);
-        for (const parentSchema of parents) {
-            buildValidatedJsonLd(validatedJsonLd, jsonLd, context, parentSchema);
-        }
-        return validatedJsonLd;
-    }
-    return null;
-}
-
-function buildValidatedJsonLd(validatedJsonLd: object, jsonLd: object, context: string, schema: object) {
-    for (const key of Object.keys(schema)) {
-        if (key.startsWith("_")) {
-            continue;
-        }
-        const value = jsonLd[key];
-        const possibleTypes = schema[key];
-        const validatedValue = getValidatedProp(context, value, possibleTypes);
-        if (validatedValue !== null) {
-            validatedJsonLd[key] = validatedValue;
-        }
-    }
-}
-
-function getValidatedProp(context: string, propValue: any, possibleTypes: string[]) {
-    if (typeof(propValue) !== "undefined" && propValue !== null) {
-        if (Array.isArray(propValue)) {
-            const validatedArray = [];
-            for(let i = 0; i < propValue.length; i++) {
-                validatedArray.push(getValidatedProp(context, propValue[i], possibleTypes));
-            }
-            return validatedArray;
-        } else if (typeof(propValue) === "object" && !moment.isDate(propValue)) {
-            const jsonLd = findJsonLd(propValue, context);
-            return jsonLd ? validateJsonLd(jsonLd, context) : null;
-        } 
-        
-        const isDateType = isType(SCHEMA_DATE, possibleTypes);
-        const isTimeType = isType(SCHEMA_TIME, possibleTypes);
-        const isDateTimeType = isType(SCHEMA_DATETIME, possibleTypes);
-        if (isDateType || isTimeType || isDateTimeType) {
-            const d = moment.isDate(propValue) ? moment(propValue) : moment(propValue, moment.ISO_8601);
-            if (d.isValid()) {
-                if (isDateType && (!isDateTimeType || DATE_FORMAT_REGEX.test(propValue))) {
-                    return d.format('YYYY-MM-DD');
-                } else if (isTimeType && (!isDateTimeType || TIME_FORMAT_REGEX.test(propValue))) {
-                    return d.format('hh:mm:ss');
-                }
-                return d.toISOString();
-            }
-        }
-        return propValue;
-    }
-    return null;
-}*/
 
 function getParentTypes(schema, parents) {
     const schemaParents = schema[SAMBAL_PARENT];

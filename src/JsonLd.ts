@@ -20,14 +20,25 @@ class JsonLd {
     private contextRef: string;
     private contextTermMap: Map<string, Term> = new Map<string, Term>();
     private graph: Map<string, Node> = new Map<string, Node>();
-    constructor(private json: any) {
+    constructor(private json: object) {
         this.parse(json);
     }
 
-    /*
-    toCompactJsonLd(context?: any) {
-
-    }*/
+    async resolveJson(fetcher: (url) => Promise<any>) {
+        if (this.isReferencingOtherNode(this.json)) {
+            const link = this.json[JSONLD_ID];
+            return await this.fetchNode(link, fetcher);
+        }
+        for (const propName of this.contextTermMap.keys()) {
+            const term: Term = this.contextTermMap.get(propName);
+            if (term.type === JSONLD_ID) {
+                const link = this.json[propName];
+                const propValue = await this.fetchNode(link, fetcher);
+                this.json[propName] = propValue;
+            }
+        }
+        return this.json;
+    }
 
     getTermId(propKey: string): string {
         if (this.contextTermMap.has(propKey)) {
@@ -42,6 +53,21 @@ class JsonLd {
 
     get graphMap(): Map<string, Node> {
         return this.graph;
+    }
+
+    private async fetchNode(link: string, fetcher: (url) => Promise<any>) {
+        if (this.graph.has(link)) {
+            return this.graph.get(link);
+        }
+        let url = link;
+        if (this.isBlankNodeIRI(link)) {
+            url = link.substring(2);
+        }
+        return await fetcher(url);
+    }
+
+    private isBlankNodeIRI(link: string) {
+        return link.startsWith("_:");
     }
 
     private parse(json: any) {

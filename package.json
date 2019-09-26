@@ -16,9 +16,11 @@
     "engines": {
         "node": ">=8.0.0"
     },
+    "files": [
+        "dist"
+    ],
     "scripts": {
-        "start": "ts-node src/index.ts",
-        "test": "ts-node src/index.ts schema howto ./test.json --full",
+        "start": "ts-node src/test.ts",
         "build": "tsc"
     },
     "dependencies": {
