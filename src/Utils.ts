@@ -5,7 +5,7 @@ import {
     SCHEMA_CONTEXT,
     JSONLD_CONTEXT,
     JSONLD_TYPE,
-    JSONLD_ID,
+    JSONLD_GRAPH,
     SAMBAL_NAME,
     SAMBAL_ID,
     SCHEMA_PRIMITIVE_SET,
@@ -28,7 +28,7 @@ export function getSchemaOrgParentTypes(typeId: string) {
     return parents;
 }
 
-export async function hydrateJsonLd(json: any, fetcher: (url) => Promise<any>, context?: any) {
+export async function hydrateJsonLd(json: object, fetcher: (url) => Promise<any>, context?: any) {
     if (Array.isArray(json)) {
         const resolvedArray = [];
         for (const item of json) {
@@ -46,7 +46,39 @@ export async function hydrateJsonLd(json: any, fetcher: (url) => Promise<any>, c
     return json;
 }
 
-export function toSchemOrgJsonLd(json: any, type: string, context?: any) {
+export function bundleSchemaOrgJsonLd(json: object) {
+    const schemaOrgJsonLds = [];
+    getTopLevelSchemaOrgJsonLd(json, schemaOrgJsonLds);
+    if (schemaOrgJsonLds.length === 0) {
+        return null;
+    } else if (schemaOrgJsonLds.length === 1) {
+        return schemaOrgJsonLds[0];
+    }
+    return {
+        [JSONLD_CONTEXT]: SCHEMA_CONTEXT,
+        [JSONLD_GRAPH]: schemaOrgJsonLds
+    };
+}
+
+function getTopLevelSchemaOrgJsonLd(json: any, schemaOrgJsonLds: any[]) {
+    if (Array.isArray(json)) {
+        json.forEach(item => getTopLevelSchemaOrgJsonLd(item, schemaOrgJsonLds));
+    } else if (typeof(json) === "object") {
+        if (json[JSONLD_TYPE]) {
+            const typeId = `${SCHEMA_CONTEXT}/${json[JSONLD_TYPE]}`;
+            if (isSchemaOrgType(typeId)) {
+                schemaOrgJsonLds.push(json);
+                return; // No need to recurse into schema.org json
+            }
+        }
+        for (const propName of Object.keys(json)) {
+            const propValue = json[propName];
+            getTopLevelSchemaOrgJsonLd(propValue, schemaOrgJsonLds);
+        }
+    }
+}
+
+export function toSchemOrgJsonLd(json: object, type: string, context?: any) {
     const typeId = `${SCHEMA_CONTEXT}/${type}`;
     if (!isSchemaOrgType(typeId)) {
         throw new Error(`schema.org ${type} not found`);
@@ -75,7 +107,7 @@ export function toSchemOrgJsonLd(json: any, type: string, context?: any) {
     return schemaOrgJsonLd;
 }
 
-function jsonToJsonLd(json: any, context?: any, type?: any) {
+function jsonToJsonLd(json: object, context?: any, type?: any) {
     if (json[JSONLD_CONTEXT]) {
         return new JsonLd(json);
     } 
@@ -88,7 +120,7 @@ function jsonToJsonLd(json: any, context?: any, type?: any) {
     return new JsonLd(json);
 }
 
-function populateSchemaProps(schemaOrgJsonLd: any, json: JsonLd, schema: any) {
+function populateSchemaProps(schemaOrgJsonLd: object, json: JsonLd, schema: any) {
     for (const propName of Object.keys(schema)) {
         if (propName.startsWith("_")) {
             continue;

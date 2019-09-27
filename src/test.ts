@@ -2,7 +2,7 @@ import fs from "fs";
 import JsonLd from "./JsonLd";
 import {JSONLD_TYPE} from "./Constants";
 import SchemaGenerator from "./SchemaGenerator";
-import {toSchemOrgJsonLd, hydrateJsonLd} from "./Utils";
+import {toSchemOrgJsonLd, hydrateJsonLd, bundleSchemaOrgJsonLd} from "./Utils";
 
 // const generator = new SchemaGenerator("./all-layers.jsonld", "./src/Schema.ts");
 // generator.run();
@@ -37,6 +37,7 @@ const blogPostIncomplete = {
     keywords: ["schema.org"]
 };
 
+/*
 (async () => {
     const result = await hydrateJsonLd(blogPostIncomplete, async (url) => {
         console.log('ysoi: ' + url);
@@ -44,8 +45,12 @@ const blogPostIncomplete = {
     });
     console.log(result);
 })();
+*/
 
-console.log(toSchemOrgJsonLd(blogPost, "BlogPosting"));
+console.log(bundleSchemaOrgJsonLd({
+    mystuff: [toSchemOrgJsonLd(blogPost, "BlogPosting"), toSchemOrgJsonLd(blogPost, "BlogPosting")]
+}));
+// console.log(toSchemOrgJsonLd(blogPost, "BlogPosting"));
 
 /*
 const content = fs.readFileSync("./all-layers.jsonld", "utf-8");

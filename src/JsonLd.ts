@@ -183,7 +183,7 @@ class JsonLd {
         });
     }
 
-    private isReferencingOtherNode(data: any) {
+    private isReferencingOtherNode(data: object) {
         return Object.keys(data).length === 1 && data[JSONLD_ID];
     }
 

@@ -4,5 +4,6 @@ export {
     getSchemaOrgType,
     getSchemaOrgParentTypes,
     hydrateJsonLd,
-    toSchemOrgJsonLd
+    toSchemOrgJsonLd,
+    bundleSchemaOrgJsonLd
 } from "./Utils";

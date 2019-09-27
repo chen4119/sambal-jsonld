@@ -2,7 +2,8 @@
     "name": "sambal-jsonld",
     "version": "0.0.1",
     "description": "Sambal json-ld and schema.org utilities",
-    "main": "dist/src/index.js",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/chen4119/sambal-jsonld"
@@ -21,7 +22,8 @@
     ],
     "scripts": {
         "start": "ts-node src/test.ts",
-        "build": "tsc"
+        "build": "npm run clean && tsc",
+        "clean": "rimraf ./dist"
     },
     "dependencies": {
         "lodash": "4.17.11"
@@ -29,6 +31,7 @@
     "devDependencies": {
         "@types/node": "10.12.10",
         "@types/lodash": "4.14.118",
+        "rimraf": "3.0.0",
         "tslint": "5.11.0",
         "ts-node": "7.0.1",
         "typescript": "3.5.3"
