@@ -5,7 +5,7 @@ export {
     getSchemaOrgParentTypes,
     hydrateJsonLd,
     toSchemOrgJsonLd,
-    bundleSchemaOrgJsonLd
+    getSchemaOrgGraph
 } from "./Operators";
 
 export {

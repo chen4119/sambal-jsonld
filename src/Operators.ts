@@ -60,6 +60,19 @@ export async function hydrateJsonLd(json: object, fetcher: (url) => Promise<any>
     return json;
 }
 
+export function getSchemaOrgGraph(schemaOrgJsonLds: object[]) {
+    if (schemaOrgJsonLds.length === 0) {
+        return null;
+    }
+    const jsonLd = new JsonLd(schemaOrgJsonLds, SCHEMA_CONTEXT);
+    const graph: Map<string, object> = jsonLd.flatten();
+    return {
+        [JSONLD_CONTEXT]: SCHEMA_CONTEXT,
+        [JSONLD_GRAPH]: [...graph.values()]
+    };
+}
+
+/*
 export function bundleSchemaOrgJsonLd(json: object) {
     const schemaOrgJsonLds = [];
     getTopLevelSchemaOrgJsonLd(json, schemaOrgJsonLds);
@@ -90,7 +103,7 @@ function getTopLevelSchemaOrgJsonLd(json: any, schemaOrgJsonLds: any[]) {
             getTopLevelSchemaOrgJsonLd(propValue, schemaOrgJsonLds);
         }
     }
-}
+}*/
 
 export function toSchemOrgJsonLd(json: object, type: string, context?: any) {
     const typeId = `${SCHEMA_CONTEXT}/${type}`;
@@ -121,6 +134,7 @@ export function toSchemOrgJsonLd(json: object, type: string, context?: any) {
     return schemaOrgJsonLd;
 }
 
+// TODO: Should not modify json
 function jsonToJsonLd(json: object, context?: any, type?: any) {
     if (json[JSONLD_CONTEXT]) {
         return new JsonLd(json);

@@ -1,6 +1,6 @@
 {
     "name": "sambal-jsonld",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Sambal json-ld and schema.org utilities",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -12,7 +12,8 @@
     "license": "MIT",
     "keywords": [
         "json-ld",
-        "schema.org"
+        "schema.org",
+        "semantic web"
     ],
     "engines": {
         "node": ">=8.0.0"
