@@ -2,7 +2,7 @@ import fs from "fs";
 import JsonLd from "./JsonLd";
 import {JSONLD_TYPE} from "./Constants";
 import SchemaGenerator from "./SchemaGenerator";
-import {toSchemOrgJsonLd, hydrateJsonLd, bundleSchemaOrgJsonLd} from "./Operators";
+import {toSchemaOrgJsonLd, hydrateJsonLd} from "./Operators";
 import {isObjectLiteral} from "./Utils";
 // const generator = new SchemaGenerator("./all-layers.jsonld", "./src/Schema.ts");
 // generator.run();
@@ -12,6 +12,52 @@ const person = {
     "givenName": "Wan Chun",
     "telephone": "(425) 123-4567",
     "url": "http://www.janedoe.com"
+};
+
+const urlList = {
+    "@context": "http://schema.org",
+    "@type": "ItemList",
+    "url": "http://multivarki.ru?filters%5Bprice%5D%5BLTE%5D=39600",
+    "numberOfItems": "315",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            position: 1,
+            url: "http://www.janedoe2.com"
+        },
+        {
+            "@type": "ListItem",
+            position: 2,
+            url: "http://www.janedoe.com"
+        }
+    ]
+};
+
+const itemList = {
+    "@context": "http://schema.org",
+    "@type": "ItemList",
+    "url": "http://multivarki.ru?filters%5Bprice%5D%5BLTE%5D=39600",
+    "numberOfItems": "315",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            position: 1,
+            item: {
+                "@type": "BlogPosting",
+                headline: "Fourth post",
+                description: "Some description",
+                author: {
+                    "@type": "Person",
+                    "name": "Jane Doe",
+                    "givenName": "Wan Chun",
+                    "telephone": "(425) 123-4567",
+                    "url": "http://www.janedoe.com"
+                },
+                dateCreated: "2019-09-06",
+                keywords: ["schema.org"]
+            }
+        }
+    ]
 };
 
 const list = {
@@ -79,8 +125,15 @@ const blogPostIncomplete = {
     keywords: ["schema.org"]
 };
 
-// const js = new JsonLd(list);
-// js.flatten();
+const person2 = {
+    "name": "Jane Doe",
+    "firstName": "Wan Chun",
+    "telephone": "(425) 123-4567",
+    "url": "http://www.janedoe.com"
+};
+
+const js = new JsonLd(person2);
+console.log(js.flatten());
 
 /*
 (async () => {
@@ -92,15 +145,9 @@ const blogPostIncomplete = {
 })();
 */
 
-const graph = bundleSchemaOrgJsonLd({
-    mystuff: [toSchemOrgJsonLd(blogPost, "BlogPosting"), toSchemOrgJsonLd(blogPost, "BlogPosting")]
-});
-console.log(graph["@graph"]);
-
-
-
 // console.log(toSchemOrgJsonLd(blogPost, "BlogPosting"));
-// console.log(toSchemOrgJsonLd(person, "Person"));
+// console.log(toSchemaOrgJsonLd(itemList, "ItemList"));
+// console.log(toSchemaOrgJsonLd(person2, "Person", {firstName: "http://schema.org/givenName"}));
 
 /*
 const content = fs.readFileSync("./all-layers.jsonld", "utf-8");

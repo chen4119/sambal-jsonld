@@ -4,7 +4,8 @@ import {cloneDeep, isEqual} from "lodash";
 
 export type Node = {
     links: Link[],
-    data: any
+    data: any,
+    isArray: boolean
 };
 
 export type Link = {
@@ -19,6 +20,7 @@ export type Term = {
 
 class JsonLd {
     // private vocab: string;
+    private blankNodeIndex = 1;
     private contextRef: string;
     private contextTermMap: Map<string, Term> = new Map<string, Term>();
     private graph: Map<string, Node> = new Map<string, Node>();
@@ -40,17 +42,6 @@ class JsonLd {
             }
         }
         return this.json;
-    }
-
-    getTermId(propKey: string): string {
-        if (this.contextTermMap.has(propKey)) {
-            return this.contextTermMap.get(propKey).id;
-        }
-        return propKey;
-    }
-
-    getTermValue(termId: string) {
-        return this.json[termId];
     }
 
     get graphMap(): Map<string, Node> {
@@ -164,6 +155,10 @@ class JsonLd {
         }
         if (json[JSONLD_GRAPH]) {
             this.parseGraph(json[JSONLD_GRAPH]);
+        } else {
+            // since no graph, pass empty graph map
+            this.parseGraphNode(new Map<string, any>(), json);
+            
         }
         /*
         for (const key of this.graph.keys()) {
@@ -203,16 +198,16 @@ class JsonLd {
         for (const data of graph) {
             this.recursivelyVisitAllNodes(graphMap, data);
         }
-        let index = 1;
+        // let index = 1;
         for (const data of graph) {
+            /*
             let nodeId = data[JSONLD_ID];
             if (!nodeId) {
                 // node might not have ID, assign a blank ID
                 nodeId = `_:${index}`;
                 index++;
                 data[JSONLD_ID] = nodeId;
-            }
-            // console.log(data);
+            }*/
             this.parseGraphNode(graphMap, data);
         }
     }
@@ -235,62 +230,65 @@ class JsonLd {
     }
 
     private parseGraphNode(graphMap: Map<string, any>, data: any): Node {
-        const nodeId = data[JSONLD_ID];
+        const nodeId = data[JSONLD_ID] ? data[JSONLD_ID] : this.getNextBlankNodeId();
+        const isReferencingOtherNode = this.isReferencingOtherNode(data);
         if (this.graph.has(nodeId)) {
             return this.graph.get(nodeId);
-        } else if (this.isReferencingOtherNode(data) && graphMap.has(nodeId)) {
+        } else if (isReferencingOtherNode && graphMap.has(nodeId)) {
             return this.parseGraphNode(graphMap, graphMap.get(nodeId));
         }
 
-        const node: Node = {links: [], data: {}};
-        this.graph.set(nodeId, node);
-        for (const key of Object.keys(data)) {
-            if (this.isLink(key)) {
-                this.addNodeLink(graphMap, node, key, data[key]);
+        const node: Node = {links: [], data: {}, isArray: false};
+        if (!isReferencingOtherNode) {
+            this.graph.set(nodeId, node);
+        }
+        for (const propName of Object.keys(data)) {
+            const absoluteIRI = this.getAbsoluteIRI(propName);
+            if (isUrl(absoluteIRI)) {
+                this.addNodeLink(graphMap, node, absoluteIRI, data[propName], false);
             } else {
-                node.data[key] = data[key];
+                node.data[propName] = data[propName];
             }
         }
         return node;
     }
 
-    private addNodeLink(graphMap: Map<string, any>, node: Node, key: string, value: any) {
+    private addNodeLink(graphMap: Map<string, any>, node: Node, absoluteIRI: string, value: any, isArray: boolean) {
         if (Array.isArray(value)) {
-            value.forEach(child => this.addNodeLink(graphMap, node, key, child));
+            value.forEach(child => this.addNodeLink(graphMap, node, absoluteIRI, child, true));
             return;
         }
         let targetNode;
-        if (typeof(value) === "object" && value[JSONLD_ID]) {
+        if (isObjectLiteral(value)) {
             targetNode = this.parseGraphNode(graphMap, value);
+            targetNode.isArray = isArray;
         } else {
-            targetNode = {links: [], data: value};
+            targetNode = {links: [], data: value, isArray: isArray};
         }
         node.links.push({
-            edge: this.getAbsoluteIRI(key),
+            edge: absoluteIRI,
             node: targetNode
         });
+    }
+
+    private getNextBlankNodeId() {
+        return `_:${this.blankNodeIndex++}`;
     }
 
     private isReferencingOtherNode(data: object) {
         return Object.keys(data).length === 1 && data[JSONLD_ID];
     }
 
-    private isLink(propKey: string) {
-        if (isUrl(propKey)) {
-            return true;
-        } else if(propKey.indexOf(":") >= 0) {
-            const splitted = propKey.split(":");
-            const prefix = splitted[0];
-            return this.contextTermMap.has(prefix);
-        } else if (this.contextRef) {
-            return true;
-        }
-        return false;
-    }
-
     private getAbsoluteIRI(propKey: string) {
-        if (isUrl(propKey)) {
+        // json-ld keyword
+        if (propKey.startsWith("@")) {
             return propKey;
+        }
+
+        if (this.contextTermMap.has(propKey)) {
+            return this.contextTermMap.get(propKey).id;
+        } else if (isUrl(propKey)) {
+            return propKey; // already absolute iri
         } else if (propKey.indexOf(":") >= 0) {
             const splitted = propKey.split(":");
             const prefix = splitted[0];

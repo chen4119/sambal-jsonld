@@ -1,10 +1,10 @@
 
 export {
-    isSchemaOrgType,
-    getSchemaOrgType,
-    getSchemaOrgParentTypes,
+    // isSchemaOrgType,
+    // getSchemaOrgType,
+    // getSchemaOrgParentTypes,
     hydrateJsonLd,
-    toSchemOrgJsonLd,
+    toSchemaOrgJsonLd,
     getSchemaOrgGraph
 } from "./Operators";
 
