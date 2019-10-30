@@ -102,10 +102,11 @@ const list = {
 };
 
 const blogPost = {
+    "@id": "_:nodes/one.jsml",
     headline: "Fourth post",
     description: "Some description",
     author: {
-        "@id": "_:nodes/test.jsml",
+        "@id": "https://fid",
         "name": "Jane Doe",
         "givenName": "Wan Chun",
         "telephone": "(425) 123-4567",
@@ -132,8 +133,8 @@ const person2 = {
     "url": "http://www.janedoe.com"
 };
 
-const js = new JsonLd(person2);
-console.log(js.flatten());
+// const js = new JsonLd(list);
+// console.log(js.flatten());
 
 /*
 (async () => {
@@ -145,7 +146,7 @@ console.log(js.flatten());
 })();
 */
 
-// console.log(toSchemOrgJsonLd(blogPost, "BlogPosting"));
+// console.log(toSchemaOrgJsonLd(blogPost, "BlogPosting", {'@base': 'http://chen4119.me'}));
 // console.log(toSchemaOrgJsonLd(itemList, "ItemList"));
 // console.log(toSchemaOrgJsonLd(person2, "Person", {firstName: "http://schema.org/givenName"}));
 

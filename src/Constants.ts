@@ -3,6 +3,7 @@ export const JSONLD_TYPE = "@type";
 export const JSONLD_ID = "@id";
 export const JSONLD_GRAPH = "@graph";
 export const JSONLD_VALUE = "@value";
+export const JSONLD_BASE = "@base";
 
 export const SCHEMA_CONTEXT = "http://schema.org";
 

@@ -21,7 +21,7 @@ import {
     SCHEMA_DATE,
     SCHEMA_TIME
 } from "./Constants";
-import {isObjectLiteral, isUrl} from "./Utils";
+import {isObjectLiteral, isUrl, makeAbsoluteIRI, isBlankNodeIRI} from "./Utils";
 
 const DATE_FORMAT_REGEX = /^\d{4}-\d{1,2}-\d{1,2}$/;
 const TIME_FORMAT_REGEX = /^\d{1,2}:\d{1,2}(:\d{1,2})?$/;
@@ -88,7 +88,7 @@ export function toSchemaOrgJsonLd(json: object, type: string, context?: any) {
         const node = jsonld.graphMap.get(nodeId);
         return {
             [JSONLD_CONTEXT]: SCHEMA_CONTEXT,
-            ...nodeToSchemaOrgType(node, type)
+            ...nodeToSchemaOrgType(node, type, jsonld.baseIRI)
         };
     }
     return null;
@@ -107,7 +107,7 @@ function getSchemaOrgProps(schema, typeProps) {
     }
 }
 
-function nodeToSchemaOrgType(node: Node, type: string) {
+function nodeToSchemaOrgType(node: Node, type: string, baseIRI: string) {
     const typeId = `${SCHEMA_CONTEXT}/${type}`;
     const typeSchema = getSchemaOrgType(typeId);
     const typeName = typeSchema[SAMBAL_NAME];
@@ -118,14 +118,16 @@ function nodeToSchemaOrgType(node: Node, type: string) {
     for (const parentSchema of parents) {
         getSchemaOrgProps(parentSchema, typeProps);
     }
-    return populateSchemaOrgType(node, typeName, typeProps);
+    return populateSchemaOrgType(node, typeName, typeProps, baseIRI);
 }
 
-function populateSchemaOrgType(node: Node, typeName: string, typeProps: object) {
+function populateSchemaOrgType(node: Node, typeName: string, typeProps: object, baseIRI: string) {
     const schemaOrgJsonLd = {
         [JSONLD_TYPE]: typeName
     };
-
+    if (node.data[JSONLD_ID]) {
+        schemaOrgJsonLd[JSONLD_ID] = getAbsoluteNodeID(baseIRI, node.data[JSONLD_ID]);
+    }
     for (const link of node.links) {
         const prop = typeProps[link.edge];
         if (prop) {
@@ -135,7 +137,7 @@ function populateSchemaOrgType(node: Node, typeName: string, typeProps: object) 
                 const classTypeName = getClassTypeName(link.node.data, prop.types);
                 // possible not to have a class type
                 if (classTypeName) {
-                    propValue = nodeToSchemaOrgType(link.node, classTypeName);
+                    propValue = nodeToSchemaOrgType(link.node, classTypeName, baseIRI);
                 }
             } else if (typeof(link.node.data) !== "undefined" && link.node.data !== null) {
                 propValue = validatePrimitiveType(link.node.data, prop.types);
@@ -144,6 +146,16 @@ function populateSchemaOrgType(node: Node, typeName: string, typeProps: object) 
         }
     }
     return schemaOrgJsonLd;
+}
+
+function getAbsoluteNodeID(baseIRI: string, nodeId: string) {
+    if (isUrl(nodeId)) {
+        return nodeId;
+    }
+    if (baseIRI && !isBlankNodeIRI(nodeId)) {
+        return makeAbsoluteIRI(baseIRI, nodeId);
+    }
+    return nodeId;
 }
 
 function setSchemaOrgPropValue(schemaOrgJsonLd: object, propName: string, propValue: any, isArray: boolean) {
@@ -155,47 +167,6 @@ function setSchemaOrgPropValue(schemaOrgJsonLd: object, propName: string, propVa
         }
     }
 }
-
-/*
-function populateSchemaProps(schemaOrgJsonLd: object, jsonld: JsonLd, typeProps: object) {
-    for (const propName of Object.keys(jsonld.data)) {
-        if (!propName.startsWith("@")) {
-            const value = getPropValue(propName, jsonld, typeProps);
-            if (value) {
-                schemaOrgJsonLd[propName] = value;
-            }
-        }
-    }
-}
-
-
-function getPropValue(propName: string, jsonld: JsonLd, typeProps: object) {
-    const termId = jsonld.getTermId(propName);
-    const prop = typeProps[termId];
-    if (prop) {
-        const termValue = jsonld.getTermValue(termId);
-        if (typeof(termValue) !== "undefined" && termValue !== null) {
-            return validatePropValue(termValue, prop.types);
-        }
-    }
-    return null;
-}*/
-
-/*
-function validatePropValue(value: any, propTypes: string[]) {
-    if (Array.isArray(value)) {
-        return value.map(item => validatePropValue(item, propTypes));
-    } else if (isObjectLiteral(value)) {
-        const classTypeName = getClassTypeName(value, propTypes);
-        // possible not to have a class type
-        if (classTypeName) {
-            return toSchemOrgJsonLd(value, classTypeName, SCHEMA_CONTEXT);
-        }
-    } else if (value) {
-        return validatePrimitiveType(value, propTypes);
-    }
-    return null;
-}*/
 
 function validatePrimitiveType(value: any,  propTypes: string[]) {
     const valueType = getPrimitiveType(value);
@@ -293,6 +264,9 @@ function getClassTypeName(json: any, propTypes: string[]) {
 }
 
 function isDescendantOf(schemaTypeId: string, parentTypeId: string) {
+    if (schemaTypeId.toLowerCase() === parentTypeId.toLowerCase()) {
+        return true;
+    }
     if (isSchemaOrgType(schemaTypeId) && isSchemaOrgType(parentTypeId)) {
         const schema = getSchemaOrgType(schemaTypeId);
         const parents = [];

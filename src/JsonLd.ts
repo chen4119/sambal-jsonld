@@ -1,5 +1,5 @@
-import {JSONLD_ID, JSONLD_CONTEXT, JSONLD_TYPE, JSONLD_GRAPH, JSONLD_VALUE} from "./Constants";
-import {isObjectLiteral, isUrl} from "./Utils";
+import {JSONLD_ID, JSONLD_CONTEXT, JSONLD_TYPE, JSONLD_GRAPH, JSONLD_VALUE, JSONLD_BASE} from "./Constants";
+import {isObjectLiteral, isUrl, makeAbsoluteIRI, isBlankNodeIRI} from "./Utils";
 import {cloneDeep, isEqual} from "lodash";
 
 export type Node = {
@@ -22,6 +22,7 @@ class JsonLd {
     // private vocab: string;
     private blankNodeIndex = 1;
     private contextRef: string;
+    private base: string;
     private contextTermMap: Map<string, Term> = new Map<string, Term>();
     private graph: Map<string, Node> = new Map<string, Node>();
     constructor(private json: object, private context?: any) {
@@ -42,6 +43,10 @@ class JsonLd {
             }
         }
         return this.json;
+    }
+
+    get baseIRI(): string {
+        return this.base;
     }
 
     get graphMap(): Map<string, Node> {
@@ -137,14 +142,10 @@ class JsonLd {
             return this.graph.get(link);
         }
         let url = link;
-        if (this.isBlankNodeIRI(link)) {
+        if (isBlankNodeIRI(link)) {
             url = link.substring(2);
         }
         return await fetcher(url);
-    }
-
-    private isBlankNodeIRI(link: string) {
-        return link.startsWith("_:");
     }
 
     private parse(json: object, context?: any) {
@@ -180,9 +181,11 @@ class JsonLd {
     private parseContextObject(context: object) {
         for (const key of Object.keys(context)) {
             const contextValue = context[key];
-            if (typeof(contextValue) === "string") {
+            if (key === JSONLD_BASE) {
+                this.base = contextValue;
+            } else if (typeof(contextValue) === "string") {
                 this.contextTermMap.set(key, {id: contextValue});
-            } else {
+            } else { // context value is an object literal
                 if (contextValue[JSONLD_ID]) {
                     this.contextTermMap.set(key, {
                         id: contextValue[JSONLD_ID],
@@ -198,16 +201,7 @@ class JsonLd {
         for (const data of graph) {
             this.recursivelyVisitAllNodes(graphMap, data);
         }
-        // let index = 1;
         for (const data of graph) {
-            /*
-            let nodeId = data[JSONLD_ID];
-            if (!nodeId) {
-                // node might not have ID, assign a blank ID
-                nodeId = `_:${index}`;
-                index++;
-                data[JSONLD_ID] = nodeId;
-            }*/
             this.parseGraphNode(graphMap, data);
         }
     }
@@ -295,19 +289,12 @@ class JsonLd {
             const suffix = splitted[1];
             const context = this.contextTermMap.get(prefix);
             if (context.id) {
-                return this.makeAbsoluteIRI(context.id, suffix);
+                return makeAbsoluteIRI(context.id, suffix);
             }
         } else if (this.contextRef) {
-            return this.makeAbsoluteIRI(this.contextRef, propKey);
+            return makeAbsoluteIRI(this.contextRef, propKey);
         }
         return propKey;
-    }
-
-    private makeAbsoluteIRI(context: string, propKey: string) {
-        if (context.endsWith("#") || context.endsWith("/")) {
-            return `${context}${propKey}`;
-        }
-        return `${context}/${propKey}`;
     }
 }
 
