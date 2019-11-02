@@ -69,6 +69,10 @@ class JsonLd {
             const propName = this.getCondensedPropName(link.edge);
             this.setNodeObjectProp(obj, propName, link.node);
         }
+        // set generated id first.  If an actual id is specified, will override from node.data
+        if (node.id) {
+            obj[JSONLD_ID] = node.id;
+        }
         if (node.data) {
             for (const propName of Object.keys(node.data)) {
                 obj[propName] = node.data[propName];

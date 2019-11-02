@@ -102,7 +102,6 @@ const list = {
 };
 
 const blogPost = {
-    "@id": "_:nodes/one.jsml",
     headline: "Fourth post",
     description: "Some description",
     author: {
@@ -157,15 +156,15 @@ const graph = {
 // const js = new JsonLd(list);
 // console.log(js.flatten().values());
 
-console.log(getSchemaOrgGraph([blogPost])['@graph']);
-/*
+// console.log(getSchemaOrgGraph([blogPost])['@graph']);
+
 (async () => {
     const result = await hydrateJsonLd(blogPostIncomplete, async (url) => {
-        return [graph];
+        return person2;
     });
     console.log(result);
 })();
-*/
+
 
 // console.log(toSchemaOrgJsonLd(blogPost, "BlogPosting", {'@base': 'http://chen4119.me#'}));
 // console.log(toSchemaOrgJsonLd(itemList, "ItemList"));
