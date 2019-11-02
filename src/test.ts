@@ -67,12 +67,12 @@ const list = {
     "numberOfItems": "315",
     "itemListElement": [
         {
-            "@context": "http://schema.org",
+            "@id": "http://chen4119.me/post1",
             "@type": "BlogPosting",
-            headline: "Fourth post",
+            headline: "First post",
             description: "Some description",
             author: {
-                "@context": "http://schema.org",
+                "@id": "http://chen4119.me/about",
                 "@type": "Person",
                 "name": "Jane Doe",
                 "givenName": "Wan Chun",
@@ -83,12 +83,12 @@ const list = {
             keywords: ["schema.org"]
         },
         {
-            "@context": "http://schema.org",
+            "@id": "http://chen4119.me/post2",
             "@type": "BlogPosting",
-            headline: "Fourth post",
+            headline: "Second post",
             description: "Some description",
             author: {
-                "@context": "http://schema.org",
+                "@id": "http://chen4119.me/about",
                 "@type": "Person",
                 "name": "Jane Doe",
                 "givenName": "Wan Chun",
@@ -106,7 +106,7 @@ const blogPost = {
     headline: "Fourth post",
     description: "Some description",
     author: {
-        "@id": "https://fid",
+        "@id": "fasdf",
         "name": "Jane Doe",
         "givenName": "Wan Chun",
         "telephone": "(425) 123-4567",
@@ -120,7 +120,7 @@ const blogPostIncomplete = {
     headline: "Fourth post",
     description: "Some description",
     author: {
-        "@id": "_:nodes/test.jsml"
+        "@id": "https://chen4119.me/about.html#about"
     },
     dateCreated: "2019-09-06",
     keywords: ["schema.org"]
@@ -133,20 +133,40 @@ const person2 = {
     "url": "http://www.janedoe.com"
 };
 
-// const js = new JsonLd(list);
-// console.log(js.flatten());
+const graph = {
+    "@context": "http://schema.org",
+    "@graph": [
+        {
+        "@type": "Person",
+        "email": "chen4119@hotmail.com",
+        "familyName": "Chen",
+        "gender": "Male",
+        "givenName": "Wan Chun",
+        "description": "Javascript developer.  Making linked data useful.",
+        "name": "Wan Chun Chen",
+        "sameAs": [
+            "https://github.com/chen4119",
+            "https://www.linkedin.com/in/wan-chun-chen-9a95a010"
+        ],
+        "url": "https://chen4119.me/about.html",
+        "@id": "https://chen4119.me/about.html#about"
+        }
+    ]
+};
 
-/*
+// const js = new JsonLd(list);
+// console.log(js.flatten().values());
+
+
 (async () => {
     const result = await hydrateJsonLd(blogPostIncomplete, async (url) => {
-        console.log('ysoi: ' + url);
-        return {test: 'hello world'};
+        return [graph];
     });
     console.log(result);
 })();
-*/
 
-// console.log(toSchemaOrgJsonLd(blogPost, "BlogPosting", {'@base': 'http://chen4119.me'}));
+
+// console.log(toSchemaOrgJsonLd(blogPost, "BlogPosting", {'@base': 'http://chen4119.me#'}));
 // console.log(toSchemaOrgJsonLd(itemList, "ItemList"));
 // console.log(toSchemaOrgJsonLd(person2, "Person", {firstName: "http://schema.org/givenName"}));
 

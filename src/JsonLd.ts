@@ -1,11 +1,11 @@
 import {JSONLD_ID, JSONLD_CONTEXT, JSONLD_TYPE, JSONLD_GRAPH, JSONLD_VALUE, JSONLD_BASE} from "./Constants";
 import {isObjectLiteral, isUrl, makeAbsoluteIRI, isBlankNodeIRI} from "./Utils";
-import {cloneDeep, isEqual} from "lodash";
 
 export type Node = {
     links: Link[],
     data: any,
-    isArray: boolean
+    isArray: boolean,
+    id: string
 };
 
 export type Link = {
@@ -55,86 +55,60 @@ class JsonLd {
 
     flatten() {
         const flattenNodeMap: Map<string, object> = new Map<string, object>();
-        this.flattenChildNodes(this.json, flattenNodeMap);
+        for (const nodeId of this.graph.keys()) {
+            const nodeObj = this.getCondensedNode(nodeId);
+            flattenNodeMap.set(nodeId, nodeObj);
+        }
         return flattenNodeMap;
     }
 
-    private flattenChildNodes(json: any, flattenNodeMap: Map<string, object>) {
-        if (Array.isArray(json)) {
-            return json.map(item => this.flattenChildNodes(item, flattenNodeMap));
-        } else if (isObjectLiteral(json) && !this.isReferencingOtherNode(json)) {
-            const jsonClone = cloneDeep(json);
-            delete jsonClone[JSONLD_CONTEXT];
-            for (const propKey of Object.keys(jsonClone)) {
-                const value = this.flattenChildNodes(jsonClone[propKey], flattenNodeMap);
-                const expandedValue = this.expand(value);
-                jsonClone[propKey] = expandedValue;
-            }
-            let nodeId = this.getFlattenNodeId(jsonClone, flattenNodeMap);
-            if (!nodeId) {
-                nodeId = jsonClone[JSONLD_ID] ? jsonClone[JSONLD_ID] : `_:${flattenNodeMap.size + 1}`;
-                jsonClone[JSONLD_ID] = nodeId;
-                flattenNodeMap.set(nodeId, jsonClone);
-            }
-            return {[JSONLD_ID]: nodeId};
+    getCondensedNode(nodeId: string) {
+        const node: Node = this.graph.get(nodeId);
+        const obj = {};
+        for (const link of node.links) {
+            const propName = this.getCondensedPropName(link.edge);
+            this.setNodeObjectProp(obj, propName, link.node);
         }
-        return json;
+        if (node.data) {
+            for (const propName of Object.keys(node.data)) {
+                obj[propName] = node.data[propName];
+            }
+        }
+        return obj;
     }
 
-    private getFlattenNodeId(json: any, flattenNodeMap: Map<string, object>) {
-        if (flattenNodeMap.has(json[JSONLD_ID])) {
-            return json[JSONLD_ID];
-        }
-        for (const node of flattenNodeMap.values()) {
-            const isSame = this.isNodeSame(json, node);
-            if (isSame) {
-                return node[JSONLD_ID];
-            }
-        }
-        return null;
-    }
-
-    private isNodeSame(node1: object, node2: object) {
-        const nodeId1 = node1[JSONLD_ID];
-        const nodeId2 = node2[JSONLD_ID];
-        if (nodeId1 && nodeId2) {
-            return nodeId1 === nodeId2;
+    private setNodeObjectProp(obj: object, propName: string, node: Node) {
+        const propValue = node.id ? {[JSONLD_ID]: node.id} : node.data;
+        if (node.isArray) {
+            obj[propName] = Array.isArray(obj[propName]) ? [...obj[propName], propValue] : [propValue];
         } else {
-            // TODO: May need to expand before comparing.  Term prefix can change if there are multiple context.  Assuming context is same for all nodes right now
-            const node1WithoutId = {
-                ...node1,
-                [JSONLD_ID]: undefined
-            };
-            const node2WithoutId = {
-                ...node2,
-                [JSONLD_ID]: undefined
-            };
-            return isEqual(node1WithoutId, node2WithoutId);
+            obj[propName] = propValue;
         }
-
     }
 
-    private expand(json: any) {
-        if (Array.isArray(json)) {
-            return json.map(item => this.expand(item));
-        } else if (isObjectLiteral(json)) {
-            const expandedJson: object = {};
-            for (const propKey of Object.keys(json)) {
-                const expandedValue = this.expand(json[propKey]);
-                if (propKey === JSONLD_ID) {
-                    expandedJson[JSONLD_ID] = expandedValue;
-                } else if (propKey === JSONLD_TYPE) {
-                    expandedJson[JSONLD_TYPE] = this.getAbsoluteIRI(expandedValue);
-                } else if (propKey !== JSONLD_CONTEXT) {
-                    const absoluteIRI = this.getAbsoluteIRI(propKey);
-                    expandedJson[absoluteIRI] = [{
-                        [JSONLD_VALUE]: expandedValue
-                    }];
+    private getCondensedPropName(absoluteIRI: string) {
+        if (isUrl(absoluteIRI)) {
+            for (const termKey of this.contextTermMap.keys()) {
+                const term = this.contextTermMap.get(termKey);
+                if (absoluteIRI === term.id) {
+                    return termKey;
+                } else if (absoluteIRI.startsWith(term.id)) {
+                    return `${termKey}:${this.getIRISuffix(term.id, absoluteIRI)}`;
                 }
             }
-            return expandedJson;
+            if (this.contextRef && absoluteIRI.startsWith(this.contextRef)) {
+                return this.getIRISuffix(this.contextRef, absoluteIRI);
+            }
         }
-        return json;
+        return absoluteIRI;
+    }
+
+    private getIRISuffix(prefix: string, absoluteIRI: string) {
+        const suffix = absoluteIRI.substring(prefix.length);
+        if (suffix.startsWith("/")) {
+            return suffix.substring(1);
+        }
+        return suffix;
     }
 
     private async fetchNode(link: string, fetcher: (url) => Promise<any>) {
@@ -145,7 +119,31 @@ class JsonLd {
         if (isBlankNodeIRI(link)) {
             url = link.substring(2);
         }
-        return await fetcher(url);
+        const externalObj = await fetcher(url);
+        if (Array.isArray(externalObj)) {
+            for (const obj of externalObj) {
+                const found = this.findNodeById(link, obj);
+                if (found) {
+                    return found;
+                }
+            }
+        } else if (isObjectLiteral(externalObj)) {
+            const found = this.findNodeById(link, externalObj);
+            if (found) {
+                return found;
+            }
+        }
+        return externalObj;
+    }
+
+    private findNodeById(id: string, json: object) {
+        if (json[JSONLD_GRAPH]) {
+            const jsonld = new JsonLd(json);
+            if (jsonld.graphMap.has(id)) {
+                return jsonld.getCondensedNode(id);
+            }
+        }
+        return null;
     }
 
     private parse(json: object, context?: any) {
@@ -157,15 +155,16 @@ class JsonLd {
         if (json[JSONLD_GRAPH]) {
             this.parseGraph(json[JSONLD_GRAPH]);
         } else {
-            // since no graph, pass empty graph map
-            this.parseGraphNode(new Map<string, any>(), json);
-            
+            // since no graph, use empty graph map
+            const emptyGraphMap = new Map<string, any>();
+            if (Array.isArray(json)) {
+                for (const node of json) {
+                    this.parseGraphNode(emptyGraphMap, json);
+                }
+            } else {
+                this.parseGraphNode(emptyGraphMap, json);
+            }
         }
-        /*
-        for (const key of this.graph.keys()) {
-            const node = this.graph.get(key);
-            console.log(node);
-        }*/
     }
 
     private parseContext(context: any) {
@@ -232,7 +231,7 @@ class JsonLd {
             return this.parseGraphNode(graphMap, graphMap.get(nodeId));
         }
 
-        const node: Node = {links: [], data: {}, isArray: false};
+        const node: Node = {links: [], data: {}, isArray: false, id: nodeId};
         if (!isReferencingOtherNode) {
             this.graph.set(nodeId, node);
         }
