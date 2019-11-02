@@ -159,7 +159,7 @@ class JsonLd {
             const emptyGraphMap = new Map<string, any>();
             if (Array.isArray(json)) {
                 for (const node of json) {
-                    this.parseGraphNode(emptyGraphMap, json);
+                    this.parseGraphNode(emptyGraphMap, node);
                 }
             } else {
                 this.parseGraphNode(emptyGraphMap, json);
