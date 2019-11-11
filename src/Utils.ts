@@ -2,7 +2,7 @@ import {schemaMap} from "./Schema";
 import {SAMBAL_PARENT} from "./Constants";
 
 export function isObjectLiteral(obj: any) {
-    return typeof(obj) === "object" && Object.getPrototypeOf(obj) === Object.prototype;
+    return obj !== null && typeof(obj) === "object" && Object.getPrototypeOf(obj) === Object.prototype;
 }
 
 export function isUrl(src: string) {

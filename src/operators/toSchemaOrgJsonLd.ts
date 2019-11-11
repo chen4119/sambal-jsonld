@@ -92,6 +92,7 @@ function populateSchemaOrgType(node: Node, typeName: string, typeProps: object, 
     for (const link of node.links) {
         const prop = typeProps[link.edge];
         if (prop) {
+            // TODO: check for node.id instead?
             const hasChildNode = link.node.links.length > 0;
             let propValue = null;
             if (hasChildNode) {

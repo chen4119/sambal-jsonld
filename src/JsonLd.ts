@@ -1,5 +1,6 @@
 import {JSONLD_ID, JSONLD_CONTEXT, JSONLD_TYPE, JSONLD_GRAPH, JSONLD_VALUE, JSONLD_BASE} from "./Constants";
 import {isObjectLiteral, isUrl, makeAbsoluteIRI, isBlankNodeIRI} from "./Utils";
+import {flatMap} from "lodash";
 
 export type Node = {
     links: Link[],
@@ -56,18 +57,43 @@ class JsonLd {
     flatten() {
         const flattenNodeMap: Map<string, object> = new Map<string, object>();
         for (const nodeId of this.graph.keys()) {
-            const nodeObj = this.getCondensedNode(nodeId);
+            const nodeObj = this.getCondensedNode(nodeId, false);
             flattenNodeMap.set(nodeId, nodeObj);
         }
         return flattenNodeMap;
     }
 
-    getCondensedNode(nodeId: string) {
+    getGraphRootNodes() {
+        const childNodeSet = new Set();
+        for (const nodeId of this.graph.keys()) {
+            const node = this.graph.get(nodeId);
+            for (const link of node.links) {
+                if (link.node.id) {
+                    childNodeSet.add(link.node.id);
+                }
+            }
+        }
+        const rootNodes = [];
+        for (const nodeId of this.graph.keys()) {
+            if (!childNodeSet.has(nodeId)) {
+                rootNodes.push(this.getCondensedNode(nodeId, true));
+            }
+        }
+        if (rootNodes.length === 1) {
+            return rootNodes[0];
+        }
+        return rootNodes;
+    }
+
+    getCondensedNode(nodeId: string, recurse: boolean) {
+        if (!this.graph.has(nodeId)) {
+            return null;
+        }
         const node: Node = this.graph.get(nodeId);
         const obj = {};
         for (const link of node.links) {
             const propName = this.getCondensedPropName(link.edge);
-            this.setNodeObjectProp(obj, propName, link.node);
+            this.setNodeObjectProp(obj, propName, link.node, recurse);
         }
         // set generated id first.  If an actual id is specified, will override from node.data
         if (node.id) {
@@ -81,8 +107,15 @@ class JsonLd {
         return obj;
     }
 
-    private setNodeObjectProp(obj: object, propName: string, node: Node) {
-        const propValue = node.id ? {[JSONLD_ID]: node.id} : node.data;
+    private setNodeObjectProp(obj: object, propName: string, node: Node, recurse: boolean) {
+        let propValue = node.data;
+        if (node.id) {
+            if (recurse) {
+                propValue = this.getCondensedNode(node.id, recurse);
+            } else {
+                propValue = {[JSONLD_ID]: node.id};
+            }
+        }
         if (node.isArray) {
             obj[propName] = Array.isArray(obj[propName]) ? [...obj[propName], propValue] : [propValue];
         } else {
@@ -124,30 +157,21 @@ class JsonLd {
             url = link.substring(2);
         }
         const externalObj = await fetcher(url);
-        if (Array.isArray(externalObj)) {
-            for (const obj of externalObj) {
-                const found = this.findNodeById(link, obj);
-                if (found) {
-                    return found;
-                }
-            }
-        } else if (isObjectLiteral(externalObj)) {
-            const found = this.findNodeById(link, externalObj);
-            if (found) {
-                return found;
-            }
-        }
-        return externalObj;
+        return this.findNodeById(link, externalObj);
     }
 
     private findNodeById(id: string, json: object) {
-        if (json[JSONLD_GRAPH]) {
+        if (Array.isArray(json)) {
+            return flatMap(json.map(item => this.findNodeById(id, item)));
+        } else if (isObjectLiteral(json) && json[JSONLD_GRAPH]) {
             const jsonld = new JsonLd(json);
-            if (jsonld.graphMap.has(id)) {
-                return jsonld.getCondensedNode(id);
+            const found = jsonld.getCondensedNode(id, true);
+            if (found) {
+                return found;
             }
+            return jsonld.getGraphRootNodes();
         }
-        return null;
+        return json;
     }
 
     private parse(json: object, context?: any) {
@@ -210,6 +234,9 @@ class JsonLd {
     }
 
     private recursivelyVisitAllNodes(graphMap: Map<string, any>, data: any) {
+        if (!data) {
+            return null;
+        }
         if (this.isReferencingOtherNode(data)) {
             return;
         }

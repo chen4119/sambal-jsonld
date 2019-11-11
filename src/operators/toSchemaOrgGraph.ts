@@ -5,7 +5,7 @@ import {
     JSONLD_GRAPH
 } from "../Constants";
 
-export function getSchemaOrgGraph(schemaOrgJsonLds: object[]) {
+export function toSchemaOrgGraph(schemaOrgJsonLds: object[]) {
     if (schemaOrgJsonLds.length === 0) {
         return null;
     }
