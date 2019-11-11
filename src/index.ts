@@ -1,13 +1,7 @@
 
-export {
-    // isSchemaOrgType,
-    // getSchemaOrgType,
-    // getSchemaOrgParentTypes,
-    hydrateJsonLd,
-    toSchemaOrgJsonLd,
-    getSchemaOrgGraph
-} from "./Operators";
-
+export {hydrateJsonLd} from "./operators/hydrateJsonLd";
+export {toSchemaOrgJsonLd} from "./operators/toSchemaOrgJsonLd";
+export {getSchemaOrgGraph} from "./operators/getSchemaOrgGraph";
 export {
     JSONLD_ID,
     JSONLD_TYPE,

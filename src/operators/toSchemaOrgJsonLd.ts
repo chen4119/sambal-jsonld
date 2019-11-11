@@ -1,6 +1,5 @@
 import moment from 'moment';
-import {schemaMap} from "./Schema";
-import JsonLd, {Node} from "./JsonLd";
+import JsonLd, {Node} from "../JsonLd";
 import {
     SAMBAL_PARENT,
     SCHEMA_CONTEXT,
@@ -20,57 +19,19 @@ import {
     SCHEMA_DATETIME,
     SCHEMA_DATE,
     SCHEMA_TIME
-} from "./Constants";
-import {isObjectLiteral, isUrl, makeAbsoluteIRI, isBlankNodeIRI} from "./Utils";
+} from "../Constants";
+import {
+    isSchemaOrgType,
+    getSchemaOrgType,
+    getSchemaOrgParentTypes,
+    getParentTypes,
+    isUrl,
+    makeAbsoluteIRI,
+    isBlankNodeIRI
+} from "../Utils";
 
 const DATE_FORMAT_REGEX = /^\d{4}-\d{1,2}-\d{1,2}$/;
 const TIME_FORMAT_REGEX = /^\d{1,2}:\d{1,2}(:\d{1,2})?$/;
-
-export function isSchemaOrgType(typeId: string) {
-    return schemaMap.has(typeId.toLowerCase());
-}
-
-export function getSchemaOrgType(typeId: string) {
-    return schemaMap.get(typeId.toLowerCase());
-}
-
-export function getSchemaOrgParentTypes(typeId: string) {
-    const parents = [];
-    if (isSchemaOrgType(typeId)) {
-        getParentTypes(getSchemaOrgType(typeId), parents);
-    }
-    return parents;
-}
-
-export async function hydrateJsonLd(json: object, fetcher: (url) => Promise<any>, context?: any) {
-    if (Array.isArray(json)) {
-        const resolvedArray = [];
-        for (const item of json) {
-            resolvedArray.push(await hydrateJsonLd(item, fetcher, context));
-        }
-        return resolvedArray;
-    } else if (isObjectLiteral(json)) {
-        for (const propName of Object.keys(json)) {
-            const propValue = await hydrateJsonLd(json[propName], fetcher, context);
-            json[propName] = propValue;
-        }
-        const jsonld = new JsonLd(json, context);
-        return await jsonld.resolveJson(fetcher);
-    }
-    return json;
-}
-
-export function getSchemaOrgGraph(schemaOrgJsonLds: object[]) {
-    if (schemaOrgJsonLds.length === 0) {
-        return null;
-    }
-    const jsonLd = new JsonLd(schemaOrgJsonLds, SCHEMA_CONTEXT);
-    const graph: Map<string, object> = jsonLd.flatten();
-    return {
-        [JSONLD_CONTEXT]: SCHEMA_CONTEXT,
-        [JSONLD_GRAPH]: [...graph.values()]
-    };
-}
 
 export function toSchemaOrgJsonLd(json: object, type: string, context?: any) {
     const typeId = `${SCHEMA_CONTEXT}/${type}`;
@@ -288,15 +249,4 @@ function isEnumeration(typeId: string) {
         }
     }
     return false;
-}
-
-function getParentTypes(schema, parents) {
-    const schemaParents = schema[SAMBAL_PARENT];
-    if (schemaParents) {
-        for (const parentId of schemaParents) {
-            const parentSchema = getSchemaOrgType(parentId);
-            parents.push(parentSchema);
-            getParentTypes(parentSchema, parents);
-        }
-    }
 }

@@ -2,7 +2,7 @@ import fs from "fs";
 import JsonLd from "./JsonLd";
 import {JSONLD_TYPE} from "./Constants";
 import SchemaGenerator from "./SchemaGenerator";
-import {toSchemaOrgJsonLd, hydrateJsonLd, getSchemaOrgGraph} from "./Operators";
+import {toSchemaOrgJsonLd, hydrateJsonLd, getSchemaOrgGraph} from "./index";
 import {isObjectLiteral} from "./Utils";
 // const generator = new SchemaGenerator("./all-layers.jsonld", "./src/Schema.ts");
 // generator.run();
@@ -158,12 +158,13 @@ const graph = {
 
 // console.log(getSchemaOrgGraph([blogPost])['@graph']);
 
+/*
 (async () => {
     const result = await hydrateJsonLd(blogPostIncomplete, async (url) => {
-        return person2;
+        return graph;
     });
     console.log(result);
-})();
+})();*/
 
 
 // console.log(toSchemaOrgJsonLd(blogPost, "BlogPosting", {'@base': 'http://chen4119.me#'}));

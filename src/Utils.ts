@@ -1,4 +1,5 @@
-
+import {schemaMap} from "./Schema";
+import {SAMBAL_PARENT} from "./Constants";
 
 export function isObjectLiteral(obj: any) {
     return typeof(obj) === "object" && Object.getPrototypeOf(obj) === Object.prototype;
@@ -20,4 +21,31 @@ export function makeAbsoluteIRI(base: string, relativeIRI: string) {
 
 export function isBlankNodeIRI(iri: string) {
     return iri.startsWith("_:");
+}
+
+export function isSchemaOrgType(typeId: string) {
+    return schemaMap.has(typeId.toLowerCase());
+}
+
+export function getSchemaOrgType(typeId: string) {
+    return schemaMap.get(typeId.toLowerCase());
+}
+
+export function getSchemaOrgParentTypes(typeId: string) {
+    const parents = [];
+    if (isSchemaOrgType(typeId)) {
+        getParentTypes(getSchemaOrgType(typeId), parents);
+    }
+    return parents;
+}
+
+export function getParentTypes(schema, parents) {
+    const schemaParents = schema[SAMBAL_PARENT];
+    if (schemaParents) {
+        for (const parentId of schemaParents) {
+            const parentSchema = getSchemaOrgType(parentId);
+            parents.push(parentSchema);
+            getParentTypes(parentSchema, parents);
+        }
+    }
 }
