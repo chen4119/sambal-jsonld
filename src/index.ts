@@ -1,7 +1,7 @@
 
 export {hydrateJsonLd} from "./operators/hydrateJsonLd";
 export {toSchemaOrgJsonLd} from "./operators/toSchemaOrgJsonLd";
-export {toSchemaOrgGraph} from "./operators/toSchemaOrgGraph";
+export {toJsonLdGraph} from "./operators/toJsonLdGraph";
 export {graphToCondensedJsonLd} from "./operators/graphToCondensedJsonLd";
 export {
     JSONLD_ID,
