@@ -4,6 +4,7 @@ import {JSONLD_TYPE, SCHEMA_CONTEXT} from "./Constants";
 import SchemaGenerator from "./SchemaGenerator";
 import {toSchemaOrgJsonLd, hydrateJsonLd, toJsonLdGraph, graphToCondensedJsonLd} from "./index";
 import {isObjectLiteral} from "./Utils";
+
 // const generator = new SchemaGenerator("./all-layers.jsonld", "./src/Schema.ts");
 // generator.run();
 
@@ -156,10 +157,10 @@ const graph = {
 // const js = new JsonLd(list);
 // console.log(js.flatten().values());
 
-console.log(toJsonLdGraph([blogPost], SCHEMA_CONTEXT));
+// console.log(toJsonLdGraph([blogPost], SCHEMA_CONTEXT));
 
-const linkedin = JSON.parse(fs.readFileSync("./src/linkedin.json", "utf-8"));
-console.log(toJsonLdGraph(linkedin, SCHEMA_CONTEXT)['@graph'][0]);
+// const linkedin = JSON.parse(fs.readFileSync("./src/linkedin.json", "utf-8"));
+// console.log(toJsonLdGraph(linkedin, SCHEMA_CONTEXT)['@graph'][0]);
 // console.log(graphToCondensedJsonLd(linkedin));
 
 /*
@@ -168,8 +169,7 @@ console.log(toJsonLdGraph(linkedin, SCHEMA_CONTEXT)['@graph'][0]);
         return [graph];
     });
     console.log(result);
-})();
-*/
+})();*/
 
 // console.log(toSchemaOrgJsonLd(blogPost, "BlogPosting", {'@base': 'http://chen4119.me#'}));
 // console.log(toSchemaOrgJsonLd(itemList, "ItemList"));

@@ -157,7 +157,11 @@ class JsonLd {
             url = link.substring(2);
         }
         const externalObj = await fetcher(url);
-        return this.findNodeById(link, externalObj);
+        const node = this.findNodeById(link, externalObj);
+        if (Array.isArray(node) && node.length === 1) {
+            return node[0];
+        }
+        return node;
     }
 
     private findNodeById(id: string, json: object) {
