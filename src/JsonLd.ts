@@ -1,5 +1,5 @@
-import {JSONLD_ID, JSONLD_CONTEXT, JSONLD_TYPE, JSONLD_GRAPH, JSONLD_VALUE, JSONLD_BASE} from "./Constants";
-import {isObjectLiteral, isUrl, makeAbsoluteIRI, isBlankNodeIRI} from "./Utils";
+import {JSONLD_ID, JSONLD_CONTEXT, JSONLD_TYPE, JSONLD_GRAPH, JSONLD_VALUE, JSONLD_BASE} from "./constants";
+import {isObjectLiteral, isUrl, makeAbsoluteIRI, isBlankNodeIRI} from "./utils";
 import {flatMap} from "lodash";
 
 export type Node = {

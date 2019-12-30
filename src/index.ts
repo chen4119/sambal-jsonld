@@ -3,7 +3,7 @@ export {hydrateJsonLd} from "./operators/hydrateJsonLd";
 export {toSchemaOrgJsonLd} from "./operators/toSchemaOrgJsonLd";
 export {toJsonLdGraph} from "./operators/toJsonLdGraph";
 export {graphToCondensedJsonLd} from "./operators/graphToCondensedJsonLd";
-export {getSchemaOrgType, isSchemaOrgType} from "./Utils";
+export {getSchemaOrgType, isSchemaOrgType} from "./utils";
 export {
     JSONLD_ID,
     JSONLD_TYPE,
@@ -26,4 +26,4 @@ export {
     SAMBAL_NAME,
     SAMBAL_PARENT,
     SAMBAL_VALUES
-} from "./Constants";
+} from "./constants";

@@ -1,4 +1,4 @@
-import {isObjectLiteral} from "../Utils";
+import {isObjectLiteral} from "../utils";
 import JsonLd from "../JsonLd";
 
 export async function hydrateJsonLd(json: object, fetcher: (url) => Promise<any>, context?: any) {

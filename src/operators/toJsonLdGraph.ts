@@ -2,7 +2,7 @@ import JsonLd from "../JsonLd";
 import {
     JSONLD_CONTEXT,
     JSONLD_GRAPH
-} from "../Constants";
+} from "../constants";
 
 export function toJsonLdGraph(jsonlds: object[], context: any) {
     if (jsonlds.length === 0) {

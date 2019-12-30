@@ -1,8 +1,8 @@
 import JsonLd from "../JsonLd";
 import {
     JSONLD_GRAPH
-} from "../Constants";
-import {isObjectLiteral} from "../Utils";
+} from "../constants";
+import {isObjectLiteral} from "../utils";
 
 export function graphToCondensedJsonLd(json: object, id?: string) {
     if (isObjectLiteral(json) && json[JSONLD_GRAPH]) {

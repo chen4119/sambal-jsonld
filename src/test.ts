@@ -1,9 +1,9 @@
 import fs from "fs";
 import JsonLd from "./JsonLd";
-import {JSONLD_TYPE, SCHEMA_CONTEXT} from "./Constants";
+import {JSONLD_TYPE, SCHEMA_CONTEXT} from "./constants";
 import SchemaGenerator from "./SchemaGenerator";
 import {toSchemaOrgJsonLd, hydrateJsonLd, toJsonLdGraph, graphToCondensedJsonLd} from "./index";
-import {isObjectLiteral} from "./Utils";
+import {isObjectLiteral} from "./utils";
 
 // const generator = new SchemaGenerator("./all-layers.jsonld", "./src/Schema.ts");
 // generator.run();

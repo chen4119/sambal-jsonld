@@ -19,7 +19,7 @@ import {
     SCHEMA_DATETIME,
     SCHEMA_DATE,
     SCHEMA_TIME
-} from "../Constants";
+} from "../constants";
 import {
     isSchemaOrgType,
     getSchemaOrgType,
@@ -28,7 +28,7 @@ import {
     isUrl,
     makeAbsoluteIRI,
     isBlankNodeIRI
-} from "../Utils";
+} from "../utils";
 
 const DATE_FORMAT_REGEX = /^\d{4}-\d{1,2}-\d{1,2}$/;
 const TIME_FORMAT_REGEX = /^\d{1,2}:\d{1,2}(:\d{1,2})?$/;
@@ -48,9 +48,9 @@ export function toSchemaOrgJsonLd(json: any, type: string, context?: any) {
                     position: index + 1
                 };
                 if (typeof(item) === "string") {
-                    listItem.url = item;
+                    listItem["url"] = item;
                 } else {
-                    listItem.item = objectToSchemaOrgType(item, type, context);
+                    listItem["item"] = objectToSchemaOrgType(item, type, context);
                 }
                 return listItem;
             })
