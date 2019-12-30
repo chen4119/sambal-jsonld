@@ -33,11 +33,34 @@ import {
 const DATE_FORMAT_REGEX = /^\d{4}-\d{1,2}-\d{1,2}$/;
 const TIME_FORMAT_REGEX = /^\d{1,2}:\d{1,2}(:\d{1,2})?$/;
 
-export function toSchemaOrgJsonLd(json: object, type: string, context?: any) {
+export function toSchemaOrgJsonLd(json: any, type: string, context?: any) {
     const typeId = `${SCHEMA_CONTEXT}/${type}`;
     if (!isSchemaOrgType(typeId)) {
         throw new Error(`schema.org ${type} not found`);
     }
+    if (Array.isArray(json)) {
+        const itemList = {
+            [JSONLD_CONTEXT]: SCHEMA_CONTEXT,
+            [JSONLD_TYPE]: "ItemList",
+            itemListElement: (json as any[]).map((item, index) => {
+                const listItem = {
+                    [JSONLD_TYPE]: "ListItem",
+                    position: index + 1
+                };
+                if (typeof(item) === "string") {
+                    listItem.url = item;
+                } else {
+                    listItem.item = objectToSchemaOrgType(item, type, context);
+                }
+                return listItem;
+            })
+        };
+        return itemList;
+    }
+    return objectToSchemaOrgType(json, type, context);
+}
+
+function objectToSchemaOrgType(json: object, type: string, context?: any) {
     const jsonld = new JsonLd(json, context ? [SCHEMA_CONTEXT, context] : SCHEMA_CONTEXT);
     let nodeId;
     if (json[JSONLD_ID]) {

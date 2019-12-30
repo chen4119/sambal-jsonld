@@ -1,6 +1,6 @@
 import fs from "fs";
 import ts from "typescript";
-import {makeVariableStatement, EXPORT_MODIFIER, objectToObjectLiteral, makeArrayLiteral, makeStringLiteral, makeIdentifier, makeNew} from "./AstFactory";
+import {makeVariableStatement, EXPORT_MODIFIER, objectToObjectLiteral, makeArrayLiteral, makeStringLiteral, makeIdentifier, makeNew} from "./ast";
 import JsonLd, {Node, Link} from "./JsonLd";
 import {JSONLD_ID, JSONLD_TYPE, JSONLD_VALUE, SCHEMA_CONTEXT, SAMBAL_ID, SAMBAL_NAME, SAMBAL_PARENT, SAMBAL_VALUES, SCHEMA_ENUMERATION} from "./Constants";
 
