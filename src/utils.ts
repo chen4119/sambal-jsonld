@@ -1,5 +1,5 @@
 import {schemaMap} from "./Schema";
-import {SAMBAL_PARENT} from "./Constants";
+import {SAMBAL_PARENT} from "./constants";
 
 export function isObjectLiteral(obj: any) {
     return obj !== null && typeof(obj) === "object" && Object.getPrototypeOf(obj) === Object.prototype;
