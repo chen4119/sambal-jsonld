@@ -1,4 +1,4 @@
-import {schemaMap} from "./Schema";
+import {schemaMap} from "./schema";
 import {SAMBAL_PARENT} from "./constants";
 
 export function isObjectLiteral(obj: any) {
