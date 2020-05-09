@@ -1,43 +1,51 @@
 {
-    "name": "sambal-jsonld",
-    "version": "0.0.13",
-    "description": "Sambal json-ld and schema.org utilities",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/chen4119/sambal-jsonld"
-    },
-    "author": "Wan Chun Chen",
-    "license": "MIT",
-    "keywords": [
-        "json-ld",
-        "schema.org",
-        "semantic web",
-        "linked data"
-    ],
-    "engines": {
-        "node": ">=8.0.0"
-    },
-    "files": [
-        "dist"
-    ],
-    "scripts": {
-        "start": "ts-node src/test.ts",
-        "schema": "ts-node src/generate.ts",
-        "build": "npm run clean && tsc",
-        "clean": "rimraf ./dist"
-    },
-    "dependencies": {
-        "lodash": "4.17.11",
-        "moment": "2.24.0"
-    },
-    "devDependencies": {
-        "@types/node": "10.12.10",
-        "@types/lodash": "4.14.118",
-        "rimraf": "3.0.0",
-        "tslint": "5.11.0",
-        "ts-node": "7.0.1",
-        "typescript": "3.5.3"
-    }
+  "name": "sambal-jsonld",
+  "version": "0.0.13",
+  "description": "Sambal json-ld and schema.org utilities",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chen4119/sambal-jsonld"
+  },
+  "author": "Wan Chun Chen",
+  "license": "MIT",
+  "keywords": [
+    "json-ld",
+    "schema.org",
+    "semantic web",
+    "linked data"
+  ],
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "ts-node src/test.ts",
+    "schema": "ts-node src/generate.ts",
+    "build": "npm run clean && tsc",
+    "clean": "rimraf ./dist",
+    "test": "jest",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'"
+  },
+  "dependencies": {
+    "lodash": "4.17.11",
+    "moment": "2.24.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.9.6",
+    "@babel/preset-env": "7.9.6",
+    "@babel/preset-typescript": "7.9.0",
+    "@types/jest": "25.2.1",
+    "@types/node": "10.12.10",
+    "@types/lodash": "4.14.118",
+    "babel-jest": "25.5.1",
+    "jest": "25.5.4",
+    "rimraf": "3.0.0",
+    "tslint": "6.1.2",
+    "ts-node": "7.0.1",
+    "typescript": "3.5.3"
+  }
 }

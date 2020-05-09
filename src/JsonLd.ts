@@ -21,12 +21,15 @@ export type Term = {
 
 class JsonLd {
     // private vocab: string;
-    private blankNodeIndex = 1;
+    private blankNodeIndex;
     private contextRef: string;
     private base: string;
-    private contextTermMap: Map<string, Term> = new Map<string, Term>();
-    private graph: Map<string, Node> = new Map<string, Node>();
+    private contextTermMap: Map<string, Term>;
+    private graph: Map<string, Node>;
     constructor(private json: object, private context?: any) {
+        this.blankNodeIndex = 1;
+        this.graph = new Map<string, Node>();
+        this.contextTermMap = new Map<string, Node>();
         this.parse(json, context);
     }
 
