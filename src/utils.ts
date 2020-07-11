@@ -1,5 +1,5 @@
 import {schemaMap} from "./schema";
-import {SAMBAL_PARENT} from "./constants";
+import {SAMBAL_PARENT, SCHEMA_CONTEXT} from "./constants";
 
 export function isObjectLiteral(obj: any) {
     return obj !== null && typeof(obj) === "object" && Object.getPrototypeOf(obj) === Object.prototype;
@@ -19,16 +19,25 @@ export function makeAbsoluteIRI(base: string, relativeIRI: string) {
     return `${base}/${relativeIRI}`;
 }
 
+export function makeRelativeIRI(base: string, absoluteUri: string) {
+    if (absoluteUri.indexOf(base) === 0) {
+        return absoluteUri.substring(base.length);
+    }
+    return absoluteUri;
+}
+
 export function isBlankNodeIRI(iri: string) {
     return iri.startsWith("_:");
 }
 
 export function isSchemaOrgType(typeId: string) {
-    return schemaMap.has(typeId.toLowerCase());
+    const key = makeRelativeIRI(`${SCHEMA_CONTEXT}/`, typeId).toLowerCase();
+    return schemaMap.has(key);
 }
 
 export function getSchemaOrgType(typeId: string) {
-    return schemaMap.get(typeId.toLowerCase());
+    const key = makeRelativeIRI(`${SCHEMA_CONTEXT}/`, typeId).toLowerCase();
+    return schemaMap.get(key);
 }
 
 export function getSchemaOrgParentTypes(typeId: string) {
@@ -42,8 +51,8 @@ export function getSchemaOrgParentTypes(typeId: string) {
 export function getParentTypes(schema, parents) {
     const schemaParents = schema[SAMBAL_PARENT];
     if (schemaParents) {
-        for (const parentId of schemaParents) {
-            const parentSchema = getSchemaOrgType(parentId);
+        for (const parentName of schemaParents) {
+            const parentSchema = getSchemaOrgType(`${SCHEMA_CONTEXT}/${parentName}`);
             parents.push(parentSchema);
             getParentTypes(parentSchema, parents);
         }

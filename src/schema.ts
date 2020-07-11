@@ -1,6169 +1,6169 @@
 export const schemaMap = new Map([
     [
-        "http://schema.org/intangible",
+        "intangible",
         {
-            _id: "http://schema.org/Intangible",
+            _id: "Intangible",
             _name: "Intangible",
             _parent: [
-                "http://schema.org/Thing"
+                "Thing"
             ]
         }
     ],
     [
-        "http://schema.org/thing",
+        "thing",
         {
-            _id: "http://schema.org/Thing",
+            _id: "Thing",
             _name: "Thing",
             _parent: [],
             additionalType: [
-                "http://schema.org/URL"
+                "URL"
             ],
             alternateName: [
-                "http://schema.org/Text"
+                "Text"
             ],
             description: [
-                "http://schema.org/Text"
+                "Text"
             ],
             disambiguatingDescription: [
-                "http://schema.org/Text"
+                "Text"
             ],
             identifier: [
-                "http://schema.org/Text",
-                "http://schema.org/PropertyValue",
-                "http://schema.org/URL"
+                "Text",
+                "PropertyValue",
+                "URL"
             ],
             image: [
-                "http://schema.org/URL",
-                "http://schema.org/ImageObject"
+                "URL",
+                "ImageObject"
             ],
             mainEntityOfPage: [
-                "http://schema.org/CreativeWork",
-                "http://schema.org/URL"
+                "CreativeWork",
+                "URL"
             ],
             name: [
-                "http://schema.org/Text"
+                "Text"
             ],
             potentialAction: [
-                "http://schema.org/Action"
+                "Action"
             ],
             sameAs: [
-                "http://schema.org/URL"
+                "URL"
             ],
             subjectOf: [
-                "http://schema.org/Event",
-                "http://schema.org/CreativeWork"
+                "Event",
+                "CreativeWork"
             ],
             url: [
-                "http://schema.org/URL"
+                "URL"
             ]
         }
     ],
     [
-        "http://schema.org/duration",
+        "duration",
         {
-            _id: "http://schema.org/Duration",
+            _id: "Duration",
             _name: "Duration",
             _parent: [
-                "http://schema.org/Quantity"
+                "Quantity"
             ]
         }
     ],
     [
-        "http://schema.org/quantity",
+        "quantity",
         {
-            _id: "http://schema.org/Quantity",
+            _id: "Quantity",
             _name: "Quantity",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ]
         }
     ],
     [
-        "http://schema.org/airline",
+        "airline",
         {
-            _id: "http://schema.org/Airline",
+            _id: "Airline",
             _name: "Airline",
             _parent: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             boardingPolicy: [
-                "http://schema.org/BoardingPolicyType"
+                "BoardingPolicyType"
             ],
             iataCode: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/organization",
+        "organization",
         {
-            _id: "http://schema.org/Organization",
+            _id: "Organization",
             _name: "Organization",
             _parent: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             address: [
-                "http://schema.org/PostalAddress",
-                "http://schema.org/Text"
+                "PostalAddress",
+                "Text"
             ],
             aggregateRating: [
-                "http://schema.org/AggregateRating"
+                "AggregateRating"
             ],
             alumni: [
-                "http://schema.org/Person"
+                "Person"
             ],
             areaServed: [
-                "http://schema.org/Text",
-                "http://schema.org/AdministrativeArea",
-                "http://schema.org/Place",
-                "http://schema.org/GeoShape"
+                "Text",
+                "AdministrativeArea",
+                "Place",
+                "GeoShape"
             ],
             award: [
-                "http://schema.org/Text"
+                "Text"
             ],
             brand: [
-                "http://schema.org/Brand",
-                "http://schema.org/Organization"
+                "Brand",
+                "Organization"
             ],
             contactPoint: [
-                "http://schema.org/ContactPoint"
+                "ContactPoint"
             ],
             department: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             dissolutionDate: [
-                "http://schema.org/Date"
+                "Date"
             ],
             duns: [
-                "http://schema.org/Text"
+                "Text"
             ],
             email: [
-                "http://schema.org/Text"
+                "Text"
             ],
             employee: [
-                "http://schema.org/Person"
+                "Person"
             ],
             event: [
-                "http://schema.org/Event"
+                "Event"
             ],
             faxNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             founder: [
-                "http://schema.org/Person"
+                "Person"
             ],
             foundingDate: [
-                "http://schema.org/Date"
+                "Date"
             ],
             foundingLocation: [
-                "http://schema.org/Place"
+                "Place"
             ],
             funder: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             globalLocationNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             hasOfferCatalog: [
-                "http://schema.org/OfferCatalog"
+                "OfferCatalog"
             ],
             hasPOS: [
-                "http://schema.org/Place"
+                "Place"
             ],
             interactionStatistic: [
-                "http://schema.org/InteractionCounter"
+                "InteractionCounter"
             ],
             isicV4: [
-                "http://schema.org/Text"
+                "Text"
             ],
             legalName: [
-                "http://schema.org/Text"
+                "Text"
             ],
             leiCode: [
-                "http://schema.org/Text"
+                "Text"
             ],
             location: [
-                "http://schema.org/Text",
-                "http://schema.org/Place",
-                "http://schema.org/PostalAddress",
-                "http://schema.org/VirtualLocation"
+                "Text",
+                "Place",
+                "PostalAddress",
+                "VirtualLocation"
             ],
             logo: [
-                "http://schema.org/URL",
-                "http://schema.org/ImageObject"
+                "URL",
+                "ImageObject"
             ],
             makesOffer: [
-                "http://schema.org/Offer"
+                "Offer"
             ],
             member: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             memberOf: [
-                "http://schema.org/Organization",
-                "http://schema.org/ProgramMembership"
+                "Organization",
+                "ProgramMembership"
             ],
             naics: [
-                "http://schema.org/Text"
+                "Text"
             ],
             numberOfEmployees: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             owns: [
-                "http://schema.org/Product",
-                "http://schema.org/OwnershipInfo"
+                "Product",
+                "OwnershipInfo"
             ],
             parentOrganization: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             publishingPrinciples: [
-                "http://schema.org/CreativeWork",
-                "http://schema.org/URL"
+                "CreativeWork",
+                "URL"
             ],
             review: [
-                "http://schema.org/Review"
+                "Review"
             ],
             seeks: [
-                "http://schema.org/Demand"
+                "Demand"
             ],
             slogan: [
-                "http://schema.org/Text"
+                "Text"
             ],
             sponsor: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             subOrganization: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             taxID: [
-                "http://schema.org/Text"
+                "Text"
             ],
             telephone: [
-                "http://schema.org/Text"
+                "Text"
             ],
             vatID: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/enumeration",
+        "enumeration",
         {
-            _id: "http://schema.org/Enumeration",
+            _id: "Enumeration",
             _name: "Enumeration",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             supersededBy: [
-                "http://schema.org/Enumeration",
-                "http://schema.org/Class",
-                "http://schema.org/Property"
+                "Enumeration",
+                "Class",
+                "Property"
             ]
         }
     ],
     [
-        "http://schema.org/structuredvalue",
+        "structuredvalue",
         {
-            _id: "http://schema.org/StructuredValue",
+            _id: "StructuredValue",
             _name: "StructuredValue",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ]
         }
     ],
     [
-        "http://schema.org/person",
+        "person",
         {
-            _id: "http://schema.org/Person",
+            _id: "Person",
             _name: "Person",
             _parent: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             additionalName: [
-                "http://schema.org/Text"
+                "Text"
             ],
             address: [
-                "http://schema.org/PostalAddress",
-                "http://schema.org/Text"
+                "PostalAddress",
+                "Text"
             ],
             affiliation: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             alumniOf: [
-                "http://schema.org/EducationalOrganization",
-                "http://schema.org/Organization"
+                "EducationalOrganization",
+                "Organization"
             ],
             award: [
-                "http://schema.org/Text"
+                "Text"
             ],
             birthDate: [
-                "http://schema.org/Date"
+                "Date"
             ],
             birthPlace: [
-                "http://schema.org/Place"
+                "Place"
             ],
             brand: [
-                "http://schema.org/Brand",
-                "http://schema.org/Organization"
+                "Brand",
+                "Organization"
             ],
             children: [
-                "http://schema.org/Person"
+                "Person"
             ],
             colleague: [
-                "http://schema.org/URL",
-                "http://schema.org/Person"
+                "URL",
+                "Person"
             ],
             contactPoint: [
-                "http://schema.org/ContactPoint"
+                "ContactPoint"
             ],
             deathDate: [
-                "http://schema.org/Date"
+                "Date"
             ],
             deathPlace: [
-                "http://schema.org/Place"
+                "Place"
             ],
             duns: [
-                "http://schema.org/Text"
+                "Text"
             ],
             email: [
-                "http://schema.org/Text"
+                "Text"
             ],
             familyName: [
-                "http://schema.org/Text"
+                "Text"
             ],
             faxNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             follows: [
-                "http://schema.org/Person"
+                "Person"
             ],
             funder: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             givenName: [
-                "http://schema.org/Text"
+                "Text"
             ],
             globalLocationNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             hasOccupation: [
-                "http://schema.org/Occupation"
+                "Occupation"
             ],
             hasOfferCatalog: [
-                "http://schema.org/OfferCatalog"
+                "OfferCatalog"
             ],
             hasPOS: [
-                "http://schema.org/Place"
+                "Place"
             ],
             height: [
-                "http://schema.org/Distance",
-                "http://schema.org/QuantitativeValue"
+                "Distance",
+                "QuantitativeValue"
             ],
             homeLocation: [
-                "http://schema.org/Place",
-                "http://schema.org/ContactPoint"
+                "Place",
+                "ContactPoint"
             ],
             honorificPrefix: [
-                "http://schema.org/Text"
+                "Text"
             ],
             honorificSuffix: [
-                "http://schema.org/Text"
+                "Text"
             ],
             interactionStatistic: [
-                "http://schema.org/InteractionCounter"
+                "InteractionCounter"
             ],
             isicV4: [
-                "http://schema.org/Text"
+                "Text"
             ],
             knows: [
-                "http://schema.org/Person"
+                "Person"
             ],
             makesOffer: [
-                "http://schema.org/Offer"
+                "Offer"
             ],
             memberOf: [
-                "http://schema.org/Organization",
-                "http://schema.org/ProgramMembership"
+                "Organization",
+                "ProgramMembership"
             ],
             naics: [
-                "http://schema.org/Text"
+                "Text"
             ],
             nationality: [
-                "http://schema.org/Country"
+                "Country"
             ],
             netWorth: [
-                "http://schema.org/MonetaryAmount",
-                "http://schema.org/PriceSpecification"
+                "MonetaryAmount",
+                "PriceSpecification"
             ],
             owns: [
-                "http://schema.org/Product",
-                "http://schema.org/OwnershipInfo"
+                "Product",
+                "OwnershipInfo"
             ],
             parent: [
-                "http://schema.org/Person"
+                "Person"
             ],
             performerIn: [
-                "http://schema.org/Event"
+                "Event"
             ],
             publishingPrinciples: [
-                "http://schema.org/CreativeWork",
-                "http://schema.org/URL"
+                "CreativeWork",
+                "URL"
             ],
             relatedTo: [
-                "http://schema.org/Person"
+                "Person"
             ],
             seeks: [
-                "http://schema.org/Demand"
+                "Demand"
             ],
             sibling: [
-                "http://schema.org/Person"
+                "Person"
             ],
             sponsor: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             spouse: [
-                "http://schema.org/Person"
+                "Person"
             ],
             taxID: [
-                "http://schema.org/Text"
+                "Text"
             ],
             telephone: [
-                "http://schema.org/Text"
+                "Text"
             ],
             vatID: [
-                "http://schema.org/Text"
+                "Text"
             ],
             weight: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             workLocation: [
-                "http://schema.org/ContactPoint",
-                "http://schema.org/Place"
+                "ContactPoint",
+                "Place"
             ],
             worksFor: [
-                "http://schema.org/Organization"
+                "Organization"
             ]
         }
     ],
     [
-        "http://schema.org/place",
+        "place",
         {
-            _id: "http://schema.org/Place",
+            _id: "Place",
             _name: "Place",
             _parent: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             additionalProperty: [
-                "http://schema.org/PropertyValue"
+                "PropertyValue"
             ],
             address: [
-                "http://schema.org/PostalAddress",
-                "http://schema.org/Text"
+                "PostalAddress",
+                "Text"
             ],
             aggregateRating: [
-                "http://schema.org/AggregateRating"
+                "AggregateRating"
             ],
             amenityFeature: [
-                "http://schema.org/LocationFeatureSpecification"
+                "LocationFeatureSpecification"
             ],
             branchCode: [
-                "http://schema.org/Text"
+                "Text"
             ],
             containedInPlace: [
-                "http://schema.org/Place"
+                "Place"
             ],
             containsPlace: [
-                "http://schema.org/Place"
+                "Place"
             ],
             event: [
-                "http://schema.org/Event"
+                "Event"
             ],
             faxNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             geo: [
-                "http://schema.org/GeoShape",
-                "http://schema.org/GeoCoordinates"
+                "GeoShape",
+                "GeoCoordinates"
             ],
             geoContains: [
-                "http://schema.org/Place",
-                "http://schema.org/GeospatialGeometry"
+                "Place",
+                "GeospatialGeometry"
             ],
             geoCoveredBy: [
-                "http://schema.org/GeospatialGeometry",
-                "http://schema.org/Place"
+                "GeospatialGeometry",
+                "Place"
             ],
             geoCovers: [
-                "http://schema.org/GeospatialGeometry",
-                "http://schema.org/Place"
+                "GeospatialGeometry",
+                "Place"
             ],
             geoCrosses: [
-                "http://schema.org/Place",
-                "http://schema.org/GeospatialGeometry"
+                "Place",
+                "GeospatialGeometry"
             ],
             geoDisjoint: [
-                "http://schema.org/GeospatialGeometry",
-                "http://schema.org/Place"
+                "GeospatialGeometry",
+                "Place"
             ],
             geoEquals: [
-                "http://schema.org/Place",
-                "http://schema.org/GeospatialGeometry"
+                "Place",
+                "GeospatialGeometry"
             ],
             geoIntersects: [
-                "http://schema.org/Place",
-                "http://schema.org/GeospatialGeometry"
+                "Place",
+                "GeospatialGeometry"
             ],
             geoOverlaps: [
-                "http://schema.org/Place",
-                "http://schema.org/GeospatialGeometry"
+                "Place",
+                "GeospatialGeometry"
             ],
             geoTouches: [
-                "http://schema.org/Place",
-                "http://schema.org/GeospatialGeometry"
+                "Place",
+                "GeospatialGeometry"
             ],
             geoWithin: [
-                "http://schema.org/GeospatialGeometry",
-                "http://schema.org/Place"
+                "GeospatialGeometry",
+                "Place"
             ],
             globalLocationNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             hasMap: [
-                "http://schema.org/Map",
-                "http://schema.org/URL"
+                "Map",
+                "URL"
             ],
             isAccessibleForFree: [
-                "http://schema.org/Boolean"
+                "Boolean"
             ],
             isicV4: [
-                "http://schema.org/Text"
+                "Text"
             ],
             latitude: [
-                "http://schema.org/Number",
-                "http://schema.org/Text"
+                "Number",
+                "Text"
             ],
             logo: [
-                "http://schema.org/URL",
-                "http://schema.org/ImageObject"
+                "URL",
+                "ImageObject"
             ],
             longitude: [
-                "http://schema.org/Text",
-                "http://schema.org/Number"
+                "Text",
+                "Number"
             ],
             maximumAttendeeCapacity: [
-                "http://schema.org/Integer"
+                "Integer"
             ],
             openingHoursSpecification: [
-                "http://schema.org/OpeningHoursSpecification"
+                "OpeningHoursSpecification"
             ],
             photo: [
-                "http://schema.org/Photograph",
-                "http://schema.org/ImageObject"
+                "Photograph",
+                "ImageObject"
             ],
             publicAccess: [
-                "http://schema.org/Boolean"
+                "Boolean"
             ],
             review: [
-                "http://schema.org/Review"
+                "Review"
             ],
             slogan: [
-                "http://schema.org/Text"
+                "Text"
             ],
             smokingAllowed: [
-                "http://schema.org/Boolean"
+                "Boolean"
             ],
             specialOpeningHoursSpecification: [
-                "http://schema.org/OpeningHoursSpecification"
+                "OpeningHoursSpecification"
             ],
             telephone: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/medicalentity",
+        "medicalentity",
         {
-            _id: "http://schema.org/MedicalEntity",
+            _id: "MedicalEntity",
             _name: "MedicalEntity",
             _parent: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             code: [
-                "http://schema.org/MedicalCode"
+                "MedicalCode"
             ],
             guideline: [
-                "http://schema.org/MedicalGuideline"
+                "MedicalGuideline"
             ],
             legalStatus: [
-                "http://schema.org/Text",
-                "http://schema.org/MedicalEnumeration",
-                "http://schema.org/DrugLegalStatus"
+                "Text",
+                "MedicalEnumeration",
+                "DrugLegalStatus"
             ],
             medicineSystem: [
-                "http://schema.org/MedicineSystem"
+                "MedicineSystem"
             ],
             recognizingAuthority: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             relevantSpecialty: [
-                "http://schema.org/MedicalSpecialty"
+                "MedicalSpecialty"
             ],
             study: [
-                "http://schema.org/MedicalStudy"
+                "MedicalStudy"
             ]
         }
     ],
     [
-        "http://schema.org/liveblogposting",
+        "liveblogposting",
         {
-            _id: "http://schema.org/LiveBlogPosting",
+            _id: "LiveBlogPosting",
             _name: "LiveBlogPosting",
             _parent: [
-                "http://schema.org/BlogPosting"
+                "BlogPosting"
             ],
             coverageEndTime: [
-                "http://schema.org/DateTime"
+                "DateTime"
             ],
             coverageStartTime: [
-                "http://schema.org/DateTime"
+                "DateTime"
             ],
             liveBlogUpdate: [
-                "http://schema.org/BlogPosting"
+                "BlogPosting"
             ]
         }
     ],
     [
-        "http://schema.org/blogposting",
+        "blogposting",
         {
-            _id: "http://schema.org/BlogPosting",
+            _id: "BlogPosting",
             _name: "BlogPosting",
             _parent: [
-                "http://schema.org/SocialMediaPosting"
+                "SocialMediaPosting"
             ]
         }
     ],
     [
-        "http://schema.org/socialmediaposting",
+        "socialmediaposting",
         {
-            _id: "http://schema.org/SocialMediaPosting",
+            _id: "SocialMediaPosting",
             _name: "SocialMediaPosting",
             _parent: [
-                "http://schema.org/Article"
+                "Article"
             ],
             sharedContent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ]
         }
     ],
     [
-        "http://schema.org/article",
+        "article",
         {
-            _id: "http://schema.org/Article",
+            _id: "Article",
             _name: "Article",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             articleBody: [
-                "http://schema.org/Text"
+                "Text"
             ],
             articleSection: [
-                "http://schema.org/Text"
+                "Text"
             ],
             pageEnd: [
-                "http://schema.org/Text",
-                "http://schema.org/Integer"
+                "Text",
+                "Integer"
             ],
             pageStart: [
-                "http://schema.org/Integer",
-                "http://schema.org/Text"
+                "Integer",
+                "Text"
             ],
             pagination: [
-                "http://schema.org/Text"
+                "Text"
             ],
             speakable: [
-                "http://schema.org/SpeakableSpecification",
-                "http://schema.org/URL"
+                "SpeakableSpecification",
+                "URL"
             ],
             wordCount: [
-                "http://schema.org/Integer"
+                "Integer"
             ]
         }
     ],
     [
-        "http://schema.org/creativework",
+        "creativework",
         {
-            _id: "http://schema.org/CreativeWork",
+            _id: "CreativeWork",
             _name: "CreativeWork",
             _parent: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             about: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             accessibilityAPI: [
-                "http://schema.org/Text"
+                "Text"
             ],
             accessibilityControl: [
-                "http://schema.org/Text"
+                "Text"
             ],
             accessibilityFeature: [
-                "http://schema.org/Text"
+                "Text"
             ],
             accessibilityHazard: [
-                "http://schema.org/Text"
+                "Text"
             ],
             accessibilitySummary: [
-                "http://schema.org/Text"
+                "Text"
             ],
             accessMode: [
-                "http://schema.org/Text"
+                "Text"
             ],
             accessModeSufficient: [
-                "http://schema.org/ItemList"
+                "ItemList"
             ],
             accountablePerson: [
-                "http://schema.org/Person"
+                "Person"
             ],
             aggregateRating: [
-                "http://schema.org/AggregateRating"
+                "AggregateRating"
             ],
             alternativeHeadline: [
-                "http://schema.org/Text"
+                "Text"
             ],
             associatedMedia: [
-                "http://schema.org/MediaObject"
+                "MediaObject"
             ],
             audience: [
-                "http://schema.org/Audience"
+                "Audience"
             ],
             audio: [
-                "http://schema.org/MusicRecording",
-                "http://schema.org/AudioObject",
-                "http://schema.org/Clip"
+                "MusicRecording",
+                "AudioObject",
+                "Clip"
             ],
             author: [
-                "http://schema.org/Organization",
-                "http://schema.org/Person"
+                "Organization",
+                "Person"
             ],
             award: [
-                "http://schema.org/Text"
+                "Text"
             ],
             character: [
-                "http://schema.org/Person"
+                "Person"
             ],
             citation: [
-                "http://schema.org/CreativeWork",
-                "http://schema.org/Text"
+                "CreativeWork",
+                "Text"
             ],
             comment: [
-                "http://schema.org/Comment"
+                "Comment"
             ],
             commentCount: [
-                "http://schema.org/Integer"
+                "Integer"
             ],
             contentLocation: [
-                "http://schema.org/Place"
+                "Place"
             ],
             contentRating: [
-                "http://schema.org/Rating",
-                "http://schema.org/Text"
+                "Rating",
+                "Text"
             ],
             contributor: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             copyrightHolder: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             copyrightYear: [
-                "http://schema.org/Number"
+                "Number"
             ],
             creator: [
-                "http://schema.org/Organization",
-                "http://schema.org/Person"
+                "Organization",
+                "Person"
             ],
             dateCreated: [
-                "http://schema.org/Date",
-                "http://schema.org/DateTime"
+                "Date",
+                "DateTime"
             ],
             dateModified: [
-                "http://schema.org/Date",
-                "http://schema.org/DateTime"
+                "Date",
+                "DateTime"
             ],
             datePublished: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date"
+                "DateTime",
+                "Date"
             ],
             discussionUrl: [
-                "http://schema.org/URL"
+                "URL"
             ],
             editor: [
-                "http://schema.org/Person"
+                "Person"
             ],
             educationalAlignment: [
-                "http://schema.org/AlignmentObject"
+                "AlignmentObject"
             ],
             educationalUse: [
-                "http://schema.org/Text"
+                "Text"
             ],
             encoding: [
-                "http://schema.org/MediaObject"
+                "MediaObject"
             ],
             encodingFormat: [
-                "http://schema.org/Text",
-                "http://schema.org/URL"
+                "Text",
+                "URL"
             ],
             exampleOfWork: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             expires: [
-                "http://schema.org/Date"
+                "Date"
             ],
             funder: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             genre: [
-                "http://schema.org/Text",
-                "http://schema.org/URL"
+                "Text",
+                "URL"
             ],
             hasPart: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             headline: [
-                "http://schema.org/Text"
+                "Text"
             ],
             inLanguage: [
-                "http://schema.org/Language",
-                "http://schema.org/Text"
+                "Language",
+                "Text"
             ],
             interactionStatistic: [
-                "http://schema.org/InteractionCounter"
+                "InteractionCounter"
             ],
             interactivityType: [
-                "http://schema.org/Text"
+                "Text"
             ],
             isAccessibleForFree: [
-                "http://schema.org/Boolean"
+                "Boolean"
             ],
             isBasedOn: [
-                "http://schema.org/CreativeWork",
-                "http://schema.org/URL",
-                "http://schema.org/Product"
+                "CreativeWork",
+                "URL",
+                "Product"
             ],
             isFamilyFriendly: [
-                "http://schema.org/Boolean"
+                "Boolean"
             ],
             isPartOf: [
-                "http://schema.org/CreativeWork",
-                "http://schema.org/URL"
+                "CreativeWork",
+                "URL"
             ],
             keywords: [
-                "http://schema.org/Text"
+                "Text"
             ],
             learningResourceType: [
-                "http://schema.org/Text"
+                "Text"
             ],
             license: [
-                "http://schema.org/CreativeWork",
-                "http://schema.org/URL"
+                "CreativeWork",
+                "URL"
             ],
             locationCreated: [
-                "http://schema.org/Place"
+                "Place"
             ],
             mainEntity: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             material: [
-                "http://schema.org/URL",
-                "http://schema.org/Text",
-                "http://schema.org/Product"
+                "URL",
+                "Text",
+                "Product"
             ],
             mentions: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             offers: [
-                "http://schema.org/Offer",
-                "http://schema.org/Demand"
+                "Offer",
+                "Demand"
             ],
             position: [
-                "http://schema.org/Text",
-                "http://schema.org/Integer"
+                "Text",
+                "Integer"
             ],
             producer: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             provider: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             publication: [
-                "http://schema.org/PublicationEvent"
+                "PublicationEvent"
             ],
             publisher: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             publisherImprint: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             publishingPrinciples: [
-                "http://schema.org/CreativeWork",
-                "http://schema.org/URL"
+                "CreativeWork",
+                "URL"
             ],
             recordedAt: [
-                "http://schema.org/Event"
+                "Event"
             ],
             releasedEvent: [
-                "http://schema.org/PublicationEvent"
+                "PublicationEvent"
             ],
             review: [
-                "http://schema.org/Review"
+                "Review"
             ],
             schemaVersion: [
-                "http://schema.org/Text",
-                "http://schema.org/URL"
+                "Text",
+                "URL"
             ],
             sourceOrganization: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             spatial: [
-                "http://schema.org/Place"
+                "Place"
             ],
             spatialCoverage: [
-                "http://schema.org/Place"
+                "Place"
             ],
             sponsor: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             temporal: [
-                "http://schema.org/Text",
-                "http://schema.org/DateTime"
+                "Text",
+                "DateTime"
             ],
             temporalCoverage: [
-                "http://schema.org/URL",
-                "http://schema.org/Text",
-                "http://schema.org/DateTime"
+                "URL",
+                "Text",
+                "DateTime"
             ],
             text: [
-                "http://schema.org/Text"
+                "Text"
             ],
             thumbnailUrl: [
-                "http://schema.org/URL"
+                "URL"
             ],
             timeRequired: [
-                "http://schema.org/Duration"
+                "Duration"
             ],
             translationOfWork: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             translator: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             typicalAgeRange: [
-                "http://schema.org/Text"
+                "Text"
             ],
             version: [
-                "http://schema.org/Number",
-                "http://schema.org/Text"
+                "Number",
+                "Text"
             ],
             video: [
-                "http://schema.org/VideoObject",
-                "http://schema.org/Clip"
+                "VideoObject",
+                "Clip"
             ],
             workExample: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             workTranslation: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ]
         }
     ],
     [
-        "http://schema.org/broadcastservice",
+        "broadcastservice",
         {
-            _id: "http://schema.org/BroadcastService",
+            _id: "BroadcastService",
             _name: "BroadcastService",
             _parent: [
-                "http://schema.org/Service"
+                "Service"
             ],
             broadcastAffiliateOf: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             broadcastDisplayName: [
-                "http://schema.org/Text"
+                "Text"
             ],
             broadcaster: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             broadcastFrequency: [
-                "http://schema.org/BroadcastFrequencySpecification",
-                "http://schema.org/Text"
+                "BroadcastFrequencySpecification",
+                "Text"
             ],
             broadcastTimezone: [
-                "http://schema.org/Text"
+                "Text"
             ],
             hasBroadcastChannel: [
-                "http://schema.org/BroadcastChannel"
+                "BroadcastChannel"
             ],
             inLanguage: [
-                "http://schema.org/Language",
-                "http://schema.org/Text"
+                "Language",
+                "Text"
             ],
             parentService: [
-                "http://schema.org/BroadcastService"
+                "BroadcastService"
             ],
             videoFormat: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/service",
+        "service",
         {
-            _id: "http://schema.org/Service",
+            _id: "Service",
             _name: "Service",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             aggregateRating: [
-                "http://schema.org/AggregateRating"
+                "AggregateRating"
             ],
             areaServed: [
-                "http://schema.org/Text",
-                "http://schema.org/AdministrativeArea",
-                "http://schema.org/Place",
-                "http://schema.org/GeoShape"
+                "Text",
+                "AdministrativeArea",
+                "Place",
+                "GeoShape"
             ],
             audience: [
-                "http://schema.org/Audience"
+                "Audience"
             ],
             availableChannel: [
-                "http://schema.org/ServiceChannel"
+                "ServiceChannel"
             ],
             award: [
-                "http://schema.org/Text"
+                "Text"
             ],
             brand: [
-                "http://schema.org/Brand",
-                "http://schema.org/Organization"
+                "Brand",
+                "Organization"
             ],
             broker: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             category: [
-                "http://schema.org/Text",
-                "http://schema.org/PhysicalActivityCategory",
-                "http://schema.org/Thing",
-                "http://schema.org/URL"
+                "Text",
+                "PhysicalActivityCategory",
+                "Thing",
+                "URL"
             ],
             hasOfferCatalog: [
-                "http://schema.org/OfferCatalog"
+                "OfferCatalog"
             ],
             hoursAvailable: [
-                "http://schema.org/OpeningHoursSpecification"
+                "OpeningHoursSpecification"
             ],
             isRelatedTo: [
-                "http://schema.org/Service",
-                "http://schema.org/Product"
+                "Service",
+                "Product"
             ],
             isSimilarTo: [
-                "http://schema.org/Product",
-                "http://schema.org/Service"
+                "Product",
+                "Service"
             ],
             logo: [
-                "http://schema.org/URL",
-                "http://schema.org/ImageObject"
+                "URL",
+                "ImageObject"
             ],
             offers: [
-                "http://schema.org/Offer",
-                "http://schema.org/Demand"
+                "Offer",
+                "Demand"
             ],
             provider: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             providerMobility: [
-                "http://schema.org/Text"
+                "Text"
             ],
             review: [
-                "http://schema.org/Review"
+                "Review"
             ],
             serviceOutput: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             serviceType: [
-                "http://schema.org/Text",
-                "http://schema.org/GovernmentBenefitsType"
+                "Text",
+                "GovernmentBenefitsType"
             ],
             slogan: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/event",
+        "event",
         {
-            _id: "http://schema.org/Event",
+            _id: "Event",
             _name: "Event",
             _parent: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             about: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             actor: [
-                "http://schema.org/Person"
+                "Person"
             ],
             aggregateRating: [
-                "http://schema.org/AggregateRating"
+                "AggregateRating"
             ],
             attendee: [
-                "http://schema.org/Organization",
-                "http://schema.org/Person"
+                "Organization",
+                "Person"
             ],
             audience: [
-                "http://schema.org/Audience"
+                "Audience"
             ],
             composer: [
-                "http://schema.org/Organization",
-                "http://schema.org/Person"
+                "Organization",
+                "Person"
             ],
             contributor: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             director: [
-                "http://schema.org/Person"
+                "Person"
             ],
             doorTime: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Time"
+                "DateTime",
+                "Time"
             ],
             duration: [
-                "http://schema.org/Duration"
+                "Duration"
             ],
             endDate: [
-                "http://schema.org/Date",
-                "http://schema.org/DateTime"
+                "Date",
+                "DateTime"
             ],
             eventStatus: [
-                "http://schema.org/EventStatusType"
+                "EventStatusType"
             ],
             funder: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             inLanguage: [
-                "http://schema.org/Language",
-                "http://schema.org/Text"
+                "Language",
+                "Text"
             ],
             isAccessibleForFree: [
-                "http://schema.org/Boolean"
+                "Boolean"
             ],
             location: [
-                "http://schema.org/Text",
-                "http://schema.org/Place",
-                "http://schema.org/PostalAddress",
-                "http://schema.org/VirtualLocation"
+                "Text",
+                "Place",
+                "PostalAddress",
+                "VirtualLocation"
             ],
             maximumAttendeeCapacity: [
-                "http://schema.org/Integer"
+                "Integer"
             ],
             offers: [
-                "http://schema.org/Offer",
-                "http://schema.org/Demand"
+                "Offer",
+                "Demand"
             ],
             organizer: [
-                "http://schema.org/Organization",
-                "http://schema.org/Person"
+                "Organization",
+                "Person"
             ],
             performer: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             previousStartDate: [
-                "http://schema.org/Date"
+                "Date"
             ],
             recordedIn: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             remainingAttendeeCapacity: [
-                "http://schema.org/Integer"
+                "Integer"
             ],
             review: [
-                "http://schema.org/Review"
+                "Review"
             ],
             sponsor: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             startDate: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date"
+                "DateTime",
+                "Date"
             ],
             subEvent: [
-                "http://schema.org/Event"
+                "Event"
             ],
             superEvent: [
-                "http://schema.org/Event"
+                "Event"
             ],
             translator: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             typicalAgeRange: [
-                "http://schema.org/Text"
+                "Text"
             ],
             workFeatured: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             workPerformed: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ]
         }
     ],
     [
-        "http://schema.org/integer",
+        "integer",
         {
-            _id: "http://schema.org/Integer",
+            _id: "Integer",
             _name: "Integer",
             _parent: [
-                "http://schema.org/Number"
+                "Number"
             ]
         }
     ],
     [
-        "http://schema.org/interactioncounter",
+        "interactioncounter",
         {
-            _id: "http://schema.org/InteractionCounter",
+            _id: "InteractionCounter",
             _name: "InteractionCounter",
             _parent: [
-                "http://schema.org/StructuredValue"
+                "StructuredValue"
             ],
             interactionService: [
-                "http://schema.org/WebSite",
-                "http://schema.org/SoftwareApplication"
+                "WebSite",
+                "SoftwareApplication"
             ],
             interactionType: [
-                "http://schema.org/Action"
+                "Action"
             ],
             userInteractionCount: [
-                "http://schema.org/Integer"
+                "Integer"
             ]
         }
     ],
     [
-        "http://schema.org/tvseason",
+        "tvseason",
         {
-            _id: "http://schema.org/TVSeason",
+            _id: "TVSeason",
             _name: "TVSeason",
             _parent: [
-                "http://schema.org/CreativeWork",
-                "http://schema.org/CreativeWorkSeason"
+                "CreativeWork",
+                "CreativeWorkSeason"
             ],
             countryOfOrigin: [
-                "http://schema.org/Country"
+                "Country"
             ]
         }
     ],
     [
-        "http://schema.org/creativeworkseason",
+        "creativeworkseason",
         {
-            _id: "http://schema.org/CreativeWorkSeason",
+            _id: "CreativeWorkSeason",
             _name: "CreativeWorkSeason",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             actor: [
-                "http://schema.org/Person"
+                "Person"
             ],
             director: [
-                "http://schema.org/Person"
+                "Person"
             ],
             endDate: [
-                "http://schema.org/Date",
-                "http://schema.org/DateTime"
+                "Date",
+                "DateTime"
             ],
             episode: [
-                "http://schema.org/Episode"
+                "Episode"
             ],
             numberOfEpisodes: [
-                "http://schema.org/Integer"
+                "Integer"
             ],
             partOfSeries: [
-                "http://schema.org/CreativeWorkSeries"
+                "CreativeWorkSeries"
             ],
             productionCompany: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             seasonNumber: [
-                "http://schema.org/Text",
-                "http://schema.org/Integer"
+                "Text",
+                "Integer"
             ],
             startDate: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date"
+                "DateTime",
+                "Date"
             ],
             trailer: [
-                "http://schema.org/VideoObject"
+                "VideoObject"
             ]
         }
     ],
     [
-        "http://schema.org/tvclip",
+        "tvclip",
         {
-            _id: "http://schema.org/TVClip",
+            _id: "TVClip",
             _name: "TVClip",
             _parent: [
-                "http://schema.org/Clip"
+                "Clip"
             ]
         }
     ],
     [
-        "http://schema.org/clip",
+        "clip",
         {
-            _id: "http://schema.org/Clip",
+            _id: "Clip",
             _name: "Clip",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             actor: [
-                "http://schema.org/Person"
+                "Person"
             ],
             clipNumber: [
-                "http://schema.org/Text",
-                "http://schema.org/Integer"
+                "Text",
+                "Integer"
             ],
             director: [
-                "http://schema.org/Person"
+                "Person"
             ],
             musicBy: [
-                "http://schema.org/MusicGroup",
-                "http://schema.org/Person"
+                "MusicGroup",
+                "Person"
             ],
             partOfEpisode: [
-                "http://schema.org/Episode"
+                "Episode"
             ],
             partOfSeason: [
-                "http://schema.org/CreativeWorkSeason"
+                "CreativeWorkSeason"
             ],
             partOfSeries: [
-                "http://schema.org/CreativeWorkSeries"
+                "CreativeWorkSeries"
             ]
         }
     ],
     [
-        "http://schema.org/tvepisode",
+        "tvepisode",
         {
-            _id: "http://schema.org/TVEpisode",
+            _id: "TVEpisode",
             _name: "TVEpisode",
             _parent: [
-                "http://schema.org/Episode"
+                "Episode"
             ],
             countryOfOrigin: [
-                "http://schema.org/Country"
+                "Country"
             ]
         }
     ],
     [
-        "http://schema.org/episode",
+        "episode",
         {
-            _id: "http://schema.org/Episode",
+            _id: "Episode",
             _name: "Episode",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             actor: [
-                "http://schema.org/Person"
+                "Person"
             ],
             director: [
-                "http://schema.org/Person"
+                "Person"
             ],
             episodeNumber: [
-                "http://schema.org/Text",
-                "http://schema.org/Integer"
+                "Text",
+                "Integer"
             ],
             musicBy: [
-                "http://schema.org/MusicGroup",
-                "http://schema.org/Person"
+                "MusicGroup",
+                "Person"
             ],
             partOfSeason: [
-                "http://schema.org/CreativeWorkSeason"
+                "CreativeWorkSeason"
             ],
             partOfSeries: [
-                "http://schema.org/CreativeWorkSeries"
+                "CreativeWorkSeries"
             ],
             productionCompany: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             trailer: [
-                "http://schema.org/VideoObject"
+                "VideoObject"
             ]
         }
     ],
     [
-        "http://schema.org/tvseries",
+        "tvseries",
         {
-            _id: "http://schema.org/TVSeries",
+            _id: "TVSeries",
             _name: "TVSeries",
             _parent: [
-                "http://schema.org/CreativeWorkSeries",
-                "http://schema.org/CreativeWork"
+                "CreativeWorkSeries",
+                "CreativeWork"
             ],
             actor: [
-                "http://schema.org/Person"
+                "Person"
             ],
             containsSeason: [
-                "http://schema.org/CreativeWorkSeason"
+                "CreativeWorkSeason"
             ],
             countryOfOrigin: [
-                "http://schema.org/Country"
+                "Country"
             ],
             director: [
-                "http://schema.org/Person"
+                "Person"
             ],
             episode: [
-                "http://schema.org/Episode"
+                "Episode"
             ],
             musicBy: [
-                "http://schema.org/MusicGroup",
-                "http://schema.org/Person"
+                "MusicGroup",
+                "Person"
             ],
             numberOfEpisodes: [
-                "http://schema.org/Integer"
+                "Integer"
             ],
             numberOfSeasons: [
-                "http://schema.org/Integer"
+                "Integer"
             ],
             productionCompany: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             trailer: [
-                "http://schema.org/VideoObject"
+                "VideoObject"
             ]
         }
     ],
     [
-        "http://schema.org/creativeworkseries",
+        "creativeworkseries",
         {
-            _id: "http://schema.org/CreativeWorkSeries",
+            _id: "CreativeWorkSeries",
             _name: "CreativeWorkSeries",
             _parent: [
-                "http://schema.org/CreativeWork",
-                "http://schema.org/Series"
+                "CreativeWork",
+                "Series"
             ],
             endDate: [
-                "http://schema.org/Date",
-                "http://schema.org/DateTime"
+                "Date",
+                "DateTime"
             ],
             issn: [
-                "http://schema.org/Text"
+                "Text"
             ],
             startDate: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date"
+                "DateTime",
+                "Date"
             ]
         }
     ],
     [
-        "http://schema.org/series",
+        "series",
         {
-            _id: "http://schema.org/Series",
+            _id: "Series",
             _name: "Series",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ]
         }
     ],
     [
-        "http://schema.org/url",
+        "url",
         {
-            _id: "http://schema.org/URL",
+            _id: "URL",
             _name: "URL",
             _parent: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/parceldelivery",
+        "parceldelivery",
         {
-            _id: "http://schema.org/ParcelDelivery",
+            _id: "ParcelDelivery",
             _name: "ParcelDelivery",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             deliveryAddress: [
-                "http://schema.org/PostalAddress"
+                "PostalAddress"
             ],
             deliveryStatus: [
-                "http://schema.org/DeliveryEvent"
+                "DeliveryEvent"
             ],
             expectedArrivalFrom: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date"
+                "DateTime",
+                "Date"
             ],
             expectedArrivalUntil: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date"
+                "DateTime",
+                "Date"
             ],
             hasDeliveryMethod: [
-                "http://schema.org/DeliveryMethod"
+                "DeliveryMethod"
             ],
             itemShipped: [
-                "http://schema.org/Product"
+                "Product"
             ],
             originAddress: [
-                "http://schema.org/PostalAddress"
+                "PostalAddress"
             ],
             partOfOrder: [
-                "http://schema.org/Order"
+                "Order"
             ],
             provider: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             trackingNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             trackingUrl: [
-                "http://schema.org/URL"
+                "URL"
             ]
         }
     ],
     [
-        "http://schema.org/flight",
+        "flight",
         {
-            _id: "http://schema.org/Flight",
+            _id: "Flight",
             _name: "Flight",
             _parent: [
-                "http://schema.org/Trip"
+                "Trip"
             ],
             aircraft: [
-                "http://schema.org/Text",
-                "http://schema.org/Vehicle"
+                "Text",
+                "Vehicle"
             ],
             arrivalAirport: [
-                "http://schema.org/Airport"
+                "Airport"
             ],
             arrivalGate: [
-                "http://schema.org/Text"
+                "Text"
             ],
             arrivalTerminal: [
-                "http://schema.org/Text"
+                "Text"
             ],
             boardingPolicy: [
-                "http://schema.org/BoardingPolicyType"
+                "BoardingPolicyType"
             ],
             departureAirport: [
-                "http://schema.org/Airport"
+                "Airport"
             ],
             departureGate: [
-                "http://schema.org/Text"
+                "Text"
             ],
             departureTerminal: [
-                "http://schema.org/Text"
+                "Text"
             ],
             estimatedFlightDuration: [
-                "http://schema.org/Duration",
-                "http://schema.org/Text"
+                "Duration",
+                "Text"
             ],
             flightDistance: [
-                "http://schema.org/Distance",
-                "http://schema.org/Text"
+                "Distance",
+                "Text"
             ],
             flightNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             mealService: [
-                "http://schema.org/Text"
+                "Text"
             ],
             seller: [
-                "http://schema.org/Organization",
-                "http://schema.org/Person"
+                "Organization",
+                "Person"
             ],
             webCheckinTime: [
-                "http://schema.org/DateTime"
+                "DateTime"
             ]
         }
     ],
     [
-        "http://schema.org/trip",
+        "trip",
         {
-            _id: "http://schema.org/Trip",
+            _id: "Trip",
             _name: "Trip",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             arrivalTime: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Time"
+                "DateTime",
+                "Time"
             ],
             departureTime: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Time"
+                "DateTime",
+                "Time"
             ],
             offers: [
-                "http://schema.org/Offer",
-                "http://schema.org/Demand"
+                "Offer",
+                "Demand"
             ],
             provider: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ]
         }
     ],
     [
-        "http://schema.org/reservation",
+        "reservation",
         {
-            _id: "http://schema.org/Reservation",
+            _id: "Reservation",
             _name: "Reservation",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             bookingTime: [
-                "http://schema.org/DateTime"
+                "DateTime"
             ],
             broker: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             modifiedTime: [
-                "http://schema.org/DateTime"
+                "DateTime"
             ],
             priceCurrency: [
-                "http://schema.org/Text"
+                "Text"
             ],
             programMembershipUsed: [
-                "http://schema.org/ProgramMembership"
+                "ProgramMembership"
             ],
             provider: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             reservationFor: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             reservationId: [
-                "http://schema.org/Text"
+                "Text"
             ],
             reservationStatus: [
-                "http://schema.org/ReservationStatusType"
+                "ReservationStatusType"
             ],
             reservedTicket: [
-                "http://schema.org/Ticket"
+                "Ticket"
             ],
             totalPrice: [
-                "http://schema.org/PriceSpecification",
-                "http://schema.org/Number",
-                "http://schema.org/Text"
+                "PriceSpecification",
+                "Number",
+                "Text"
             ],
             underName: [
-                "http://schema.org/Organization",
-                "http://schema.org/Person"
+                "Organization",
+                "Person"
             ]
         }
     ],
     [
-        "http://schema.org/invoice",
+        "invoice",
         {
-            _id: "http://schema.org/Invoice",
+            _id: "Invoice",
             _name: "Invoice",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             accountId: [
-                "http://schema.org/Text"
+                "Text"
             ],
             billingPeriod: [
-                "http://schema.org/Duration"
+                "Duration"
             ],
             broker: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             category: [
-                "http://schema.org/Text",
-                "http://schema.org/PhysicalActivityCategory",
-                "http://schema.org/Thing",
-                "http://schema.org/URL"
+                "Text",
+                "PhysicalActivityCategory",
+                "Thing",
+                "URL"
             ],
             confirmationNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             customer: [
-                "http://schema.org/Organization",
-                "http://schema.org/Person"
+                "Organization",
+                "Person"
             ],
             minimumPaymentDue: [
-                "http://schema.org/PriceSpecification",
-                "http://schema.org/MonetaryAmount"
+                "PriceSpecification",
+                "MonetaryAmount"
             ],
             paymentDueDate: [
-                "http://schema.org/Date",
-                "http://schema.org/DateTime"
+                "Date",
+                "DateTime"
             ],
             paymentMethod: [
-                "http://schema.org/PaymentMethod"
+                "PaymentMethod"
             ],
             paymentMethodId: [
-                "http://schema.org/Text"
+                "Text"
             ],
             paymentStatus: [
-                "http://schema.org/Text",
-                "http://schema.org/PaymentStatusType"
+                "Text",
+                "PaymentStatusType"
             ],
             provider: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             referencesOrder: [
-                "http://schema.org/Order"
+                "Order"
             ],
             scheduledPaymentDate: [
-                "http://schema.org/Date"
+                "Date"
             ],
             totalPaymentDue: [
-                "http://schema.org/MonetaryAmount",
-                "http://schema.org/PriceSpecification"
+                "MonetaryAmount",
+                "PriceSpecification"
             ]
         }
     ],
     [
-        "http://schema.org/webpage",
+        "webpage",
         {
-            _id: "http://schema.org/WebPage",
+            _id: "WebPage",
             _name: "WebPage",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             breadcrumb: [
-                "http://schema.org/BreadcrumbList",
-                "http://schema.org/Text"
+                "BreadcrumbList",
+                "Text"
             ],
             lastReviewed: [
-                "http://schema.org/Date"
+                "Date"
             ],
             mainContentOfPage: [
-                "http://schema.org/WebPageElement"
+                "WebPageElement"
             ],
             primaryImageOfPage: [
-                "http://schema.org/ImageObject"
+                "ImageObject"
             ],
             relatedLink: [
-                "http://schema.org/URL"
+                "URL"
             ],
             reviewedBy: [
-                "http://schema.org/Organization",
-                "http://schema.org/Person"
+                "Organization",
+                "Person"
             ],
             significantLink: [
-                "http://schema.org/URL"
+                "URL"
             ],
             speakable: [
-                "http://schema.org/SpeakableSpecification",
-                "http://schema.org/URL"
+                "SpeakableSpecification",
+                "URL"
             ],
             specialty: [
-                "http://schema.org/Specialty"
+                "Specialty"
             ]
         }
     ],
     [
-        "http://schema.org/webpageelement",
+        "webpageelement",
         {
-            _id: "http://schema.org/WebPageElement",
+            _id: "WebPageElement",
             _name: "WebPageElement",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             cssSelector: [
-                "http://schema.org/CssSelectorType"
+                "CssSelectorType"
             ],
             xpath: [
-                "http://schema.org/XPathType"
+                "XPathType"
             ]
         }
     ],
     [
-        "http://schema.org/medicaltherapy",
+        "medicaltherapy",
         {
-            _id: "http://schema.org/MedicalTherapy",
+            _id: "MedicalTherapy",
             _name: "MedicalTherapy",
             _parent: [
-                "http://schema.org/TherapeuticProcedure"
+                "TherapeuticProcedure"
             ],
             contraindication: [
-                "http://schema.org/Text",
-                "http://schema.org/MedicalContraindication"
+                "Text",
+                "MedicalContraindication"
             ],
             duplicateTherapy: [
-                "http://schema.org/MedicalTherapy"
+                "MedicalTherapy"
             ],
             seriousAdverseOutcome: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ]
         }
     ],
     [
-        "http://schema.org/therapeuticprocedure",
+        "therapeuticprocedure",
         {
-            _id: "http://schema.org/TherapeuticProcedure",
+            _id: "TherapeuticProcedure",
             _name: "TherapeuticProcedure",
             _parent: [
-                "http://schema.org/MedicalProcedure"
+                "MedicalProcedure"
             ],
             adverseOutcome: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ],
             doseSchedule: [
-                "http://schema.org/DoseSchedule"
+                "DoseSchedule"
             ],
             drug: [
-                "http://schema.org/Drug"
+                "Drug"
             ]
         }
     ],
     [
-        "http://schema.org/medicalprocedure",
+        "medicalprocedure",
         {
-            _id: "http://schema.org/MedicalProcedure",
+            _id: "MedicalProcedure",
             _name: "MedicalProcedure",
             _parent: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ],
             bodyLocation: [
-                "http://schema.org/Text"
+                "Text"
             ],
             followup: [
-                "http://schema.org/Text"
+                "Text"
             ],
             howPerformed: [
-                "http://schema.org/Text"
+                "Text"
             ],
             preparation: [
-                "http://schema.org/Text",
-                "http://schema.org/MedicalEntity"
+                "Text",
+                "MedicalEntity"
             ],
             procedureType: [
-                "http://schema.org/MedicalProcedureType"
+                "MedicalProcedureType"
             ],
             status: [
-                "http://schema.org/Text",
-                "http://schema.org/EventStatusType",
-                "http://schema.org/MedicalStudyStatus"
+                "Text",
+                "EventStatusType",
+                "MedicalStudyStatus"
             ]
         }
     ],
     [
-        "http://schema.org/nutritioninformation",
+        "nutritioninformation",
         {
-            _id: "http://schema.org/NutritionInformation",
+            _id: "NutritionInformation",
             _name: "NutritionInformation",
             _parent: [
-                "http://schema.org/StructuredValue"
+                "StructuredValue"
             ],
             calories: [
-                "http://schema.org/Energy"
+                "Energy"
             ],
             carbohydrateContent: [
-                "http://schema.org/Mass"
+                "Mass"
             ],
             cholesterolContent: [
-                "http://schema.org/Mass"
+                "Mass"
             ],
             fatContent: [
-                "http://schema.org/Mass"
+                "Mass"
             ],
             fiberContent: [
-                "http://schema.org/Mass"
+                "Mass"
             ],
             proteinContent: [
-                "http://schema.org/Mass"
+                "Mass"
             ],
             saturatedFatContent: [
-                "http://schema.org/Mass"
+                "Mass"
             ],
             servingSize: [
-                "http://schema.org/Text"
+                "Text"
             ],
             sodiumContent: [
-                "http://schema.org/Mass"
+                "Mass"
             ],
             sugarContent: [
-                "http://schema.org/Mass"
+                "Mass"
             ],
             transFatContent: [
-                "http://schema.org/Mass"
+                "Mass"
             ],
             unsaturatedFatContent: [
-                "http://schema.org/Mass"
+                "Mass"
             ]
         }
     ],
     [
-        "http://schema.org/mass",
+        "mass",
         {
-            _id: "http://schema.org/Mass",
+            _id: "Mass",
             _name: "Mass",
             _parent: [
-                "http://schema.org/Quantity"
+                "Quantity"
             ]
         }
     ],
     [
-        "http://schema.org/vehicle",
+        "vehicle",
         {
-            _id: "http://schema.org/Vehicle",
+            _id: "Vehicle",
             _name: "Vehicle",
             _parent: [
-                "http://schema.org/Product"
+                "Product"
             ],
             accelerationTime: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             bodyType: [
-                "http://schema.org/URL",
-                "http://schema.org/QualitativeValue",
-                "http://schema.org/Text"
+                "URL",
+                "QualitativeValue",
+                "Text"
             ],
             cargoVolume: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             dateVehicleFirstRegistered: [
-                "http://schema.org/Date"
+                "Date"
             ],
             driveWheelConfiguration: [
-                "http://schema.org/Text",
-                "http://schema.org/DriveWheelConfigurationValue"
+                "Text",
+                "DriveWheelConfigurationValue"
             ],
             emissionsCO2: [
-                "http://schema.org/Number"
+                "Number"
             ],
             fuelCapacity: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             fuelConsumption: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             fuelEfficiency: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             fuelType: [
-                "http://schema.org/Text",
-                "http://schema.org/QualitativeValue",
-                "http://schema.org/URL"
+                "Text",
+                "QualitativeValue",
+                "URL"
             ],
             knownVehicleDamages: [
-                "http://schema.org/Text"
+                "Text"
             ],
             meetsEmissionStandard: [
-                "http://schema.org/Text",
-                "http://schema.org/QualitativeValue",
-                "http://schema.org/URL"
+                "Text",
+                "QualitativeValue",
+                "URL"
             ],
             mileageFromOdometer: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             modelDate: [
-                "http://schema.org/Date"
+                "Date"
             ],
             numberOfAirbags: [
-                "http://schema.org/Number",
-                "http://schema.org/Text"
+                "Number",
+                "Text"
             ],
             numberOfAxles: [
-                "http://schema.org/QuantitativeValue",
-                "http://schema.org/Number"
+                "QuantitativeValue",
+                "Number"
             ],
             numberOfDoors: [
-                "http://schema.org/QuantitativeValue",
-                "http://schema.org/Number"
+                "QuantitativeValue",
+                "Number"
             ],
             numberOfForwardGears: [
-                "http://schema.org/QuantitativeValue",
-                "http://schema.org/Number"
+                "QuantitativeValue",
+                "Number"
             ],
             numberOfPreviousOwners: [
-                "http://schema.org/QuantitativeValue",
-                "http://schema.org/Number"
+                "QuantitativeValue",
+                "Number"
             ],
             payload: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             productionDate: [
-                "http://schema.org/Date"
+                "Date"
             ],
             purchaseDate: [
-                "http://schema.org/Date"
+                "Date"
             ],
             seatingCapacity: [
-                "http://schema.org/QuantitativeValue",
-                "http://schema.org/Number"
+                "QuantitativeValue",
+                "Number"
             ],
             speed: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             steeringPosition: [
-                "http://schema.org/SteeringPositionValue"
+                "SteeringPositionValue"
             ],
             stupidProperty: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             tongueWeight: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             trailerWeight: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             vehicleConfiguration: [
-                "http://schema.org/Text"
+                "Text"
             ],
             vehicleEngine: [
-                "http://schema.org/EngineSpecification"
+                "EngineSpecification"
             ],
             vehicleIdentificationNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             vehicleInteriorColor: [
-                "http://schema.org/Text"
+                "Text"
             ],
             vehicleInteriorType: [
-                "http://schema.org/Text"
+                "Text"
             ],
             vehicleModelDate: [
-                "http://schema.org/Date"
+                "Date"
             ],
             vehicleSeatingCapacity: [
-                "http://schema.org/QuantitativeValue",
-                "http://schema.org/Number"
+                "QuantitativeValue",
+                "Number"
             ],
             vehicleSpecialUsage: [
-                "http://schema.org/CarUsageType",
-                "http://schema.org/Text"
+                "CarUsageType",
+                "Text"
             ],
             vehicleTransmission: [
-                "http://schema.org/QualitativeValue",
-                "http://schema.org/Text",
-                "http://schema.org/URL"
+                "QualitativeValue",
+                "Text",
+                "URL"
             ],
             weightTotal: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             wheelbase: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ]
         }
     ],
     [
-        "http://schema.org/product",
+        "product",
         {
-            _id: "http://schema.org/Product",
+            _id: "Product",
             _name: "Product",
             _parent: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             additionalProperty: [
-                "http://schema.org/PropertyValue"
+                "PropertyValue"
             ],
             aggregateRating: [
-                "http://schema.org/AggregateRating"
+                "AggregateRating"
             ],
             audience: [
-                "http://schema.org/Audience"
+                "Audience"
             ],
             award: [
-                "http://schema.org/Text"
+                "Text"
             ],
             brand: [
-                "http://schema.org/Brand",
-                "http://schema.org/Organization"
+                "Brand",
+                "Organization"
             ],
             category: [
-                "http://schema.org/Text",
-                "http://schema.org/PhysicalActivityCategory",
-                "http://schema.org/Thing",
-                "http://schema.org/URL"
+                "Text",
+                "PhysicalActivityCategory",
+                "Thing",
+                "URL"
             ],
             color: [
-                "http://schema.org/Text"
+                "Text"
             ],
             depth: [
-                "http://schema.org/QuantitativeValue",
-                "http://schema.org/Distance"
+                "QuantitativeValue",
+                "Distance"
             ],
             gtin12: [
-                "http://schema.org/Text"
+                "Text"
             ],
             gtin13: [
-                "http://schema.org/Text"
+                "Text"
             ],
             gtin14: [
-                "http://schema.org/Text"
+                "Text"
             ],
             gtin8: [
-                "http://schema.org/Text"
+                "Text"
             ],
             height: [
-                "http://schema.org/Distance",
-                "http://schema.org/QuantitativeValue"
+                "Distance",
+                "QuantitativeValue"
             ],
             isAccessoryOrSparePartFor: [
-                "http://schema.org/Product"
+                "Product"
             ],
             isConsumableFor: [
-                "http://schema.org/Product"
+                "Product"
             ],
             isRelatedTo: [
-                "http://schema.org/Service",
-                "http://schema.org/Product"
+                "Service",
+                "Product"
             ],
             isSimilarTo: [
-                "http://schema.org/Product",
-                "http://schema.org/Service"
+                "Product",
+                "Service"
             ],
             itemCondition: [
-                "http://schema.org/OfferItemCondition"
+                "OfferItemCondition"
             ],
             logo: [
-                "http://schema.org/URL",
-                "http://schema.org/ImageObject"
+                "URL",
+                "ImageObject"
             ],
             manufacturer: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             material: [
-                "http://schema.org/URL",
-                "http://schema.org/Text",
-                "http://schema.org/Product"
+                "URL",
+                "Text",
+                "Product"
             ],
             model: [
-                "http://schema.org/ProductModel",
-                "http://schema.org/Text"
+                "ProductModel",
+                "Text"
             ],
             mpn: [
-                "http://schema.org/Text"
+                "Text"
             ],
             offers: [
-                "http://schema.org/Offer",
-                "http://schema.org/Demand"
+                "Offer",
+                "Demand"
             ],
             productID: [
-                "http://schema.org/Text"
+                "Text"
             ],
             productionDate: [
-                "http://schema.org/Date"
+                "Date"
             ],
             purchaseDate: [
-                "http://schema.org/Date"
+                "Date"
             ],
             releaseDate: [
-                "http://schema.org/Date"
+                "Date"
             ],
             review: [
-                "http://schema.org/Review"
+                "Review"
             ],
             sku: [
-                "http://schema.org/Text"
+                "Text"
             ],
             slogan: [
-                "http://schema.org/Text"
+                "Text"
             ],
             weight: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             width: [
-                "http://schema.org/Distance",
-                "http://schema.org/QuantitativeValue"
+                "Distance",
+                "QuantitativeValue"
             ]
         }
     ],
     [
-        "http://schema.org/bikestore",
+        "bikestore",
         {
-            _id: "http://schema.org/BikeStore",
+            _id: "BikeStore",
             _name: "BikeStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/store",
+        "store",
         {
-            _id: "http://schema.org/Store",
+            _id: "Store",
             _name: "Store",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/localbusiness",
+        "localbusiness",
         {
-            _id: "http://schema.org/LocalBusiness",
+            _id: "LocalBusiness",
             _name: "LocalBusiness",
             _parent: [
-                "http://schema.org/Organization",
-                "http://schema.org/Place"
+                "Organization",
+                "Place"
             ],
             currenciesAccepted: [
-                "http://schema.org/Text"
+                "Text"
             ],
             openingHours: [
-                "http://schema.org/Text"
+                "Text"
             ],
             paymentAccepted: [
-                "http://schema.org/Text"
+                "Text"
             ],
             priceRange: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/order",
+        "order",
         {
-            _id: "http://schema.org/Order",
+            _id: "Order",
             _name: "Order",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             acceptedOffer: [
-                "http://schema.org/Offer"
+                "Offer"
             ],
             billingAddress: [
-                "http://schema.org/PostalAddress"
+                "PostalAddress"
             ],
             broker: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             confirmationNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             customer: [
-                "http://schema.org/Organization",
-                "http://schema.org/Person"
+                "Organization",
+                "Person"
             ],
             discount: [
-                "http://schema.org/Text",
-                "http://schema.org/Number"
+                "Text",
+                "Number"
             ],
             discountCode: [
-                "http://schema.org/Text"
+                "Text"
             ],
             discountCurrency: [
-                "http://schema.org/Text"
+                "Text"
             ],
             isGift: [
-                "http://schema.org/Boolean"
+                "Boolean"
             ],
             orderDate: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date"
+                "DateTime",
+                "Date"
             ],
             orderDelivery: [
-                "http://schema.org/ParcelDelivery"
+                "ParcelDelivery"
             ],
             orderedItem: [
-                "http://schema.org/Product",
-                "http://schema.org/OrderItem",
-                "http://schema.org/Service"
+                "Product",
+                "OrderItem",
+                "Service"
             ],
             orderNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             orderStatus: [
-                "http://schema.org/OrderStatus"
+                "OrderStatus"
             ],
             partOfInvoice: [
-                "http://schema.org/Invoice"
+                "Invoice"
             ],
             paymentDueDate: [
-                "http://schema.org/Date",
-                "http://schema.org/DateTime"
+                "Date",
+                "DateTime"
             ],
             paymentMethod: [
-                "http://schema.org/PaymentMethod"
+                "PaymentMethod"
             ],
             paymentMethodId: [
-                "http://schema.org/Text"
+                "Text"
             ],
             paymentUrl: [
-                "http://schema.org/URL"
+                "URL"
             ],
             seller: [
-                "http://schema.org/Organization",
-                "http://schema.org/Person"
+                "Organization",
+                "Person"
             ]
         }
     ],
     [
-        "http://schema.org/softwaresourcecode",
+        "softwaresourcecode",
         {
-            _id: "http://schema.org/SoftwareSourceCode",
+            _id: "SoftwareSourceCode",
             _name: "SoftwareSourceCode",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             codeRepository: [
-                "http://schema.org/URL"
+                "URL"
             ],
             codeSampleType: [
-                "http://schema.org/Text"
+                "Text"
             ],
             programmingLanguage: [
-                "http://schema.org/Text",
-                "http://schema.org/ComputerLanguage"
+                "Text",
+                "ComputerLanguage"
             ],
             runtimePlatform: [
-                "http://schema.org/Text"
+                "Text"
             ],
             targetProduct: [
-                "http://schema.org/SoftwareApplication"
+                "SoftwareApplication"
             ]
         }
     ],
     [
-        "http://schema.org/buddhisttemple",
+        "buddhisttemple",
         {
-            _id: "http://schema.org/BuddhistTemple",
+            _id: "BuddhistTemple",
             _name: "BuddhistTemple",
             _parent: [
-                "http://schema.org/PlaceOfWorship"
+                "PlaceOfWorship"
             ]
         }
     ],
     [
-        "http://schema.org/placeofworship",
+        "placeofworship",
         {
-            _id: "http://schema.org/PlaceOfWorship",
+            _id: "PlaceOfWorship",
             _name: "PlaceOfWorship",
             _parent: [
-                "http://schema.org/CivicStructure"
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/civicstructure",
+        "civicstructure",
         {
-            _id: "http://schema.org/CivicStructure",
+            _id: "CivicStructure",
             _name: "CivicStructure",
             _parent: [
-                "http://schema.org/Place"
+                "Place"
             ],
             openingHours: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/monetaryamountdistribution",
+        "monetaryamountdistribution",
         {
-            _id: "http://schema.org/MonetaryAmountDistribution",
+            _id: "MonetaryAmountDistribution",
             _name: "MonetaryAmountDistribution",
             _parent: [
-                "http://schema.org/QuantitativeValueDistribution"
+                "QuantitativeValueDistribution"
             ],
             currency: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/quantitativevaluedistribution",
+        "quantitativevaluedistribution",
         {
-            _id: "http://schema.org/QuantitativeValueDistribution",
+            _id: "QuantitativeValueDistribution",
             _name: "QuantitativeValueDistribution",
             _parent: [
-                "http://schema.org/StructuredValue"
+                "StructuredValue"
             ],
             duration: [
-                "http://schema.org/Duration"
+                "Duration"
             ],
             median: [
-                "http://schema.org/Number"
+                "Number"
             ],
             percentile10: [
-                "http://schema.org/Number"
+                "Number"
             ],
             percentile25: [
-                "http://schema.org/Number"
+                "Number"
             ],
             percentile75: [
-                "http://schema.org/Number"
+                "Number"
             ],
             percentile90: [
-                "http://schema.org/Number"
+                "Number"
             ]
         }
     ],
     [
-        "http://schema.org/menuitem",
+        "menuitem",
         {
-            _id: "http://schema.org/MenuItem",
+            _id: "MenuItem",
             _name: "MenuItem",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             menuAddOn: [
-                "http://schema.org/MenuItem",
-                "http://schema.org/MenuSection"
+                "MenuItem",
+                "MenuSection"
             ],
             nutrition: [
-                "http://schema.org/NutritionInformation"
+                "NutritionInformation"
             ],
             offers: [
-                "http://schema.org/Offer",
-                "http://schema.org/Demand"
+                "Offer",
+                "Demand"
             ],
             suitableForDiet: [
-                "http://schema.org/RestrictedDiet"
+                "RestrictedDiet"
             ]
         }
     ],
     [
-        "http://schema.org/menusection",
+        "menusection",
         {
-            _id: "http://schema.org/MenuSection",
+            _id: "MenuSection",
             _name: "MenuSection",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             hasMenuItem: [
-                "http://schema.org/MenuItem"
+                "MenuItem"
             ],
             hasMenuSection: [
-                "http://schema.org/MenuSection"
+                "MenuSection"
             ]
         }
     ],
     [
-        "http://schema.org/audience",
+        "audience",
         {
-            _id: "http://schema.org/Audience",
+            _id: "Audience",
             _name: "Audience",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             audienceType: [
-                "http://schema.org/Text"
+                "Text"
             ],
             geographicArea: [
-                "http://schema.org/AdministrativeArea"
+                "AdministrativeArea"
             ]
         }
     ],
     [
-        "http://schema.org/peopleaudience",
+        "peopleaudience",
         {
-            _id: "http://schema.org/PeopleAudience",
+            _id: "PeopleAudience",
             _name: "PeopleAudience",
             _parent: [
-                "http://schema.org/Audience"
+                "Audience"
             ],
             healthCondition: [
-                "http://schema.org/MedicalCondition"
+                "MedicalCondition"
             ],
             requiredGender: [
-                "http://schema.org/Text"
+                "Text"
             ],
             requiredMaxAge: [
-                "http://schema.org/Integer"
+                "Integer"
             ],
             requiredMinAge: [
-                "http://schema.org/Integer"
+                "Integer"
             ],
             suggestedGender: [
-                "http://schema.org/Text"
+                "Text"
             ],
             suggestedMaxAge: [
-                "http://schema.org/Number"
+                "Number"
             ],
             suggestedMinAge: [
-                "http://schema.org/Number"
+                "Number"
             ]
         }
     ],
     [
-        "http://schema.org/medicalcondition",
+        "medicalcondition",
         {
-            _id: "http://schema.org/MedicalCondition",
+            _id: "MedicalCondition",
             _name: "MedicalCondition",
             _parent: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ],
             associatedAnatomy: [
-                "http://schema.org/SuperficialAnatomy",
-                "http://schema.org/AnatomicalSystem",
-                "http://schema.org/AnatomicalStructure"
+                "SuperficialAnatomy",
+                "AnatomicalSystem",
+                "AnatomicalStructure"
             ],
             differentialDiagnosis: [
-                "http://schema.org/DDxElement"
+                "DDxElement"
             ],
             drug: [
-                "http://schema.org/Drug"
+                "Drug"
             ],
             epidemiology: [
-                "http://schema.org/Text"
+                "Text"
             ],
             expectedPrognosis: [
-                "http://schema.org/Text"
+                "Text"
             ],
             naturalProgression: [
-                "http://schema.org/Text"
+                "Text"
             ],
             pathophysiology: [
-                "http://schema.org/Text"
+                "Text"
             ],
             possibleComplication: [
-                "http://schema.org/Text"
+                "Text"
             ],
             possibleTreatment: [
-                "http://schema.org/MedicalTherapy"
+                "MedicalTherapy"
             ],
             primaryPrevention: [
-                "http://schema.org/MedicalTherapy"
+                "MedicalTherapy"
             ],
             riskFactor: [
-                "http://schema.org/MedicalRiskFactor"
+                "MedicalRiskFactor"
             ],
             secondaryPrevention: [
-                "http://schema.org/MedicalTherapy"
+                "MedicalTherapy"
             ],
             signOrSymptom: [
-                "http://schema.org/MedicalSignOrSymptom"
+                "MedicalSignOrSymptom"
             ],
             stage: [
-                "http://schema.org/MedicalConditionStage"
+                "MedicalConditionStage"
             ],
             status: [
-                "http://schema.org/Text",
-                "http://schema.org/EventStatusType",
-                "http://schema.org/MedicalStudyStatus"
+                "Text",
+                "EventStatusType",
+                "MedicalStudyStatus"
             ],
             typicalTest: [
-                "http://schema.org/MedicalTest"
+                "MedicalTest"
             ]
         }
     ],
     [
-        "http://schema.org/drug",
+        "drug",
         {
-            _id: "http://schema.org/Drug",
+            _id: "Drug",
             _name: "Drug",
             _parent: [
-                "http://schema.org/Substance"
+                "Substance"
             ],
             activeIngredient: [
-                "http://schema.org/Text"
+                "Text"
             ],
             administrationRoute: [
-                "http://schema.org/Text"
+                "Text"
             ],
             alcoholWarning: [
-                "http://schema.org/Text"
+                "Text"
             ],
             availableStrength: [
-                "http://schema.org/DrugStrength"
+                "DrugStrength"
             ],
             breastfeedingWarning: [
-                "http://schema.org/Text"
+                "Text"
             ],
             clinicalPharmacology: [
-                "http://schema.org/Text"
+                "Text"
             ],
             dosageForm: [
-                "http://schema.org/Text"
+                "Text"
             ],
             doseSchedule: [
-                "http://schema.org/DoseSchedule"
+                "DoseSchedule"
             ],
             drugClass: [
-                "http://schema.org/DrugClass"
+                "DrugClass"
             ],
             drugUnit: [
-                "http://schema.org/Text"
+                "Text"
             ],
             foodWarning: [
-                "http://schema.org/Text"
+                "Text"
             ],
             interactingDrug: [
-                "http://schema.org/Drug"
+                "Drug"
             ],
             isAvailableGenerically: [
-                "http://schema.org/Boolean"
+                "Boolean"
             ],
             isProprietary: [
-                "http://schema.org/Boolean"
+                "Boolean"
             ],
             labelDetails: [
-                "http://schema.org/URL"
+                "URL"
             ],
             legalStatus: [
-                "http://schema.org/Text",
-                "http://schema.org/MedicalEnumeration",
-                "http://schema.org/DrugLegalStatus"
+                "Text",
+                "MedicalEnumeration",
+                "DrugLegalStatus"
             ],
             manufacturer: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             maximumIntake: [
-                "http://schema.org/MaximumDoseSchedule"
+                "MaximumDoseSchedule"
             ],
             mechanismOfAction: [
-                "http://schema.org/Text"
+                "Text"
             ],
             nonProprietaryName: [
-                "http://schema.org/Text"
+                "Text"
             ],
             overdosage: [
-                "http://schema.org/Text"
+                "Text"
             ],
             pregnancyCategory: [
-                "http://schema.org/DrugPregnancyCategory"
+                "DrugPregnancyCategory"
             ],
             pregnancyWarning: [
-                "http://schema.org/Text"
+                "Text"
             ],
             prescribingInfo: [
-                "http://schema.org/URL"
+                "URL"
             ],
             prescriptionStatus: [
-                "http://schema.org/Text",
-                "http://schema.org/DrugPrescriptionStatus"
+                "Text",
+                "DrugPrescriptionStatus"
             ],
             proprietaryName: [
-                "http://schema.org/Text"
+                "Text"
             ],
             relatedDrug: [
-                "http://schema.org/Drug"
+                "Drug"
             ],
             warning: [
-                "http://schema.org/URL",
-                "http://schema.org/Text"
+                "URL",
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/substance",
+        "substance",
         {
-            _id: "http://schema.org/Substance",
+            _id: "Substance",
             _name: "Substance",
             _parent: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ],
             activeIngredient: [
-                "http://schema.org/Text"
+                "Text"
             ],
             maximumIntake: [
-                "http://schema.org/MaximumDoseSchedule"
+                "MaximumDoseSchedule"
             ]
         }
     ],
     [
-        "http://schema.org/action",
+        "action",
         {
-            _id: "http://schema.org/Action",
+            _id: "Action",
             _name: "Action",
             _parent: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             actionStatus: [
-                "http://schema.org/ActionStatusType"
+                "ActionStatusType"
             ],
             agent: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             endTime: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Time"
+                "DateTime",
+                "Time"
             ],
             error: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             instrument: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             location: [
-                "http://schema.org/Text",
-                "http://schema.org/Place",
-                "http://schema.org/PostalAddress",
-                "http://schema.org/VirtualLocation"
+                "Text",
+                "Place",
+                "PostalAddress",
+                "VirtualLocation"
             ],
             object: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             participant: [
-                "http://schema.org/Organization",
-                "http://schema.org/Person"
+                "Organization",
+                "Person"
             ],
             result: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             startTime: [
-                "http://schema.org/Time",
-                "http://schema.org/DateTime"
+                "Time",
+                "DateTime"
             ],
             target: [
-                "http://schema.org/EntryPoint"
+                "EntryPoint"
             ]
         }
     ],
     [
-        "http://schema.org/medicalstudy",
+        "medicalstudy",
         {
-            _id: "http://schema.org/MedicalStudy",
+            _id: "MedicalStudy",
             _name: "MedicalStudy",
             _parent: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ],
             healthCondition: [
-                "http://schema.org/MedicalCondition"
+                "MedicalCondition"
             ],
             sponsor: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             status: [
-                "http://schema.org/Text",
-                "http://schema.org/EventStatusType",
-                "http://schema.org/MedicalStudyStatus"
+                "Text",
+                "EventStatusType",
+                "MedicalStudyStatus"
             ],
             studyLocation: [
-                "http://schema.org/AdministrativeArea"
+                "AdministrativeArea"
             ],
             studySubject: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ]
         }
     ],
     [
-        "http://schema.org/medicaltest",
+        "medicaltest",
         {
-            _id: "http://schema.org/MedicalTest",
+            _id: "MedicalTest",
             _name: "MedicalTest",
             _parent: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ],
             affectedBy: [
-                "http://schema.org/Drug"
+                "Drug"
             ],
             normalRange: [
-                "http://schema.org/Text",
-                "http://schema.org/MedicalEnumeration"
+                "Text",
+                "MedicalEnumeration"
             ],
             signDetected: [
-                "http://schema.org/MedicalSign"
+                "MedicalSign"
             ],
             usedToDiagnose: [
-                "http://schema.org/MedicalCondition"
+                "MedicalCondition"
             ],
             usesDevice: [
-                "http://schema.org/MedicalDevice"
+                "MedicalDevice"
             ]
         }
     ],
     [
-        "http://schema.org/deliverychargespecification",
+        "deliverychargespecification",
         {
-            _id: "http://schema.org/DeliveryChargeSpecification",
+            _id: "DeliveryChargeSpecification",
             _name: "DeliveryChargeSpecification",
             _parent: [
-                "http://schema.org/PriceSpecification"
+                "PriceSpecification"
             ],
             appliesToDeliveryMethod: [
-                "http://schema.org/DeliveryMethod"
+                "DeliveryMethod"
             ],
             areaServed: [
-                "http://schema.org/Text",
-                "http://schema.org/AdministrativeArea",
-                "http://schema.org/Place",
-                "http://schema.org/GeoShape"
+                "Text",
+                "AdministrativeArea",
+                "Place",
+                "GeoShape"
             ],
             eligibleRegion: [
-                "http://schema.org/Place",
-                "http://schema.org/Text",
-                "http://schema.org/GeoShape"
+                "Place",
+                "Text",
+                "GeoShape"
             ]
         }
     ],
     [
-        "http://schema.org/pricespecification",
+        "pricespecification",
         {
-            _id: "http://schema.org/PriceSpecification",
+            _id: "PriceSpecification",
             _name: "PriceSpecification",
             _parent: [
-                "http://schema.org/StructuredValue"
+                "StructuredValue"
             ],
             eligibleQuantity: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             eligibleTransactionVolume: [
-                "http://schema.org/PriceSpecification"
+                "PriceSpecification"
             ],
             maxPrice: [
-                "http://schema.org/Number"
+                "Number"
             ],
             minPrice: [
-                "http://schema.org/Number"
+                "Number"
             ],
             price: [
-                "http://schema.org/Text",
-                "http://schema.org/Number"
+                "Text",
+                "Number"
             ],
             priceCurrency: [
-                "http://schema.org/Text"
+                "Text"
             ],
             validFrom: [
-                "http://schema.org/Date",
-                "http://schema.org/DateTime"
+                "Date",
+                "DateTime"
             ],
             validThrough: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date"
+                "DateTime",
+                "Date"
             ],
             valueAddedTaxIncluded: [
-                "http://schema.org/Boolean"
+                "Boolean"
             ]
         }
     ],
     [
-        "http://schema.org/monetaryamount",
+        "monetaryamount",
         {
-            _id: "http://schema.org/MonetaryAmount",
+            _id: "MonetaryAmount",
             _name: "MonetaryAmount",
             _parent: [
-                "http://schema.org/StructuredValue"
+                "StructuredValue"
             ],
             currency: [
-                "http://schema.org/Text"
+                "Text"
             ],
             maxValue: [
-                "http://schema.org/Number"
+                "Number"
             ],
             minValue: [
-                "http://schema.org/Number"
+                "Number"
             ],
             validFrom: [
-                "http://schema.org/Date",
-                "http://schema.org/DateTime"
+                "Date",
+                "DateTime"
             ],
             validThrough: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date"
+                "DateTime",
+                "Date"
             ],
             value: [
-                "http://schema.org/Number",
-                "http://schema.org/Text",
-                "http://schema.org/StructuredValue",
-                "http://schema.org/Boolean"
+                "Number",
+                "Text",
+                "StructuredValue",
+                "Boolean"
             ]
         }
     ],
     [
-        "http://schema.org/programmembership",
+        "programmembership",
         {
-            _id: "http://schema.org/ProgramMembership",
+            _id: "ProgramMembership",
             _name: "ProgramMembership",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             hostingOrganization: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             member: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             membershipNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             programName: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/airport",
+        "airport",
         {
-            _id: "http://schema.org/Airport",
+            _id: "Airport",
             _name: "Airport",
             _parent: [
-                "http://schema.org/CivicStructure"
+                "CivicStructure"
             ],
             iataCode: [
-                "http://schema.org/Text"
+                "Text"
             ],
             icaoCode: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/medicalguideline",
+        "medicalguideline",
         {
-            _id: "http://schema.org/MedicalGuideline",
+            _id: "MedicalGuideline",
             _name: "MedicalGuideline",
             _parent: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ],
             evidenceLevel: [
-                "http://schema.org/MedicalEvidenceLevel"
+                "MedicalEvidenceLevel"
             ],
             evidenceOrigin: [
-                "http://schema.org/Text"
+                "Text"
             ],
             guidelineDate: [
-                "http://schema.org/Date"
+                "Date"
             ],
             guidelineSubject: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ]
         }
     ],
     [
-        "http://schema.org/mediaobject",
+        "mediaobject",
         {
-            _id: "http://schema.org/MediaObject",
+            _id: "MediaObject",
             _name: "MediaObject",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             associatedArticle: [
-                "http://schema.org/NewsArticle"
+                "NewsArticle"
             ],
             bitrate: [
-                "http://schema.org/Text"
+                "Text"
             ],
             contentSize: [
-                "http://schema.org/Text"
+                "Text"
             ],
             contentUrl: [
-                "http://schema.org/URL"
+                "URL"
             ],
             duration: [
-                "http://schema.org/Duration"
+                "Duration"
             ],
             embedUrl: [
-                "http://schema.org/URL"
+                "URL"
             ],
             encodesCreativeWork: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             encodingFormat: [
-                "http://schema.org/Text",
-                "http://schema.org/URL"
+                "Text",
+                "URL"
             ],
             endTime: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Time"
+                "DateTime",
+                "Time"
             ],
             height: [
-                "http://schema.org/Distance",
-                "http://schema.org/QuantitativeValue"
+                "Distance",
+                "QuantitativeValue"
             ],
             playerType: [
-                "http://schema.org/Text"
+                "Text"
             ],
             productionCompany: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             regionsAllowed: [
-                "http://schema.org/Place"
+                "Place"
             ],
             requiresSubscription: [
-                "http://schema.org/Boolean",
-                "http://schema.org/MediaSubscription"
+                "Boolean",
+                "MediaSubscription"
             ],
             startTime: [
-                "http://schema.org/Time",
-                "http://schema.org/DateTime"
+                "Time",
+                "DateTime"
             ],
             uploadDate: [
-                "http://schema.org/Date"
+                "Date"
             ],
             width: [
-                "http://schema.org/Distance",
-                "http://schema.org/QuantitativeValue"
+                "Distance",
+                "QuantitativeValue"
             ]
         }
     ],
     [
-        "http://schema.org/foodestablishmentreservation",
+        "foodestablishmentreservation",
         {
-            _id: "http://schema.org/FoodEstablishmentReservation",
+            _id: "FoodEstablishmentReservation",
             _name: "FoodEstablishmentReservation",
             _parent: [
-                "http://schema.org/Reservation"
+                "Reservation"
             ],
             endTime: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Time"
+                "DateTime",
+                "Time"
             ],
             partySize: [
-                "http://schema.org/QuantitativeValue",
-                "http://schema.org/Integer"
+                "QuantitativeValue",
+                "Integer"
             ],
             startTime: [
-                "http://schema.org/Time",
-                "http://schema.org/DateTime"
+                "Time",
+                "DateTime"
             ]
         }
     ],
     [
-        "http://schema.org/movieseries",
+        "movieseries",
         {
-            _id: "http://schema.org/MovieSeries",
+            _id: "MovieSeries",
             _name: "MovieSeries",
             _parent: [
-                "http://schema.org/CreativeWorkSeries"
+                "CreativeWorkSeries"
             ],
             actor: [
-                "http://schema.org/Person"
+                "Person"
             ],
             director: [
-                "http://schema.org/Person"
+                "Person"
             ],
             musicBy: [
-                "http://schema.org/MusicGroup",
-                "http://schema.org/Person"
+                "MusicGroup",
+                "Person"
             ],
             productionCompany: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             trailer: [
-                "http://schema.org/VideoObject"
+                "VideoObject"
             ]
         }
     ],
     [
-        "http://schema.org/postaladdress",
+        "postaladdress",
         {
-            _id: "http://schema.org/PostalAddress",
+            _id: "PostalAddress",
             _name: "PostalAddress",
             _parent: [
-                "http://schema.org/ContactPoint"
+                "ContactPoint"
             ],
             addressCountry: [
-                "http://schema.org/Country",
-                "http://schema.org/Text"
+                "Country",
+                "Text"
             ],
             addressLocality: [
-                "http://schema.org/Text"
+                "Text"
             ],
             addressRegion: [
-                "http://schema.org/Text"
+                "Text"
             ],
             postalCode: [
-                "http://schema.org/Text"
+                "Text"
             ],
             postOfficeBoxNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             streetAddress: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/contactpoint",
+        "contactpoint",
         {
-            _id: "http://schema.org/ContactPoint",
+            _id: "ContactPoint",
             _name: "ContactPoint",
             _parent: [
-                "http://schema.org/StructuredValue"
+                "StructuredValue"
             ],
             areaServed: [
-                "http://schema.org/Text",
-                "http://schema.org/AdministrativeArea",
-                "http://schema.org/Place",
-                "http://schema.org/GeoShape"
+                "Text",
+                "AdministrativeArea",
+                "Place",
+                "GeoShape"
             ],
             availableLanguage: [
-                "http://schema.org/Text",
-                "http://schema.org/Language"
+                "Text",
+                "Language"
             ],
             contactOption: [
-                "http://schema.org/ContactPointOption"
+                "ContactPointOption"
             ],
             contactType: [
-                "http://schema.org/Text"
+                "Text"
             ],
             email: [
-                "http://schema.org/Text"
+                "Text"
             ],
             faxNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             hoursAvailable: [
-                "http://schema.org/OpeningHoursSpecification"
+                "OpeningHoursSpecification"
             ],
             productSupported: [
-                "http://schema.org/Text",
-                "http://schema.org/Product"
+                "Text",
+                "Product"
             ],
             telephone: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/sportsteam",
+        "sportsteam",
         {
-            _id: "http://schema.org/SportsTeam",
+            _id: "SportsTeam",
             _name: "SportsTeam",
             _parent: [
-                "http://schema.org/SportsOrganization"
+                "SportsOrganization"
             ],
             athlete: [
-                "http://schema.org/Person"
+                "Person"
             ],
             coach: [
-                "http://schema.org/Person"
+                "Person"
             ]
         }
     ],
     [
-        "http://schema.org/sportsorganization",
+        "sportsorganization",
         {
-            _id: "http://schema.org/SportsOrganization",
+            _id: "SportsOrganization",
             _name: "SportsOrganization",
             _parent: [
-                "http://schema.org/Organization"
+                "Organization"
             ]
         }
     ],
     [
-        "http://schema.org/lodgingreservation",
+        "lodgingreservation",
         {
-            _id: "http://schema.org/LodgingReservation",
+            _id: "LodgingReservation",
             _name: "LodgingReservation",
             _parent: [
-                "http://schema.org/Reservation"
+                "Reservation"
             ],
             checkinTime: [
-                "http://schema.org/Time",
-                "http://schema.org/DateTime"
+                "Time",
+                "DateTime"
             ],
             checkoutTime: [
-                "http://schema.org/Time",
-                "http://schema.org/DateTime"
+                "Time",
+                "DateTime"
             ],
             lodgingUnitDescription: [
-                "http://schema.org/Text"
+                "Text"
             ],
             lodgingUnitType: [
-                "http://schema.org/Text",
-                "http://schema.org/QualitativeValue"
+                "Text",
+                "QualitativeValue"
             ],
             numAdults: [
-                "http://schema.org/Integer",
-                "http://schema.org/QuantitativeValue"
+                "Integer",
+                "QuantitativeValue"
             ],
             numChildren: [
-                "http://schema.org/Integer",
-                "http://schema.org/QuantitativeValue"
+                "Integer",
+                "QuantitativeValue"
             ]
         }
     ],
     [
-        "http://schema.org/quantitativevalue",
+        "quantitativevalue",
         {
-            _id: "http://schema.org/QuantitativeValue",
+            _id: "QuantitativeValue",
             _name: "QuantitativeValue",
             _parent: [
-                "http://schema.org/StructuredValue"
+                "StructuredValue"
             ],
             additionalProperty: [
-                "http://schema.org/PropertyValue"
+                "PropertyValue"
             ],
             maxValue: [
-                "http://schema.org/Number"
+                "Number"
             ],
             minValue: [
-                "http://schema.org/Number"
+                "Number"
             ],
             unitCode: [
-                "http://schema.org/URL",
-                "http://schema.org/Text"
+                "URL",
+                "Text"
             ],
             unitText: [
-                "http://schema.org/Text"
+                "Text"
             ],
             value: [
-                "http://schema.org/Number",
-                "http://schema.org/Text",
-                "http://schema.org/StructuredValue",
-                "http://schema.org/Boolean"
+                "Number",
+                "Text",
+                "StructuredValue",
+                "Boolean"
             ],
             valueReference: [
-                "http://schema.org/StructuredValue",
-                "http://schema.org/Enumeration",
-                "http://schema.org/QualitativeValue",
-                "http://schema.org/PropertyValue",
-                "http://schema.org/QuantitativeValue"
+                "StructuredValue",
+                "Enumeration",
+                "QualitativeValue",
+                "PropertyValue",
+                "QuantitativeValue"
             ]
         }
     ],
     [
-        "http://schema.org/comicissue",
+        "comicissue",
         {
-            _id: "http://schema.org/ComicIssue",
+            _id: "ComicIssue",
             _name: "ComicIssue",
             _parent: [
-                "http://schema.org/PublicationIssue"
+                "PublicationIssue"
             ],
             artist: [
-                "http://schema.org/Person"
+                "Person"
             ],
             colorist: [
-                "http://schema.org/Person"
+                "Person"
             ],
             inker: [
-                "http://schema.org/Person"
+                "Person"
             ],
             letterer: [
-                "http://schema.org/Person"
+                "Person"
             ],
             penciler: [
-                "http://schema.org/Person"
+                "Person"
             ],
             variantCover: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/publicationissue",
+        "publicationissue",
         {
-            _id: "http://schema.org/PublicationIssue",
+            _id: "PublicationIssue",
             _name: "PublicationIssue",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             issueNumber: [
-                "http://schema.org/Integer",
-                "http://schema.org/Text"
+                "Integer",
+                "Text"
             ],
             pageEnd: [
-                "http://schema.org/Text",
-                "http://schema.org/Integer"
+                "Text",
+                "Integer"
             ],
             pageStart: [
-                "http://schema.org/Integer",
-                "http://schema.org/Text"
+                "Integer",
+                "Text"
             ],
             pagination: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/comicstory",
+        "comicstory",
         {
-            _id: "http://schema.org/ComicStory",
+            _id: "ComicStory",
             _name: "ComicStory",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             artist: [
-                "http://schema.org/Person"
+                "Person"
             ],
             colorist: [
-                "http://schema.org/Person"
+                "Person"
             ],
             inker: [
-                "http://schema.org/Person"
+                "Person"
             ],
             letterer: [
-                "http://schema.org/Person"
+                "Person"
             ],
             penciler: [
-                "http://schema.org/Person"
+                "Person"
             ]
         }
     ],
     [
-        "http://schema.org/visualartwork",
+        "visualartwork",
         {
-            _id: "http://schema.org/VisualArtwork",
+            _id: "VisualArtwork",
             _name: "VisualArtwork",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             artEdition: [
-                "http://schema.org/Integer",
-                "http://schema.org/Text"
+                "Integer",
+                "Text"
             ],
             artform: [
-                "http://schema.org/Text",
-                "http://schema.org/URL"
+                "Text",
+                "URL"
             ],
             artist: [
-                "http://schema.org/Person"
+                "Person"
             ],
             artMedium: [
-                "http://schema.org/Text",
-                "http://schema.org/URL"
+                "Text",
+                "URL"
             ],
             artworkSurface: [
-                "http://schema.org/URL",
-                "http://schema.org/Text"
+                "URL",
+                "Text"
             ],
             colorist: [
-                "http://schema.org/Person"
+                "Person"
             ],
             depth: [
-                "http://schema.org/QuantitativeValue",
-                "http://schema.org/Distance"
+                "QuantitativeValue",
+                "Distance"
             ],
             height: [
-                "http://schema.org/Distance",
-                "http://schema.org/QuantitativeValue"
+                "Distance",
+                "QuantitativeValue"
             ],
             inker: [
-                "http://schema.org/Person"
+                "Person"
             ],
             letterer: [
-                "http://schema.org/Person"
+                "Person"
             ],
             penciler: [
-                "http://schema.org/Person"
+                "Person"
             ],
             width: [
-                "http://schema.org/Distance",
-                "http://schema.org/QuantitativeValue"
+                "Distance",
+                "QuantitativeValue"
             ]
         }
     ],
     [
-        "http://schema.org/locationfeaturespecification",
+        "locationfeaturespecification",
         {
-            _id: "http://schema.org/LocationFeatureSpecification",
+            _id: "LocationFeatureSpecification",
             _name: "LocationFeatureSpecification",
             _parent: [
-                "http://schema.org/PropertyValue"
+                "PropertyValue"
             ],
             hoursAvailable: [
-                "http://schema.org/OpeningHoursSpecification"
+                "OpeningHoursSpecification"
             ],
             validFrom: [
-                "http://schema.org/Date",
-                "http://schema.org/DateTime"
+                "Date",
+                "DateTime"
             ],
             validThrough: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date"
+                "DateTime",
+                "Date"
             ]
         }
     ],
     [
-        "http://schema.org/propertyvalue",
+        "propertyvalue",
         {
-            _id: "http://schema.org/PropertyValue",
+            _id: "PropertyValue",
             _name: "PropertyValue",
             _parent: [
-                "http://schema.org/StructuredValue"
+                "StructuredValue"
             ],
             maxValue: [
-                "http://schema.org/Number"
+                "Number"
             ],
             minValue: [
-                "http://schema.org/Number"
+                "Number"
             ],
             propertyID: [
-                "http://schema.org/URL",
-                "http://schema.org/Text"
+                "URL",
+                "Text"
             ],
             unitCode: [
-                "http://schema.org/URL",
-                "http://schema.org/Text"
+                "URL",
+                "Text"
             ],
             unitText: [
-                "http://schema.org/Text"
+                "Text"
             ],
             value: [
-                "http://schema.org/Number",
-                "http://schema.org/Text",
-                "http://schema.org/StructuredValue",
-                "http://schema.org/Boolean"
+                "Number",
+                "Text",
+                "StructuredValue",
+                "Boolean"
             ],
             valueReference: [
-                "http://schema.org/StructuredValue",
-                "http://schema.org/Enumeration",
-                "http://schema.org/QualitativeValue",
-                "http://schema.org/PropertyValue",
-                "http://schema.org/QuantitativeValue"
+                "StructuredValue",
+                "Enumeration",
+                "QualitativeValue",
+                "PropertyValue",
+                "QuantitativeValue"
             ]
         }
     ],
     [
-        "http://schema.org/openinghoursspecification",
+        "openinghoursspecification",
         {
-            _id: "http://schema.org/OpeningHoursSpecification",
+            _id: "OpeningHoursSpecification",
             _name: "OpeningHoursSpecification",
             _parent: [
-                "http://schema.org/StructuredValue"
+                "StructuredValue"
             ],
             closes: [
-                "http://schema.org/Time"
+                "Time"
             ],
             dayOfWeek: [
-                "http://schema.org/DayOfWeek"
+                "DayOfWeek"
             ],
             opens: [
-                "http://schema.org/Time"
+                "Time"
             ],
             validFrom: [
-                "http://schema.org/Date",
-                "http://schema.org/DateTime"
+                "Date",
+                "DateTime"
             ],
             validThrough: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date"
+                "DateTime",
+                "Date"
             ]
         }
     ],
     [
-        "http://schema.org/property",
+        "property",
         {
-            _id: "http://schema.org/Property",
+            _id: "Property",
             _name: "Property",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             domainIncludes: [
-                "http://schema.org/Class"
+                "Class"
             ],
             inverseOf: [
-                "http://schema.org/Property"
+                "Property"
             ],
             rangeIncludes: [
-                "http://schema.org/Class"
+                "Class"
             ],
             supersededBy: [
-                "http://schema.org/Enumeration",
-                "http://schema.org/Class",
-                "http://schema.org/Property"
+                "Enumeration",
+                "Class",
+                "Property"
             ]
         }
     ],
     [
-        "http://schema.org/class",
+        "class",
         {
-            _id: "http://schema.org/Class",
+            _id: "Class",
             _name: "Class",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             supersededBy: [
-                "http://schema.org/Enumeration",
-                "http://schema.org/Class",
-                "http://schema.org/Property"
+                "Enumeration",
+                "Class",
+                "Property"
             ]
         }
     ],
     [
-        "http://schema.org/broadcastevent",
+        "broadcastevent",
         {
-            _id: "http://schema.org/BroadcastEvent",
+            _id: "BroadcastEvent",
             _name: "BroadcastEvent",
             _parent: [
-                "http://schema.org/PublicationEvent"
+                "PublicationEvent"
             ],
             broadcastOfEvent: [
-                "http://schema.org/Event"
+                "Event"
             ],
             isLiveBroadcast: [
-                "http://schema.org/Boolean"
+                "Boolean"
             ],
             videoFormat: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/publicationevent",
+        "publicationevent",
         {
-            _id: "http://schema.org/PublicationEvent",
+            _id: "PublicationEvent",
             _name: "PublicationEvent",
             _parent: [
-                "http://schema.org/Event"
+                "Event"
             ],
             isAccessibleForFree: [
-                "http://schema.org/Boolean"
+                "Boolean"
             ],
             publishedBy: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             publishedOn: [
-                "http://schema.org/BroadcastService"
+                "BroadcastService"
             ]
         }
     ],
     [
-        "http://schema.org/softwareapplication",
+        "softwareapplication",
         {
-            _id: "http://schema.org/SoftwareApplication",
+            _id: "SoftwareApplication",
             _name: "SoftwareApplication",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             applicationCategory: [
-                "http://schema.org/Text",
-                "http://schema.org/URL"
+                "Text",
+                "URL"
             ],
             applicationSubCategory: [
-                "http://schema.org/Text",
-                "http://schema.org/URL"
+                "Text",
+                "URL"
             ],
             applicationSuite: [
-                "http://schema.org/Text"
+                "Text"
             ],
             availableOnDevice: [
-                "http://schema.org/Text"
+                "Text"
             ],
             countriesNotSupported: [
-                "http://schema.org/Text"
+                "Text"
             ],
             countriesSupported: [
-                "http://schema.org/Text"
+                "Text"
             ],
             downloadUrl: [
-                "http://schema.org/URL"
+                "URL"
             ],
             featureList: [
-                "http://schema.org/Text",
-                "http://schema.org/URL"
+                "Text",
+                "URL"
             ],
             fileSize: [
-                "http://schema.org/Text"
+                "Text"
             ],
             installUrl: [
-                "http://schema.org/URL"
+                "URL"
             ],
             memoryRequirements: [
-                "http://schema.org/URL",
-                "http://schema.org/Text"
+                "URL",
+                "Text"
             ],
             operatingSystem: [
-                "http://schema.org/Text"
+                "Text"
             ],
             permissions: [
-                "http://schema.org/Text"
+                "Text"
             ],
             processorRequirements: [
-                "http://schema.org/Text"
+                "Text"
             ],
             releaseNotes: [
-                "http://schema.org/URL",
-                "http://schema.org/Text"
+                "URL",
+                "Text"
             ],
             screenshot: [
-                "http://schema.org/ImageObject",
-                "http://schema.org/URL"
+                "ImageObject",
+                "URL"
             ],
             softwareAddOn: [
-                "http://schema.org/SoftwareApplication"
+                "SoftwareApplication"
             ],
             softwareHelp: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             softwareRequirements: [
-                "http://schema.org/URL",
-                "http://schema.org/Text"
+                "URL",
+                "Text"
             ],
             softwareVersion: [
-                "http://schema.org/Text"
+                "Text"
             ],
             storageRequirements: [
-                "http://schema.org/Text",
-                "http://schema.org/URL"
+                "Text",
+                "URL"
             ],
             supportingData: [
-                "http://schema.org/DataFeed"
+                "DataFeed"
             ]
         }
     ],
     [
-        "http://schema.org/traintrip",
+        "traintrip",
         {
-            _id: "http://schema.org/TrainTrip",
+            _id: "TrainTrip",
             _name: "TrainTrip",
             _parent: [
-                "http://schema.org/Trip"
+                "Trip"
             ],
             arrivalPlatform: [
-                "http://schema.org/Text"
+                "Text"
             ],
             arrivalStation: [
-                "http://schema.org/TrainStation"
+                "TrainStation"
             ],
             departurePlatform: [
-                "http://schema.org/Text"
+                "Text"
             ],
             departureStation: [
-                "http://schema.org/TrainStation"
+                "TrainStation"
             ],
             trainName: [
-                "http://schema.org/Text"
+                "Text"
             ],
             trainNumber: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/consumeaction",
+        "consumeaction",
         {
-            _id: "http://schema.org/ConsumeAction",
+            _id: "ConsumeAction",
             _name: "ConsumeAction",
             _parent: [
-                "http://schema.org/Action"
+                "Action"
             ],
             actionAccessibilityRequirement: [
-                "http://schema.org/ActionAccessSpecification"
+                "ActionAccessSpecification"
             ],
             expectsAcceptanceOf: [
-                "http://schema.org/Offer"
+                "Offer"
             ]
         }
     ],
     [
-        "http://schema.org/actionaccessspecification",
+        "actionaccessspecification",
         {
-            _id: "http://schema.org/ActionAccessSpecification",
+            _id: "ActionAccessSpecification",
             _name: "ActionAccessSpecification",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             availabilityEnds: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date",
-                "http://schema.org/Time"
+                "DateTime",
+                "Date",
+                "Time"
             ],
             availabilityStarts: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date",
-                "http://schema.org/Time"
+                "DateTime",
+                "Date",
+                "Time"
             ],
             category: [
-                "http://schema.org/Text",
-                "http://schema.org/PhysicalActivityCategory",
-                "http://schema.org/Thing",
-                "http://schema.org/URL"
+                "Text",
+                "PhysicalActivityCategory",
+                "Thing",
+                "URL"
             ],
             eligibleRegion: [
-                "http://schema.org/Place",
-                "http://schema.org/Text",
-                "http://schema.org/GeoShape"
+                "Place",
+                "Text",
+                "GeoShape"
             ],
             expectsAcceptanceOf: [
-                "http://schema.org/Offer"
+                "Offer"
             ],
             requiresSubscription: [
-                "http://schema.org/Boolean",
-                "http://schema.org/MediaSubscription"
+                "Boolean",
+                "MediaSubscription"
             ]
         }
     ],
     [
-        "http://schema.org/broadcastfrequencyspecification",
+        "broadcastfrequencyspecification",
         {
-            _id: "http://schema.org/BroadcastFrequencySpecification",
+            _id: "BroadcastFrequencySpecification",
             _name: "BroadcastFrequencySpecification",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             broadcastFrequencyValue: [
-                "http://schema.org/QuantitativeValue",
-                "http://schema.org/Number"
+                "QuantitativeValue",
+                "Number"
             ]
         }
     ],
     [
-        "http://schema.org/movie",
+        "movie",
         {
-            _id: "http://schema.org/Movie",
+            _id: "Movie",
             _name: "Movie",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             actor: [
-                "http://schema.org/Person"
+                "Person"
             ],
             countryOfOrigin: [
-                "http://schema.org/Country"
+                "Country"
             ],
             director: [
-                "http://schema.org/Person"
+                "Person"
             ],
             duration: [
-                "http://schema.org/Duration"
+                "Duration"
             ],
             musicBy: [
-                "http://schema.org/MusicGroup",
-                "http://schema.org/Person"
+                "MusicGroup",
+                "Person"
             ],
             productionCompany: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             trailer: [
-                "http://schema.org/VideoObject"
+                "VideoObject"
             ]
         }
     ],
     [
-        "http://schema.org/website",
+        "website",
         {
-            _id: "http://schema.org/WebSite",
+            _id: "WebSite",
             _name: "WebSite",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             issn: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/autorental",
+        "autorental",
         {
-            _id: "http://schema.org/AutoRental",
+            _id: "AutoRental",
             _name: "AutoRental",
             _parent: [
-                "http://schema.org/AutomotiveBusiness"
+                "AutomotiveBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/automotivebusiness",
+        "automotivebusiness",
         {
-            _id: "http://schema.org/AutomotiveBusiness",
+            _id: "AutomotiveBusiness",
             _name: "AutomotiveBusiness",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/medicalbusiness",
+        "medicalbusiness",
         {
-            _id: "http://schema.org/MedicalBusiness",
+            _id: "MedicalBusiness",
             _name: "MedicalBusiness",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/productmodel",
+        "productmodel",
         {
-            _id: "http://schema.org/ProductModel",
+            _id: "ProductModel",
             _name: "ProductModel",
             _parent: [
-                "http://schema.org/Product"
+                "Product"
             ],
             isVariantOf: [
-                "http://schema.org/ProductModel"
+                "ProductModel"
             ],
             predecessorOf: [
-                "http://schema.org/ProductModel"
+                "ProductModel"
             ],
             successorOf: [
-                "http://schema.org/ProductModel"
+                "ProductModel"
             ]
         }
     ],
     [
-        "http://schema.org/hotelroom",
+        "hotelroom",
         {
-            _id: "http://schema.org/HotelRoom",
+            _id: "HotelRoom",
             _name: "HotelRoom",
             _parent: [
-                "http://schema.org/Room"
+                "Room"
             ],
             bed: [
-                "http://schema.org/BedType",
-                "http://schema.org/BedDetails",
-                "http://schema.org/Text"
+                "BedType",
+                "BedDetails",
+                "Text"
             ],
             occupancy: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ]
         }
     ],
     [
-        "http://schema.org/room",
+        "room",
         {
-            _id: "http://schema.org/Room",
+            _id: "Room",
             _name: "Room",
             _parent: [
-                "http://schema.org/Accommodation"
+                "Accommodation"
             ]
         }
     ],
     [
-        "http://schema.org/accommodation",
+        "accommodation",
         {
-            _id: "http://schema.org/Accommodation",
+            _id: "Accommodation",
             _name: "Accommodation",
             _parent: [
-                "http://schema.org/Place"
+                "Place"
             ],
             amenityFeature: [
-                "http://schema.org/LocationFeatureSpecification"
+                "LocationFeatureSpecification"
             ],
             floorSize: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             numberOfRooms: [
-                "http://schema.org/QuantitativeValue",
-                "http://schema.org/Number"
+                "QuantitativeValue",
+                "Number"
             ],
             permittedUsage: [
-                "http://schema.org/Text"
+                "Text"
             ],
             petsAllowed: [
-                "http://schema.org/Text",
-                "http://schema.org/Boolean"
+                "Text",
+                "Boolean"
             ]
         }
     ],
     [
-        "http://schema.org/lymphaticvessel",
+        "lymphaticvessel",
         {
-            _id: "http://schema.org/LymphaticVessel",
+            _id: "LymphaticVessel",
             _name: "LymphaticVessel",
             _parent: [
-                "http://schema.org/Vessel"
+                "Vessel"
             ],
             originatesFrom: [
-                "http://schema.org/Vessel"
+                "Vessel"
             ],
             regionDrained: [
-                "http://schema.org/AnatomicalStructure",
-                "http://schema.org/AnatomicalSystem"
+                "AnatomicalStructure",
+                "AnatomicalSystem"
             ],
             runsTo: [
-                "http://schema.org/Vessel"
+                "Vessel"
             ]
         }
     ],
     [
-        "http://schema.org/vessel",
+        "vessel",
         {
-            _id: "http://schema.org/Vessel",
+            _id: "Vessel",
             _name: "Vessel",
             _parent: [
-                "http://schema.org/AnatomicalStructure"
+                "AnatomicalStructure"
             ]
         }
     ],
     [
-        "http://schema.org/anatomicalstructure",
+        "anatomicalstructure",
         {
-            _id: "http://schema.org/AnatomicalStructure",
+            _id: "AnatomicalStructure",
             _name: "AnatomicalStructure",
             _parent: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ],
             associatedPathophysiology: [
-                "http://schema.org/Text"
+                "Text"
             ],
             bodyLocation: [
-                "http://schema.org/Text"
+                "Text"
             ],
             connectedTo: [
-                "http://schema.org/AnatomicalStructure"
+                "AnatomicalStructure"
             ],
             diagram: [
-                "http://schema.org/ImageObject"
+                "ImageObject"
             ],
             partOfSystem: [
-                "http://schema.org/AnatomicalSystem"
+                "AnatomicalSystem"
             ],
             relatedCondition: [
-                "http://schema.org/MedicalCondition"
+                "MedicalCondition"
             ],
             relatedTherapy: [
-                "http://schema.org/MedicalTherapy"
+                "MedicalTherapy"
             ],
             subStructure: [
-                "http://schema.org/AnatomicalStructure"
+                "AnatomicalStructure"
             ]
         }
     ],
     [
-        "http://schema.org/treatmentindication",
+        "treatmentindication",
         {
-            _id: "http://schema.org/TreatmentIndication",
+            _id: "TreatmentIndication",
             _name: "TreatmentIndication",
             _parent: [
-                "http://schema.org/MedicalIndication"
+                "MedicalIndication"
             ]
         }
     ],
     [
-        "http://schema.org/medicalindication",
+        "medicalindication",
         {
-            _id: "http://schema.org/MedicalIndication",
+            _id: "MedicalIndication",
             _name: "MedicalIndication",
             _parent: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ]
         }
     ],
     [
-        "http://schema.org/newsarticle",
+        "newsarticle",
         {
-            _id: "http://schema.org/NewsArticle",
+            _id: "NewsArticle",
             _name: "NewsArticle",
             _parent: [
-                "http://schema.org/Article"
+                "Article"
             ],
             dateline: [
-                "http://schema.org/Text"
+                "Text"
             ],
             printColumn: [
-                "http://schema.org/Text"
+                "Text"
             ],
             printEdition: [
-                "http://schema.org/Text"
+                "Text"
             ],
             printPage: [
-                "http://schema.org/Text"
+                "Text"
             ],
             printSection: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/restaurant",
+        "restaurant",
         {
-            _id: "http://schema.org/Restaurant",
+            _id: "Restaurant",
             _name: "Restaurant",
             _parent: [
-                "http://schema.org/FoodEstablishment"
+                "FoodEstablishment"
             ]
         }
     ],
     [
-        "http://schema.org/foodestablishment",
+        "foodestablishment",
         {
-            _id: "http://schema.org/FoodEstablishment",
+            _id: "FoodEstablishment",
             _name: "FoodEstablishment",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ],
             acceptsReservations: [
-                "http://schema.org/URL",
-                "http://schema.org/Boolean",
-                "http://schema.org/Text"
+                "URL",
+                "Boolean",
+                "Text"
             ],
             hasMenu: [
-                "http://schema.org/URL",
-                "http://schema.org/Menu",
-                "http://schema.org/Text"
+                "URL",
+                "Menu",
+                "Text"
             ],
             servesCuisine: [
-                "http://schema.org/Text"
+                "Text"
             ],
             starRating: [
-                "http://schema.org/Rating"
+                "Rating"
             ]
         }
     ],
     [
-        "http://schema.org/organizeaction",
+        "organizeaction",
         {
-            _id: "http://schema.org/OrganizeAction",
+            _id: "OrganizeAction",
             _name: "OrganizeAction",
             _parent: [
-                "http://schema.org/Action"
+                "Action"
             ]
         }
     ],
     [
-        "http://schema.org/apartmentcomplex",
+        "apartmentcomplex",
         {
-            _id: "http://schema.org/ApartmentComplex",
+            _id: "ApartmentComplex",
             _name: "ApartmentComplex",
             _parent: [
-                "http://schema.org/Residence"
+                "Residence"
             ],
             petsAllowed: [
-                "http://schema.org/Text",
-                "http://schema.org/Boolean"
+                "Text",
+                "Boolean"
             ]
         }
     ],
     [
-        "http://schema.org/residence",
+        "residence",
         {
-            _id: "http://schema.org/Residence",
+            _id: "Residence",
             _name: "Residence",
             _parent: [
-                "http://schema.org/Place"
+                "Place"
             ]
         }
     ],
     [
-        "http://schema.org/message",
+        "message",
         {
-            _id: "http://schema.org/Message",
+            _id: "Message",
             _name: "Message",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             bccRecipient: [
-                "http://schema.org/ContactPoint",
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "ContactPoint",
+                "Person",
+                "Organization"
             ],
             ccRecipient: [
-                "http://schema.org/ContactPoint",
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "ContactPoint",
+                "Person",
+                "Organization"
             ],
             dateRead: [
-                "http://schema.org/Date",
-                "http://schema.org/DateTime"
+                "Date",
+                "DateTime"
             ],
             dateReceived: [
-                "http://schema.org/DateTime"
+                "DateTime"
             ],
             dateSent: [
-                "http://schema.org/DateTime"
+                "DateTime"
             ],
             messageAttachment: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             recipient: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization",
-                "http://schema.org/ContactPoint",
-                "http://schema.org/Audience"
+                "Person",
+                "Organization",
+                "ContactPoint",
+                "Audience"
             ],
             sender: [
-                "http://schema.org/Organization",
-                "http://schema.org/Audience",
-                "http://schema.org/Person"
+                "Organization",
+                "Audience",
+                "Person"
             ],
             toRecipient: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization",
-                "http://schema.org/Audience",
-                "http://schema.org/ContactPoint"
+                "Person",
+                "Organization",
+                "Audience",
+                "ContactPoint"
             ]
         }
     ],
     [
-        "http://schema.org/returnaction",
+        "returnaction",
         {
-            _id: "http://schema.org/ReturnAction",
+            _id: "ReturnAction",
             _name: "ReturnAction",
             _parent: [
-                "http://schema.org/TransferAction"
+                "TransferAction"
             ],
             recipient: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization",
-                "http://schema.org/ContactPoint",
-                "http://schema.org/Audience"
+                "Person",
+                "Organization",
+                "ContactPoint",
+                "Audience"
             ]
         }
     ],
     [
-        "http://schema.org/transferaction",
+        "transferaction",
         {
-            _id: "http://schema.org/TransferAction",
+            _id: "TransferAction",
             _name: "TransferAction",
             _parent: [
-                "http://schema.org/Action"
+                "Action"
             ],
             fromLocation: [
-                "http://schema.org/Place"
+                "Place"
             ],
             toLocation: [
-                "http://schema.org/Place"
+                "Place"
             ]
         }
     ],
     [
-        "http://schema.org/tipaction",
+        "tipaction",
         {
-            _id: "http://schema.org/TipAction",
+            _id: "TipAction",
             _name: "TipAction",
             _parent: [
-                "http://schema.org/TradeAction"
+                "TradeAction"
             ],
             recipient: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization",
-                "http://schema.org/ContactPoint",
-                "http://schema.org/Audience"
+                "Person",
+                "Organization",
+                "ContactPoint",
+                "Audience"
             ]
         }
     ],
     [
-        "http://schema.org/tradeaction",
+        "tradeaction",
         {
-            _id: "http://schema.org/TradeAction",
+            _id: "TradeAction",
             _name: "TradeAction",
             _parent: [
-                "http://schema.org/Action"
+                "Action"
             ],
             price: [
-                "http://schema.org/Text",
-                "http://schema.org/Number"
+                "Text",
+                "Number"
             ],
             priceCurrency: [
-                "http://schema.org/Text"
+                "Text"
             ],
             priceSpecification: [
-                "http://schema.org/PriceSpecification"
+                "PriceSpecification"
             ]
         }
     ],
     [
-        "http://schema.org/donateaction",
+        "donateaction",
         {
-            _id: "http://schema.org/DonateAction",
+            _id: "DonateAction",
             _name: "DonateAction",
             _parent: [
-                "http://schema.org/TradeAction"
+                "TradeAction"
             ],
             recipient: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization",
-                "http://schema.org/ContactPoint",
-                "http://schema.org/Audience"
+                "Person",
+                "Organization",
+                "ContactPoint",
+                "Audience"
             ]
         }
     ],
     [
-        "http://schema.org/communicateaction",
+        "communicateaction",
         {
-            _id: "http://schema.org/CommunicateAction",
+            _id: "CommunicateAction",
             _name: "CommunicateAction",
             _parent: [
-                "http://schema.org/InteractAction"
+                "InteractAction"
             ],
             about: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             inLanguage: [
-                "http://schema.org/Language",
-                "http://schema.org/Text"
+                "Language",
+                "Text"
             ],
             recipient: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization",
-                "http://schema.org/ContactPoint",
-                "http://schema.org/Audience"
+                "Person",
+                "Organization",
+                "ContactPoint",
+                "Audience"
             ]
         }
     ],
     [
-        "http://schema.org/interactaction",
+        "interactaction",
         {
-            _id: "http://schema.org/InteractAction",
+            _id: "InteractAction",
             _name: "InteractAction",
             _parent: [
-                "http://schema.org/Action"
+                "Action"
             ]
         }
     ],
     [
-        "http://schema.org/sendaction",
+        "sendaction",
         {
-            _id: "http://schema.org/SendAction",
+            _id: "SendAction",
             _name: "SendAction",
             _parent: [
-                "http://schema.org/TransferAction"
+                "TransferAction"
             ],
             deliveryMethod: [
-                "http://schema.org/DeliveryMethod"
+                "DeliveryMethod"
             ],
             recipient: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization",
-                "http://schema.org/ContactPoint",
-                "http://schema.org/Audience"
+                "Person",
+                "Organization",
+                "ContactPoint",
+                "Audience"
             ]
         }
     ],
     [
-        "http://schema.org/giveaction",
+        "giveaction",
         {
-            _id: "http://schema.org/GiveAction",
+            _id: "GiveAction",
             _name: "GiveAction",
             _parent: [
-                "http://schema.org/TransferAction"
+                "TransferAction"
             ],
             recipient: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization",
-                "http://schema.org/ContactPoint",
-                "http://schema.org/Audience"
+                "Person",
+                "Organization",
+                "ContactPoint",
+                "Audience"
             ]
         }
     ],
     [
-        "http://schema.org/payaction",
+        "payaction",
         {
-            _id: "http://schema.org/PayAction",
+            _id: "PayAction",
             _name: "PayAction",
             _parent: [
-                "http://schema.org/TradeAction"
+                "TradeAction"
             ],
             recipient: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization",
-                "http://schema.org/ContactPoint",
-                "http://schema.org/Audience"
+                "Person",
+                "Organization",
+                "ContactPoint",
+                "Audience"
             ]
         }
     ],
     [
-        "http://schema.org/authorizeaction",
+        "authorizeaction",
         {
-            _id: "http://schema.org/AuthorizeAction",
+            _id: "AuthorizeAction",
             _name: "AuthorizeAction",
             _parent: [
-                "http://schema.org/AllocateAction"
+                "AllocateAction"
             ],
             recipient: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization",
-                "http://schema.org/ContactPoint",
-                "http://schema.org/Audience"
+                "Person",
+                "Organization",
+                "ContactPoint",
+                "Audience"
             ]
         }
     ],
     [
-        "http://schema.org/allocateaction",
+        "allocateaction",
         {
-            _id: "http://schema.org/AllocateAction",
+            _id: "AllocateAction",
             _name: "AllocateAction",
             _parent: [
-                "http://schema.org/OrganizeAction"
+                "OrganizeAction"
             ]
         }
     ],
     [
-        "http://schema.org/enginespecification",
+        "enginespecification",
         {
-            _id: "http://schema.org/EngineSpecification",
+            _id: "EngineSpecification",
             _name: "EngineSpecification",
             _parent: [
-                "http://schema.org/StructuredValue"
+                "StructuredValue"
             ],
             engineDisplacement: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             enginePower: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             engineType: [
-                "http://schema.org/Text",
-                "http://schema.org/QualitativeValue",
-                "http://schema.org/URL"
+                "Text",
+                "QualitativeValue",
+                "URL"
             ],
             fuelType: [
-                "http://schema.org/Text",
-                "http://schema.org/QualitativeValue",
-                "http://schema.org/URL"
+                "Text",
+                "QualitativeValue",
+                "URL"
             ],
             torque: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ]
         }
     ],
     [
-        "http://schema.org/offer",
+        "offer",
         {
-            _id: "http://schema.org/Offer",
+            _id: "Offer",
             _name: "Offer",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             acceptedPaymentMethod: [
-                "http://schema.org/LoanOrCredit",
-                "http://schema.org/PaymentMethod"
+                "LoanOrCredit",
+                "PaymentMethod"
             ],
             addOn: [
-                "http://schema.org/Offer"
+                "Offer"
             ],
             advanceBookingRequirement: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             aggregateRating: [
-                "http://schema.org/AggregateRating"
+                "AggregateRating"
             ],
             areaServed: [
-                "http://schema.org/Text",
-                "http://schema.org/AdministrativeArea",
-                "http://schema.org/Place",
-                "http://schema.org/GeoShape"
+                "Text",
+                "AdministrativeArea",
+                "Place",
+                "GeoShape"
             ],
             availability: [
-                "http://schema.org/ItemAvailability"
+                "ItemAvailability"
             ],
             availabilityEnds: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date",
-                "http://schema.org/Time"
+                "DateTime",
+                "Date",
+                "Time"
             ],
             availabilityStarts: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date",
-                "http://schema.org/Time"
+                "DateTime",
+                "Date",
+                "Time"
             ],
             availableAtOrFrom: [
-                "http://schema.org/Place"
+                "Place"
             ],
             availableDeliveryMethod: [
-                "http://schema.org/DeliveryMethod"
+                "DeliveryMethod"
             ],
             businessFunction: [
-                "http://schema.org/BusinessFunction"
+                "BusinessFunction"
             ],
             category: [
-                "http://schema.org/Text",
-                "http://schema.org/PhysicalActivityCategory",
-                "http://schema.org/Thing",
-                "http://schema.org/URL"
+                "Text",
+                "PhysicalActivityCategory",
+                "Thing",
+                "URL"
             ],
             deliveryLeadTime: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             eligibleCustomerType: [
-                "http://schema.org/BusinessEntityType"
+                "BusinessEntityType"
             ],
             eligibleDuration: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             eligibleQuantity: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             eligibleRegion: [
-                "http://schema.org/Place",
-                "http://schema.org/Text",
-                "http://schema.org/GeoShape"
+                "Place",
+                "Text",
+                "GeoShape"
             ],
             eligibleTransactionVolume: [
-                "http://schema.org/PriceSpecification"
+                "PriceSpecification"
             ],
             gtin12: [
-                "http://schema.org/Text"
+                "Text"
             ],
             gtin13: [
-                "http://schema.org/Text"
+                "Text"
             ],
             gtin14: [
-                "http://schema.org/Text"
+                "Text"
             ],
             gtin8: [
-                "http://schema.org/Text"
+                "Text"
             ],
             includesObject: [
-                "http://schema.org/TypeAndQuantityNode"
+                "TypeAndQuantityNode"
             ],
             inventoryLevel: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             itemCondition: [
-                "http://schema.org/OfferItemCondition"
+                "OfferItemCondition"
             ],
             itemOffered: [
-                "http://schema.org/Service",
-                "http://schema.org/Trip",
-                "http://schema.org/MenuItem",
-                "http://schema.org/Event",
-                "http://schema.org/CreativeWork",
-                "http://schema.org/Product",
-                "http://schema.org/AggregateOffer"
+                "Service",
+                "Trip",
+                "MenuItem",
+                "Event",
+                "CreativeWork",
+                "Product",
+                "AggregateOffer"
             ],
             mpn: [
-                "http://schema.org/Text"
+                "Text"
             ],
             offeredBy: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             price: [
-                "http://schema.org/Text",
-                "http://schema.org/Number"
+                "Text",
+                "Number"
             ],
             priceCurrency: [
-                "http://schema.org/Text"
+                "Text"
             ],
             priceSpecification: [
-                "http://schema.org/PriceSpecification"
+                "PriceSpecification"
             ],
             priceValidUntil: [
-                "http://schema.org/Date"
+                "Date"
             ],
             review: [
-                "http://schema.org/Review"
+                "Review"
             ],
             seller: [
-                "http://schema.org/Organization",
-                "http://schema.org/Person"
+                "Organization",
+                "Person"
             ],
             serialNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             sku: [
-                "http://schema.org/Text"
+                "Text"
             ],
             validFrom: [
-                "http://schema.org/Date",
-                "http://schema.org/DateTime"
+                "Date",
+                "DateTime"
             ],
             validThrough: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date"
+                "DateTime",
+                "Date"
             ],
             warranty: [
-                "http://schema.org/WarrantyPromise"
+                "WarrantyPromise"
             ]
         }
     ],
     [
-        "http://schema.org/demand",
+        "demand",
         {
-            _id: "http://schema.org/Demand",
+            _id: "Demand",
             _name: "Demand",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             acceptedPaymentMethod: [
-                "http://schema.org/LoanOrCredit",
-                "http://schema.org/PaymentMethod"
+                "LoanOrCredit",
+                "PaymentMethod"
             ],
             advanceBookingRequirement: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             areaServed: [
-                "http://schema.org/Text",
-                "http://schema.org/AdministrativeArea",
-                "http://schema.org/Place",
-                "http://schema.org/GeoShape"
+                "Text",
+                "AdministrativeArea",
+                "Place",
+                "GeoShape"
             ],
             availability: [
-                "http://schema.org/ItemAvailability"
+                "ItemAvailability"
             ],
             availabilityEnds: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date",
-                "http://schema.org/Time"
+                "DateTime",
+                "Date",
+                "Time"
             ],
             availabilityStarts: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date",
-                "http://schema.org/Time"
+                "DateTime",
+                "Date",
+                "Time"
             ],
             availableAtOrFrom: [
-                "http://schema.org/Place"
+                "Place"
             ],
             availableDeliveryMethod: [
-                "http://schema.org/DeliveryMethod"
+                "DeliveryMethod"
             ],
             businessFunction: [
-                "http://schema.org/BusinessFunction"
+                "BusinessFunction"
             ],
             deliveryLeadTime: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             eligibleCustomerType: [
-                "http://schema.org/BusinessEntityType"
+                "BusinessEntityType"
             ],
             eligibleDuration: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             eligibleQuantity: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             eligibleRegion: [
-                "http://schema.org/Place",
-                "http://schema.org/Text",
-                "http://schema.org/GeoShape"
+                "Place",
+                "Text",
+                "GeoShape"
             ],
             eligibleTransactionVolume: [
-                "http://schema.org/PriceSpecification"
+                "PriceSpecification"
             ],
             gtin12: [
-                "http://schema.org/Text"
+                "Text"
             ],
             gtin13: [
-                "http://schema.org/Text"
+                "Text"
             ],
             gtin14: [
-                "http://schema.org/Text"
+                "Text"
             ],
             gtin8: [
-                "http://schema.org/Text"
+                "Text"
             ],
             includesObject: [
-                "http://schema.org/TypeAndQuantityNode"
+                "TypeAndQuantityNode"
             ],
             inventoryLevel: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             itemCondition: [
-                "http://schema.org/OfferItemCondition"
+                "OfferItemCondition"
             ],
             itemOffered: [
-                "http://schema.org/Service",
-                "http://schema.org/Trip",
-                "http://schema.org/MenuItem",
-                "http://schema.org/Event",
-                "http://schema.org/CreativeWork",
-                "http://schema.org/Product",
-                "http://schema.org/AggregateOffer"
+                "Service",
+                "Trip",
+                "MenuItem",
+                "Event",
+                "CreativeWork",
+                "Product",
+                "AggregateOffer"
             ],
             mpn: [
-                "http://schema.org/Text"
+                "Text"
             ],
             priceSpecification: [
-                "http://schema.org/PriceSpecification"
+                "PriceSpecification"
             ],
             seller: [
-                "http://schema.org/Organization",
-                "http://schema.org/Person"
+                "Organization",
+                "Person"
             ],
             serialNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             sku: [
-                "http://schema.org/Text"
+                "Text"
             ],
             validFrom: [
-                "http://schema.org/Date",
-                "http://schema.org/DateTime"
+                "Date",
+                "DateTime"
             ],
             validThrough: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date"
+                "DateTime",
+                "Date"
             ],
             warranty: [
-                "http://schema.org/WarrantyPromise"
+                "WarrantyPromise"
             ]
         }
     ],
     [
-        "http://schema.org/useaction",
+        "useaction",
         {
-            _id: "http://schema.org/UseAction",
+            _id: "UseAction",
             _name: "UseAction",
             _parent: [
-                "http://schema.org/ConsumeAction"
+                "ConsumeAction"
             ]
         }
     ],
     [
-        "http://schema.org/apireference",
+        "apireference",
         {
-            _id: "http://schema.org/APIReference",
+            _id: "APIReference",
             _name: "APIReference",
             _parent: [
-                "http://schema.org/TechArticle"
+                "TechArticle"
             ],
             assemblyVersion: [
-                "http://schema.org/Text"
+                "Text"
             ],
             executableLibraryName: [
-                "http://schema.org/Text"
+                "Text"
             ],
             programmingModel: [
-                "http://schema.org/Text"
+                "Text"
             ],
             targetPlatform: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/techarticle",
+        "techarticle",
         {
-            _id: "http://schema.org/TechArticle",
+            _id: "TechArticle",
             _name: "TechArticle",
             _parent: [
-                "http://schema.org/Article"
+                "Article"
             ],
             dependencies: [
-                "http://schema.org/Text"
+                "Text"
             ],
             proficiencyLevel: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/filmaction",
+        "filmaction",
         {
-            _id: "http://schema.org/FilmAction",
+            _id: "FilmAction",
             _name: "FilmAction",
             _parent: [
-                "http://schema.org/CreateAction"
+                "CreateAction"
             ]
         }
     ],
     [
-        "http://schema.org/createaction",
+        "createaction",
         {
-            _id: "http://schema.org/CreateAction",
+            _id: "CreateAction",
             _name: "CreateAction",
             _parent: [
-                "http://schema.org/Action"
+                "Action"
             ]
         }
     ],
     [
-        "http://schema.org/medicaldevice",
+        "medicaldevice",
         {
-            _id: "http://schema.org/MedicalDevice",
+            _id: "MedicalDevice",
             _name: "MedicalDevice",
             _parent: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ],
             adverseOutcome: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ],
             contraindication: [
-                "http://schema.org/Text",
-                "http://schema.org/MedicalContraindication"
+                "Text",
+                "MedicalContraindication"
             ],
             postOp: [
-                "http://schema.org/Text"
+                "Text"
             ],
             preOp: [
-                "http://schema.org/Text"
+                "Text"
             ],
             procedure: [
-                "http://schema.org/Text"
+                "Text"
             ],
             seriousAdverseOutcome: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ]
         }
     ],
     [
-        "http://schema.org/bustrip",
+        "bustrip",
         {
-            _id: "http://schema.org/BusTrip",
+            _id: "BusTrip",
             _name: "BusTrip",
             _parent: [
-                "http://schema.org/Trip"
+                "Trip"
             ],
             arrivalBusStop: [
-                "http://schema.org/BusStation",
-                "http://schema.org/BusStop"
+                "BusStation",
+                "BusStop"
             ],
             busName: [
-                "http://schema.org/Text"
+                "Text"
             ],
             busNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             departureBusStop: [
-                "http://schema.org/BusStop",
-                "http://schema.org/BusStation"
+                "BusStop",
+                "BusStation"
             ]
         }
     ],
     [
-        "http://schema.org/busstation",
+        "busstation",
         {
-            _id: "http://schema.org/BusStation",
+            _id: "BusStation",
             _name: "BusStation",
             _parent: [
-                "http://schema.org/CivicStructure"
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/busstop",
+        "busstop",
         {
-            _id: "http://schema.org/BusStop",
+            _id: "BusStop",
             _name: "BusStop",
             _parent: [
-                "http://schema.org/CivicStructure"
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/computerlanguage",
+        "computerlanguage",
         {
-            _id: "http://schema.org/ComputerLanguage",
+            _id: "ComputerLanguage",
             _name: "ComputerLanguage",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ]
         }
     ],
     [
-        "http://schema.org/medicalscholarlyarticle",
+        "medicalscholarlyarticle",
         {
-            _id: "http://schema.org/MedicalScholarlyArticle",
+            _id: "MedicalScholarlyArticle",
             _name: "MedicalScholarlyArticle",
             _parent: [
-                "http://schema.org/ScholarlyArticle"
+                "ScholarlyArticle"
             ],
             publicationType: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/scholarlyarticle",
+        "scholarlyarticle",
         {
-            _id: "http://schema.org/ScholarlyArticle",
+            _id: "ScholarlyArticle",
             _name: "ScholarlyArticle",
             _parent: [
-                "http://schema.org/Article"
+                "Article"
             ]
         }
     ],
     [
-        "http://schema.org/joint",
+        "joint",
         {
-            _id: "http://schema.org/Joint",
+            _id: "Joint",
             _name: "Joint",
             _parent: [
-                "http://schema.org/AnatomicalStructure"
+                "AnatomicalStructure"
             ],
             biomechnicalClass: [
-                "http://schema.org/Text"
+                "Text"
             ],
             functionalClass: [
-                "http://schema.org/MedicalEntity",
-                "http://schema.org/Text"
+                "MedicalEntity",
+                "Text"
             ],
             structuralClass: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/educationevent",
+        "educationevent",
         {
-            _id: "http://schema.org/EducationEvent",
+            _id: "EducationEvent",
             _name: "EducationEvent",
             _parent: [
-                "http://schema.org/Event"
+                "Event"
             ]
         }
     ],
     [
-        "http://schema.org/speakablespecification",
+        "speakablespecification",
         {
-            _id: "http://schema.org/SpeakableSpecification",
+            _id: "SpeakableSpecification",
             _name: "SpeakableSpecification",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             cssSelector: [
-                "http://schema.org/CssSelectorType"
+                "CssSelectorType"
             ],
             xpath: [
-                "http://schema.org/XPathType"
+                "XPathType"
             ]
         }
     ],
     [
-        "http://schema.org/sportinggoodsstore",
+        "sportinggoodsstore",
         {
-            _id: "http://schema.org/SportingGoodsStore",
+            _id: "SportingGoodsStore",
             _name: "SportingGoodsStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/individualproduct",
+        "individualproduct",
         {
-            _id: "http://schema.org/IndividualProduct",
+            _id: "IndividualProduct",
             _name: "IndividualProduct",
             _parent: [
-                "http://schema.org/Product"
+                "Product"
             ],
             serialNumber: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/videogame",
+        "videogame",
         {
-            _id: "http://schema.org/VideoGame",
+            _id: "VideoGame",
             _name: "VideoGame",
             _parent: [
-                "http://schema.org/SoftwareApplication",
-                "http://schema.org/Game"
+                "SoftwareApplication",
+                "Game"
             ],
             actor: [
-                "http://schema.org/Person"
+                "Person"
             ],
             cheatCode: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             director: [
-                "http://schema.org/Person"
+                "Person"
             ],
             gamePlatform: [
-                "http://schema.org/Thing",
-                "http://schema.org/URL",
-                "http://schema.org/Text"
+                "Thing",
+                "URL",
+                "Text"
             ],
             gameServer: [
-                "http://schema.org/GameServer"
+                "GameServer"
             ],
             gameTip: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             musicBy: [
-                "http://schema.org/MusicGroup",
-                "http://schema.org/Person"
+                "MusicGroup",
+                "Person"
             ],
             playMode: [
-                "http://schema.org/GamePlayMode"
+                "GamePlayMode"
             ],
             trailer: [
-                "http://schema.org/VideoObject"
+                "VideoObject"
             ]
         }
     ],
     [
-        "http://schema.org/game",
+        "game",
         {
-            _id: "http://schema.org/Game",
+            _id: "Game",
             _name: "Game",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             characterAttribute: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             gameItem: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             gameLocation: [
-                "http://schema.org/PostalAddress",
-                "http://schema.org/URL",
-                "http://schema.org/Place"
+                "PostalAddress",
+                "URL",
+                "Place"
             ],
             numberOfPlayers: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             quest: [
-                "http://schema.org/Thing"
+                "Thing"
             ]
         }
     ],
     [
-        "http://schema.org/medicaltestpanel",
+        "medicaltestpanel",
         {
-            _id: "http://schema.org/MedicalTestPanel",
+            _id: "MedicalTestPanel",
             _name: "MedicalTestPanel",
             _parent: [
-                "http://schema.org/MedicalTest"
+                "MedicalTest"
             ],
             subTest: [
-                "http://schema.org/MedicalTest"
+                "MedicalTest"
             ]
         }
     ],
     [
-        "http://schema.org/warrantypromise",
+        "warrantypromise",
         {
-            _id: "http://schema.org/WarrantyPromise",
+            _id: "WarrantyPromise",
             _name: "WarrantyPromise",
             _parent: [
-                "http://schema.org/StructuredValue"
+                "StructuredValue"
             ],
             durationOfWarranty: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             warrantyScope: [
-                "http://schema.org/WarrantyScope"
+                "WarrantyScope"
             ]
         }
     ],
     [
-        "http://schema.org/textdigitaldocument",
+        "textdigitaldocument",
         {
-            _id: "http://schema.org/TextDigitalDocument",
+            _id: "TextDigitalDocument",
             _name: "TextDigitalDocument",
             _parent: [
-                "http://schema.org/DigitalDocument"
+                "DigitalDocument"
             ]
         }
     ],
     [
-        "http://schema.org/digitaldocument",
+        "digitaldocument",
         {
-            _id: "http://schema.org/DigitalDocument",
+            _id: "DigitalDocument",
             _name: "DigitalDocument",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             hasDigitalDocumentPermission: [
-                "http://schema.org/DigitalDocumentPermission"
+                "DigitalDocumentPermission"
             ]
         }
     ],
     [
-        "http://schema.org/taxireservation",
+        "taxireservation",
         {
-            _id: "http://schema.org/TaxiReservation",
+            _id: "TaxiReservation",
             _name: "TaxiReservation",
             _parent: [
-                "http://schema.org/Reservation"
+                "Reservation"
             ],
             partySize: [
-                "http://schema.org/QuantitativeValue",
-                "http://schema.org/Integer"
+                "QuantitativeValue",
+                "Integer"
             ],
             pickupLocation: [
-                "http://schema.org/Place"
+                "Place"
             ],
             pickupTime: [
-                "http://schema.org/DateTime"
+                "DateTime"
             ]
         }
     ],
     [
-        "http://schema.org/question",
+        "question",
         {
-            _id: "http://schema.org/Question",
+            _id: "Question",
             _name: "Question",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             acceptedAnswer: [
-                "http://schema.org/ItemList",
-                "http://schema.org/Answer"
+                "ItemList",
+                "Answer"
             ],
             answerCount: [
-                "http://schema.org/Integer"
+                "Integer"
             ],
             downvoteCount: [
-                "http://schema.org/Integer"
+                "Integer"
             ],
             suggestedAnswer: [
-                "http://schema.org/ItemList",
-                "http://schema.org/Answer"
+                "ItemList",
+                "Answer"
             ],
             upvoteCount: [
-                "http://schema.org/Integer"
+                "Integer"
             ]
         }
     ],
     [
-        "http://schema.org/itemlist",
+        "itemlist",
         {
-            _id: "http://schema.org/ItemList",
+            _id: "ItemList",
             _name: "ItemList",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             itemListElement: [
-                "http://schema.org/Thing",
-                "http://schema.org/Text",
-                "http://schema.org/ListItem"
+                "Thing",
+                "Text",
+                "ListItem"
             ],
             itemListOrder: [
-                "http://schema.org/Text",
-                "http://schema.org/ItemListOrderType"
+                "Text",
+                "ItemListOrderType"
             ],
             numberOfItems: [
-                "http://schema.org/Integer"
+                "Integer"
             ]
         }
     ],
     [
-        "http://schema.org/answer",
+        "answer",
         {
-            _id: "http://schema.org/Answer",
+            _id: "Answer",
             _name: "Answer",
             _parent: [
-                "http://schema.org/Comment"
+                "Comment"
             ]
         }
     ],
     [
-        "http://schema.org/comment",
+        "comment",
         {
-            _id: "http://schema.org/Comment",
+            _id: "Comment",
             _name: "Comment",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             downvoteCount: [
-                "http://schema.org/Integer"
+                "Integer"
             ],
             parentItem: [
-                "http://schema.org/Question"
+                "Question"
             ],
             upvoteCount: [
-                "http://schema.org/Integer"
+                "Integer"
             ]
         }
     ],
     [
-        "http://schema.org/loanorcredit",
+        "loanorcredit",
         {
-            _id: "http://schema.org/LoanOrCredit",
+            _id: "LoanOrCredit",
             _name: "LoanOrCredit",
             _parent: [
-                "http://schema.org/FinancialProduct"
+                "FinancialProduct"
             ],
             amount: [
-                "http://schema.org/MonetaryAmount",
-                "http://schema.org/Number"
+                "MonetaryAmount",
+                "Number"
             ],
             currency: [
-                "http://schema.org/Text"
+                "Text"
             ],
             loanTerm: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             requiredCollateral: [
-                "http://schema.org/Text",
-                "http://schema.org/Thing"
+                "Text",
+                "Thing"
             ]
         }
     ],
     [
-        "http://schema.org/financialproduct",
+        "financialproduct",
         {
-            _id: "http://schema.org/FinancialProduct",
+            _id: "FinancialProduct",
             _name: "FinancialProduct",
             _parent: [
-                "http://schema.org/Service"
+                "Service"
             ],
             annualPercentageRate: [
-                "http://schema.org/Number",
-                "http://schema.org/QuantitativeValue"
+                "Number",
+                "QuantitativeValue"
             ],
             feesAndCommissionsSpecification: [
-                "http://schema.org/Text",
-                "http://schema.org/URL"
+                "Text",
+                "URL"
             ],
             interestRate: [
-                "http://schema.org/QuantitativeValue",
-                "http://schema.org/Number"
+                "QuantitativeValue",
+                "Number"
             ]
         }
     ],
     [
-        "http://schema.org/employeerole",
+        "employeerole",
         {
-            _id: "http://schema.org/EmployeeRole",
+            _id: "EmployeeRole",
             _name: "EmployeeRole",
             _parent: [
-                "http://schema.org/OrganizationRole"
+                "OrganizationRole"
             ],
             baseSalary: [
-                "http://schema.org/PriceSpecification",
-                "http://schema.org/Number",
-                "http://schema.org/MonetaryAmount"
+                "PriceSpecification",
+                "Number",
+                "MonetaryAmount"
             ],
             salaryCurrency: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/organizationrole",
+        "organizationrole",
         {
-            _id: "http://schema.org/OrganizationRole",
+            _id: "OrganizationRole",
             _name: "OrganizationRole",
             _parent: [
-                "http://schema.org/Role"
+                "Role"
             ],
             numberedPosition: [
-                "http://schema.org/Number"
+                "Number"
             ]
         }
     ],
     [
-        "http://schema.org/role",
+        "role",
         {
-            _id: "http://schema.org/Role",
+            _id: "Role",
             _name: "Role",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             endDate: [
-                "http://schema.org/Date",
-                "http://schema.org/DateTime"
+                "Date",
+                "DateTime"
             ],
             roleName: [
-                "http://schema.org/URL",
-                "http://schema.org/Text"
+                "URL",
+                "Text"
             ],
             startDate: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date"
+                "DateTime",
+                "Date"
             ]
         }
     ],
     [
-        "http://schema.org/jobposting",
+        "jobposting",
         {
-            _id: "http://schema.org/JobPosting",
+            _id: "JobPosting",
             _name: "JobPosting",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             baseSalary: [
-                "http://schema.org/PriceSpecification",
-                "http://schema.org/Number",
-                "http://schema.org/MonetaryAmount"
+                "PriceSpecification",
+                "Number",
+                "MonetaryAmount"
             ],
             datePosted: [
-                "http://schema.org/Date",
-                "http://schema.org/DateTime"
+                "Date",
+                "DateTime"
             ],
             employmentType: [
-                "http://schema.org/Text"
+                "Text"
             ],
             estimatedSalary: [
-                "http://schema.org/Number",
-                "http://schema.org/MonetaryAmountDistribution",
-                "http://schema.org/MonetaryAmount"
+                "Number",
+                "MonetaryAmountDistribution",
+                "MonetaryAmount"
             ],
             experienceRequirements: [
-                "http://schema.org/Text"
+                "Text"
             ],
             hiringOrganization: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             incentiveCompensation: [
-                "http://schema.org/Text"
+                "Text"
             ],
             industry: [
-                "http://schema.org/Text",
-                "http://schema.org/DefinedTerm"
+                "Text",
+                "DefinedTerm"
             ],
             jobBenefits: [
-                "http://schema.org/Text"
+                "Text"
             ],
             jobLocation: [
-                "http://schema.org/Place"
+                "Place"
             ],
             relevantOccupation: [
-                "http://schema.org/Occupation"
+                "Occupation"
             ],
             responsibilities: [
-                "http://schema.org/Text"
+                "Text"
             ],
             salaryCurrency: [
-                "http://schema.org/Text"
+                "Text"
             ],
             skills: [
-                "http://schema.org/DefinedTerm",
-                "http://schema.org/Text"
+                "DefinedTerm",
+                "Text"
             ],
             specialCommitments: [
-                "http://schema.org/Text"
+                "Text"
             ],
             title: [
-                "http://schema.org/Text"
+                "Text"
             ],
             validThrough: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date"
+                "DateTime",
+                "Date"
             ],
             workHours: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/someproducts",
+        "someproducts",
         {
-            _id: "http://schema.org/SomeProducts",
+            _id: "SomeProducts",
             _name: "SomeProducts",
             _parent: [
-                "http://schema.org/Product"
+                "Product"
             ],
             inventoryLevel: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ]
         }
     ],
     [
-        "http://schema.org/planaction",
+        "planaction",
         {
-            _id: "http://schema.org/PlanAction",
+            _id: "PlanAction",
             _name: "PlanAction",
             _parent: [
-                "http://schema.org/OrganizeAction"
+                "OrganizeAction"
             ],
             scheduledTime: [
-                "http://schema.org/DateTime"
+                "DateTime"
             ]
         }
     ],
     [
-        "http://schema.org/busorcoach",
+        "busorcoach",
         {
-            _id: "http://schema.org/BusOrCoach",
+            _id: "BusOrCoach",
             _name: "BusOrCoach",
             _parent: [
-                "http://schema.org/Vehicle"
+                "Vehicle"
             ],
             acrissCode: [
-                "http://schema.org/Text"
+                "Text"
             ],
             roofLoad: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ]
         }
     ],
     [
-        "http://schema.org/review",
+        "review",
         {
-            _id: "http://schema.org/Review",
+            _id: "Review",
             _name: "Review",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             itemReviewed: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             reviewAspect: [
-                "http://schema.org/Text"
+                "Text"
             ],
             reviewBody: [
-                "http://schema.org/Text"
+                "Text"
             ],
             reviewRating: [
-                "http://schema.org/Rating"
+                "Rating"
             ]
         }
     ],
     [
-        "http://schema.org/aggregaterating",
+        "aggregaterating",
         {
-            _id: "http://schema.org/AggregateRating",
+            _id: "AggregateRating",
             _name: "AggregateRating",
             _parent: [
-                "http://schema.org/Rating"
+                "Rating"
             ],
             itemReviewed: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             ratingCount: [
-                "http://schema.org/Integer"
+                "Integer"
             ],
             reviewCount: [
-                "http://schema.org/Integer"
+                "Integer"
             ]
         }
     ],
     [
-        "http://schema.org/rating",
+        "rating",
         {
-            _id: "http://schema.org/Rating",
+            _id: "Rating",
             _name: "Rating",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             author: [
-                "http://schema.org/Organization",
-                "http://schema.org/Person"
+                "Organization",
+                "Person"
             ],
             bestRating: [
-                "http://schema.org/Number",
-                "http://schema.org/Text"
+                "Number",
+                "Text"
             ],
             ratingValue: [
-                "http://schema.org/Text",
-                "http://schema.org/Number"
+                "Text",
+                "Number"
             ],
             reviewAspect: [
-                "http://schema.org/Text"
+                "Text"
             ],
             worstRating: [
-                "http://schema.org/Text",
-                "http://schema.org/Number"
+                "Text",
+                "Number"
             ]
         }
     ],
     [
-        "http://schema.org/propertyvaluespecification",
+        "propertyvaluespecification",
         {
-            _id: "http://schema.org/PropertyValueSpecification",
+            _id: "PropertyValueSpecification",
             _name: "PropertyValueSpecification",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             defaultValue: [
-                "http://schema.org/Text",
-                "http://schema.org/Thing"
+                "Text",
+                "Thing"
             ],
             maxValue: [
-                "http://schema.org/Number"
+                "Number"
             ],
             minValue: [
-                "http://schema.org/Number"
+                "Number"
             ],
             multipleValues: [
-                "http://schema.org/Boolean"
+                "Boolean"
             ],
             readonlyValue: [
-                "http://schema.org/Boolean"
+                "Boolean"
             ],
             stepValue: [
-                "http://schema.org/Number"
+                "Number"
             ],
             valueMaxLength: [
-                "http://schema.org/Number"
+                "Number"
             ],
             valueMinLength: [
-                "http://schema.org/Number"
+                "Number"
             ],
             valueName: [
-                "http://schema.org/Text"
+                "Text"
             ],
             valuePattern: [
-                "http://schema.org/Text"
+                "Text"
             ],
             valueRequired: [
-                "http://schema.org/Boolean"
+                "Boolean"
             ]
         }
     ],
     [
-        "http://schema.org/officeequipmentstore",
+        "officeequipmentstore",
         {
-            _id: "http://schema.org/OfficeEquipmentStore",
+            _id: "OfficeEquipmentStore",
             _name: "OfficeEquipmentStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/gatedresidencecommunity",
+        "gatedresidencecommunity",
         {
-            _id: "http://schema.org/GatedResidenceCommunity",
+            _id: "GatedResidenceCommunity",
             _name: "GatedResidenceCommunity",
             _parent: [
-                "http://schema.org/Residence"
+                "Residence"
             ]
         }
     ],
     [
-        "http://schema.org/bakery",
+        "bakery",
         {
-            _id: "http://schema.org/Bakery",
+            _id: "Bakery",
             _name: "Bakery",
             _parent: [
-                "http://schema.org/FoodEstablishment"
+                "FoodEstablishment"
             ]
         }
     ],
     [
-        "http://schema.org/country",
+        "country",
         {
-            _id: "http://schema.org/Country",
+            _id: "Country",
             _name: "Country",
             _parent: [
-                "http://schema.org/AdministrativeArea"
+                "AdministrativeArea"
             ]
         }
     ],
     [
-        "http://schema.org/administrativearea",
+        "administrativearea",
         {
-            _id: "http://schema.org/AdministrativeArea",
+            _id: "AdministrativeArea",
             _name: "AdministrativeArea",
             _parent: [
-                "http://schema.org/Place"
+                "Place"
             ]
         }
     ],
     [
-        "http://schema.org/rentaction",
+        "rentaction",
         {
-            _id: "http://schema.org/RentAction",
+            _id: "RentAction",
             _name: "RentAction",
             _parent: [
-                "http://schema.org/TradeAction"
+                "TradeAction"
             ],
             landlord: [
-                "http://schema.org/Organization",
-                "http://schema.org/Person"
+                "Organization",
+                "Person"
             ],
             realEstateAgent: [
-                "http://schema.org/RealEstateAgent"
+                "RealEstateAgent"
             ]
         }
     ],
     [
-        "http://schema.org/movietheater",
+        "movietheater",
         {
-            _id: "http://schema.org/MovieTheater",
+            _id: "MovieTheater",
             _name: "MovieTheater",
             _parent: [
-                "http://schema.org/CivicStructure",
-                "http://schema.org/EntertainmentBusiness"
+                "CivicStructure",
+                "EntertainmentBusiness"
             ],
             screenCount: [
-                "http://schema.org/Number"
+                "Number"
             ]
         }
     ],
     [
-        "http://schema.org/entertainmentbusiness",
+        "entertainmentbusiness",
         {
-            _id: "http://schema.org/EntertainmentBusiness",
+            _id: "EntertainmentBusiness",
             _name: "EntertainmentBusiness",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/educationalorganization",
+        "educationalorganization",
         {
-            _id: "http://schema.org/EducationalOrganization",
+            _id: "EducationalOrganization",
             _name: "EducationalOrganization",
             _parent: [
-                "http://schema.org/CivicStructure",
-                "http://schema.org/Organization"
+                "CivicStructure",
+                "Organization"
             ],
             alumni: [
-                "http://schema.org/Person"
+                "Person"
             ]
         }
     ],
     [
-        "http://schema.org/sellaction",
+        "sellaction",
         {
-            _id: "http://schema.org/SellAction",
+            _id: "SellAction",
             _name: "SellAction",
             _parent: [
-                "http://schema.org/TradeAction"
+                "TradeAction"
             ],
             buyer: [
-                "http://schema.org/Person"
+                "Person"
             ]
         }
     ],
     [
-        "http://schema.org/mountain",
+        "mountain",
         {
-            _id: "http://schema.org/Mountain",
+            _id: "Mountain",
             _name: "Mountain",
             _parent: [
-                "http://schema.org/Landform"
+                "Landform"
             ]
         }
     ],
     [
-        "http://schema.org/landform",
+        "landform",
         {
-            _id: "http://schema.org/Landform",
+            _id: "Landform",
             _name: "Landform",
             _parent: [
-                "http://schema.org/Place"
+                "Place"
             ]
         }
     ],
     [
-        "http://schema.org/recipe",
+        "recipe",
         {
-            _id: "http://schema.org/Recipe",
+            _id: "Recipe",
             _name: "Recipe",
             _parent: [
-                "http://schema.org/HowTo"
+                "HowTo"
             ],
             cookingMethod: [
-                "http://schema.org/Text"
+                "Text"
             ],
             cookTime: [
-                "http://schema.org/Duration"
+                "Duration"
             ],
             nutrition: [
-                "http://schema.org/NutritionInformation"
+                "NutritionInformation"
             ],
             recipeCategory: [
-                "http://schema.org/Text"
+                "Text"
             ],
             recipeCuisine: [
-                "http://schema.org/Text"
+                "Text"
             ],
             recipeIngredient: [
-                "http://schema.org/Text"
+                "Text"
             ],
             recipeInstructions: [
-                "http://schema.org/ItemList",
-                "http://schema.org/Text",
-                "http://schema.org/CreativeWork"
+                "ItemList",
+                "Text",
+                "CreativeWork"
             ],
             recipeYield: [
-                "http://schema.org/QuantitativeValue",
-                "http://schema.org/Text"
+                "QuantitativeValue",
+                "Text"
             ],
             suitableForDiet: [
-                "http://schema.org/RestrictedDiet"
+                "RestrictedDiet"
             ]
         }
     ],
     [
-        "http://schema.org/howto",
+        "howto",
         {
-            _id: "http://schema.org/HowTo",
+            _id: "HowTo",
             _name: "HowTo",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             estimatedCost: [
-                "http://schema.org/MonetaryAmount",
-                "http://schema.org/Text"
+                "MonetaryAmount",
+                "Text"
             ],
             performTime: [
-                "http://schema.org/Duration"
+                "Duration"
             ],
             prepTime: [
-                "http://schema.org/Duration"
+                "Duration"
             ],
             step: [
-                "http://schema.org/Text",
-                "http://schema.org/HowToSection",
-                "http://schema.org/CreativeWork",
-                "http://schema.org/HowToStep"
+                "Text",
+                "HowToSection",
+                "CreativeWork",
+                "HowToStep"
             ],
             supply: [
-                "http://schema.org/Text",
-                "http://schema.org/HowToSupply"
+                "Text",
+                "HowToSupply"
             ],
             tool: [
-                "http://schema.org/Text",
-                "http://schema.org/HowToTool"
+                "Text",
+                "HowToTool"
             ],
             totalTime: [
-                "http://schema.org/Duration"
+                "Duration"
             ],
             yield: [
-                "http://schema.org/Text",
-                "http://schema.org/QuantitativeValue"
+                "Text",
+                "QuantitativeValue"
             ]
         }
     ],
     [
-        "http://schema.org/howtodirection",
+        "howtodirection",
         {
-            _id: "http://schema.org/HowToDirection",
+            _id: "HowToDirection",
             _name: "HowToDirection",
             _parent: [
-                "http://schema.org/ListItem",
-                "http://schema.org/CreativeWork"
+                "ListItem",
+                "CreativeWork"
             ],
             afterMedia: [
-                "http://schema.org/URL",
-                "http://schema.org/MediaObject"
+                "URL",
+                "MediaObject"
             ],
             beforeMedia: [
-                "http://schema.org/MediaObject",
-                "http://schema.org/URL"
+                "MediaObject",
+                "URL"
             ],
             duringMedia: [
-                "http://schema.org/URL",
-                "http://schema.org/MediaObject"
+                "URL",
+                "MediaObject"
             ],
             performTime: [
-                "http://schema.org/Duration"
+                "Duration"
             ],
             prepTime: [
-                "http://schema.org/Duration"
+                "Duration"
             ],
             supply: [
-                "http://schema.org/Text",
-                "http://schema.org/HowToSupply"
+                "Text",
+                "HowToSupply"
             ],
             tool: [
-                "http://schema.org/Text",
-                "http://schema.org/HowToTool"
+                "Text",
+                "HowToTool"
             ],
             totalTime: [
-                "http://schema.org/Duration"
+                "Duration"
             ]
         }
     ],
     [
-        "http://schema.org/listitem",
+        "listitem",
         {
-            _id: "http://schema.org/ListItem",
+            _id: "ListItem",
             _name: "ListItem",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             item: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             nextItem: [
-                "http://schema.org/ListItem"
+                "ListItem"
             ],
             position: [
-                "http://schema.org/Text",
-                "http://schema.org/Integer"
+                "Text",
+                "Integer"
             ],
             previousItem: [
-                "http://schema.org/ListItem"
+                "ListItem"
             ]
         }
     ],
     [
-        "http://schema.org/howtosupply",
+        "howtosupply",
         {
-            _id: "http://schema.org/HowToSupply",
+            _id: "HowToSupply",
             _name: "HowToSupply",
             _parent: [
-                "http://schema.org/HowToItem"
+                "HowToItem"
             ],
             estimatedCost: [
-                "http://schema.org/MonetaryAmount",
-                "http://schema.org/Text"
+                "MonetaryAmount",
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/howtoitem",
+        "howtoitem",
         {
-            _id: "http://schema.org/HowToItem",
+            _id: "HowToItem",
             _name: "HowToItem",
             _parent: [
-                "http://schema.org/ListItem"
+                "ListItem"
             ],
             requiredQuantity: [
-                "http://schema.org/Number",
-                "http://schema.org/Text",
-                "http://schema.org/QuantitativeValue"
+                "Number",
+                "Text",
+                "QuantitativeValue"
             ]
         }
     ],
     [
-        "http://schema.org/howtotip",
+        "howtotip",
         {
-            _id: "http://schema.org/HowToTip",
+            _id: "HowToTip",
             _name: "HowToTip",
             _parent: [
-                "http://schema.org/CreativeWork",
-                "http://schema.org/ListItem"
+                "CreativeWork",
+                "ListItem"
             ]
         }
     ],
     [
-        "http://schema.org/medicalriskfactor",
+        "medicalriskfactor",
         {
-            _id: "http://schema.org/MedicalRiskFactor",
+            _id: "MedicalRiskFactor",
             _name: "MedicalRiskFactor",
             _parent: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ],
             increasesRiskOf: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ]
         }
     ],
     [
-        "http://schema.org/performancerole",
+        "performancerole",
         {
-            _id: "http://schema.org/PerformanceRole",
+            _id: "PerformanceRole",
             _name: "PerformanceRole",
             _parent: [
-                "http://schema.org/Role"
+                "Role"
             ],
             characterName: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/hospital",
+        "hospital",
         {
-            _id: "http://schema.org/Hospital",
+            _id: "Hospital",
             _name: "Hospital",
             _parent: [
-                "http://schema.org/CivicStructure",
-                "http://schema.org/EmergencyService",
-                "http://schema.org/MedicalOrganization"
+                "CivicStructure",
+                "EmergencyService",
+                "MedicalOrganization"
             ],
             availableService: [
-                "http://schema.org/MedicalTest",
-                "http://schema.org/MedicalTherapy",
-                "http://schema.org/MedicalProcedure"
+                "MedicalTest",
+                "MedicalTherapy",
+                "MedicalProcedure"
             ],
             medicalSpecialty: [
-                "http://schema.org/MedicalSpecialty"
+                "MedicalSpecialty"
             ]
         }
     ],
     [
-        "http://schema.org/emergencyservice",
+        "emergencyservice",
         {
-            _id: "http://schema.org/EmergencyService",
+            _id: "EmergencyService",
             _name: "EmergencyService",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/medicalorganization",
+        "medicalorganization",
         {
-            _id: "http://schema.org/MedicalOrganization",
+            _id: "MedicalOrganization",
             _name: "MedicalOrganization",
             _parent: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             medicalSpecialty: [
-                "http://schema.org/MedicalSpecialty"
+                "MedicalSpecialty"
             ]
         }
     ],
     [
-        "http://schema.org/dataset",
+        "dataset",
         {
-            _id: "http://schema.org/Dataset",
+            _id: "Dataset",
             _name: "Dataset",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             distribution: [
-                "http://schema.org/DataDownload"
+                "DataDownload"
             ],
             includedInDataCatalog: [
-                "http://schema.org/DataCatalog"
+                "DataCatalog"
             ],
             issn: [
-                "http://schema.org/Text"
+                "Text"
             ],
             variablesMeasured: [
-                "http://schema.org/Text",
-                "http://schema.org/PropertyValue"
+                "Text",
+                "PropertyValue"
             ]
         }
     ],
     [
-        "http://schema.org/unitpricespecification",
+        "unitpricespecification",
         {
-            _id: "http://schema.org/UnitPriceSpecification",
+            _id: "UnitPriceSpecification",
             _name: "UnitPriceSpecification",
             _parent: [
-                "http://schema.org/PriceSpecification"
+                "PriceSpecification"
             ],
             billingIncrement: [
-                "http://schema.org/Number"
+                "Number"
             ],
             priceType: [
-                "http://schema.org/Text"
+                "Text"
             ],
             referenceQuantity: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             unitCode: [
-                "http://schema.org/URL",
-                "http://schema.org/Text"
+                "URL",
+                "Text"
             ],
             unitText: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/ownershipinfo",
+        "ownershipinfo",
         {
-            _id: "http://schema.org/OwnershipInfo",
+            _id: "OwnershipInfo",
             _name: "OwnershipInfo",
             _parent: [
-                "http://schema.org/StructuredValue"
+                "StructuredValue"
             ],
             acquiredFrom: [
-                "http://schema.org/Organization",
-                "http://schema.org/Person"
+                "Organization",
+                "Person"
             ],
             ownedFrom: [
-                "http://schema.org/DateTime"
+                "DateTime"
             ],
             ownedThrough: [
-                "http://schema.org/DateTime"
+                "DateTime"
             ],
             typeOfGood: [
-                "http://schema.org/Product",
-                "http://schema.org/Service"
+                "Product",
+                "Service"
             ]
         }
     ],
     [
-        "http://schema.org/screeningevent",
+        "screeningevent",
         {
-            _id: "http://schema.org/ScreeningEvent",
+            _id: "ScreeningEvent",
             _name: "ScreeningEvent",
             _parent: [
-                "http://schema.org/Event"
+                "Event"
             ],
             videoFormat: [
-                "http://schema.org/Text"
+                "Text"
             ],
             workPresented: [
-                "http://schema.org/Movie"
+                "Movie"
             ]
         }
     ],
     [
-        "http://schema.org/language",
+        "language",
         {
-            _id: "http://schema.org/Language",
+            _id: "Language",
             _name: "Language",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ]
         }
     ],
     [
-        "http://schema.org/brand",
+        "brand",
         {
-            _id: "http://schema.org/Brand",
+            _id: "Brand",
             _name: "Brand",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             aggregateRating: [
-                "http://schema.org/AggregateRating"
+                "AggregateRating"
             ],
             logo: [
-                "http://schema.org/URL",
-                "http://schema.org/ImageObject"
+                "URL",
+                "ImageObject"
             ],
             review: [
-                "http://schema.org/Review"
+                "Review"
             ],
             slogan: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/receiveaction",
+        "receiveaction",
         {
-            _id: "http://schema.org/ReceiveAction",
+            _id: "ReceiveAction",
             _name: "ReceiveAction",
             _parent: [
-                "http://schema.org/TransferAction"
+                "TransferAction"
             ],
             deliveryMethod: [
-                "http://schema.org/DeliveryMethod"
+                "DeliveryMethod"
             ],
             sender: [
-                "http://schema.org/Organization",
-                "http://schema.org/Audience",
-                "http://schema.org/Person"
+                "Organization",
+                "Audience",
+                "Person"
             ]
         }
     ],
     [
-        "http://schema.org/videogameclip",
+        "videogameclip",
         {
-            _id: "http://schema.org/VideoGameClip",
+            _id: "VideoGameClip",
             _name: "VideoGameClip",
             _parent: [
-                "http://schema.org/Clip"
+                "Clip"
             ]
         }
     ],
     [
-        "http://schema.org/musicrecording",
+        "musicrecording",
         {
-            _id: "http://schema.org/MusicRecording",
+            _id: "MusicRecording",
             _name: "MusicRecording",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             byArtist: [
-                "http://schema.org/Person",
-                "http://schema.org/MusicGroup"
+                "Person",
+                "MusicGroup"
             ],
             duration: [
-                "http://schema.org/Duration"
+                "Duration"
             ],
             inAlbum: [
-                "http://schema.org/MusicAlbum"
+                "MusicAlbum"
             ],
             inPlaylist: [
-                "http://schema.org/MusicPlaylist"
+                "MusicPlaylist"
             ],
             isrcCode: [
-                "http://schema.org/Text"
+                "Text"
             ],
             recordingOf: [
-                "http://schema.org/MusicComposition"
+                "MusicComposition"
             ]
         }
     ],
     [
-        "http://schema.org/musicalbum",
+        "musicalbum",
         {
-            _id: "http://schema.org/MusicAlbum",
+            _id: "MusicAlbum",
             _name: "MusicAlbum",
             _parent: [
-                "http://schema.org/MusicPlaylist"
+                "MusicPlaylist"
             ],
             albumProductionType: [
-                "http://schema.org/MusicAlbumProductionType"
+                "MusicAlbumProductionType"
             ],
             albumRelease: [
-                "http://schema.org/MusicRelease"
+                "MusicRelease"
             ],
             albumReleaseType: [
-                "http://schema.org/MusicAlbumReleaseType"
+                "MusicAlbumReleaseType"
             ],
             byArtist: [
-                "http://schema.org/Person",
-                "http://schema.org/MusicGroup"
+                "Person",
+                "MusicGroup"
             ]
         }
     ],
     [
-        "http://schema.org/musicplaylist",
+        "musicplaylist",
         {
-            _id: "http://schema.org/MusicPlaylist",
+            _id: "MusicPlaylist",
             _name: "MusicPlaylist",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             numTracks: [
-                "http://schema.org/Integer"
+                "Integer"
             ],
             track: [
-                "http://schema.org/MusicRecording",
-                "http://schema.org/ItemList"
+                "MusicRecording",
+                "ItemList"
             ]
         }
     ],
     [
-        "http://schema.org/medicalriskscore",
+        "medicalriskscore",
         {
-            _id: "http://schema.org/MedicalRiskScore",
+            _id: "MedicalRiskScore",
             _name: "MedicalRiskScore",
             _parent: [
-                "http://schema.org/MedicalRiskEstimator"
+                "MedicalRiskEstimator"
             ],
             algorithm: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/medicalriskestimator",
+        "medicalriskestimator",
         {
-            _id: "http://schema.org/MedicalRiskEstimator",
+            _id: "MedicalRiskEstimator",
             _name: "MedicalRiskEstimator",
             _parent: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ],
             estimatesRiskOf: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ],
             includedRiskFactor: [
-                "http://schema.org/MedicalRiskFactor"
+                "MedicalRiskFactor"
             ]
         }
     ],
     [
-        "http://schema.org/imageobject",
+        "imageobject",
         {
-            _id: "http://schema.org/ImageObject",
+            _id: "ImageObject",
             _name: "ImageObject",
             _parent: [
-                "http://schema.org/MediaObject"
+                "MediaObject"
             ],
             caption: [
-                "http://schema.org/Text",
-                "http://schema.org/MediaObject"
+                "Text",
+                "MediaObject"
             ],
             exifData: [
-                "http://schema.org/Text",
-                "http://schema.org/PropertyValue"
+                "Text",
+                "PropertyValue"
             ],
             representativeOfPage: [
-                "http://schema.org/Boolean"
+                "Boolean"
             ],
             thumbnail: [
-                "http://schema.org/ImageObject"
+                "ImageObject"
             ]
         }
     ],
     [
-        "http://schema.org/musicstore",
+        "musicstore",
         {
-            _id: "http://schema.org/MusicStore",
+            _id: "MusicStore",
             _name: "MusicStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/crematorium",
+        "crematorium",
         {
-            _id: "http://schema.org/Crematorium",
+            _id: "Crematorium",
             _name: "Crematorium",
             _parent: [
-                "http://schema.org/CivicStructure"
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/howtosection",
+        "howtosection",
         {
-            _id: "http://schema.org/HowToSection",
+            _id: "HowToSection",
             _name: "HowToSection",
             _parent: [
-                "http://schema.org/ListItem",
-                "http://schema.org/CreativeWork",
-                "http://schema.org/ItemList"
+                "ListItem",
+                "CreativeWork",
+                "ItemList"
             ]
         }
     ],
     [
-        "http://schema.org/howtostep",
+        "howtostep",
         {
-            _id: "http://schema.org/HowToStep",
+            _id: "HowToStep",
             _name: "HowToStep",
             _parent: [
-                "http://schema.org/CreativeWork",
-                "http://schema.org/ListItem",
-                "http://schema.org/ItemList"
+                "CreativeWork",
+                "ListItem",
+                "ItemList"
             ]
         }
     ],
     [
-        "http://schema.org/musiccomposition",
+        "musiccomposition",
         {
-            _id: "http://schema.org/MusicComposition",
+            _id: "MusicComposition",
             _name: "MusicComposition",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             composer: [
-                "http://schema.org/Organization",
-                "http://schema.org/Person"
+                "Organization",
+                "Person"
             ],
             firstPerformance: [
-                "http://schema.org/Event"
+                "Event"
             ],
             includedComposition: [
-                "http://schema.org/MusicComposition"
+                "MusicComposition"
             ],
             iswcCode: [
-                "http://schema.org/Text"
+                "Text"
             ],
             lyricist: [
-                "http://schema.org/Person"
+                "Person"
             ],
             lyrics: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             musicalKey: [
-                "http://schema.org/Text"
+                "Text"
             ],
             musicArrangement: [
-                "http://schema.org/MusicComposition"
+                "MusicComposition"
             ],
             musicCompositionForm: [
-                "http://schema.org/Text"
+                "Text"
             ],
             recordedAs: [
-                "http://schema.org/MusicRecording"
+                "MusicRecording"
             ]
         }
     ],
     [
-        "http://schema.org/physicaltherapy",
+        "physicaltherapy",
         {
-            _id: "http://schema.org/PhysicalTherapy",
+            _id: "PhysicalTherapy",
             _name: "PhysicalTherapy",
             _parent: [
-                "http://schema.org/MedicalTherapy"
+                "MedicalTherapy"
             ]
         }
     ],
     [
-        "http://schema.org/drugstrength",
+        "drugstrength",
         {
-            _id: "http://schema.org/DrugStrength",
+            _id: "DrugStrength",
             _name: "DrugStrength",
             _parent: [
-                "http://schema.org/MedicalIntangible"
+                "MedicalIntangible"
             ],
             activeIngredient: [
-                "http://schema.org/Text"
+                "Text"
             ],
             availableIn: [
-                "http://schema.org/AdministrativeArea"
+                "AdministrativeArea"
             ],
             maximumIntake: [
-                "http://schema.org/MaximumDoseSchedule"
+                "MaximumDoseSchedule"
             ],
             strengthUnit: [
-                "http://schema.org/Text"
+                "Text"
             ],
             strengthValue: [
-                "http://schema.org/Number"
+                "Number"
             ]
         }
     ],
     [
-        "http://schema.org/medicalintangible",
+        "medicalintangible",
         {
-            _id: "http://schema.org/MedicalIntangible",
+            _id: "MedicalIntangible",
             _name: "MedicalIntangible",
             _parent: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ]
         }
     ],
     [
-        "http://schema.org/quoteaction",
+        "quoteaction",
         {
-            _id: "http://schema.org/QuoteAction",
+            _id: "QuoteAction",
             _name: "QuoteAction",
             _parent: [
-                "http://schema.org/TradeAction"
+                "TradeAction"
             ]
         }
     ],
     [
-        "http://schema.org/datatype",
+        "datatype",
         {
-            _id: "http://schema.org/DataType",
+            _id: "DataType",
             _name: "DataType",
             _parent: [
                 "rdfs:Class"
@@ -6171,5703 +6171,5703 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/preorderaction",
+        "preorderaction",
         {
-            _id: "http://schema.org/PreOrderAction",
+            _id: "PreOrderAction",
             _name: "PreOrderAction",
             _parent: [
-                "http://schema.org/TradeAction"
+                "TradeAction"
             ]
         }
     ],
     [
-        "http://schema.org/blog",
+        "blog",
         {
-            _id: "http://schema.org/Blog",
+            _id: "Blog",
             _name: "Blog",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             blogPost: [
-                "http://schema.org/BlogPosting"
+                "BlogPosting"
             ],
             issn: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/mediasubscription",
+        "mediasubscription",
         {
-            _id: "http://schema.org/MediaSubscription",
+            _id: "MediaSubscription",
             _name: "MediaSubscription",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             authenticator: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             expectsAcceptanceOf: [
-                "http://schema.org/Offer"
+                "Offer"
             ]
         }
     ],
     [
-        "http://schema.org/presentationdigitaldocument",
+        "presentationdigitaldocument",
         {
-            _id: "http://schema.org/PresentationDigitalDocument",
+            _id: "PresentationDigitalDocument",
             _name: "PresentationDigitalDocument",
             _parent: [
-                "http://schema.org/DigitalDocument"
+                "DigitalDocument"
             ]
         }
     ],
     [
-        "http://schema.org/contactpage",
+        "contactpage",
         {
-            _id: "http://schema.org/ContactPage",
+            _id: "ContactPage",
             _name: "ContactPage",
             _parent: [
-                "http://schema.org/WebPage"
+                "WebPage"
             ]
         }
     ],
     [
-        "http://schema.org/medicaltrial",
+        "medicaltrial",
         {
-            _id: "http://schema.org/MedicalTrial",
+            _id: "MedicalTrial",
             _name: "MedicalTrial",
             _parent: [
-                "http://schema.org/MedicalStudy"
+                "MedicalStudy"
             ],
             trialDesign: [
-                "http://schema.org/MedicalTrialDesign"
+                "MedicalTrialDesign"
             ]
         }
     ],
     [
-        "http://schema.org/doseschedule",
+        "doseschedule",
         {
-            _id: "http://schema.org/DoseSchedule",
+            _id: "DoseSchedule",
             _name: "DoseSchedule",
             _parent: [
-                "http://schema.org/MedicalIntangible"
+                "MedicalIntangible"
             ],
             doseUnit: [
-                "http://schema.org/Text"
+                "Text"
             ],
             doseValue: [
-                "http://schema.org/Number",
-                "http://schema.org/QualitativeValue"
+                "Number",
+                "QualitativeValue"
             ],
             frequency: [
-                "http://schema.org/Text"
+                "Text"
             ],
             targetPopulation: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/webapplication",
+        "webapplication",
         {
-            _id: "http://schema.org/WebApplication",
+            _id: "WebApplication",
             _name: "WebApplication",
             _parent: [
-                "http://schema.org/SoftwareApplication"
+                "SoftwareApplication"
             ],
             browserRequirements: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/palliativeprocedure",
+        "palliativeprocedure",
         {
-            _id: "http://schema.org/PalliativeProcedure",
+            _id: "PalliativeProcedure",
             _name: "PalliativeProcedure",
             _parent: [
-                "http://schema.org/MedicalTherapy",
-                "http://schema.org/MedicalProcedure"
+                "MedicalTherapy",
+                "MedicalProcedure"
             ]
         }
     ],
     [
-        "http://schema.org/exerciseplan",
+        "exerciseplan",
         {
-            _id: "http://schema.org/ExercisePlan",
+            _id: "ExercisePlan",
             _name: "ExercisePlan",
             _parent: [
-                "http://schema.org/PhysicalActivity",
-                "http://schema.org/CreativeWork"
+                "PhysicalActivity",
+                "CreativeWork"
             ],
             activityDuration: [
-                "http://schema.org/Duration",
-                "http://schema.org/QualitativeValue"
+                "Duration",
+                "QualitativeValue"
             ],
             activityFrequency: [
-                "http://schema.org/QualitativeValue",
-                "http://schema.org/Text"
+                "QualitativeValue",
+                "Text"
             ],
             additionalVariable: [
-                "http://schema.org/Text"
+                "Text"
             ],
             exerciseType: [
-                "http://schema.org/Text"
+                "Text"
             ],
             intensity: [
-                "http://schema.org/QualitativeValue",
-                "http://schema.org/Text"
+                "QualitativeValue",
+                "Text"
             ],
             repetitions: [
-                "http://schema.org/QualitativeValue",
-                "http://schema.org/Number"
+                "QualitativeValue",
+                "Number"
             ],
             restPeriods: [
-                "http://schema.org/Text",
-                "http://schema.org/QualitativeValue"
+                "Text",
+                "QualitativeValue"
             ],
             workload: [
-                "http://schema.org/QualitativeValue",
-                "http://schema.org/Energy"
+                "QualitativeValue",
+                "Energy"
             ]
         }
     ],
     [
-        "http://schema.org/physicalactivity",
+        "physicalactivity",
         {
-            _id: "http://schema.org/PhysicalActivity",
+            _id: "PhysicalActivity",
             _name: "PhysicalActivity",
             _parent: [
-                "http://schema.org/LifestyleModification"
+                "LifestyleModification"
             ],
             associatedAnatomy: [
-                "http://schema.org/SuperficialAnatomy",
-                "http://schema.org/AnatomicalSystem",
-                "http://schema.org/AnatomicalStructure"
+                "SuperficialAnatomy",
+                "AnatomicalSystem",
+                "AnatomicalStructure"
             ],
             category: [
-                "http://schema.org/Text",
-                "http://schema.org/PhysicalActivityCategory",
-                "http://schema.org/Thing",
-                "http://schema.org/URL"
+                "Text",
+                "PhysicalActivityCategory",
+                "Thing",
+                "URL"
             ],
             epidemiology: [
-                "http://schema.org/Text"
+                "Text"
             ],
             pathophysiology: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/lifestylemodification",
+        "lifestylemodification",
         {
-            _id: "http://schema.org/LifestyleModification",
+            _id: "LifestyleModification",
             _name: "LifestyleModification",
             _parent: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ]
         }
     ],
     [
-        "http://schema.org/gardenstore",
+        "gardenstore",
         {
-            _id: "http://schema.org/GardenStore",
+            _id: "GardenStore",
             _name: "GardenStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/medicalcause",
+        "medicalcause",
         {
-            _id: "http://schema.org/MedicalCause",
+            _id: "MedicalCause",
             _name: "MedicalCause",
             _parent: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ],
             causeOf: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ]
         }
     ],
     [
-        "http://schema.org/ticket",
+        "ticket",
         {
-            _id: "http://schema.org/Ticket",
+            _id: "Ticket",
             _name: "Ticket",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             dateIssued: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date"
+                "DateTime",
+                "Date"
             ],
             issuedBy: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             priceCurrency: [
-                "http://schema.org/Text"
+                "Text"
             ],
             ticketedSeat: [
-                "http://schema.org/Seat"
+                "Seat"
             ],
             ticketNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             ticketToken: [
-                "http://schema.org/URL",
-                "http://schema.org/Text"
+                "URL",
+                "Text"
             ],
             totalPrice: [
-                "http://schema.org/PriceSpecification",
-                "http://schema.org/Number",
-                "http://schema.org/Text"
+                "PriceSpecification",
+                "Number",
+                "Text"
             ],
             underName: [
-                "http://schema.org/Organization",
-                "http://schema.org/Person"
+                "Organization",
+                "Person"
             ]
         }
     ],
     [
-        "http://schema.org/medicalclinic",
+        "medicalclinic",
         {
-            _id: "http://schema.org/MedicalClinic",
+            _id: "MedicalClinic",
             _name: "MedicalClinic",
             _parent: [
-                "http://schema.org/MedicalBusiness",
-                "http://schema.org/MedicalOrganization"
+                "MedicalBusiness",
+                "MedicalOrganization"
             ],
             availableService: [
-                "http://schema.org/MedicalTest",
-                "http://schema.org/MedicalTherapy",
-                "http://schema.org/MedicalProcedure"
+                "MedicalTest",
+                "MedicalTherapy",
+                "MedicalProcedure"
             ],
             medicalSpecialty: [
-                "http://schema.org/MedicalSpecialty"
+                "MedicalSpecialty"
             ]
         }
     ],
     [
-        "http://schema.org/infectiousdisease",
+        "infectiousdisease",
         {
-            _id: "http://schema.org/InfectiousDisease",
+            _id: "InfectiousDisease",
             _name: "InfectiousDisease",
             _parent: [
-                "http://schema.org/MedicalCondition"
+                "MedicalCondition"
             ],
             infectiousAgent: [
-                "http://schema.org/Text"
+                "Text"
             ],
             infectiousAgentClass: [
-                "http://schema.org/InfectiousAgentClass"
+                "InfectiousAgentClass"
             ],
             transmissionMethod: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/report",
+        "report",
         {
-            _id: "http://schema.org/Report",
+            _id: "Report",
             _name: "Report",
             _parent: [
-                "http://schema.org/Article"
+                "Article"
             ],
             reportNumber: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/geoshape",
+        "geoshape",
         {
-            _id: "http://schema.org/GeoShape",
+            _id: "GeoShape",
             _name: "GeoShape",
             _parent: [
-                "http://schema.org/StructuredValue"
+                "StructuredValue"
             ],
             address: [
-                "http://schema.org/PostalAddress",
-                "http://schema.org/Text"
+                "PostalAddress",
+                "Text"
             ],
             addressCountry: [
-                "http://schema.org/Country",
-                "http://schema.org/Text"
+                "Country",
+                "Text"
             ],
             box: [
-                "http://schema.org/Text"
+                "Text"
             ],
             circle: [
-                "http://schema.org/Text"
+                "Text"
             ],
             elevation: [
-                "http://schema.org/Number",
-                "http://schema.org/Text"
+                "Number",
+                "Text"
             ],
             line: [
-                "http://schema.org/Text"
+                "Text"
             ],
             polygon: [
-                "http://schema.org/Text"
+                "Text"
             ],
             postalCode: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/touristattraction",
+        "touristattraction",
         {
-            _id: "http://schema.org/TouristAttraction",
+            _id: "TouristAttraction",
             _name: "TouristAttraction",
             _parent: [
-                "http://schema.org/Place"
+                "Place"
             ],
             availableLanguage: [
-                "http://schema.org/Text",
-                "http://schema.org/Language"
+                "Text",
+                "Language"
             ],
             touristType: [
-                "http://schema.org/Audience",
-                "http://schema.org/Text"
+                "Audience",
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/seat",
+        "seat",
         {
-            _id: "http://schema.org/Seat",
+            _id: "Seat",
             _name: "Seat",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             seatingType: [
-                "http://schema.org/Text",
-                "http://schema.org/QualitativeValue"
+                "Text",
+                "QualitativeValue"
             ],
             seatNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             seatRow: [
-                "http://schema.org/Text"
+                "Text"
             ],
             seatSection: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/businessaudience",
+        "businessaudience",
         {
-            _id: "http://schema.org/BusinessAudience",
+            _id: "BusinessAudience",
             _name: "BusinessAudience",
             _parent: [
-                "http://schema.org/Audience"
+                "Audience"
             ],
             numberOfEmployees: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             yearlyRevenue: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             yearsInOperation: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ]
         }
     ],
     [
-        "http://schema.org/sculpture",
+        "sculpture",
         {
-            _id: "http://schema.org/Sculpture",
+            _id: "Sculpture",
             _name: "Sculpture",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ]
         }
     ],
     [
-        "http://schema.org/computerstore",
+        "computerstore",
         {
-            _id: "http://schema.org/ComputerStore",
+            _id: "ComputerStore",
             _name: "ComputerStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/chooseaction",
+        "chooseaction",
         {
-            _id: "http://schema.org/ChooseAction",
+            _id: "ChooseAction",
             _name: "ChooseAction",
             _parent: [
-                "http://schema.org/AssessAction"
+                "AssessAction"
             ],
             actionOption: [
-                "http://schema.org/Text",
-                "http://schema.org/Thing"
+                "Text",
+                "Thing"
             ]
         }
     ],
     [
-        "http://schema.org/assessaction",
+        "assessaction",
         {
-            _id: "http://schema.org/AssessAction",
+            _id: "AssessAction",
             _name: "AssessAction",
             _parent: [
-                "http://schema.org/Action"
+                "Action"
             ]
         }
     ],
     [
-        "http://schema.org/radiostation",
+        "radiostation",
         {
-            _id: "http://schema.org/RadioStation",
+            _id: "RadioStation",
             _name: "RadioStation",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/musicrelease",
+        "musicrelease",
         {
-            _id: "http://schema.org/MusicRelease",
+            _id: "MusicRelease",
             _name: "MusicRelease",
             _parent: [
-                "http://schema.org/MusicPlaylist"
+                "MusicPlaylist"
             ],
             catalogNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             creditedTo: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             duration: [
-                "http://schema.org/Duration"
+                "Duration"
             ],
             musicReleaseFormat: [
-                "http://schema.org/MusicReleaseFormatType"
+                "MusicReleaseFormatType"
             ],
             recordLabel: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             releaseOf: [
-                "http://schema.org/MusicAlbum"
+                "MusicAlbum"
             ]
         }
     ],
     [
-        "http://schema.org/dietarysupplement",
+        "dietarysupplement",
         {
-            _id: "http://schema.org/DietarySupplement",
+            _id: "DietarySupplement",
             _name: "DietarySupplement",
             _parent: [
-                "http://schema.org/Substance"
+                "Substance"
             ],
             activeIngredient: [
-                "http://schema.org/Text"
+                "Text"
             ],
             isProprietary: [
-                "http://schema.org/Boolean"
+                "Boolean"
             ],
             legalStatus: [
-                "http://schema.org/Text",
-                "http://schema.org/MedicalEnumeration",
-                "http://schema.org/DrugLegalStatus"
+                "Text",
+                "MedicalEnumeration",
+                "DrugLegalStatus"
             ],
             manufacturer: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             maximumIntake: [
-                "http://schema.org/MaximumDoseSchedule"
+                "MaximumDoseSchedule"
             ],
             mechanismOfAction: [
-                "http://schema.org/Text"
+                "Text"
             ],
             nonProprietaryName: [
-                "http://schema.org/Text"
+                "Text"
             ],
             proprietaryName: [
-                "http://schema.org/Text"
+                "Text"
             ],
             recommendedIntake: [
-                "http://schema.org/RecommendedDoseSchedule"
+                "RecommendedDoseSchedule"
             ],
             safetyConsideration: [
-                "http://schema.org/Text"
+                "Text"
             ],
             targetPopulation: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/golfcourse",
+        "golfcourse",
         {
-            _id: "http://schema.org/GolfCourse",
+            _id: "GolfCourse",
             _name: "GolfCourse",
             _parent: [
-                "http://schema.org/SportsActivityLocation"
+                "SportsActivityLocation"
             ]
         }
     ],
     [
-        "http://schema.org/sportsactivitylocation",
+        "sportsactivitylocation",
         {
-            _id: "http://schema.org/SportsActivityLocation",
+            _id: "SportsActivityLocation",
             _name: "SportsActivityLocation",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/cookaction",
+        "cookaction",
         {
-            _id: "http://schema.org/CookAction",
+            _id: "CookAction",
             _name: "CookAction",
             _parent: [
-                "http://schema.org/CreateAction"
+                "CreateAction"
             ],
             foodEstablishment: [
-                "http://schema.org/FoodEstablishment",
-                "http://schema.org/Place"
+                "FoodEstablishment",
+                "Place"
             ],
             foodEvent: [
-                "http://schema.org/FoodEvent"
+                "FoodEvent"
             ],
             recipe: [
-                "http://schema.org/Recipe"
+                "Recipe"
             ]
         }
     ],
     [
-        "http://schema.org/radioseries",
+        "radioseries",
         {
-            _id: "http://schema.org/RadioSeries",
+            _id: "RadioSeries",
             _name: "RadioSeries",
             _parent: [
-                "http://schema.org/CreativeWorkSeries"
+                "CreativeWorkSeries"
             ],
             actor: [
-                "http://schema.org/Person"
+                "Person"
             ],
             containsSeason: [
-                "http://schema.org/CreativeWorkSeason"
+                "CreativeWorkSeason"
             ],
             director: [
-                "http://schema.org/Person"
+                "Person"
             ],
             episode: [
-                "http://schema.org/Episode"
+                "Episode"
             ],
             musicBy: [
-                "http://schema.org/MusicGroup",
-                "http://schema.org/Person"
+                "MusicGroup",
+                "Person"
             ],
             numberOfEpisodes: [
-                "http://schema.org/Integer"
+                "Integer"
             ],
             numberOfSeasons: [
-                "http://schema.org/Integer"
+                "Integer"
             ],
             productionCompany: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             trailer: [
-                "http://schema.org/VideoObject"
+                "VideoObject"
             ]
         }
     ],
     [
-        "http://schema.org/videogameseries",
+        "videogameseries",
         {
-            _id: "http://schema.org/VideoGameSeries",
+            _id: "VideoGameSeries",
             _name: "VideoGameSeries",
             _parent: [
-                "http://schema.org/CreativeWorkSeries"
+                "CreativeWorkSeries"
             ],
             actor: [
-                "http://schema.org/Person"
+                "Person"
             ],
             characterAttribute: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             cheatCode: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             containsSeason: [
-                "http://schema.org/CreativeWorkSeason"
+                "CreativeWorkSeason"
             ],
             director: [
-                "http://schema.org/Person"
+                "Person"
             ],
             episode: [
-                "http://schema.org/Episode"
+                "Episode"
             ],
             gameItem: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             gameLocation: [
-                "http://schema.org/PostalAddress",
-                "http://schema.org/URL",
-                "http://schema.org/Place"
+                "PostalAddress",
+                "URL",
+                "Place"
             ],
             gamePlatform: [
-                "http://schema.org/Thing",
-                "http://schema.org/URL",
-                "http://schema.org/Text"
+                "Thing",
+                "URL",
+                "Text"
             ],
             musicBy: [
-                "http://schema.org/MusicGroup",
-                "http://schema.org/Person"
+                "MusicGroup",
+                "Person"
             ],
             numberOfEpisodes: [
-                "http://schema.org/Integer"
+                "Integer"
             ],
             numberOfPlayers: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ],
             numberOfSeasons: [
-                "http://schema.org/Integer"
+                "Integer"
             ],
             playMode: [
-                "http://schema.org/GamePlayMode"
+                "GamePlayMode"
             ],
             productionCompany: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             quest: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             trailer: [
-                "http://schema.org/VideoObject"
+                "VideoObject"
             ]
         }
     ],
     [
-        "http://schema.org/videoobject",
+        "videoobject",
         {
-            _id: "http://schema.org/VideoObject",
+            _id: "VideoObject",
             _name: "VideoObject",
             _parent: [
-                "http://schema.org/MediaObject"
+                "MediaObject"
             ],
             actor: [
-                "http://schema.org/Person"
+                "Person"
             ],
             caption: [
-                "http://schema.org/Text",
-                "http://schema.org/MediaObject"
+                "Text",
+                "MediaObject"
             ],
             director: [
-                "http://schema.org/Person"
+                "Person"
             ],
             musicBy: [
-                "http://schema.org/MusicGroup",
-                "http://schema.org/Person"
+                "MusicGroup",
+                "Person"
             ],
             thumbnail: [
-                "http://schema.org/ImageObject"
+                "ImageObject"
             ],
             transcript: [
-                "http://schema.org/Text"
+                "Text"
             ],
             videoFrameSize: [
-                "http://schema.org/Text"
+                "Text"
             ],
             videoQuality: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/musicgroup",
+        "musicgroup",
         {
-            _id: "http://schema.org/MusicGroup",
+            _id: "MusicGroup",
             _name: "MusicGroup",
             _parent: [
-                "http://schema.org/PerformingGroup"
+                "PerformingGroup"
             ],
             album: [
-                "http://schema.org/MusicAlbum"
+                "MusicAlbum"
             ],
             genre: [
-                "http://schema.org/Text",
-                "http://schema.org/URL"
+                "Text",
+                "URL"
             ],
             track: [
-                "http://schema.org/MusicRecording",
-                "http://schema.org/ItemList"
+                "MusicRecording",
+                "ItemList"
             ]
         }
     ],
     [
-        "http://schema.org/performinggroup",
+        "performinggroup",
         {
-            _id: "http://schema.org/PerformingGroup",
+            _id: "PerformingGroup",
             _name: "PerformingGroup",
             _parent: [
-                "http://schema.org/Organization"
+                "Organization"
             ]
         }
     ],
     [
-        "http://schema.org/followaction",
+        "followaction",
         {
-            _id: "http://schema.org/FollowAction",
+            _id: "FollowAction",
             _name: "FollowAction",
             _parent: [
-                "http://schema.org/InteractAction"
+                "InteractAction"
             ],
             followee: [
-                "http://schema.org/Organization",
-                "http://schema.org/Person"
+                "Organization",
+                "Person"
             ]
         }
     ],
     [
-        "http://schema.org/ddxelement",
+        "ddxelement",
         {
-            _id: "http://schema.org/DDxElement",
+            _id: "DDxElement",
             _name: "DDxElement",
             _parent: [
-                "http://schema.org/MedicalIntangible"
+                "MedicalIntangible"
             ],
             diagnosis: [
-                "http://schema.org/MedicalCondition"
+                "MedicalCondition"
             ],
             distinguishingSign: [
-                "http://schema.org/MedicalSignOrSymptom"
+                "MedicalSignOrSymptom"
             ]
         }
     ],
     [
-        "http://schema.org/departaction",
+        "departaction",
         {
-            _id: "http://schema.org/DepartAction",
+            _id: "DepartAction",
             _name: "DepartAction",
             _parent: [
-                "http://schema.org/MoveAction"
+                "MoveAction"
             ]
         }
     ],
     [
-        "http://schema.org/moveaction",
+        "moveaction",
         {
-            _id: "http://schema.org/MoveAction",
+            _id: "MoveAction",
             _name: "MoveAction",
             _parent: [
-                "http://schema.org/Action"
+                "Action"
             ],
             fromLocation: [
-                "http://schema.org/Place"
+                "Place"
             ],
             toLocation: [
-                "http://schema.org/Place"
+                "Place"
             ]
         }
     ],
     [
-        "http://schema.org/map",
+        "map",
         {
-            _id: "http://schema.org/Map",
+            _id: "Map",
             _name: "Map",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             mapType: [
-                "http://schema.org/MapCategoryType"
+                "MapCategoryType"
             ]
         }
     ],
     [
-        "http://schema.org/courseinstance",
+        "courseinstance",
         {
-            _id: "http://schema.org/CourseInstance",
+            _id: "CourseInstance",
             _name: "CourseInstance",
             _parent: [
-                "http://schema.org/Event"
+                "Event"
             ],
             courseMode: [
-                "http://schema.org/URL",
-                "http://schema.org/Text"
+                "URL",
+                "Text"
             ],
             instructor: [
-                "http://schema.org/Person"
+                "Person"
             ]
         }
     ],
     [
-        "http://schema.org/menu",
+        "menu",
         {
-            _id: "http://schema.org/Menu",
+            _id: "Menu",
             _name: "Menu",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             hasMenuItem: [
-                "http://schema.org/MenuItem"
+                "MenuItem"
             ],
             hasMenuSection: [
-                "http://schema.org/MenuSection"
+                "MenuSection"
             ]
         }
     ],
     [
-        "http://schema.org/servicechannel",
+        "servicechannel",
         {
-            _id: "http://schema.org/ServiceChannel",
+            _id: "ServiceChannel",
             _name: "ServiceChannel",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             availableLanguage: [
-                "http://schema.org/Text",
-                "http://schema.org/Language"
+                "Text",
+                "Language"
             ],
             processingTime: [
-                "http://schema.org/Duration"
+                "Duration"
             ],
             providesService: [
-                "http://schema.org/Service"
+                "Service"
             ],
             serviceLocation: [
-                "http://schema.org/Place"
+                "Place"
             ],
             servicePhone: [
-                "http://schema.org/ContactPoint"
+                "ContactPoint"
             ],
             servicePostalAddress: [
-                "http://schema.org/PostalAddress"
+                "PostalAddress"
             ],
             serviceSmsNumber: [
-                "http://schema.org/ContactPoint"
+                "ContactPoint"
             ],
             serviceUrl: [
-                "http://schema.org/URL"
+                "URL"
             ]
         }
     ],
     [
-        "http://schema.org/wpsidebar",
+        "wpsidebar",
         {
-            _id: "http://schema.org/WPSideBar",
+            _id: "WPSideBar",
             _name: "WPSideBar",
             _parent: [
-                "http://schema.org/WebPageElement"
+                "WebPageElement"
             ]
         }
     ],
     [
-        "http://schema.org/investmentordeposit",
+        "investmentordeposit",
         {
-            _id: "http://schema.org/InvestmentOrDeposit",
+            _id: "InvestmentOrDeposit",
             _name: "InvestmentOrDeposit",
             _parent: [
-                "http://schema.org/FinancialProduct"
+                "FinancialProduct"
             ],
             amount: [
-                "http://schema.org/MonetaryAmount",
-                "http://schema.org/Number"
+                "MonetaryAmount",
+                "Number"
             ]
         }
     ],
     [
-        "http://schema.org/shoestore",
+        "shoestore",
         {
-            _id: "http://schema.org/ShoeStore",
+            _id: "ShoeStore",
             _name: "ShoeStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/petstore",
+        "petstore",
         {
-            _id: "http://schema.org/PetStore",
+            _id: "PetStore",
             _name: "PetStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/ondemandevent",
+        "ondemandevent",
         {
-            _id: "http://schema.org/OnDemandEvent",
+            _id: "OnDemandEvent",
             _name: "OnDemandEvent",
             _parent: [
-                "http://schema.org/PublicationEvent"
+                "PublicationEvent"
             ]
         }
     ],
     [
-        "http://schema.org/aggregateoffer",
+        "aggregateoffer",
         {
-            _id: "http://schema.org/AggregateOffer",
+            _id: "AggregateOffer",
             _name: "AggregateOffer",
             _parent: [
-                "http://schema.org/Offer"
+                "Offer"
             ],
             highPrice: [
-                "http://schema.org/Text",
-                "http://schema.org/Number"
+                "Text",
+                "Number"
             ],
             lowPrice: [
-                "http://schema.org/Text",
-                "http://schema.org/Number"
+                "Text",
+                "Number"
             ],
             offerCount: [
-                "http://schema.org/Integer"
+                "Integer"
             ],
             offers: [
-                "http://schema.org/Offer",
-                "http://schema.org/Demand"
+                "Offer",
+                "Demand"
             ]
         }
     ],
     [
-        "http://schema.org/clothingstore",
+        "clothingstore",
         {
-            _id: "http://schema.org/ClothingStore",
+            _id: "ClothingStore",
             _name: "ClothingStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/course",
+        "course",
         {
-            _id: "http://schema.org/Course",
+            _id: "Course",
             _name: "Course",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             courseCode: [
-                "http://schema.org/Text"
+                "Text"
             ],
             coursePrerequisites: [
-                "http://schema.org/AlignmentObject",
-                "http://schema.org/Text",
-                "http://schema.org/Course"
+                "AlignmentObject",
+                "Text",
+                "Course"
             ],
             educationalCredentialAwarded: [
-                "http://schema.org/Text",
-                "http://schema.org/EducationalOccupationalCredential",
-                "http://schema.org/URL"
+                "Text",
+                "EducationalOccupationalCredential",
+                "URL"
             ],
             hasCourseInstance: [
-                "http://schema.org/CourseInstance"
+                "CourseInstance"
             ]
         }
     ],
     [
-        "http://schema.org/lodgingbusiness",
+        "lodgingbusiness",
         {
-            _id: "http://schema.org/LodgingBusiness",
+            _id: "LodgingBusiness",
             _name: "LodgingBusiness",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ],
             amenityFeature: [
-                "http://schema.org/LocationFeatureSpecification"
+                "LocationFeatureSpecification"
             ],
             audience: [
-                "http://schema.org/Audience"
+                "Audience"
             ],
             availableLanguage: [
-                "http://schema.org/Text",
-                "http://schema.org/Language"
+                "Text",
+                "Language"
             ],
             checkinTime: [
-                "http://schema.org/Time",
-                "http://schema.org/DateTime"
+                "Time",
+                "DateTime"
             ],
             checkoutTime: [
-                "http://schema.org/Time",
-                "http://schema.org/DateTime"
+                "Time",
+                "DateTime"
             ],
             numberOfRooms: [
-                "http://schema.org/QuantitativeValue",
-                "http://schema.org/Number"
+                "QuantitativeValue",
+                "Number"
             ],
             petsAllowed: [
-                "http://schema.org/Text",
-                "http://schema.org/Boolean"
+                "Text",
+                "Boolean"
             ],
             starRating: [
-                "http://schema.org/Rating"
+                "Rating"
             ]
         }
     ],
     [
-        "http://schema.org/governmentoffice",
+        "governmentoffice",
         {
-            _id: "http://schema.org/GovernmentOffice",
+            _id: "GovernmentOffice",
             _name: "GovernmentOffice",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/leaveaction",
+        "leaveaction",
         {
-            _id: "http://schema.org/LeaveAction",
+            _id: "LeaveAction",
             _name: "LeaveAction",
             _parent: [
-                "http://schema.org/InteractAction"
+                "InteractAction"
             ],
             event: [
-                "http://schema.org/Event"
+                "Event"
             ]
         }
     ],
     [
-        "http://schema.org/chapter",
+        "chapter",
         {
-            _id: "http://schema.org/Chapter",
+            _id: "Chapter",
             _name: "Chapter",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             pageEnd: [
-                "http://schema.org/Text",
-                "http://schema.org/Integer"
+                "Text",
+                "Integer"
             ],
             pageStart: [
-                "http://schema.org/Integer",
-                "http://schema.org/Text"
+                "Integer",
+                "Text"
             ],
             pagination: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/publicationvolume",
+        "publicationvolume",
         {
-            _id: "http://schema.org/PublicationVolume",
+            _id: "PublicationVolume",
             _name: "PublicationVolume",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             pageEnd: [
-                "http://schema.org/Text",
-                "http://schema.org/Integer"
+                "Text",
+                "Integer"
             ],
             pageStart: [
-                "http://schema.org/Integer",
-                "http://schema.org/Text"
+                "Integer",
+                "Text"
             ],
             pagination: [
-                "http://schema.org/Text"
+                "Text"
             ],
             volumeNumber: [
-                "http://schema.org/Text",
-                "http://schema.org/Integer"
+                "Text",
+                "Integer"
             ]
         }
     ],
     [
-        "http://schema.org/claimreview",
+        "claimreview",
         {
-            _id: "http://schema.org/ClaimReview",
+            _id: "ClaimReview",
             _name: "ClaimReview",
             _parent: [
-                "http://schema.org/Review"
+                "Review"
             ],
             claimReviewed: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/gasstation",
+        "gasstation",
         {
-            _id: "http://schema.org/GasStation",
+            _id: "GasStation",
             _name: "GasStation",
             _parent: [
-                "http://schema.org/AutomotiveBusiness"
+                "AutomotiveBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/commentaction",
+        "commentaction",
         {
-            _id: "http://schema.org/CommentAction",
+            _id: "CommentAction",
             _name: "CommentAction",
             _parent: [
-                "http://schema.org/CommunicateAction"
+                "CommunicateAction"
             ],
             resultComment: [
-                "http://schema.org/Comment"
+                "Comment"
             ]
         }
     ],
     [
-        "http://schema.org/entrypoint",
+        "entrypoint",
         {
-            _id: "http://schema.org/EntryPoint",
+            _id: "EntryPoint",
             _name: "EntryPoint",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             actionApplication: [
-                "http://schema.org/SoftwareApplication"
+                "SoftwareApplication"
             ],
             actionPlatform: [
-                "http://schema.org/URL",
-                "http://schema.org/Text"
+                "URL",
+                "Text"
             ],
             contentType: [
-                "http://schema.org/Text"
+                "Text"
             ],
             encodingType: [
-                "http://schema.org/Text"
+                "Text"
             ],
             httpMethod: [
-                "http://schema.org/Text"
+                "Text"
             ],
             urlTemplate: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/photograph",
+        "photograph",
         {
-            _id: "http://schema.org/Photograph",
+            _id: "Photograph",
             _name: "Photograph",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ]
         }
     ],
     [
-        "http://schema.org/replyaction",
+        "replyaction",
         {
-            _id: "http://schema.org/ReplyAction",
+            _id: "ReplyAction",
             _name: "ReplyAction",
             _parent: [
-                "http://schema.org/CommunicateAction"
+                "CommunicateAction"
             ],
             resultComment: [
-                "http://schema.org/Comment"
+                "Comment"
             ]
         }
     ],
     [
-        "http://schema.org/library",
+        "library",
         {
-            _id: "http://schema.org/Library",
+            _id: "Library",
             _name: "Library",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/touristinformationcenter",
+        "touristinformationcenter",
         {
-            _id: "http://schema.org/TouristInformationCenter",
+            _id: "TouristInformationCenter",
             _name: "TouristInformationCenter",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/maximumdoseschedule",
+        "maximumdoseschedule",
         {
-            _id: "http://schema.org/MaximumDoseSchedule",
+            _id: "MaximumDoseSchedule",
             _name: "MaximumDoseSchedule",
             _parent: [
-                "http://schema.org/DoseSchedule"
+                "DoseSchedule"
             ]
         }
     ],
     [
-        "http://schema.org/orderitem",
+        "orderitem",
         {
-            _id: "http://schema.org/OrderItem",
+            _id: "OrderItem",
             _name: "OrderItem",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             orderDelivery: [
-                "http://schema.org/ParcelDelivery"
+                "ParcelDelivery"
             ],
             orderedItem: [
-                "http://schema.org/Product",
-                "http://schema.org/OrderItem",
-                "http://schema.org/Service"
+                "Product",
+                "OrderItem",
+                "Service"
             ],
             orderItemNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             orderItemStatus: [
-                "http://schema.org/OrderStatus"
+                "OrderStatus"
             ],
             orderQuantity: [
-                "http://schema.org/Number"
+                "Number"
             ]
         }
     ],
     [
-        "http://schema.org/distance",
+        "distance",
         {
-            _id: "http://schema.org/Distance",
+            _id: "Distance",
             _name: "Distance",
             _parent: [
-                "http://schema.org/Quantity"
+                "Quantity"
             ]
         }
     ],
     [
-        "http://schema.org/aquarium",
+        "aquarium",
         {
-            _id: "http://schema.org/Aquarium",
+            _id: "Aquarium",
             _name: "Aquarium",
             _parent: [
-                "http://schema.org/CivicStructure"
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/selfstorage",
+        "selfstorage",
         {
-            _id: "http://schema.org/SelfStorage",
+            _id: "SelfStorage",
             _name: "SelfStorage",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/breadcrumblist",
+        "breadcrumblist",
         {
-            _id: "http://schema.org/BreadcrumbList",
+            _id: "BreadcrumbList",
             _name: "BreadcrumbList",
             _parent: [
-                "http://schema.org/ItemList"
+                "ItemList"
             ]
         }
     ],
     [
-        "http://schema.org/dentist",
+        "dentist",
         {
-            _id: "http://schema.org/Dentist",
+            _id: "Dentist",
             _name: "Dentist",
             _parent: [
-                "http://schema.org/LocalBusiness",
-                "http://schema.org/MedicalOrganization",
-                "http://schema.org/MedicalBusiness"
+                "LocalBusiness",
+                "MedicalOrganization",
+                "MedicalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/buyaction",
+        "buyaction",
         {
-            _id: "http://schema.org/BuyAction",
+            _id: "BuyAction",
             _name: "BuyAction",
             _parent: [
-                "http://schema.org/TradeAction"
+                "TradeAction"
             ],
             seller: [
-                "http://schema.org/Organization",
-                "http://schema.org/Person"
+                "Organization",
+                "Person"
             ]
         }
     ],
     [
-        "http://schema.org/datafeed",
+        "datafeed",
         {
-            _id: "http://schema.org/DataFeed",
+            _id: "DataFeed",
             _name: "DataFeed",
             _parent: [
-                "http://schema.org/Dataset"
+                "Dataset"
             ],
             dataFeedElement: [
-                "http://schema.org/Text",
-                "http://schema.org/DataFeedItem",
-                "http://schema.org/Thing"
+                "Text",
+                "DataFeedItem",
+                "Thing"
             ]
         }
     ],
     [
-        "http://schema.org/broadcastchannel",
+        "broadcastchannel",
         {
-            _id: "http://schema.org/BroadcastChannel",
+            _id: "BroadcastChannel",
             _name: "BroadcastChannel",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             broadcastChannelId: [
-                "http://schema.org/Text"
+                "Text"
             ],
             broadcastFrequency: [
-                "http://schema.org/BroadcastFrequencySpecification",
-                "http://schema.org/Text"
+                "BroadcastFrequencySpecification",
+                "Text"
             ],
             broadcastServiceTier: [
-                "http://schema.org/Text"
+                "Text"
             ],
             genre: [
-                "http://schema.org/Text",
-                "http://schema.org/URL"
+                "Text",
+                "URL"
             ],
             inBroadcastLineup: [
-                "http://schema.org/CableOrSatelliteService"
+                "CableOrSatelliteService"
             ],
             providesBroadcastService: [
-                "http://schema.org/BroadcastService"
+                "BroadcastService"
             ]
         }
     ],
     [
-        "http://schema.org/florist",
+        "florist",
         {
-            _id: "http://schema.org/Florist",
+            _id: "Florist",
             _name: "Florist",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/occupation",
+        "occupation",
         {
-            _id: "http://schema.org/Occupation",
+            _id: "Occupation",
             _name: "Occupation",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             estimatedSalary: [
-                "http://schema.org/Number",
-                "http://schema.org/MonetaryAmountDistribution",
-                "http://schema.org/MonetaryAmount"
+                "Number",
+                "MonetaryAmountDistribution",
+                "MonetaryAmount"
             ],
             experienceRequirements: [
-                "http://schema.org/Text"
+                "Text"
             ],
             occupationLocation: [
-                "http://schema.org/AdministrativeArea"
+                "AdministrativeArea"
             ],
             responsibilities: [
-                "http://schema.org/Text"
+                "Text"
             ],
             skills: [
-                "http://schema.org/DefinedTerm",
-                "http://schema.org/Text"
+                "DefinedTerm",
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/cableorsatelliteservice",
+        "cableorsatelliteservice",
         {
-            _id: "http://schema.org/CableOrSatelliteService",
+            _id: "CableOrSatelliteService",
             _name: "CableOrSatelliteService",
             _parent: [
-                "http://schema.org/Service"
+                "Service"
             ]
         }
     ],
     [
-        "http://schema.org/nerve",
+        "nerve",
         {
-            _id: "http://schema.org/Nerve",
+            _id: "Nerve",
             _name: "Nerve",
             _parent: [
-                "http://schema.org/AnatomicalStructure"
+                "AnatomicalStructure"
             ],
             nerveMotor: [
-                "http://schema.org/Muscle"
+                "Muscle"
             ],
             sensoryUnit: [
-                "http://schema.org/SuperficialAnatomy",
-                "http://schema.org/AnatomicalStructure"
+                "SuperficialAnatomy",
+                "AnatomicalStructure"
             ],
             sourcedFrom: [
-                "http://schema.org/BrainStructure"
+                "BrainStructure"
             ]
         }
     ],
     [
-        "http://schema.org/brainstructure",
+        "brainstructure",
         {
-            _id: "http://schema.org/BrainStructure",
+            _id: "BrainStructure",
             _name: "BrainStructure",
             _parent: [
-                "http://schema.org/AnatomicalStructure"
+                "AnatomicalStructure"
             ]
         }
     ],
     [
-        "http://schema.org/preventionindication",
+        "preventionindication",
         {
-            _id: "http://schema.org/PreventionIndication",
+            _id: "PreventionIndication",
             _name: "PreventionIndication",
             _parent: [
-                "http://schema.org/MedicalIndication"
+                "MedicalIndication"
             ]
         }
     ],
     [
-        "http://schema.org/exerciseaction",
+        "exerciseaction",
         {
-            _id: "http://schema.org/ExerciseAction",
+            _id: "ExerciseAction",
             _name: "ExerciseAction",
             _parent: [
-                "http://schema.org/PlayAction"
+                "PlayAction"
             ],
             diet: [
-                "http://schema.org/Diet"
+                "Diet"
             ],
             distance: [
-                "http://schema.org/Distance"
+                "Distance"
             ],
             exerciseCourse: [
-                "http://schema.org/Place"
+                "Place"
             ],
             exercisePlan: [
-                "http://schema.org/ExercisePlan"
+                "ExercisePlan"
             ],
             exerciseRelatedDiet: [
-                "http://schema.org/Diet"
+                "Diet"
             ],
             exerciseType: [
-                "http://schema.org/Text"
+                "Text"
             ],
             fromLocation: [
-                "http://schema.org/Place"
+                "Place"
             ],
             opponent: [
-                "http://schema.org/Person"
+                "Person"
             ],
             sportsActivityLocation: [
-                "http://schema.org/SportsActivityLocation"
+                "SportsActivityLocation"
             ],
             sportsEvent: [
-                "http://schema.org/SportsEvent"
+                "SportsEvent"
             ],
             sportsTeam: [
-                "http://schema.org/SportsTeam"
+                "SportsTeam"
             ],
             toLocation: [
-                "http://schema.org/Place"
+                "Place"
             ]
         }
     ],
     [
-        "http://schema.org/playaction",
+        "playaction",
         {
-            _id: "http://schema.org/PlayAction",
+            _id: "PlayAction",
             _name: "PlayAction",
             _parent: [
-                "http://schema.org/Action"
+                "Action"
             ],
             audience: [
-                "http://schema.org/Audience"
+                "Audience"
             ],
             event: [
-                "http://schema.org/Event"
+                "Event"
             ]
         }
     ],
     [
-        "http://schema.org/sportsevent",
+        "sportsevent",
         {
-            _id: "http://schema.org/SportsEvent",
+            _id: "SportsEvent",
             _name: "SportsEvent",
             _parent: [
-                "http://schema.org/Event"
+                "Event"
             ],
             awayTeam: [
-                "http://schema.org/Person",
-                "http://schema.org/SportsTeam"
+                "Person",
+                "SportsTeam"
             ],
             competitor: [
-                "http://schema.org/Person",
-                "http://schema.org/SportsTeam"
+                "Person",
+                "SportsTeam"
             ],
             homeTeam: [
-                "http://schema.org/SportsTeam",
-                "http://schema.org/Person"
+                "SportsTeam",
+                "Person"
             ]
         }
     ],
     [
-        "http://schema.org/continent",
+        "continent",
         {
-            _id: "http://schema.org/Continent",
+            _id: "Continent",
             _name: "Continent",
             _parent: [
-                "http://schema.org/Landform"
+                "Landform"
             ]
         }
     ],
     [
-        "http://schema.org/travelaction",
+        "travelaction",
         {
-            _id: "http://schema.org/TravelAction",
+            _id: "TravelAction",
             _name: "TravelAction",
             _parent: [
-                "http://schema.org/MoveAction"
+                "MoveAction"
             ],
             distance: [
-                "http://schema.org/Distance"
+                "Distance"
             ]
         }
     ],
     [
-        "http://schema.org/reservoir",
+        "reservoir",
         {
-            _id: "http://schema.org/Reservoir",
+            _id: "Reservoir",
             _name: "Reservoir",
             _parent: [
-                "http://schema.org/BodyOfWater"
+                "BodyOfWater"
             ]
         }
     ],
     [
-        "http://schema.org/bodyofwater",
+        "bodyofwater",
         {
-            _id: "http://schema.org/BodyOfWater",
+            _id: "BodyOfWater",
             _name: "BodyOfWater",
             _parent: [
-                "http://schema.org/Landform"
+                "Landform"
             ]
         }
     ],
     [
-        "http://schema.org/diet",
+        "diet",
         {
-            _id: "http://schema.org/Diet",
+            _id: "Diet",
             _name: "Diet",
             _parent: [
-                "http://schema.org/LifestyleModification",
-                "http://schema.org/CreativeWork"
+                "LifestyleModification",
+                "CreativeWork"
             ],
             dietFeatures: [
-                "http://schema.org/Text"
+                "Text"
             ],
             endorsers: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ],
             expertConsiderations: [
-                "http://schema.org/Text"
+                "Text"
             ],
             physiologicalBenefits: [
-                "http://schema.org/Text"
+                "Text"
             ],
             risks: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/geocoordinates",
+        "geocoordinates",
         {
-            _id: "http://schema.org/GeoCoordinates",
+            _id: "GeoCoordinates",
             _name: "GeoCoordinates",
             _parent: [
-                "http://schema.org/StructuredValue"
+                "StructuredValue"
             ],
             address: [
-                "http://schema.org/PostalAddress",
-                "http://schema.org/Text"
+                "PostalAddress",
+                "Text"
             ],
             addressCountry: [
-                "http://schema.org/Country",
-                "http://schema.org/Text"
+                "Country",
+                "Text"
             ],
             elevation: [
-                "http://schema.org/Number",
-                "http://schema.org/Text"
+                "Number",
+                "Text"
             ],
             latitude: [
-                "http://schema.org/Number",
-                "http://schema.org/Text"
+                "Number",
+                "Text"
             ],
             longitude: [
-                "http://schema.org/Text",
-                "http://schema.org/Number"
+                "Text",
+                "Number"
             ],
             postalCode: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/offercatalog",
+        "offercatalog",
         {
-            _id: "http://schema.org/OfferCatalog",
+            _id: "OfferCatalog",
             _name: "OfferCatalog",
             _parent: [
-                "http://schema.org/ItemList"
+                "ItemList"
             ]
         }
     ],
     [
-        "http://schema.org/unregisteraction",
+        "unregisteraction",
         {
-            _id: "http://schema.org/UnRegisterAction",
+            _id: "UnRegisterAction",
             _name: "UnRegisterAction",
             _parent: [
-                "http://schema.org/InteractAction"
+                "InteractAction"
             ]
         }
     ],
     [
-        "http://schema.org/aboutpage",
+        "aboutpage",
         {
-            _id: "http://schema.org/AboutPage",
+            _id: "AboutPage",
             _name: "AboutPage",
             _parent: [
-                "http://schema.org/WebPage"
+                "WebPage"
             ]
         }
     ],
     [
-        "http://schema.org/loseaction",
+        "loseaction",
         {
-            _id: "http://schema.org/LoseAction",
+            _id: "LoseAction",
             _name: "LoseAction",
             _parent: [
-                "http://schema.org/AchieveAction"
+                "AchieveAction"
             ],
             winner: [
-                "http://schema.org/Person"
+                "Person"
             ]
         }
     ],
     [
-        "http://schema.org/achieveaction",
+        "achieveaction",
         {
-            _id: "http://schema.org/AchieveAction",
+            _id: "AchieveAction",
             _name: "AchieveAction",
             _parent: [
-                "http://schema.org/Action"
+                "Action"
             ]
         }
     ],
     [
-        "http://schema.org/superficialanatomy",
+        "superficialanatomy",
         {
-            _id: "http://schema.org/SuperficialAnatomy",
+            _id: "SuperficialAnatomy",
             _name: "SuperficialAnatomy",
             _parent: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ],
             associatedPathophysiology: [
-                "http://schema.org/Text"
+                "Text"
             ],
             relatedAnatomy: [
-                "http://schema.org/AnatomicalStructure",
-                "http://schema.org/AnatomicalSystem"
+                "AnatomicalStructure",
+                "AnatomicalSystem"
             ],
             relatedCondition: [
-                "http://schema.org/MedicalCondition"
+                "MedicalCondition"
             ],
             relatedTherapy: [
-                "http://schema.org/MedicalTherapy"
+                "MedicalTherapy"
             ],
             significance: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/anatomicalsystem",
+        "anatomicalsystem",
         {
-            _id: "http://schema.org/AnatomicalSystem",
+            _id: "AnatomicalSystem",
             _name: "AnatomicalSystem",
             _parent: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ],
             associatedPathophysiology: [
-                "http://schema.org/Text"
+                "Text"
             ],
             comprisedOf: [
-                "http://schema.org/AnatomicalSystem",
-                "http://schema.org/AnatomicalStructure"
+                "AnatomicalSystem",
+                "AnatomicalStructure"
             ],
             relatedCondition: [
-                "http://schema.org/MedicalCondition"
+                "MedicalCondition"
             ],
             relatedStructure: [
-                "http://schema.org/AnatomicalStructure"
+                "AnatomicalStructure"
             ],
             relatedTherapy: [
-                "http://schema.org/MedicalTherapy"
+                "MedicalTherapy"
             ]
         }
     ],
     [
-        "http://schema.org/shoppingcenter",
+        "shoppingcenter",
         {
-            _id: "http://schema.org/ShoppingCenter",
+            _id: "ShoppingCenter",
             _name: "ShoppingCenter",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/confirmaction",
+        "confirmaction",
         {
-            _id: "http://schema.org/ConfirmAction",
+            _id: "ConfirmAction",
             _name: "ConfirmAction",
             _parent: [
-                "http://schema.org/InformAction"
+                "InformAction"
             ]
         }
     ],
     [
-        "http://schema.org/informaction",
+        "informaction",
         {
-            _id: "http://schema.org/InformAction",
+            _id: "InformAction",
             _name: "InformAction",
             _parent: [
-                "http://schema.org/CommunicateAction"
+                "CommunicateAction"
             ],
             event: [
-                "http://schema.org/Event"
+                "Event"
             ]
         }
     ],
     [
-        "http://schema.org/howtotool",
+        "howtotool",
         {
-            _id: "http://schema.org/HowToTool",
+            _id: "HowToTool",
             _name: "HowToTool",
             _parent: [
-                "http://schema.org/HowToItem"
+                "HowToItem"
             ]
         }
     ],
     [
-        "http://schema.org/compoundpricespecification",
+        "compoundpricespecification",
         {
-            _id: "http://schema.org/CompoundPriceSpecification",
+            _id: "CompoundPriceSpecification",
             _name: "CompoundPriceSpecification",
             _parent: [
-                "http://schema.org/PriceSpecification"
+                "PriceSpecification"
             ],
             priceComponent: [
-                "http://schema.org/UnitPriceSpecification"
+                "UnitPriceSpecification"
             ]
         }
     ],
     [
-        "http://schema.org/medicalsignorsymptom",
+        "medicalsignorsymptom",
         {
-            _id: "http://schema.org/MedicalSignOrSymptom",
+            _id: "MedicalSignOrSymptom",
             _name: "MedicalSignOrSymptom",
             _parent: [
-                "http://schema.org/MedicalCondition"
+                "MedicalCondition"
             ],
             possibleTreatment: [
-                "http://schema.org/MedicalTherapy"
+                "MedicalTherapy"
             ]
         }
     ],
     [
-        "http://schema.org/state",
+        "state",
         {
-            _id: "http://schema.org/State",
+            _id: "State",
             _name: "State",
             _parent: [
-                "http://schema.org/AdministrativeArea"
+                "AdministrativeArea"
             ]
         }
     ],
     [
-        "http://schema.org/playground",
+        "playground",
         {
-            _id: "http://schema.org/Playground",
+            _id: "Playground",
             _name: "Playground",
             _parent: [
-                "http://schema.org/CivicStructure"
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/appendaction",
+        "appendaction",
         {
-            _id: "http://schema.org/AppendAction",
+            _id: "AppendAction",
             _name: "AppendAction",
             _parent: [
-                "http://schema.org/InsertAction"
+                "InsertAction"
             ]
         }
     ],
     [
-        "http://schema.org/insertaction",
+        "insertaction",
         {
-            _id: "http://schema.org/InsertAction",
+            _id: "InsertAction",
             _name: "InsertAction",
             _parent: [
-                "http://schema.org/AddAction"
+                "AddAction"
             ],
             toLocation: [
-                "http://schema.org/Place"
+                "Place"
             ]
         }
     ],
     [
-        "http://schema.org/addaction",
+        "addaction",
         {
-            _id: "http://schema.org/AddAction",
+            _id: "AddAction",
             _name: "AddAction",
             _parent: [
-                "http://schema.org/UpdateAction"
+                "UpdateAction"
             ]
         }
     ],
     [
-        "http://schema.org/updateaction",
+        "updateaction",
         {
-            _id: "http://schema.org/UpdateAction",
+            _id: "UpdateAction",
             _name: "UpdateAction",
             _parent: [
-                "http://schema.org/Action"
+                "Action"
             ],
             targetCollection: [
-                "http://schema.org/Thing"
+                "Thing"
             ]
         }
     ],
     [
-        "http://schema.org/eventreservation",
+        "eventreservation",
         {
-            _id: "http://schema.org/EventReservation",
+            _id: "EventReservation",
             _name: "EventReservation",
             _parent: [
-                "http://schema.org/Reservation"
+                "Reservation"
             ]
         }
     ],
     [
-        "http://schema.org/medicalcontraindication",
+        "medicalcontraindication",
         {
-            _id: "http://schema.org/MedicalContraindication",
+            _id: "MedicalContraindication",
             _name: "MedicalContraindication",
             _parent: [
-                "http://schema.org/MedicalEntity"
+                "MedicalEntity"
             ]
         }
     ],
     [
-        "http://schema.org/medicalsign",
+        "medicalsign",
         {
-            _id: "http://schema.org/MedicalSign",
+            _id: "MedicalSign",
             _name: "MedicalSign",
             _parent: [
-                "http://schema.org/MedicalSignOrSymptom"
+                "MedicalSignOrSymptom"
             ],
             identifyingExam: [
-                "http://schema.org/PhysicalExam"
+                "PhysicalExam"
             ],
             identifyingTest: [
-                "http://schema.org/MedicalTest"
+                "MedicalTest"
             ]
         }
     ],
     [
-        "http://schema.org/bookseries",
+        "bookseries",
         {
-            _id: "http://schema.org/BookSeries",
+            _id: "BookSeries",
             _name: "BookSeries",
             _parent: [
-                "http://schema.org/CreativeWorkSeries"
+                "CreativeWorkSeries"
             ]
         }
     ],
     [
-        "http://schema.org/replaceaction",
+        "replaceaction",
         {
-            _id: "http://schema.org/ReplaceAction",
+            _id: "ReplaceAction",
             _name: "ReplaceAction",
             _parent: [
-                "http://schema.org/UpdateAction"
+                "UpdateAction"
             ],
             replacee: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             replacer: [
-                "http://schema.org/Thing"
+                "Thing"
             ]
         }
     ],
     [
-        "http://schema.org/parkingfacility",
+        "parkingfacility",
         {
-            _id: "http://schema.org/ParkingFacility",
+            _id: "ParkingFacility",
             _name: "ParkingFacility",
             _parent: [
-                "http://schema.org/CivicStructure"
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/highschool",
+        "highschool",
         {
-            _id: "http://schema.org/HighSchool",
+            _id: "HighSchool",
             _name: "HighSchool",
             _parent: [
-                "http://schema.org/EducationalOrganization"
+                "EducationalOrganization"
             ]
         }
     ],
     [
-        "http://schema.org/bankaccount",
+        "bankaccount",
         {
-            _id: "http://schema.org/BankAccount",
+            _id: "BankAccount",
             _name: "BankAccount",
             _parent: [
-                "http://schema.org/FinancialProduct"
+                "FinancialProduct"
             ]
         }
     ],
     [
-        "http://schema.org/datafeeditem",
+        "datafeeditem",
         {
-            _id: "http://schema.org/DataFeedItem",
+            _id: "DataFeedItem",
             _name: "DataFeedItem",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             dateCreated: [
-                "http://schema.org/Date",
-                "http://schema.org/DateTime"
+                "Date",
+                "DateTime"
             ],
             dateDeleted: [
-                "http://schema.org/DateTime",
-                "http://schema.org/Date"
+                "DateTime",
+                "Date"
             ],
             dateModified: [
-                "http://schema.org/Date",
-                "http://schema.org/DateTime"
+                "Date",
+                "DateTime"
             ],
             item: [
-                "http://schema.org/Thing"
+                "Thing"
             ]
         }
     ],
     [
-        "http://schema.org/cityhall",
+        "cityhall",
         {
-            _id: "http://schema.org/CityHall",
+            _id: "CityHall",
             _name: "CityHall",
             _parent: [
-                "http://schema.org/GovernmentBuilding"
+                "GovernmentBuilding"
             ]
         }
     ],
     [
-        "http://schema.org/governmentbuilding",
+        "governmentbuilding",
         {
-            _id: "http://schema.org/GovernmentBuilding",
+            _id: "GovernmentBuilding",
             _name: "GovernmentBuilding",
             _parent: [
-                "http://schema.org/CivicStructure"
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/pawnshop",
+        "pawnshop",
         {
-            _id: "http://schema.org/PawnShop",
+            _id: "PawnShop",
             _name: "PawnShop",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/physician",
+        "physician",
         {
-            _id: "http://schema.org/Physician",
+            _id: "Physician",
             _name: "Physician",
             _parent: [
-                "http://schema.org/MedicalOrganization",
-                "http://schema.org/MedicalBusiness"
+                "MedicalOrganization",
+                "MedicalBusiness"
             ],
             availableService: [
-                "http://schema.org/MedicalTest",
-                "http://schema.org/MedicalTherapy",
-                "http://schema.org/MedicalProcedure"
+                "MedicalTest",
+                "MedicalTherapy",
+                "MedicalProcedure"
             ],
             hospitalAffiliation: [
-                "http://schema.org/Hospital"
+                "Hospital"
             ],
             medicalSpecialty: [
-                "http://schema.org/MedicalSpecialty"
+                "MedicalSpecialty"
             ]
         }
     ],
     [
-        "http://schema.org/assignaction",
+        "assignaction",
         {
-            _id: "http://schema.org/AssignAction",
+            _id: "AssignAction",
             _name: "AssignAction",
             _parent: [
-                "http://schema.org/AllocateAction"
+                "AllocateAction"
             ]
         }
     ],
     [
-        "http://schema.org/beddetails",
+        "beddetails",
         {
-            _id: "http://schema.org/BedDetails",
+            _id: "BedDetails",
             _name: "BedDetails",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             numberOfBeds: [
-                "http://schema.org/Number"
+                "Number"
             ],
             typeOfBed: [
-                "http://schema.org/Text",
-                "http://schema.org/BedType"
+                "Text",
+                "BedType"
             ]
         }
     ],
     [
-        "http://schema.org/trainstation",
+        "trainstation",
         {
-            _id: "http://schema.org/TrainStation",
+            _id: "TrainStation",
             _name: "TrainStation",
             _parent: [
-                "http://schema.org/CivicStructure"
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/distillery",
+        "distillery",
         {
-            _id: "http://schema.org/Distillery",
+            _id: "Distillery",
             _name: "Distillery",
             _parent: [
-                "http://schema.org/FoodEstablishment"
+                "FoodEstablishment"
             ]
         }
     ],
     [
-        "http://schema.org/typeandquantitynode",
+        "typeandquantitynode",
         {
-            _id: "http://schema.org/TypeAndQuantityNode",
+            _id: "TypeAndQuantityNode",
             _name: "TypeAndQuantityNode",
             _parent: [
-                "http://schema.org/StructuredValue"
+                "StructuredValue"
             ],
             amountOfThisGood: [
-                "http://schema.org/Number"
+                "Number"
             ],
             businessFunction: [
-                "http://schema.org/BusinessFunction"
+                "BusinessFunction"
             ],
             typeOfGood: [
-                "http://schema.org/Product",
-                "http://schema.org/Service"
+                "Product",
+                "Service"
             ],
             unitCode: [
-                "http://schema.org/URL",
-                "http://schema.org/Text"
+                "URL",
+                "Text"
             ],
             unitText: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/permit",
+        "permit",
         {
-            _id: "http://schema.org/Permit",
+            _id: "Permit",
             _name: "Permit",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             issuedBy: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             issuedThrough: [
-                "http://schema.org/Service"
+                "Service"
             ],
             permitAudience: [
-                "http://schema.org/Audience"
+                "Audience"
             ],
             validFor: [
-                "http://schema.org/Duration"
+                "Duration"
             ],
             validFrom: [
-                "http://schema.org/Date",
-                "http://schema.org/DateTime"
+                "Date",
+                "DateTime"
             ],
             validIn: [
-                "http://schema.org/AdministrativeArea"
+                "AdministrativeArea"
             ],
             validUntil: [
-                "http://schema.org/Date"
+                "Date"
             ]
         }
     ],
     [
-        "http://schema.org/sportsclub",
+        "sportsclub",
         {
-            _id: "http://schema.org/SportsClub",
+            _id: "SportsClub",
             _name: "SportsClub",
             _parent: [
-                "http://schema.org/SportsActivityLocation"
+                "SportsActivityLocation"
             ]
         }
     ],
     [
-        "http://schema.org/bridge",
+        "bridge",
         {
-            _id: "http://schema.org/Bridge",
+            _id: "Bridge",
             _name: "Bridge",
             _parent: [
-                "http://schema.org/CivicStructure"
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/volcano",
+        "volcano",
         {
-            _id: "http://schema.org/Volcano",
+            _id: "Volcano",
             _name: "Volcano",
             _parent: [
-                "http://schema.org/Landform"
+                "Landform"
             ]
         }
     ],
     [
-        "http://schema.org/medicalwebpage",
+        "medicalwebpage",
         {
-            _id: "http://schema.org/MedicalWebPage",
+            _id: "MedicalWebPage",
             _name: "MedicalWebPage",
             _parent: [
-                "http://schema.org/WebPage"
+                "WebPage"
             ]
         }
     ],
     [
-        "http://schema.org/book",
+        "book",
         {
-            _id: "http://schema.org/Book",
+            _id: "Book",
             _name: "Book",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             abridged: [
-                "http://schema.org/Boolean"
+                "Boolean"
             ],
             bookEdition: [
-                "http://schema.org/Text"
+                "Text"
             ],
             bookFormat: [
-                "http://schema.org/BookFormatType"
+                "BookFormatType"
             ],
             illustrator: [
-                "http://schema.org/Person"
+                "Person"
             ],
             isbn: [
-                "http://schema.org/Text"
+                "Text"
             ],
             numberOfPages: [
-                "http://schema.org/Integer"
+                "Integer"
             ]
         }
     ],
     [
-        "http://schema.org/grocerystore",
+        "grocerystore",
         {
-            _id: "http://schema.org/GroceryStore",
+            _id: "GroceryStore",
             _name: "GroceryStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/icecreamshop",
+        "icecreamshop",
         {
-            _id: "http://schema.org/IceCreamShop",
+            _id: "IceCreamShop",
             _name: "IceCreamShop",
             _parent: [
-                "http://schema.org/FoodEstablishment"
+                "FoodEstablishment"
             ]
         }
     ],
     [
-        "http://schema.org/insuranceagency",
+        "insuranceagency",
         {
-            _id: "http://schema.org/InsuranceAgency",
+            _id: "InsuranceAgency",
             _name: "InsuranceAgency",
             _parent: [
-                "http://schema.org/FinancialService"
+                "FinancialService"
             ]
         }
     ],
     [
-        "http://schema.org/financialservice",
+        "financialservice",
         {
-            _id: "http://schema.org/FinancialService",
+            _id: "FinancialService",
             _name: "FinancialService",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ],
             feesAndCommissionsSpecification: [
-                "http://schema.org/Text",
-                "http://schema.org/URL"
+                "Text",
+                "URL"
             ]
         }
     ],
     [
-        "http://schema.org/audioobject",
+        "audioobject",
         {
-            _id: "http://schema.org/AudioObject",
+            _id: "AudioObject",
             _name: "AudioObject",
             _parent: [
-                "http://schema.org/MediaObject"
+                "MediaObject"
             ],
             caption: [
-                "http://schema.org/Text",
-                "http://schema.org/MediaObject"
+                "Text",
+                "MediaObject"
             ],
             transcript: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/seabodyofwater",
+        "seabodyofwater",
         {
-            _id: "http://schema.org/SeaBodyOfWater",
+            _id: "SeaBodyOfWater",
             _name: "SeaBodyOfWater",
             _parent: [
-                "http://schema.org/BodyOfWater"
+                "BodyOfWater"
             ]
         }
     ],
     [
-        "http://schema.org/vein",
+        "vein",
         {
-            _id: "http://schema.org/Vein",
+            _id: "Vein",
             _name: "Vein",
             _parent: [
-                "http://schema.org/Vessel"
+                "Vessel"
             ],
             drainsTo: [
-                "http://schema.org/Vessel"
+                "Vessel"
             ],
             regionDrained: [
-                "http://schema.org/AnatomicalStructure",
-                "http://schema.org/AnatomicalSystem"
+                "AnatomicalStructure",
+                "AnatomicalSystem"
             ],
             tributary: [
-                "http://schema.org/AnatomicalStructure"
+                "AnatomicalStructure"
             ]
         }
     ],
     [
-        "http://schema.org/alignmentobject",
+        "alignmentobject",
         {
-            _id: "http://schema.org/AlignmentObject",
+            _id: "AlignmentObject",
             _name: "AlignmentObject",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             alignmentType: [
-                "http://schema.org/Text"
+                "Text"
             ],
             educationalFramework: [
-                "http://schema.org/Text"
+                "Text"
             ],
             targetDescription: [
-                "http://schema.org/Text"
+                "Text"
             ],
             targetName: [
-                "http://schema.org/Text"
+                "Text"
             ],
             targetUrl: [
-                "http://schema.org/URL"
+                "URL"
             ]
         }
     ],
     [
-        "http://schema.org/muscle",
+        "muscle",
         {
-            _id: "http://schema.org/Muscle",
+            _id: "Muscle",
             _name: "Muscle",
             _parent: [
-                "http://schema.org/AnatomicalStructure"
+                "AnatomicalStructure"
             ],
             antagonist: [
-                "http://schema.org/Muscle"
+                "Muscle"
             ],
             bloodSupply: [
-                "http://schema.org/Vessel"
+                "Vessel"
             ],
             insertion: [
-                "http://schema.org/AnatomicalStructure"
+                "AnatomicalStructure"
             ],
             muscleAction: [
-                "http://schema.org/Text"
+                "Text"
             ],
             nerve: [
-                "http://schema.org/Nerve"
+                "Nerve"
             ]
         }
     ],
     [
-        "http://schema.org/autopartsstore",
+        "autopartsstore",
         {
-            _id: "http://schema.org/AutoPartsStore",
+            _id: "AutoPartsStore",
             _name: "AutoPartsStore",
             _parent: [
-                "http://schema.org/AutomotiveBusiness",
-                "http://schema.org/Store"
+                "AutomotiveBusiness",
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/wpadblock",
+        "wpadblock",
         {
-            _id: "http://schema.org/WPAdBlock",
+            _id: "WPAdBlock",
             _name: "WPAdBlock",
             _parent: [
-                "http://schema.org/WebPageElement"
+                "WebPageElement"
             ]
         }
     ],
     [
-        "http://schema.org/recommendeddoseschedule",
+        "recommendeddoseschedule",
         {
-            _id: "http://schema.org/RecommendedDoseSchedule",
+            _id: "RecommendedDoseSchedule",
             _name: "RecommendedDoseSchedule",
             _parent: [
-                "http://schema.org/DoseSchedule"
+                "DoseSchedule"
             ]
         }
     ],
     [
-        "http://schema.org/ligament",
+        "ligament",
         {
-            _id: "http://schema.org/Ligament",
+            _id: "Ligament",
             _name: "Ligament",
             _parent: [
-                "http://schema.org/AnatomicalStructure"
+                "AnatomicalStructure"
             ]
         }
     ],
     [
-        "http://schema.org/writeaction",
+        "writeaction",
         {
-            _id: "http://schema.org/WriteAction",
+            _id: "WriteAction",
             _name: "WriteAction",
             _parent: [
-                "http://schema.org/CreateAction"
+                "CreateAction"
             ],
             inLanguage: [
-                "http://schema.org/Language",
-                "http://schema.org/Text"
+                "Language",
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/qapage",
+        "qapage",
         {
-            _id: "http://schema.org/QAPage",
+            _id: "QAPage",
             _name: "QAPage",
             _parent: [
-                "http://schema.org/WebPage"
+                "WebPage"
             ]
         }
     ],
     [
-        "http://schema.org/searchaction",
+        "searchaction",
         {
-            _id: "http://schema.org/SearchAction",
+            _id: "SearchAction",
             _name: "SearchAction",
             _parent: [
-                "http://schema.org/Action"
+                "Action"
             ],
             query: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/pathologytest",
+        "pathologytest",
         {
-            _id: "http://schema.org/PathologyTest",
+            _id: "PathologyTest",
             _name: "PathologyTest",
             _parent: [
-                "http://schema.org/MedicalTest"
+                "MedicalTest"
             ],
             tissueSample: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/jewelrystore",
+        "jewelrystore",
         {
-            _id: "http://schema.org/JewelryStore",
+            _id: "JewelryStore",
             _name: "JewelryStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/viewaction",
+        "viewaction",
         {
-            _id: "http://schema.org/ViewAction",
+            _id: "ViewAction",
             _name: "ViewAction",
             _parent: [
-                "http://schema.org/ConsumeAction"
+                "ConsumeAction"
             ]
         }
     ],
     [
-        "http://schema.org/wpfooter",
+        "wpfooter",
         {
-            _id: "http://schema.org/WPFooter",
+            _id: "WPFooter",
             _name: "WPFooter",
             _parent: [
-                "http://schema.org/WebPageElement"
+                "WebPageElement"
             ]
         }
     ],
     [
-        "http://schema.org/likeaction",
+        "likeaction",
         {
-            _id: "http://schema.org/LikeAction",
+            _id: "LikeAction",
             _name: "LikeAction",
             _parent: [
-                "http://schema.org/ReactAction"
+                "ReactAction"
             ]
         }
     ],
     [
-        "http://schema.org/reactaction",
+        "reactaction",
         {
-            _id: "http://schema.org/ReactAction",
+            _id: "ReactAction",
             _name: "ReactAction",
             _parent: [
-                "http://schema.org/AssessAction"
+                "AssessAction"
             ]
         }
     ],
     [
-        "http://schema.org/downloadaction",
+        "downloadaction",
         {
-            _id: "http://schema.org/DownloadAction",
+            _id: "DownloadAction",
             _name: "DownloadAction",
             _parent: [
-                "http://schema.org/TransferAction"
+                "TransferAction"
             ]
         }
     ],
     [
-        "http://schema.org/synagogue",
+        "synagogue",
         {
-            _id: "http://schema.org/Synagogue",
+            _id: "Synagogue",
             _name: "Synagogue",
             _parent: [
-                "http://schema.org/PlaceOfWorship"
+                "PlaceOfWorship"
             ]
         }
     ],
     [
-        "http://schema.org/tireshop",
+        "tireshop",
         {
-            _id: "http://schema.org/TireShop",
+            _id: "TireShop",
             _name: "TireShop",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/policestation",
+        "policestation",
         {
-            _id: "http://schema.org/PoliceStation",
+            _id: "PoliceStation",
             _name: "PoliceStation",
             _parent: [
-                "http://schema.org/CivicStructure",
-                "http://schema.org/EmergencyService"
+                "CivicStructure",
+                "EmergencyService"
             ]
         }
     ],
     [
-        "http://schema.org/healthclub",
+        "healthclub",
         {
-            _id: "http://schema.org/HealthClub",
+            _id: "HealthClub",
             _name: "HealthClub",
             _parent: [
-                "http://schema.org/SportsActivityLocation",
-                "http://schema.org/HealthAndBeautyBusiness"
+                "SportsActivityLocation",
+                "HealthAndBeautyBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/healthandbeautybusiness",
+        "healthandbeautybusiness",
         {
-            _id: "http://schema.org/HealthAndBeautyBusiness",
+            _id: "HealthAndBeautyBusiness",
             _name: "HealthAndBeautyBusiness",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/animalshelter",
+        "animalshelter",
         {
-            _id: "http://schema.org/AnimalShelter",
+            _id: "AnimalShelter",
             _name: "AnimalShelter",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/thesis",
+        "thesis",
         {
-            _id: "http://schema.org/Thesis",
+            _id: "Thesis",
             _name: "Thesis",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             inSupportOf: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/workersunion",
+        "workersunion",
         {
-            _id: "http://schema.org/WorkersUnion",
+            _id: "WorkersUnion",
             _name: "WorkersUnion",
             _parent: [
-                "http://schema.org/Organization"
+                "Organization"
             ]
         }
     ],
     [
-        "http://schema.org/lendaction",
+        "lendaction",
         {
-            _id: "http://schema.org/LendAction",
+            _id: "LendAction",
             _name: "LendAction",
             _parent: [
-                "http://schema.org/TransferAction"
+                "TransferAction"
             ],
             borrower: [
-                "http://schema.org/Person"
+                "Person"
             ]
         }
     ],
     [
-        "http://schema.org/listenaction",
+        "listenaction",
         {
-            _id: "http://schema.org/ListenAction",
+            _id: "ListenAction",
             _name: "ListenAction",
             _parent: [
-                "http://schema.org/ConsumeAction"
+                "ConsumeAction"
             ]
         }
     ],
     [
-        "http://schema.org/suite",
+        "suite",
         {
-            _id: "http://schema.org/Suite",
+            _id: "Suite",
             _name: "Suite",
             _parent: [
-                "http://schema.org/Accommodation"
+                "Accommodation"
             ],
             bed: [
-                "http://schema.org/BedType",
-                "http://schema.org/BedDetails",
-                "http://schema.org/Text"
+                "BedType",
+                "BedDetails",
+                "Text"
             ],
             numberOfRooms: [
-                "http://schema.org/QuantitativeValue",
-                "http://schema.org/Number"
+                "QuantitativeValue",
+                "Number"
             ],
             occupancy: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ]
         }
     ],
     [
-        "http://schema.org/apartment",
+        "apartment",
         {
-            _id: "http://schema.org/Apartment",
+            _id: "Apartment",
             _name: "Apartment",
             _parent: [
-                "http://schema.org/Accommodation"
+                "Accommodation"
             ],
             numberOfRooms: [
-                "http://schema.org/QuantitativeValue",
-                "http://schema.org/Number"
+                "QuantitativeValue",
+                "Number"
             ],
             occupancy: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ]
         }
     ],
     [
-        "http://schema.org/singlefamilyresidence",
+        "singlefamilyresidence",
         {
-            _id: "http://schema.org/SingleFamilyResidence",
+            _id: "SingleFamilyResidence",
             _name: "SingleFamilyResidence",
             _parent: [
-                "http://schema.org/House"
+                "House"
             ],
             numberOfRooms: [
-                "http://schema.org/QuantitativeValue",
-                "http://schema.org/Number"
+                "QuantitativeValue",
+                "Number"
             ],
             occupancy: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ]
         }
     ],
     [
-        "http://schema.org/house",
+        "house",
         {
-            _id: "http://schema.org/House",
+            _id: "House",
             _name: "House",
             _parent: [
-                "http://schema.org/Accommodation"
+                "Accommodation"
             ],
             numberOfRooms: [
-                "http://schema.org/QuantitativeValue",
-                "http://schema.org/Number"
+                "QuantitativeValue",
+                "Number"
             ]
         }
     ],
     [
-        "http://schema.org/deleteaction",
+        "deleteaction",
         {
-            _id: "http://schema.org/DeleteAction",
+            _id: "DeleteAction",
             _name: "DeleteAction",
             _parent: [
-                "http://schema.org/UpdateAction"
+                "UpdateAction"
             ]
         }
     ],
     [
-        "http://schema.org/sitenavigationelement",
+        "sitenavigationelement",
         {
-            _id: "http://schema.org/SiteNavigationElement",
+            _id: "SiteNavigationElement",
             _name: "SiteNavigationElement",
             _parent: [
-                "http://schema.org/WebPageElement"
+                "WebPageElement"
             ]
         }
     ],
     [
-        "http://schema.org/governmentservice",
+        "governmentservice",
         {
-            _id: "http://schema.org/GovernmentService",
+            _id: "GovernmentService",
             _name: "GovernmentService",
             _parent: [
-                "http://schema.org/Service"
+                "Service"
             ],
             serviceOperator: [
-                "http://schema.org/Organization"
+                "Organization"
             ]
         }
     ],
     [
-        "http://schema.org/legalservice",
+        "legalservice",
         {
-            _id: "http://schema.org/LegalService",
+            _id: "LegalService",
             _name: "LegalService",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/digitaldocumentpermission",
+        "digitaldocumentpermission",
         {
-            _id: "http://schema.org/DigitalDocumentPermission",
+            _id: "DigitalDocumentPermission",
             _name: "DigitalDocumentPermission",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             grantee: [
-                "http://schema.org/Person",
-                "http://schema.org/ContactPoint",
-                "http://schema.org/Organization",
-                "http://schema.org/Audience"
+                "Person",
+                "ContactPoint",
+                "Organization",
+                "Audience"
             ],
             permissionType: [
-                "http://schema.org/DigitalDocumentPermissionType"
+                "DigitalDocumentPermissionType"
             ]
         }
     ],
     [
-        "http://schema.org/registeraction",
+        "registeraction",
         {
-            _id: "http://schema.org/RegisterAction",
+            _id: "RegisterAction",
             _name: "RegisterAction",
             _parent: [
-                "http://schema.org/InteractAction"
+                "InteractAction"
             ]
         }
     ],
     [
-        "http://schema.org/housepainter",
+        "housepainter",
         {
-            _id: "http://schema.org/HousePainter",
+            _id: "HousePainter",
             _name: "HousePainter",
             _parent: [
-                "http://schema.org/HomeAndConstructionBusiness"
+                "HomeAndConstructionBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/homeandconstructionbusiness",
+        "homeandconstructionbusiness",
         {
-            _id: "http://schema.org/HomeAndConstructionBusiness",
+            _id: "HomeAndConstructionBusiness",
             _name: "HomeAndConstructionBusiness",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/diagnosticlab",
+        "diagnosticlab",
         {
-            _id: "http://schema.org/DiagnosticLab",
+            _id: "DiagnosticLab",
             _name: "DiagnosticLab",
             _parent: [
-                "http://schema.org/MedicalOrganization"
+                "MedicalOrganization"
             ],
             availableTest: [
-                "http://schema.org/MedicalTest"
+                "MedicalTest"
             ]
         }
     ],
     [
-        "http://schema.org/gameserver",
+        "gameserver",
         {
-            _id: "http://schema.org/GameServer",
+            _id: "GameServer",
             _name: "GameServer",
             _parent: [
-                "http://schema.org/Intangible"
+                "Intangible"
             ],
             game: [
-                "http://schema.org/VideoGame"
+                "VideoGame"
             ],
             playersOnline: [
-                "http://schema.org/Integer"
+                "Integer"
             ],
             serverStatus: [
-                "http://schema.org/GameServerStatus"
+                "GameServerStatus"
             ]
         }
     ],
     [
-        "http://schema.org/attorney",
+        "attorney",
         {
-            _id: "http://schema.org/Attorney",
+            _id: "Attorney",
             _name: "Attorney",
             _parent: [
-                "http://schema.org/LegalService"
+                "LegalService"
             ]
         }
     ],
     [
-        "http://schema.org/rsvpaction",
+        "rsvpaction",
         {
-            _id: "http://schema.org/RsvpAction",
+            _id: "RsvpAction",
             _name: "RsvpAction",
             _parent: [
-                "http://schema.org/InformAction"
+                "InformAction"
             ],
             additionalNumberOfGuests: [
-                "http://schema.org/Number"
+                "Number"
             ],
             comment: [
-                "http://schema.org/Comment"
+                "Comment"
             ],
             rsvpResponse: [
-                "http://schema.org/RsvpResponseType"
+                "RsvpResponseType"
             ]
         }
     ],
     [
-        "http://schema.org/generalcontractor",
+        "generalcontractor",
         {
-            _id: "http://schema.org/GeneralContractor",
+            _id: "GeneralContractor",
             _name: "GeneralContractor",
             _parent: [
-                "http://schema.org/HomeAndConstructionBusiness"
+                "HomeAndConstructionBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/toystore",
+        "toystore",
         {
-            _id: "http://schema.org/ToyStore",
+            _id: "ToyStore",
             _name: "ToyStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/resumeaction",
+        "resumeaction",
         {
-            _id: "http://schema.org/ResumeAction",
+            _id: "ResumeAction",
             _name: "ResumeAction",
             _parent: [
-                "http://schema.org/ControlAction"
+                "ControlAction"
             ]
         }
     ],
     [
-        "http://schema.org/controlaction",
+        "controlaction",
         {
-            _id: "http://schema.org/ControlAction",
+            _id: "ControlAction",
             _name: "ControlAction",
             _parent: [
-                "http://schema.org/Action"
+                "Action"
             ]
         }
     ],
     [
-        "http://schema.org/waterfall",
+        "waterfall",
         {
-            _id: "http://schema.org/Waterfall",
+            _id: "Waterfall",
             _name: "Waterfall",
             _parent: [
-                "http://schema.org/BodyOfWater"
+                "BodyOfWater"
             ]
         }
     ],
     [
-        "http://schema.org/movierentalstore",
+        "movierentalstore",
         {
-            _id: "http://schema.org/MovieRentalStore",
+            _id: "MovieRentalStore",
             _name: "MovieRentalStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/winaction",
+        "winaction",
         {
-            _id: "http://schema.org/WinAction",
+            _id: "WinAction",
             _name: "WinAction",
             _parent: [
-                "http://schema.org/AchieveAction"
+                "AchieveAction"
             ],
             loser: [
-                "http://schema.org/Person"
+                "Person"
             ]
         }
     ],
     [
-        "http://schema.org/watchaction",
+        "watchaction",
         {
-            _id: "http://schema.org/WatchAction",
+            _id: "WatchAction",
             _name: "WatchAction",
             _parent: [
-                "http://schema.org/ConsumeAction"
+                "ConsumeAction"
             ]
         }
     ],
     [
-        "http://schema.org/medicalguidelinecontraindication",
+        "medicalguidelinecontraindication",
         {
-            _id: "http://schema.org/MedicalGuidelineContraindication",
+            _id: "MedicalGuidelineContraindication",
             _name: "MedicalGuidelineContraindication",
             _parent: [
-                "http://schema.org/MedicalGuideline"
+                "MedicalGuideline"
             ]
         }
     ],
     [
-        "http://schema.org/imagingtest",
+        "imagingtest",
         {
-            _id: "http://schema.org/ImagingTest",
+            _id: "ImagingTest",
             _name: "ImagingTest",
             _parent: [
-                "http://schema.org/MedicalTest"
+                "MedicalTest"
             ],
             imagingTechnique: [
-                "http://schema.org/MedicalImagingTechnique"
+                "MedicalImagingTechnique"
             ]
         }
     ],
     [
-        "http://schema.org/autowash",
+        "autowash",
         {
-            _id: "http://schema.org/AutoWash",
+            _id: "AutoWash",
             _name: "AutoWash",
             _parent: [
-                "http://schema.org/AutomotiveBusiness"
+                "AutomotiveBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/installaction",
+        "installaction",
         {
-            _id: "http://schema.org/InstallAction",
+            _id: "InstallAction",
             _name: "InstallAction",
             _parent: [
-                "http://schema.org/ConsumeAction"
+                "ConsumeAction"
             ]
         }
     ],
     [
-        "http://schema.org/eventvenue",
+        "eventvenue",
         {
-            _id: "http://schema.org/EventVenue",
+            _id: "EventVenue",
             _name: "EventVenue",
             _parent: [
-                "http://schema.org/CivicStructure"
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/museum",
+        "museum",
         {
-            _id: "http://schema.org/Museum",
+            _id: "Museum",
             _name: "Museum",
             _parent: [
-                "http://schema.org/CivicStructure"
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/postoffice",
+        "postoffice",
         {
-            _id: "http://schema.org/PostOffice",
+            _id: "PostOffice",
             _name: "PostOffice",
             _parent: [
-                "http://schema.org/GovernmentOffice"
+                "GovernmentOffice"
             ]
         }
     ],
     [
-        "http://schema.org/checkoutpage",
+        "checkoutpage",
         {
-            _id: "http://schema.org/CheckoutPage",
+            _id: "CheckoutPage",
             _name: "CheckoutPage",
             _parent: [
-                "http://schema.org/WebPage"
+                "WebPage"
             ]
         }
     ],
     [
-        "http://schema.org/veterinarycare",
+        "veterinarycare",
         {
-            _id: "http://schema.org/VeterinaryCare",
+            _id: "VeterinaryCare",
             _name: "VeterinaryCare",
             _parent: [
-                "http://schema.org/MedicalOrganization"
+                "MedicalOrganization"
             ]
         }
     ],
     [
-        "http://schema.org/autorepair",
+        "autorepair",
         {
-            _id: "http://schema.org/AutoRepair",
+            _id: "AutoRepair",
             _name: "AutoRepair",
             _parent: [
-                "http://schema.org/AutomotiveBusiness"
+                "AutomotiveBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/parentaudience",
+        "parentaudience",
         {
-            _id: "http://schema.org/ParentAudience",
+            _id: "ParentAudience",
             _name: "ParentAudience",
             _parent: [
-                "http://schema.org/PeopleAudience"
+                "PeopleAudience"
             ],
             childMaxAge: [
-                "http://schema.org/Number"
+                "Number"
             ],
             childMinAge: [
-                "http://schema.org/Number"
+                "Number"
             ]
         }
     ],
     [
-        "http://schema.org/exercisegym",
+        "exercisegym",
         {
-            _id: "http://schema.org/ExerciseGym",
+            _id: "ExerciseGym",
             _name: "ExerciseGym",
             _parent: [
-                "http://schema.org/SportsActivityLocation"
+                "SportsActivityLocation"
             ]
         }
     ],
     [
-        "http://schema.org/profilepage",
+        "profilepage",
         {
-            _id: "http://schema.org/ProfilePage",
+            _id: "ProfilePage",
             _name: "ProfilePage",
             _parent: [
-                "http://schema.org/WebPage"
+                "WebPage"
             ]
         }
     ],
     [
-        "http://schema.org/approvedindication",
+        "approvedindication",
         {
-            _id: "http://schema.org/ApprovedIndication",
+            _id: "ApprovedIndication",
             _name: "ApprovedIndication",
             _parent: [
-                "http://schema.org/MedicalIndication"
+                "MedicalIndication"
             ]
         }
     ],
     [
-        "http://schema.org/reservationpackage",
+        "reservationpackage",
         {
-            _id: "http://schema.org/ReservationPackage",
+            _id: "ReservationPackage",
             _name: "ReservationPackage",
             _parent: [
-                "http://schema.org/Reservation"
+                "Reservation"
             ],
             subReservation: [
-                "http://schema.org/Reservation"
+                "Reservation"
             ]
         }
     ],
     [
-        "http://schema.org/datacatalog",
+        "datacatalog",
         {
-            _id: "http://schema.org/DataCatalog",
+            _id: "DataCatalog",
             _name: "DataCatalog",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ],
             dataset: [
-                "http://schema.org/Dataset"
+                "Dataset"
             ]
         }
     ],
     [
-        "http://schema.org/checkaction",
+        "checkaction",
         {
-            _id: "http://schema.org/CheckAction",
+            _id: "CheckAction",
             _name: "CheckAction",
             _parent: [
-                "http://schema.org/FindAction"
+                "FindAction"
             ]
         }
     ],
     [
-        "http://schema.org/findaction",
+        "findaction",
         {
-            _id: "http://schema.org/FindAction",
+            _id: "FindAction",
             _name: "FindAction",
             _parent: [
-                "http://schema.org/Action"
+                "Action"
             ]
         }
     ],
     [
-        "http://schema.org/disagreeaction",
+        "disagreeaction",
         {
-            _id: "http://schema.org/DisagreeAction",
+            _id: "DisagreeAction",
             _name: "DisagreeAction",
             _parent: [
-                "http://schema.org/ReactAction"
+                "ReactAction"
             ]
         }
     ],
     [
-        "http://schema.org/itempage",
+        "itempage",
         {
-            _id: "http://schema.org/ItemPage",
+            _id: "ItemPage",
             _name: "ItemPage",
             _parent: [
-                "http://schema.org/WebPage"
+                "WebPage"
             ]
         }
     ],
     [
-        "http://schema.org/discussionforumposting",
+        "discussionforumposting",
         {
-            _id: "http://schema.org/DiscussionForumPosting",
+            _id: "DiscussionForumPosting",
             _name: "DiscussionForumPosting",
             _parent: [
-                "http://schema.org/SocialMediaPosting"
+                "SocialMediaPosting"
             ]
         }
     ],
     [
-        "http://schema.org/car",
+        "car",
         {
-            _id: "http://schema.org/Car",
+            _id: "Car",
             _name: "Car",
             _parent: [
-                "http://schema.org/Vehicle"
+                "Vehicle"
             ],
             acrissCode: [
-                "http://schema.org/Text"
+                "Text"
             ],
             roofLoad: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ]
         }
     ],
     [
-        "http://schema.org/dancegroup",
+        "dancegroup",
         {
-            _id: "http://schema.org/DanceGroup",
+            _id: "DanceGroup",
             _name: "DanceGroup",
             _parent: [
-                "http://schema.org/PerformingGroup"
+                "PerformingGroup"
             ]
         }
     ],
     [
-        "http://schema.org/cancelaction",
+        "cancelaction",
         {
-            _id: "http://schema.org/CancelAction",
+            _id: "CancelAction",
             _name: "CancelAction",
             _parent: [
-                "http://schema.org/PlanAction"
+                "PlanAction"
             ]
         }
     ],
     [
-        "http://schema.org/drawaction",
+        "drawaction",
         {
-            _id: "http://schema.org/DrawAction",
+            _id: "DrawAction",
             _name: "DrawAction",
             _parent: [
-                "http://schema.org/CreateAction"
+                "CreateAction"
             ]
         }
     ],
     [
-        "http://schema.org/conversation",
+        "conversation",
         {
-            _id: "http://schema.org/Conversation",
+            _id: "Conversation",
             _name: "Conversation",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ]
         }
     ],
     [
-        "http://schema.org/medicalguidelinerecommendation",
+        "medicalguidelinerecommendation",
         {
-            _id: "http://schema.org/MedicalGuidelineRecommendation",
+            _id: "MedicalGuidelineRecommendation",
             _name: "MedicalGuidelineRecommendation",
             _parent: [
-                "http://schema.org/MedicalGuideline"
+                "MedicalGuideline"
             ],
             recommendationStrength: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/motorcycledealer",
+        "motorcycledealer",
         {
-            _id: "http://schema.org/MotorcycleDealer",
+            _id: "MotorcycleDealer",
             _name: "MotorcycleDealer",
             _parent: [
-                "http://schema.org/AutomotiveBusiness"
+                "AutomotiveBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/optician",
+        "optician",
         {
-            _id: "http://schema.org/Optician",
+            _id: "Optician",
             _name: "Optician",
             _parent: [
-                "http://schema.org/MedicalBusiness"
+                "MedicalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/checkoutaction",
+        "checkoutaction",
         {
-            _id: "http://schema.org/CheckOutAction",
+            _id: "CheckOutAction",
             _name: "CheckOutAction",
             _parent: [
-                "http://schema.org/CommunicateAction"
+                "CommunicateAction"
             ]
         }
     ],
     [
-        "http://schema.org/ignoreaction",
+        "ignoreaction",
         {
-            _id: "http://schema.org/IgnoreAction",
+            _id: "IgnoreAction",
             _name: "IgnoreAction",
             _parent: [
-                "http://schema.org/AssessAction"
+                "AssessAction"
             ]
         }
     ],
     [
-        "http://schema.org/realestateagent",
+        "realestateagent",
         {
-            _id: "http://schema.org/RealEstateAgent",
+            _id: "RealEstateAgent",
             _name: "RealEstateAgent",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/applyaction",
+        "applyaction",
         {
-            _id: "http://schema.org/ApplyAction",
+            _id: "ApplyAction",
             _name: "ApplyAction",
             _parent: [
-                "http://schema.org/OrganizeAction"
+                "OrganizeAction"
             ]
         }
     ],
     [
-        "http://schema.org/endorseaction",
+        "endorseaction",
         {
-            _id: "http://schema.org/EndorseAction",
+            _id: "EndorseAction",
             _name: "EndorseAction",
             _parent: [
-                "http://schema.org/ReactAction"
+                "ReactAction"
             ],
             endorsee: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ]
         }
     ],
     [
-        "http://schema.org/medicalsymptom",
+        "medicalsymptom",
         {
-            _id: "http://schema.org/MedicalSymptom",
+            _id: "MedicalSymptom",
             _name: "MedicalSymptom",
             _parent: [
-                "http://schema.org/MedicalSignOrSymptom"
+                "MedicalSignOrSymptom"
             ]
         }
     ],
     [
-        "http://schema.org/performaction",
+        "performaction",
         {
-            _id: "http://schema.org/PerformAction",
+            _id: "PerformAction",
             _name: "PerformAction",
             _parent: [
-                "http://schema.org/PlayAction"
+                "PlayAction"
             ],
             entertainmentBusiness: [
-                "http://schema.org/EntertainmentBusiness"
+                "EntertainmentBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/hindutemple",
+        "hindutemple",
         {
-            _id: "http://schema.org/HinduTemple",
+            _id: "HinduTemple",
             _name: "HinduTemple",
             _parent: [
-                "http://schema.org/PlaceOfWorship"
+                "PlaceOfWorship"
             ]
         }
     ],
     [
-        "http://schema.org/searchresultspage",
+        "searchresultspage",
         {
-            _id: "http://schema.org/SearchResultsPage",
+            _id: "SearchResultsPage",
             _name: "SearchResultsPage",
             _parent: [
-                "http://schema.org/WebPage"
+                "WebPage"
             ]
         }
     ],
     [
-        "http://schema.org/deliveryevent",
+        "deliveryevent",
         {
-            _id: "http://schema.org/DeliveryEvent",
+            _id: "DeliveryEvent",
             _name: "DeliveryEvent",
             _parent: [
-                "http://schema.org/Event"
+                "Event"
             ],
             accessCode: [
-                "http://schema.org/Text"
+                "Text"
             ],
             availableFrom: [
-                "http://schema.org/DateTime"
+                "DateTime"
             ],
             availableThrough: [
-                "http://schema.org/DateTime"
+                "DateTime"
             ],
             hasDeliveryMethod: [
-                "http://schema.org/DeliveryMethod"
+                "DeliveryMethod"
             ]
         }
     ],
     [
-        "http://schema.org/bookstore",
+        "bookstore",
         {
-            _id: "http://schema.org/BookStore",
+            _id: "BookStore",
             _name: "BookStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/occupationaltherapy",
+        "occupationaltherapy",
         {
-            _id: "http://schema.org/OccupationalTherapy",
+            _id: "OccupationalTherapy",
             _name: "OccupationalTherapy",
             _parent: [
-                "http://schema.org/MedicalTherapy"
+                "MedicalTherapy"
             ]
         }
     ],
     [
-        "http://schema.org/collection",
+        "collection",
         {
-            _id: "http://schema.org/Collection",
+            _id: "Collection",
             _name: "Collection",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ]
         }
     ],
     [
-        "http://schema.org/medicalobservationalstudy",
+        "medicalobservationalstudy",
         {
-            _id: "http://schema.org/MedicalObservationalStudy",
+            _id: "MedicalObservationalStudy",
             _name: "MedicalObservationalStudy",
             _parent: [
-                "http://schema.org/MedicalStudy"
+                "MedicalStudy"
             ],
             studyDesign: [
-                "http://schema.org/MedicalObservationalStudyDesign"
+                "MedicalObservationalStudyDesign"
             ]
         }
     ],
     [
-        "http://schema.org/embassy",
+        "embassy",
         {
-            _id: "http://schema.org/Embassy",
+            _id: "Embassy",
             _name: "Embassy",
             _parent: [
-                "http://schema.org/GovernmentBuilding"
+                "GovernmentBuilding"
             ]
         }
     ],
     [
-        "http://schema.org/foodevent",
+        "foodevent",
         {
-            _id: "http://schema.org/FoodEvent",
+            _id: "FoodEvent",
             _name: "FoodEvent",
             _parent: [
-                "http://schema.org/Event"
+                "Event"
             ]
         }
     ],
     [
-        "http://schema.org/outletstore",
+        "outletstore",
         {
-            _id: "http://schema.org/OutletStore",
+            _id: "OutletStore",
             _name: "OutletStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/paymentchargespecification",
+        "paymentchargespecification",
         {
-            _id: "http://schema.org/PaymentChargeSpecification",
+            _id: "PaymentChargeSpecification",
             _name: "PaymentChargeSpecification",
             _parent: [
-                "http://schema.org/PriceSpecification"
+                "PriceSpecification"
             ],
             appliesToDeliveryMethod: [
-                "http://schema.org/DeliveryMethod"
+                "DeliveryMethod"
             ],
             appliesToPaymentMethod: [
-                "http://schema.org/PaymentMethod"
+                "PaymentMethod"
             ]
         }
     ],
     [
-        "http://schema.org/casino",
+        "casino",
         {
-            _id: "http://schema.org/Casino",
+            _id: "Casino",
             _name: "Casino",
             _parent: [
-                "http://schema.org/EntertainmentBusiness"
+                "EntertainmentBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/amusementpark",
+        "amusementpark",
         {
-            _id: "http://schema.org/AmusementPark",
+            _id: "AmusementPark",
             _name: "AmusementPark",
             _parent: [
-                "http://schema.org/EntertainmentBusiness"
+                "EntertainmentBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/depositaccount",
+        "depositaccount",
         {
-            _id: "http://schema.org/DepositAccount",
+            _id: "DepositAccount",
             _name: "DepositAccount",
             _parent: [
-                "http://schema.org/InvestmentOrDeposit",
-                "http://schema.org/BankAccount"
+                "InvestmentOrDeposit",
+                "BankAccount"
             ]
         }
     ],
     [
-        "http://schema.org/motel",
+        "motel",
         {
-            _id: "http://schema.org/Motel",
+            _id: "Motel",
             _name: "Motel",
             _parent: [
-                "http://schema.org/LodgingBusiness"
+                "LodgingBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/subscribeaction",
+        "subscribeaction",
         {
-            _id: "http://schema.org/SubscribeAction",
+            _id: "SubscribeAction",
             _name: "SubscribeAction",
             _parent: [
-                "http://schema.org/InteractAction"
+                "InteractAction"
             ]
         }
     ],
     [
-        "http://schema.org/agreeaction",
+        "agreeaction",
         {
-            _id: "http://schema.org/AgreeAction",
+            _id: "AgreeAction",
             _name: "AgreeAction",
             _parent: [
-                "http://schema.org/ReactAction"
+                "ReactAction"
             ]
         }
     ],
     [
-        "http://schema.org/businessevent",
+        "businessevent",
         {
-            _id: "http://schema.org/BusinessEvent",
+            _id: "BusinessEvent",
             _name: "BusinessEvent",
             _parent: [
-                "http://schema.org/Event"
+                "Event"
             ]
         }
     ],
     [
-        "http://schema.org/childcare",
+        "childcare",
         {
-            _id: "http://schema.org/ChildCare",
+            _id: "ChildCare",
             _name: "ChildCare",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/medicalcode",
+        "medicalcode",
         {
-            _id: "http://schema.org/MedicalCode",
+            _id: "MedicalCode",
             _name: "MedicalCode",
             _parent: [
-                "http://schema.org/CategoryCode",
-                "http://schema.org/MedicalIntangible"
+                "CategoryCode",
+                "MedicalIntangible"
             ],
             codingSystem: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/druglegalstatus",
+        "druglegalstatus",
         {
-            _id: "http://schema.org/DrugLegalStatus",
+            _id: "DrugLegalStatus",
             _name: "DrugLegalStatus",
             _parent: [
-                "http://schema.org/MedicalIntangible"
+                "MedicalIntangible"
             ],
             applicableLocation: [
-                "http://schema.org/AdministrativeArea"
+                "AdministrativeArea"
             ]
         }
     ],
     [
-        "http://schema.org/medicalconditionstage",
+        "medicalconditionstage",
         {
-            _id: "http://schema.org/MedicalConditionStage",
+            _id: "MedicalConditionStage",
             _name: "MedicalConditionStage",
             _parent: [
-                "http://schema.org/MedicalIntangible"
+                "MedicalIntangible"
             ],
             stageAsNumber: [
-                "http://schema.org/Number"
+                "Number"
             ],
             subStageSuffix: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/pharmacy",
+        "pharmacy",
         {
-            _id: "http://schema.org/Pharmacy",
+            _id: "Pharmacy",
             _name: "Pharmacy",
             _parent: [
-                "http://schema.org/MedicalBusiness",
-                "http://schema.org/MedicalOrganization"
+                "MedicalBusiness",
+                "MedicalOrganization"
             ]
         }
     ],
     [
-        "http://schema.org/bookmarkaction",
+        "bookmarkaction",
         {
-            _id: "http://schema.org/BookmarkAction",
+            _id: "BookmarkAction",
             _name: "BookmarkAction",
             _parent: [
-                "http://schema.org/OrganizeAction"
+                "OrganizeAction"
             ]
         }
     ],
     [
-        "http://schema.org/internetcafe",
+        "internetcafe",
         {
-            _id: "http://schema.org/InternetCafe",
+            _id: "InternetCafe",
             _name: "InternetCafe",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/defenceestablishment",
+        "defenceestablishment",
         {
-            _id: "http://schema.org/DefenceEstablishment",
+            _id: "DefenceEstablishment",
             _name: "DefenceEstablishment",
             _parent: [
-                "http://schema.org/GovernmentBuilding"
+                "GovernmentBuilding"
             ]
         }
     ],
     [
-        "http://schema.org/church",
+        "church",
         {
-            _id: "http://schema.org/Church",
+            _id: "Church",
             _name: "Church",
             _parent: [
-                "http://schema.org/PlaceOfWorship"
+                "PlaceOfWorship"
             ]
         }
     ],
     [
-        "http://schema.org/liquorstore",
+        "liquorstore",
         {
-            _id: "http://schema.org/LiquorStore",
+            _id: "LiquorStore",
             _name: "LiquorStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/reporteddoseschedule",
+        "reporteddoseschedule",
         {
-            _id: "http://schema.org/ReportedDoseSchedule",
+            _id: "ReportedDoseSchedule",
             _name: "ReportedDoseSchedule",
             _parent: [
-                "http://schema.org/DoseSchedule"
+                "DoseSchedule"
             ]
         }
     ],
     [
-        "http://schema.org/reserveaction",
+        "reserveaction",
         {
-            _id: "http://schema.org/ReserveAction",
+            _id: "ReserveAction",
             _name: "ReserveAction",
             _parent: [
-                "http://schema.org/PlanAction"
+                "PlanAction"
             ]
         }
     ],
     [
-        "http://schema.org/dayspa",
+        "dayspa",
         {
-            _id: "http://schema.org/DaySpa",
+            _id: "DaySpa",
             _name: "DaySpa",
             _parent: [
-                "http://schema.org/HealthAndBeautyBusiness"
+                "HealthAndBeautyBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/wantaction",
+        "wantaction",
         {
-            _id: "http://schema.org/WantAction",
+            _id: "WantAction",
             _name: "WantAction",
             _parent: [
-                "http://schema.org/ReactAction"
+                "ReactAction"
             ]
         }
     ],
     [
-        "http://schema.org/taxiservice",
+        "taxiservice",
         {
-            _id: "http://schema.org/TaxiService",
+            _id: "TaxiService",
             _name: "TaxiService",
             _parent: [
-                "http://schema.org/Service"
+                "Service"
             ]
         }
     ],
     [
-        "http://schema.org/readaction",
+        "readaction",
         {
-            _id: "http://schema.org/ReadAction",
+            _id: "ReadAction",
             _name: "ReadAction",
             _parent: [
-                "http://schema.org/ConsumeAction"
+                "ConsumeAction"
             ]
         }
     ],
     [
-        "http://schema.org/plumber",
+        "plumber",
         {
-            _id: "http://schema.org/Plumber",
+            _id: "Plumber",
             _name: "Plumber",
             _parent: [
-                "http://schema.org/HomeAndConstructionBusiness"
+                "HomeAndConstructionBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/artgallery",
+        "artgallery",
         {
-            _id: "http://schema.org/ArtGallery",
+            _id: "ArtGallery",
             _name: "ArtGallery",
             _parent: [
-                "http://schema.org/EntertainmentBusiness"
+                "EntertainmentBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/geocircle",
+        "geocircle",
         {
-            _id: "http://schema.org/GeoCircle",
+            _id: "GeoCircle",
             _name: "GeoCircle",
             _parent: [
-                "http://schema.org/GeoShape"
+                "GeoShape"
             ],
             geoMidpoint: [
-                "http://schema.org/GeoCoordinates"
+                "GeoCoordinates"
             ],
             geoRadius: [
-                "http://schema.org/Number",
-                "http://schema.org/Text",
-                "http://schema.org/Distance"
+                "Number",
+                "Text",
+                "Distance"
             ]
         }
     ],
     [
-        "http://schema.org/tattooparlor",
+        "tattooparlor",
         {
-            _id: "http://schema.org/TattooParlor",
+            _id: "TattooParlor",
             _name: "TattooParlor",
             _parent: [
-                "http://schema.org/HealthAndBeautyBusiness"
+                "HealthAndBeautyBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/inviteaction",
+        "inviteaction",
         {
-            _id: "http://schema.org/InviteAction",
+            _id: "InviteAction",
             _name: "InviteAction",
             _parent: [
-                "http://schema.org/CommunicateAction"
+                "CommunicateAction"
             ],
             event: [
-                "http://schema.org/Event"
+                "Event"
             ]
         }
     ],
     [
-        "http://schema.org/joinaction",
+        "joinaction",
         {
-            _id: "http://schema.org/JoinAction",
+            _id: "JoinAction",
             _name: "JoinAction",
             _parent: [
-                "http://schema.org/InteractAction"
+                "InteractAction"
             ],
             event: [
-                "http://schema.org/Event"
+                "Event"
             ]
         }
     ],
     [
-        "http://schema.org/audiobook",
+        "audiobook",
         {
-            _id: "http://schema.org/Audiobook",
+            _id: "Audiobook",
             _name: "Audiobook",
             _parent: [
-                "http://schema.org/AudioObject",
-                "http://schema.org/Book"
+                "AudioObject",
+                "Book"
             ],
             duration: [
-                "http://schema.org/Duration"
+                "Duration"
             ],
             readBy: [
-                "http://schema.org/Person"
+                "Person"
             ]
         }
     ],
     [
-        "http://schema.org/stupidtype",
+        "stupidtype",
         {
-            _id: "http://schema.org/StupidType",
+            _id: "StupidType",
             _name: "StupidType",
             _parent: [
-                "http://schema.org/Thing"
+                "Thing"
             ],
             stupidProperty: [
-                "http://schema.org/QuantitativeValue"
+                "QuantitativeValue"
             ]
         }
     ],
     [
-        "http://schema.org/rejectaction",
+        "rejectaction",
         {
-            _id: "http://schema.org/RejectAction",
+            _id: "RejectAction",
             _name: "RejectAction",
             _parent: [
-                "http://schema.org/AllocateAction"
+                "AllocateAction"
             ]
         }
     ],
     [
-        "http://schema.org/motorcyclerepair",
+        "motorcyclerepair",
         {
-            _id: "http://schema.org/MotorcycleRepair",
+            _id: "MotorcycleRepair",
             _name: "MotorcycleRepair",
             _parent: [
-                "http://schema.org/AutomotiveBusiness"
+                "AutomotiveBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/foodservice",
+        "foodservice",
         {
-            _id: "http://schema.org/FoodService",
+            _id: "FoodService",
             _name: "FoodService",
             _parent: [
-                "http://schema.org/Service"
+                "Service"
             ]
         }
     ],
     [
-        "http://schema.org/furniturestore",
+        "furniturestore",
         {
-            _id: "http://schema.org/FurnitureStore",
+            _id: "FurnitureStore",
             _name: "FurnitureStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/energy",
+        "energy",
         {
-            _id: "http://schema.org/Energy",
+            _id: "Energy",
             _name: "Energy",
             _parent: [
-                "http://schema.org/Quantity"
+                "Quantity"
             ]
         }
     ],
     [
-        "http://schema.org/resort",
+        "resort",
         {
-            _id: "http://schema.org/Resort",
+            _id: "Resort",
             _name: "Resort",
             _parent: [
-                "http://schema.org/LodgingBusiness"
+                "LodgingBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/datadownload",
+        "datadownload",
         {
-            _id: "http://schema.org/DataDownload",
+            _id: "DataDownload",
             _name: "DataDownload",
             _parent: [
-                "http://schema.org/MediaObject"
+                "MediaObject"
             ]
         }
     ],
     [
-        "http://schema.org/governmentpermit",
+        "governmentpermit",
         {
-            _id: "http://schema.org/GovernmentPermit",
+            _id: "GovernmentPermit",
             _name: "GovernmentPermit",
             _parent: [
-                "http://schema.org/Permit"
+                "Permit"
             ]
         }
     ],
     [
-        "http://schema.org/table",
+        "table",
         {
-            _id: "http://schema.org/Table",
+            _id: "Table",
             _name: "Table",
             _parent: [
-                "http://schema.org/WebPageElement"
+                "WebPageElement"
             ]
         }
     ],
     [
-        "http://schema.org/atlas",
+        "atlas",
         {
-            _id: "http://schema.org/Atlas",
+            _id: "Atlas",
             _name: "Atlas",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ]
         }
     ],
     [
-        "http://schema.org/governmentorganization",
+        "governmentorganization",
         {
-            _id: "http://schema.org/GovernmentOrganization",
+            _id: "GovernmentOrganization",
             _name: "GovernmentOrganization",
             _parent: [
-                "http://schema.org/Organization"
+                "Organization"
             ]
         }
     ],
     [
-        "http://schema.org/busreservation",
+        "busreservation",
         {
-            _id: "http://schema.org/BusReservation",
+            _id: "BusReservation",
             _name: "BusReservation",
             _parent: [
-                "http://schema.org/Reservation"
+                "Reservation"
             ]
         }
     ],
     [
-        "http://schema.org/rentalcarreservation",
+        "rentalcarreservation",
         {
-            _id: "http://schema.org/RentalCarReservation",
+            _id: "RentalCarReservation",
             _name: "RentalCarReservation",
             _parent: [
-                "http://schema.org/Reservation"
+                "Reservation"
             ],
             dropoffLocation: [
-                "http://schema.org/Place"
+                "Place"
             ],
             dropoffTime: [
-                "http://schema.org/DateTime"
+                "DateTime"
             ],
             pickupLocation: [
-                "http://schema.org/Place"
+                "Place"
             ],
             pickupTime: [
-                "http://schema.org/DateTime"
+                "DateTime"
             ]
         }
     ],
     [
-        "http://schema.org/cafeorcoffeeshop",
+        "cafeorcoffeeshop",
         {
-            _id: "http://schema.org/CafeOrCoffeeShop",
+            _id: "CafeOrCoffeeShop",
             _name: "CafeOrCoffeeShop",
             _parent: [
-                "http://schema.org/FoodEstablishment"
+                "FoodEstablishment"
             ]
         }
     ],
     [
-        "http://schema.org/notedigitaldocument",
+        "notedigitaldocument",
         {
-            _id: "http://schema.org/NoteDigitalDocument",
+            _id: "NoteDigitalDocument",
             _name: "NoteDigitalDocument",
             _parent: [
-                "http://schema.org/DigitalDocument"
+                "DigitalDocument"
             ]
         }
     ],
     [
-        "http://schema.org/mobileapplication",
+        "mobileapplication",
         {
-            _id: "http://schema.org/MobileApplication",
+            _id: "MobileApplication",
             _name: "MobileApplication",
             _parent: [
-                "http://schema.org/SoftwareApplication"
+                "SoftwareApplication"
             ],
             carrierRequirements: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/danceevent",
+        "danceevent",
         {
-            _id: "http://schema.org/DanceEvent",
+            _id: "DanceEvent",
             _name: "DanceEvent",
             _parent: [
-                "http://schema.org/Event"
+                "Event"
             ]
         }
     ],
     [
-        "http://schema.org/tenniscomplex",
+        "tenniscomplex",
         {
-            _id: "http://schema.org/TennisComplex",
+            _id: "TennisComplex",
             _name: "TennisComplex",
             _parent: [
-                "http://schema.org/SportsActivityLocation"
+                "SportsActivityLocation"
             ]
         }
     ],
     [
-        "http://schema.org/subwaystation",
+        "subwaystation",
         {
-            _id: "http://schema.org/SubwayStation",
+            _id: "SubwayStation",
             _name: "SubwayStation",
             _parent: [
-                "http://schema.org/CivicStructure"
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/campground",
+        "campground",
         {
-            _id: "http://schema.org/Campground",
+            _id: "Campground",
             _name: "Campground",
             _parent: [
-                "http://schema.org/LodgingBusiness",
-                "http://schema.org/CivicStructure"
+                "LodgingBusiness",
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/courthouse",
+        "courthouse",
         {
-            _id: "http://schema.org/Courthouse",
+            _id: "Courthouse",
             _name: "Courthouse",
             _parent: [
-                "http://schema.org/GovernmentBuilding"
+                "GovernmentBuilding"
             ]
         }
     ],
     [
-        "http://schema.org/hardwarestore",
+        "hardwarestore",
         {
-            _id: "http://schema.org/HardwareStore",
+            _id: "HardwareStore",
             _name: "HardwareStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/askaction",
+        "askaction",
         {
-            _id: "http://schema.org/AskAction",
+            _id: "AskAction",
             _name: "AskAction",
             _parent: [
-                "http://schema.org/CommunicateAction"
+                "CommunicateAction"
             ],
             question: [
-                "http://schema.org/Question"
+                "Question"
             ]
         }
     ],
     [
-        "http://schema.org/trackaction",
+        "trackaction",
         {
-            _id: "http://schema.org/TrackAction",
+            _id: "TrackAction",
             _name: "TrackAction",
             _parent: [
-                "http://schema.org/FindAction"
+                "FindAction"
             ],
             deliveryMethod: [
-                "http://schema.org/DeliveryMethod"
+                "DeliveryMethod"
             ]
         }
     ],
     [
-        "http://schema.org/visualartsevent",
+        "visualartsevent",
         {
-            _id: "http://schema.org/VisualArtsEvent",
+            _id: "VisualArtsEvent",
             _name: "VisualArtsEvent",
             _parent: [
-                "http://schema.org/Event"
+                "Event"
             ]
         }
     ],
     [
-        "http://schema.org/comicseries",
+        "comicseries",
         {
-            _id: "http://schema.org/ComicSeries",
+            _id: "ComicSeries",
             _name: "ComicSeries",
             _parent: [
-                "http://schema.org/Periodical"
+                "Periodical"
             ]
         }
     ],
     [
-        "http://schema.org/periodical",
+        "periodical",
         {
-            _id: "http://schema.org/Periodical",
+            _id: "Periodical",
             _name: "Periodical",
             _parent: [
-                "http://schema.org/CreativeWorkSeries"
+                "CreativeWorkSeries"
             ]
         }
     ],
     [
-        "http://schema.org/performingartstheater",
+        "performingartstheater",
         {
-            _id: "http://schema.org/PerformingArtsTheater",
+            _id: "PerformingArtsTheater",
             _name: "PerformingArtsTheater",
             _parent: [
-                "http://schema.org/CivicStructure"
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/currencyconversionservice",
+        "currencyconversionservice",
         {
-            _id: "http://schema.org/CurrencyConversionService",
+            _id: "CurrencyConversionService",
             _name: "CurrencyConversionService",
             _parent: [
-                "http://schema.org/FinancialProduct"
+                "FinancialProduct"
             ]
         }
     ],
     [
-        "http://schema.org/roofingcontractor",
+        "roofingcontractor",
         {
-            _id: "http://schema.org/RoofingContractor",
+            _id: "RoofingContractor",
             _name: "RoofingContractor",
             _parent: [
-                "http://schema.org/HomeAndConstructionBusiness"
+                "HomeAndConstructionBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/rvpark",
+        "rvpark",
         {
-            _id: "http://schema.org/RVPark",
+            _id: "RVPark",
             _name: "RVPark",
             _parent: [
-                "http://schema.org/CivicStructure"
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/childrensevent",
+        "childrensevent",
         {
-            _id: "http://schema.org/ChildrensEvent",
+            _id: "ChildrensEvent",
             _name: "ChildrensEvent",
             _parent: [
-                "http://schema.org/Event"
+                "Event"
             ]
         }
     ],
     [
-        "http://schema.org/stadiumorarena",
+        "stadiumorarena",
         {
-            _id: "http://schema.org/StadiumOrArena",
+            _id: "StadiumOrArena",
             _name: "StadiumOrArena",
             _parent: [
-                "http://schema.org/SportsActivityLocation",
-                "http://schema.org/CivicStructure"
+                "SportsActivityLocation",
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/conveniencestore",
+        "conveniencestore",
         {
-            _id: "http://schema.org/ConvenienceStore",
+            _id: "ConvenienceStore",
             _name: "ConvenienceStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/departmentstore",
+        "departmentstore",
         {
-            _id: "http://schema.org/DepartmentStore",
+            _id: "DepartmentStore",
             _name: "DepartmentStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/wholesalestore",
+        "wholesalestore",
         {
-            _id: "http://schema.org/WholesaleStore",
+            _id: "WholesaleStore",
             _name: "WholesaleStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/skiresort",
+        "skiresort",
         {
-            _id: "http://schema.org/SkiResort",
+            _id: "SkiResort",
             _name: "SkiResort",
             _parent: [
-                "http://schema.org/SportsActivityLocation"
+                "SportsActivityLocation"
             ]
         }
     ],
     [
-        "http://schema.org/automatedteller",
+        "automatedteller",
         {
-            _id: "http://schema.org/AutomatedTeller",
+            _id: "AutomatedTeller",
             _name: "AutomatedTeller",
             _parent: [
-                "http://schema.org/FinancialService"
+                "FinancialService"
             ]
         }
     ],
     [
-        "http://schema.org/ngo",
+        "ngo",
         {
-            _id: "http://schema.org/NGO",
+            _id: "NGO",
             _name: "NGO",
             _parent: [
-                "http://schema.org/Organization"
+                "Organization"
             ]
         }
     ],
     [
-        "http://schema.org/fmradiochannel",
+        "fmradiochannel",
         {
-            _id: "http://schema.org/FMRadioChannel",
+            _id: "FMRadioChannel",
             _name: "FMRadioChannel",
             _parent: [
-                "http://schema.org/RadioChannel"
+                "RadioChannel"
             ]
         }
     ],
     [
-        "http://schema.org/radiochannel",
+        "radiochannel",
         {
-            _id: "http://schema.org/RadioChannel",
+            _id: "RadioChannel",
             _name: "RadioChannel",
             _parent: [
-                "http://schema.org/BroadcastChannel"
+                "BroadcastChannel"
             ]
         }
     ],
     [
-        "http://schema.org/motorizedbicycle",
+        "motorizedbicycle",
         {
-            _id: "http://schema.org/MotorizedBicycle",
+            _id: "MotorizedBicycle",
             _name: "MotorizedBicycle",
             _parent: [
-                "http://schema.org/Vehicle"
+                "Vehicle"
             ]
         }
     ],
     [
-        "http://schema.org/barorpub",
+        "barorpub",
         {
-            _id: "http://schema.org/BarOrPub",
+            _id: "BarOrPub",
             _name: "BarOrPub",
             _parent: [
-                "http://schema.org/FoodEstablishment"
+                "FoodEstablishment"
             ]
         }
     ],
     [
-        "http://schema.org/float",
+        "float",
         {
-            _id: "http://schema.org/Float",
+            _id: "Float",
             _name: "Float",
             _parent: [
-                "http://schema.org/Number"
+                "Number"
             ]
         }
     ],
     [
-        "http://schema.org/acceptaction",
+        "acceptaction",
         {
-            _id: "http://schema.org/AcceptAction",
+            _id: "AcceptAction",
             _name: "AcceptAction",
             _parent: [
-                "http://schema.org/AllocateAction"
+                "AllocateAction"
             ]
         }
     ],
     [
-        "http://schema.org/mensclothingstore",
+        "mensclothingstore",
         {
-            _id: "http://schema.org/MensClothingStore",
+            _id: "MensClothingStore",
             _name: "MensClothingStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/mediagallery",
+        "mediagallery",
         {
-            _id: "http://schema.org/MediaGallery",
+            _id: "MediaGallery",
             _name: "MediaGallery",
             _parent: [
-                "http://schema.org/CollectionPage"
+                "CollectionPage"
             ]
         }
     ],
     [
-        "http://schema.org/collectionpage",
+        "collectionpage",
         {
-            _id: "http://schema.org/CollectionPage",
+            _id: "CollectionPage",
             _name: "CollectionPage",
             _parent: [
-                "http://schema.org/WebPage"
+                "WebPage"
             ]
         }
     ],
     [
-        "http://schema.org/saleevent",
+        "saleevent",
         {
-            _id: "http://schema.org/SaleEvent",
+            _id: "SaleEvent",
             _name: "SaleEvent",
             _parent: [
-                "http://schema.org/Event"
+                "Event"
             ]
         }
     ],
     [
-        "http://schema.org/nightclub",
+        "nightclub",
         {
-            _id: "http://schema.org/NightClub",
+            _id: "NightClub",
             _name: "NightClub",
             _parent: [
-                "http://schema.org/EntertainmentBusiness"
+                "EntertainmentBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/brewery",
+        "brewery",
         {
-            _id: "http://schema.org/Brewery",
+            _id: "Brewery",
             _name: "Brewery",
             _parent: [
-                "http://schema.org/FoodEstablishment"
+                "FoodEstablishment"
             ]
         }
     ],
     [
-        "http://schema.org/artery",
+        "artery",
         {
-            _id: "http://schema.org/Artery",
+            _id: "Artery",
             _name: "Artery",
             _parent: [
-                "http://schema.org/Vessel"
+                "Vessel"
             ],
             arterialBranch: [
-                "http://schema.org/AnatomicalStructure"
+                "AnatomicalStructure"
             ],
             supplyTo: [
-                "http://schema.org/AnatomicalStructure"
+                "AnatomicalStructure"
             ]
         }
     ],
     [
-        "http://schema.org/theatergroup",
+        "theatergroup",
         {
-            _id: "http://schema.org/TheaterGroup",
+            _id: "TheaterGroup",
             _name: "TheaterGroup",
             _parent: [
-                "http://schema.org/PerformingGroup"
+                "PerformingGroup"
             ]
         }
     ],
     [
-        "http://schema.org/flightreservation",
+        "flightreservation",
         {
-            _id: "http://schema.org/FlightReservation",
+            _id: "FlightReservation",
             _name: "FlightReservation",
             _parent: [
-                "http://schema.org/Reservation"
+                "Reservation"
             ],
             boardingGroup: [
-                "http://schema.org/Text"
+                "Text"
             ],
             passengerPriorityStatus: [
-                "http://schema.org/Text",
-                "http://schema.org/QualitativeValue"
+                "Text",
+                "QualitativeValue"
             ],
             passengerSequenceNumber: [
-                "http://schema.org/Text"
+                "Text"
             ],
             securityScreening: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/publicswimmingpool",
+        "publicswimmingpool",
         {
-            _id: "http://schema.org/PublicSwimmingPool",
+            _id: "PublicSwimmingPool",
             _name: "PublicSwimmingPool",
             _parent: [
-                "http://schema.org/SportsActivityLocation"
+                "SportsActivityLocation"
             ]
         }
     ],
     [
-        "http://schema.org/accountingservice",
+        "accountingservice",
         {
-            _id: "http://schema.org/AccountingService",
+            _id: "AccountingService",
             _name: "AccountingService",
             _parent: [
-                "http://schema.org/FinancialService"
+                "FinancialService"
             ]
         }
     ],
     [
-        "http://schema.org/cemetery",
+        "cemetery",
         {
-            _id: "http://schema.org/Cemetery",
+            _id: "Cemetery",
             _name: "Cemetery",
             _parent: [
-                "http://schema.org/CivicStructure"
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/borrowaction",
+        "borrowaction",
         {
-            _id: "http://schema.org/BorrowAction",
+            _id: "BorrowAction",
             _name: "BorrowAction",
             _parent: [
-                "http://schema.org/TransferAction"
+                "TransferAction"
             ],
             lender: [
-                "http://schema.org/Person",
-                "http://schema.org/Organization"
+                "Person",
+                "Organization"
             ]
         }
     ],
     [
-        "http://schema.org/autodealer",
+        "autodealer",
         {
-            _id: "http://schema.org/AutoDealer",
+            _id: "AutoDealer",
             _name: "AutoDealer",
             _parent: [
-                "http://schema.org/AutomotiveBusiness"
+                "AutomotiveBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/bedandbreakfast",
+        "bedandbreakfast",
         {
-            _id: "http://schema.org/BedAndBreakfast",
+            _id: "BedAndBreakfast",
             _name: "BedAndBreakfast",
             _parent: [
-                "http://schema.org/LodgingBusiness"
+                "LodgingBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/checkinaction",
+        "checkinaction",
         {
-            _id: "http://schema.org/CheckInAction",
+            _id: "CheckInAction",
             _name: "CheckInAction",
             _parent: [
-                "http://schema.org/CommunicateAction"
+                "CommunicateAction"
             ]
         }
     ],
     [
-        "http://schema.org/recyclingcenter",
+        "recyclingcenter",
         {
-            _id: "http://schema.org/RecyclingCenter",
+            _id: "RecyclingCenter",
             _name: "RecyclingCenter",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/painting",
+        "painting",
         {
-            _id: "http://schema.org/Painting",
+            _id: "Painting",
             _name: "Painting",
             _parent: [
-                "http://schema.org/CreativeWork"
+                "CreativeWork"
             ]
         }
     ],
     [
-        "http://schema.org/festival",
+        "festival",
         {
-            _id: "http://schema.org/Festival",
+            _id: "Festival",
             _name: "Festival",
             _parent: [
-                "http://schema.org/Event"
+                "Event"
             ]
         }
     ],
     [
-        "http://schema.org/radioseason",
+        "radioseason",
         {
-            _id: "http://schema.org/RadioSeason",
+            _id: "RadioSeason",
             _name: "RadioSeason",
             _parent: [
-                "http://schema.org/CreativeWorkSeason"
+                "CreativeWorkSeason"
             ]
         }
     ],
     [
-        "http://schema.org/psychologicaltreatment",
+        "psychologicaltreatment",
         {
-            _id: "http://schema.org/PsychologicalTreatment",
+            _id: "PsychologicalTreatment",
             _name: "PsychologicalTreatment",
             _parent: [
-                "http://schema.org/TherapeuticProcedure"
+                "TherapeuticProcedure"
             ]
         }
     ],
     [
-        "http://schema.org/orderaction",
+        "orderaction",
         {
-            _id: "http://schema.org/OrderAction",
+            _id: "OrderAction",
             _name: "OrderAction",
             _parent: [
-                "http://schema.org/TradeAction"
+                "TradeAction"
             ],
             deliveryMethod: [
-                "http://schema.org/DeliveryMethod"
+                "DeliveryMethod"
             ]
         }
     ],
     [
-        "http://schema.org/catholicchurch",
+        "catholicchurch",
         {
-            _id: "http://schema.org/CatholicChurch",
+            _id: "CatholicChurch",
             _name: "CatholicChurch",
             _parent: [
-                "http://schema.org/Church"
+                "Church"
             ]
         }
     ],
     [
-        "http://schema.org/emailmessage",
+        "emailmessage",
         {
-            _id: "http://schema.org/EmailMessage",
+            _id: "EmailMessage",
             _name: "EmailMessage",
             _parent: [
-                "http://schema.org/Message"
+                "Message"
             ]
         }
     ],
     [
-        "http://schema.org/mobilephonestore",
+        "mobilephonestore",
         {
-            _id: "http://schema.org/MobilePhoneStore",
+            _id: "MobilePhoneStore",
             _name: "MobilePhoneStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/hobbyshop",
+        "hobbyshop",
         {
-            _id: "http://schema.org/HobbyShop",
+            _id: "HobbyShop",
             _name: "HobbyShop",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/middleschool",
+        "middleschool",
         {
-            _id: "http://schema.org/MiddleSchool",
+            _id: "MiddleSchool",
             _name: "MiddleSchool",
             _parent: [
-                "http://schema.org/EducationalOrganization"
+                "EducationalOrganization"
             ]
         }
     ],
     [
-        "http://schema.org/bowlingalley",
+        "bowlingalley",
         {
-            _id: "http://schema.org/BowlingAlley",
+            _id: "BowlingAlley",
             _name: "BowlingAlley",
             _parent: [
-                "http://schema.org/SportsActivityLocation"
+                "SportsActivityLocation"
             ]
         }
     ],
     [
-        "http://schema.org/imagegallery",
+        "imagegallery",
         {
-            _id: "http://schema.org/ImageGallery",
+            _id: "ImageGallery",
             _name: "ImageGallery",
             _parent: [
-                "http://schema.org/MediaGallery"
+                "MediaGallery"
             ]
         }
     ],
     [
-        "http://schema.org/voteaction",
+        "voteaction",
         {
-            _id: "http://schema.org/VoteAction",
+            _id: "VoteAction",
             _name: "VoteAction",
             _parent: [
-                "http://schema.org/ChooseAction"
+                "ChooseAction"
             ],
             candidate: [
-                "http://schema.org/Person"
+                "Person"
             ]
         }
     ],
     [
-        "http://schema.org/socialevent",
+        "socialevent",
         {
-            _id: "http://schema.org/SocialEvent",
+            _id: "SocialEvent",
             _name: "SocialEvent",
             _parent: [
-                "http://schema.org/Event"
+                "Event"
             ]
         }
     ],
     [
-        "http://schema.org/eataction",
+        "eataction",
         {
-            _id: "http://schema.org/EatAction",
+            _id: "EatAction",
             _name: "EatAction",
             _parent: [
-                "http://schema.org/ConsumeAction"
+                "ConsumeAction"
             ]
         }
     ],
     [
-        "http://schema.org/pond",
+        "pond",
         {
-            _id: "http://schema.org/Pond",
+            _id: "Pond",
             _name: "Pond",
             _parent: [
-                "http://schema.org/BodyOfWater"
+                "BodyOfWater"
             ]
         }
     ],
     [
-        "http://schema.org/literaryevent",
+        "literaryevent",
         {
-            _id: "http://schema.org/LiteraryEvent",
+            _id: "LiteraryEvent",
             _name: "LiteraryEvent",
             _parent: [
-                "http://schema.org/Event"
+                "Event"
             ]
         }
     ],
     [
-        "http://schema.org/theaterevent",
+        "theaterevent",
         {
-            _id: "http://schema.org/TheaterEvent",
+            _id: "TheaterEvent",
             _name: "TheaterEvent",
             _parent: [
-                "http://schema.org/Event"
+                "Event"
             ]
         }
     ],
     [
-        "http://schema.org/takeaction",
+        "takeaction",
         {
-            _id: "http://schema.org/TakeAction",
+            _id: "TakeAction",
             _name: "TakeAction",
             _parent: [
-                "http://schema.org/TransferAction"
+                "TransferAction"
             ]
         }
     ],
     [
-        "http://schema.org/amradiochannel",
+        "amradiochannel",
         {
-            _id: "http://schema.org/AMRadioChannel",
+            _id: "AMRadioChannel",
             _name: "AMRadioChannel",
             _parent: [
-                "http://schema.org/RadioChannel"
+                "RadioChannel"
             ]
         }
     ],
     [
-        "http://schema.org/autobodyshop",
+        "autobodyshop",
         {
-            _id: "http://schema.org/AutoBodyShop",
+            _id: "AutoBodyShop",
             _name: "AutoBodyShop",
             _parent: [
-                "http://schema.org/AutomotiveBusiness"
+                "AutomotiveBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/zoo",
+        "zoo",
         {
-            _id: "http://schema.org/Zoo",
+            _id: "Zoo",
             _name: "Zoo",
             _parent: [
-                "http://schema.org/CivicStructure"
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/homegoodsstore",
+        "homegoodsstore",
         {
-            _id: "http://schema.org/HomeGoodsStore",
+            _id: "HomeGoodsStore",
             _name: "HomeGoodsStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/lakebodyofwater",
+        "lakebodyofwater",
         {
-            _id: "http://schema.org/LakeBodyOfWater",
+            _id: "LakeBodyOfWater",
             _name: "LakeBodyOfWater",
             _parent: [
-                "http://schema.org/BodyOfWater"
+                "BodyOfWater"
             ]
         }
     ],
     [
-        "http://schema.org/school",
+        "school",
         {
-            _id: "http://schema.org/School",
+            _id: "School",
             _name: "School",
             _parent: [
-                "http://schema.org/EducationalOrganization"
+                "EducationalOrganization"
             ]
         }
     ],
     [
-        "http://schema.org/televisionstation",
+        "televisionstation",
         {
-            _id: "http://schema.org/TelevisionStation",
+            _id: "TelevisionStation",
             _name: "TelevisionStation",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/paymentservice",
+        "paymentservice",
         {
-            _id: "http://schema.org/PaymentService",
+            _id: "PaymentService",
             _name: "PaymentService",
             _parent: [
-                "http://schema.org/FinancialProduct"
+                "FinancialProduct"
             ]
         }
     ],
     [
-        "http://schema.org/professionalservice",
+        "professionalservice",
         {
-            _id: "http://schema.org/ProfessionalService",
+            _id: "ProfessionalService",
             _name: "ProfessionalService",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/radiationtherapy",
+        "radiationtherapy",
         {
-            _id: "http://schema.org/RadiationTherapy",
+            _id: "RadiationTherapy",
             _name: "RadiationTherapy",
             _parent: [
-                "http://schema.org/MedicalTherapy"
+                "MedicalTherapy"
             ]
         }
     ],
     [
-        "http://schema.org/beach",
+        "beach",
         {
-            _id: "http://schema.org/Beach",
+            _id: "Beach",
             _name: "Beach",
             _parent: [
-                "http://schema.org/CivicStructure"
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/musicvideoobject",
+        "musicvideoobject",
         {
-            _id: "http://schema.org/MusicVideoObject",
+            _id: "MusicVideoObject",
             _name: "MusicVideoObject",
             _parent: [
-                "http://schema.org/MediaObject"
+                "MediaObject"
             ]
         }
     ],
     [
-        "http://schema.org/marryaction",
+        "marryaction",
         {
-            _id: "http://schema.org/MarryAction",
+            _id: "MarryAction",
             _name: "MarryAction",
             _parent: [
-                "http://schema.org/InteractAction"
+                "InteractAction"
             ]
         }
     ],
     [
-        "http://schema.org/landmarksorhistoricalbuildings",
+        "landmarksorhistoricalbuildings",
         {
-            _id: "http://schema.org/LandmarksOrHistoricalBuildings",
+            _id: "LandmarksOrHistoricalBuildings",
             _name: "LandmarksOrHistoricalBuildings",
             _parent: [
-                "http://schema.org/Place"
+                "Place"
             ]
         }
     ],
     [
-        "http://schema.org/shareaction",
+        "shareaction",
         {
-            _id: "http://schema.org/ShareAction",
+            _id: "ShareAction",
             _name: "ShareAction",
             _parent: [
-                "http://schema.org/CommunicateAction"
+                "CommunicateAction"
             ]
         }
     ],
     [
-        "http://schema.org/wpheader",
+        "wpheader",
         {
-            _id: "http://schema.org/WPHeader",
+            _id: "WPHeader",
             _name: "WPHeader",
             _parent: [
-                "http://schema.org/WebPageElement"
+                "WebPageElement"
             ]
         }
     ],
     [
-        "http://schema.org/notary",
+        "notary",
         {
-            _id: "http://schema.org/Notary",
+            _id: "Notary",
             _name: "Notary",
             _parent: [
-                "http://schema.org/LegalService"
+                "LegalService"
             ]
         }
     ],
     [
-        "http://schema.org/deactivateaction",
+        "deactivateaction",
         {
-            _id: "http://schema.org/DeactivateAction",
+            _id: "DeactivateAction",
             _name: "DeactivateAction",
             _parent: [
-                "http://schema.org/ControlAction"
+                "ControlAction"
             ]
         }
     ],
     [
-        "http://schema.org/fastfoodrestaurant",
+        "fastfoodrestaurant",
         {
-            _id: "http://schema.org/FastFoodRestaurant",
+            _id: "FastFoodRestaurant",
             _name: "FastFoodRestaurant",
             _parent: [
-                "http://schema.org/FoodEstablishment"
+                "FoodEstablishment"
             ]
         }
     ],
     [
-        "http://schema.org/drycleaningorlaundry",
+        "drycleaningorlaundry",
         {
-            _id: "http://schema.org/DryCleaningOrLaundry",
+            _id: "DryCleaningOrLaundry",
             _name: "DryCleaningOrLaundry",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/corporation",
+        "corporation",
         {
-            _id: "http://schema.org/Corporation",
+            _id: "Corporation",
             _name: "Corporation",
             _parent: [
-                "http://schema.org/Organization"
+                "Organization"
             ],
             tickerSymbol: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/barcode",
+        "barcode",
         {
-            _id: "http://schema.org/Barcode",
+            _id: "Barcode",
             _name: "Barcode",
             _parent: [
-                "http://schema.org/ImageObject"
+                "ImageObject"
             ]
         }
     ],
     [
-        "http://schema.org/park",
+        "park",
         {
-            _id: "http://schema.org/Park",
+            _id: "Park",
             _name: "Park",
             _parent: [
-                "http://schema.org/CivicStructure"
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/exhibitionevent",
+        "exhibitionevent",
         {
-            _id: "http://schema.org/ExhibitionEvent",
+            _id: "ExhibitionEvent",
             _name: "ExhibitionEvent",
             _parent: [
-                "http://schema.org/Event"
+                "Event"
             ]
         }
     ],
     [
-        "http://schema.org/comedyclub",
+        "comedyclub",
         {
-            _id: "http://schema.org/ComedyClub",
+            _id: "ComedyClub",
             _name: "ComedyClub",
             _parent: [
-                "http://schema.org/EntertainmentBusiness"
+                "EntertainmentBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/surgicalprocedure",
+        "surgicalprocedure",
         {
-            _id: "http://schema.org/SurgicalProcedure",
+            _id: "SurgicalProcedure",
             _name: "SurgicalProcedure",
             _parent: [
-                "http://schema.org/MedicalProcedure"
+                "MedicalProcedure"
             ]
         }
     ],
     [
-        "http://schema.org/radioclip",
+        "radioclip",
         {
-            _id: "http://schema.org/RadioClip",
+            _id: "RadioClip",
             _name: "RadioClip",
             _parent: [
-                "http://schema.org/Clip"
+                "Clip"
             ]
         }
     ],
     [
-        "http://schema.org/employmentagency",
+        "employmentagency",
         {
-            _id: "http://schema.org/EmploymentAgency",
+            _id: "EmploymentAgency",
             _name: "EmploymentAgency",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/prependaction",
+        "prependaction",
         {
-            _id: "http://schema.org/PrependAction",
+            _id: "PrependAction",
             _name: "PrependAction",
             _parent: [
-                "http://schema.org/InsertAction"
+                "InsertAction"
             ]
         }
     ],
     [
-        "http://schema.org/canal",
+        "canal",
         {
-            _id: "http://schema.org/Canal",
+            _id: "Canal",
             _name: "Canal",
             _parent: [
-                "http://schema.org/BodyOfWater"
+                "BodyOfWater"
             ]
         }
     ],
     [
-        "http://schema.org/firestation",
+        "firestation",
         {
-            _id: "http://schema.org/FireStation",
+            _id: "FireStation",
             _name: "FireStation",
             _parent: [
-                "http://schema.org/CivicStructure",
-                "http://schema.org/EmergencyService"
+                "CivicStructure",
+                "EmergencyService"
             ]
         }
     ],
     [
-        "http://schema.org/hotel",
+        "hotel",
         {
-            _id: "http://schema.org/Hotel",
+            _id: "Hotel",
             _name: "Hotel",
             _parent: [
-                "http://schema.org/LodgingBusiness"
+                "LodgingBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/electronicsstore",
+        "electronicsstore",
         {
-            _id: "http://schema.org/ElectronicsStore",
+            _id: "ElectronicsStore",
             _name: "ElectronicsStore",
             _parent: [
-                "http://schema.org/Store"
+                "Store"
             ]
         }
     ],
     [
-        "http://schema.org/befriendaction",
+        "befriendaction",
         {
-            _id: "http://schema.org/BefriendAction",
+            _id: "BefriendAction",
             _name: "BefriendAction",
             _parent: [
-                "http://schema.org/InteractAction"
+                "InteractAction"
             ]
         }
     ],
     [
-        "http://schema.org/nailsalon",
+        "nailsalon",
         {
-            _id: "http://schema.org/NailSalon",
+            _id: "NailSalon",
             _name: "NailSalon",
             _parent: [
-                "http://schema.org/HealthAndBeautyBusiness"
+                "HealthAndBeautyBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/bloodtest",
+        "bloodtest",
         {
-            _id: "http://schema.org/BloodTest",
+            _id: "BloodTest",
             _name: "BloodTest",
             _parent: [
-                "http://schema.org/MedicalTest"
+                "MedicalTest"
             ]
         }
     ],
     [
-        "http://schema.org/drinkaction",
+        "drinkaction",
         {
-            _id: "http://schema.org/DrinkAction",
+            _id: "DrinkAction",
             _name: "DrinkAction",
             _parent: [
-                "http://schema.org/ConsumeAction"
+                "ConsumeAction"
             ]
         }
     ],
     [
-        "http://schema.org/photographaction",
+        "photographaction",
         {
-            _id: "http://schema.org/PhotographAction",
+            _id: "PhotographAction",
             _name: "PhotographAction",
             _parent: [
-                "http://schema.org/CreateAction"
+                "CreateAction"
             ]
         }
     ],
     [
-        "http://schema.org/electrician",
+        "electrician",
         {
-            _id: "http://schema.org/Electrician",
+            _id: "Electrician",
             _name: "Electrician",
             _parent: [
-                "http://schema.org/HomeAndConstructionBusiness"
+                "HomeAndConstructionBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/wearaction",
+        "wearaction",
         {
-            _id: "http://schema.org/WearAction",
+            _id: "WearAction",
             _name: "WearAction",
             _parent: [
-                "http://schema.org/UseAction"
+                "UseAction"
             ]
         }
     ],
     [
-        "http://schema.org/coverart",
+        "coverart",
         {
-            _id: "http://schema.org/CoverArt",
+            _id: "CoverArt",
             _name: "CoverArt",
             _parent: [
-                "http://schema.org/VisualArtwork"
+                "VisualArtwork"
             ]
         }
     ],
     [
-        "http://schema.org/travelagency",
+        "travelagency",
         {
-            _id: "http://schema.org/TravelAgency",
+            _id: "TravelAgency",
             _name: "TravelAgency",
             _parent: [
-                "http://schema.org/LocalBusiness"
+                "LocalBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/legislativebuilding",
+        "legislativebuilding",
         {
-            _id: "http://schema.org/LegislativeBuilding",
+            _id: "LegislativeBuilding",
             _name: "LegislativeBuilding",
             _parent: [
-                "http://schema.org/GovernmentBuilding"
+                "GovernmentBuilding"
             ]
         }
     ],
     [
-        "http://schema.org/suspendaction",
+        "suspendaction",
         {
-            _id: "http://schema.org/SuspendAction",
+            _id: "SuspendAction",
             _name: "SuspendAction",
             _parent: [
-                "http://schema.org/ControlAction"
+                "ControlAction"
             ]
         }
     ],
     [
-        "http://schema.org/videogallery",
+        "videogallery",
         {
-            _id: "http://schema.org/VideoGallery",
+            _id: "VideoGallery",
             _name: "VideoGallery",
             _parent: [
-                "http://schema.org/MediaGallery"
+                "MediaGallery"
             ]
         }
     ],
     [
-        "http://schema.org/bone",
+        "bone",
         {
-            _id: "http://schema.org/Bone",
+            _id: "Bone",
             _name: "Bone",
             _parent: [
-                "http://schema.org/AnatomicalStructure"
+                "AnatomicalStructure"
             ]
         }
     ],
     [
-        "http://schema.org/educationalaudience",
+        "educationalaudience",
         {
-            _id: "http://schema.org/EducationalAudience",
+            _id: "EducationalAudience",
             _name: "EducationalAudience",
             _parent: [
-                "http://schema.org/Audience"
+                "Audience"
             ],
             educationalRole: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/hostel",
+        "hostel",
         {
-            _id: "http://schema.org/Hostel",
+            _id: "Hostel",
             _name: "Hostel",
             _parent: [
-                "http://schema.org/LodgingBusiness"
+                "LodgingBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/movingcompany",
+        "movingcompany",
         {
-            _id: "http://schema.org/MovingCompany",
+            _id: "MovingCompany",
             _name: "MovingCompany",
             _parent: [
-                "http://schema.org/HomeAndConstructionBusiness"
+                "HomeAndConstructionBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/campingpitch",
+        "campingpitch",
         {
-            _id: "http://schema.org/CampingPitch",
+            _id: "CampingPitch",
             _name: "CampingPitch",
             _parent: [
-                "http://schema.org/Accommodation"
+                "Accommodation"
             ]
         }
     ],
     [
-        "http://schema.org/comedyevent",
+        "comedyevent",
         {
-            _id: "http://schema.org/ComedyEvent",
+            _id: "ComedyEvent",
             _name: "ComedyEvent",
             _parent: [
-                "http://schema.org/Event"
+                "Event"
             ]
         }
     ],
     [
-        "http://schema.org/comiccoverart",
+        "comiccoverart",
         {
-            _id: "http://schema.org/ComicCoverArt",
+            _id: "ComicCoverArt",
             _name: "ComicCoverArt",
             _parent: [
-                "http://schema.org/ComicStory",
-                "http://schema.org/CoverArt"
+                "ComicStory",
+                "CoverArt"
             ]
         }
     ],
     [
-        "http://schema.org/reviewaction",
+        "reviewaction",
         {
-            _id: "http://schema.org/ReviewAction",
+            _id: "ReviewAction",
             _name: "ReviewAction",
             _parent: [
-                "http://schema.org/AssessAction"
+                "AssessAction"
             ],
             resultReview: [
-                "http://schema.org/Review"
+                "Review"
             ]
         }
     ],
     [
-        "http://schema.org/paintaction",
+        "paintaction",
         {
-            _id: "http://schema.org/PaintAction",
+            _id: "PaintAction",
             _name: "PaintAction",
             _parent: [
-                "http://schema.org/CreateAction"
+                "CreateAction"
             ]
         }
     ],
     [
-        "http://schema.org/bankorcreditunion",
+        "bankorcreditunion",
         {
-            _id: "http://schema.org/BankOrCreditUnion",
+            _id: "BankOrCreditUnion",
             _name: "BankOrCreditUnion",
             _parent: [
-                "http://schema.org/FinancialService"
+                "FinancialService"
             ]
         }
     ],
     [
-        "http://schema.org/employeraggregaterating",
+        "employeraggregaterating",
         {
-            _id: "http://schema.org/EmployerAggregateRating",
+            _id: "EmployerAggregateRating",
             _name: "EmployerAggregateRating",
             _parent: [
-                "http://schema.org/AggregateRating"
+                "AggregateRating"
             ]
         }
     ],
     [
-        "http://schema.org/city",
+        "city",
         {
-            _id: "http://schema.org/City",
+            _id: "City",
             _name: "City",
             _parent: [
-                "http://schema.org/AdministrativeArea"
+                "AdministrativeArea"
             ]
         }
     ],
     [
-        "http://schema.org/mosque",
+        "mosque",
         {
-            _id: "http://schema.org/Mosque",
+            _id: "Mosque",
             _name: "Mosque",
             _parent: [
-                "http://schema.org/PlaceOfWorship"
+                "PlaceOfWorship"
             ]
         }
     ],
     [
-        "http://schema.org/adultentertainment",
+        "adultentertainment",
         {
-            _id: "http://schema.org/AdultEntertainment",
+            _id: "AdultEntertainment",
             _name: "AdultEntertainment",
             _parent: [
-                "http://schema.org/EntertainmentBusiness"
+                "EntertainmentBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/vitalsign",
+        "vitalsign",
         {
-            _id: "http://schema.org/VitalSign",
+            _id: "VitalSign",
             _name: "VitalSign",
             _parent: [
-                "http://schema.org/MedicalSign"
+                "MedicalSign"
             ]
         }
     ],
     [
-        "http://schema.org/scheduleaction",
+        "scheduleaction",
         {
-            _id: "http://schema.org/ScheduleAction",
+            _id: "ScheduleAction",
             _name: "ScheduleAction",
             _parent: [
-                "http://schema.org/PlanAction"
+                "PlanAction"
             ]
         }
     ],
     [
-        "http://schema.org/arriveaction",
+        "arriveaction",
         {
-            _id: "http://schema.org/ArriveAction",
+            _id: "ArriveAction",
             _name: "ArriveAction",
             _parent: [
-                "http://schema.org/MoveAction"
+                "MoveAction"
             ]
         }
     ],
     [
-        "http://schema.org/musicevent",
+        "musicevent",
         {
-            _id: "http://schema.org/MusicEvent",
+            _id: "MusicEvent",
             _name: "MusicEvent",
             _parent: [
-                "http://schema.org/Event"
+                "Event"
             ]
         }
     ],
     [
-        "http://schema.org/hairsalon",
+        "hairsalon",
         {
-            _id: "http://schema.org/HairSalon",
+            _id: "HairSalon",
             _name: "HairSalon",
             _parent: [
-                "http://schema.org/HealthAndBeautyBusiness"
+                "HealthAndBeautyBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/discoveraction",
+        "discoveraction",
         {
-            _id: "http://schema.org/DiscoverAction",
+            _id: "DiscoverAction",
             _name: "DiscoverAction",
             _parent: [
-                "http://schema.org/FindAction"
+                "FindAction"
             ]
         }
     ],
     [
-        "http://schema.org/endorsementrating",
+        "endorsementrating",
         {
-            _id: "http://schema.org/EndorsementRating",
+            _id: "EndorsementRating",
             _name: "EndorsementRating",
             _parent: [
-                "http://schema.org/Rating"
+                "Rating"
             ]
         }
     ],
     [
-        "http://schema.org/elementaryschool",
+        "elementaryschool",
         {
-            _id: "http://schema.org/ElementarySchool",
+            _id: "ElementarySchool",
             _name: "ElementarySchool",
             _parent: [
-                "http://schema.org/EducationalOrganization"
+                "EducationalOrganization"
             ]
         }
     ],
     [
-        "http://schema.org/activateaction",
+        "activateaction",
         {
-            _id: "http://schema.org/ActivateAction",
+            _id: "ActivateAction",
             _name: "ActivateAction",
             _parent: [
-                "http://schema.org/ControlAction"
+                "ControlAction"
             ]
         }
     ],
     [
-        "http://schema.org/radioepisode",
+        "radioepisode",
         {
-            _id: "http://schema.org/RadioEpisode",
+            _id: "RadioEpisode",
             _name: "RadioEpisode",
             _parent: [
-                "http://schema.org/Episode"
+                "Episode"
             ]
         }
     ],
     [
-        "http://schema.org/tieaction",
+        "tieaction",
         {
-            _id: "http://schema.org/TieAction",
+            _id: "TieAction",
             _name: "TieAction",
             _parent: [
-                "http://schema.org/AchieveAction"
+                "AchieveAction"
             ]
         }
     ],
     [
-        "http://schema.org/dislikeaction",
+        "dislikeaction",
         {
-            _id: "http://schema.org/DislikeAction",
+            _id: "DislikeAction",
             _name: "DislikeAction",
             _parent: [
-                "http://schema.org/ReactAction"
+                "ReactAction"
             ]
         }
     ],
     [
-        "http://schema.org/faqpage",
+        "faqpage",
         {
-            _id: "http://schema.org/FAQPage",
+            _id: "FAQPage",
             _name: "FAQPage",
             _parent: [
-                "http://schema.org/WebPage"
+                "WebPage"
             ]
         }
     ],
     [
-        "http://schema.org/winery",
+        "winery",
         {
-            _id: "http://schema.org/Winery",
+            _id: "Winery",
             _name: "Winery",
             _parent: [
-                "http://schema.org/FoodEstablishment"
+                "FoodEstablishment"
             ]
         }
     ],
     [
-        "http://schema.org/diagnosticprocedure",
+        "diagnosticprocedure",
         {
-            _id: "http://schema.org/DiagnosticProcedure",
+            _id: "DiagnosticProcedure",
             _name: "DiagnosticProcedure",
             _parent: [
-                "http://schema.org/MedicalProcedure"
+                "MedicalProcedure"
             ]
         }
     ],
     [
-        "http://schema.org/preschool",
+        "preschool",
         {
-            _id: "http://schema.org/Preschool",
+            _id: "Preschool",
             _name: "Preschool",
             _parent: [
-                "http://schema.org/EducationalOrganization"
+                "EducationalOrganization"
             ]
         }
     ],
     [
-        "http://schema.org/riverbodyofwater",
+        "riverbodyofwater",
         {
-            _id: "http://schema.org/RiverBodyOfWater",
+            _id: "RiverBodyOfWater",
             _name: "RiverBodyOfWater",
             _parent: [
-                "http://schema.org/BodyOfWater"
+                "BodyOfWater"
             ]
         }
     ],
     [
-        "http://schema.org/newspaper",
+        "newspaper",
         {
-            _id: "http://schema.org/Newspaper",
+            _id: "Newspaper",
             _name: "Newspaper",
             _parent: [
-                "http://schema.org/Periodical"
+                "Periodical"
             ]
         }
     ],
     [
-        "http://schema.org/meetingroom",
+        "meetingroom",
         {
-            _id: "http://schema.org/MeetingRoom",
+            _id: "MeetingRoom",
             _name: "MeetingRoom",
             _parent: [
-                "http://schema.org/Room"
+                "Room"
             ]
         }
     ],
     [
-        "http://schema.org/movieclip",
+        "movieclip",
         {
-            _id: "http://schema.org/MovieClip",
+            _id: "MovieClip",
             _name: "MovieClip",
             _parent: [
-                "http://schema.org/Clip"
+                "Clip"
             ]
         }
     ],
     [
-        "http://schema.org/hvacbusiness",
+        "hvacbusiness",
         {
-            _id: "http://schema.org/HVACBusiness",
+            _id: "HVACBusiness",
             _name: "HVACBusiness",
             _parent: [
-                "http://schema.org/HomeAndConstructionBusiness"
+                "HomeAndConstructionBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/taxistand",
+        "taxistand",
         {
-            _id: "http://schema.org/TaxiStand",
+            _id: "TaxiStand",
             _name: "TaxiStand",
             _parent: [
-                "http://schema.org/CivicStructure"
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/medicalriskcalculator",
+        "medicalriskcalculator",
         {
-            _id: "http://schema.org/MedicalRiskCalculator",
+            _id: "MedicalRiskCalculator",
             _name: "MedicalRiskCalculator",
             _parent: [
-                "http://schema.org/MedicalRiskEstimator"
+                "MedicalRiskEstimator"
             ]
         }
     ],
     [
-        "http://schema.org/locksmith",
+        "locksmith",
         {
-            _id: "http://schema.org/Locksmith",
+            _id: "Locksmith",
             _name: "Locksmith",
             _parent: [
-                "http://schema.org/HomeAndConstructionBusiness"
+                "HomeAndConstructionBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/beautysalon",
+        "beautysalon",
         {
-            _id: "http://schema.org/BeautySalon",
+            _id: "BeautySalon",
             _name: "BeautySalon",
             _parent: [
-                "http://schema.org/HealthAndBeautyBusiness"
+                "HealthAndBeautyBusiness"
             ]
         }
     ],
     [
-        "http://schema.org/trainreservation",
+        "trainreservation",
         {
-            _id: "http://schema.org/TrainReservation",
+            _id: "TrainReservation",
             _name: "TrainReservation",
             _parent: [
-                "http://schema.org/Reservation"
+                "Reservation"
             ]
         }
     ],
     [
-        "http://schema.org/musicvenue",
+        "musicvenue",
         {
-            _id: "http://schema.org/MusicVenue",
+            _id: "MusicVenue",
             _name: "MusicVenue",
             _parent: [
-                "http://schema.org/CivicStructure"
+                "CivicStructure"
             ]
         }
     ],
     [
-        "http://schema.org/oceanbodyofwater",
+        "oceanbodyofwater",
         {
-            _id: "http://schema.org/OceanBodyOfWater",
+            _id: "OceanBodyOfWater",
             _name: "OceanBodyOfWater",
             _parent: [
-                "http://schema.org/BodyOfWater"
+                "BodyOfWater"
             ]
         }
     ],
     [
-        "http://schema.org/televisionchannel",
+        "televisionchannel",
         {
-            _id: "http://schema.org/TelevisionChannel",
+            _id: "TelevisionChannel",
             _name: "TelevisionChannel",
             _parent: [
-                "http://schema.org/BroadcastChannel"
+                "BroadcastChannel"
             ]
         }
     ],
     [
-        "http://schema.org/spreadsheetdigitaldocument",
+        "spreadsheetdigitaldocument",
         {
-            _id: "http://schema.org/SpreadsheetDigitalDocument",
+            _id: "SpreadsheetDigitalDocument",
             _name: "SpreadsheetDigitalDocument",
             _parent: [
-                "http://schema.org/DigitalDocument"
+                "DigitalDocument"
             ]
         }
     ],
     [
-        "http://schema.org/motorcycle",
+        "motorcycle",
         {
-            _id: "http://schema.org/Motorcycle",
+            _id: "Motorcycle",
             _name: "Motorcycle",
             _parent: [
-                "http://schema.org/Vehicle"
+                "Vehicle"
             ]
         }
     ],
     [
-        "http://schema.org/collegeoruniversity",
+        "collegeoruniversity",
         {
-            _id: "http://schema.org/CollegeOrUniversity",
+            _id: "CollegeOrUniversity",
             _name: "CollegeOrUniversity",
             _parent: [
-                "http://schema.org/EducationalOrganization"
+                "EducationalOrganization"
             ]
         }
     ],
     [
-        "http://schema.org/drugcost",
+        "drugcost",
         {
-            _id: "http://schema.org/DrugCost",
+            _id: "DrugCost",
             _name: "DrugCost",
             _parent: [
-                "http://schema.org/MedicalEnumeration"
+                "MedicalEnumeration"
             ],
             applicableLocation: [
-                "http://schema.org/AdministrativeArea"
+                "AdministrativeArea"
             ],
             costCategory: [
-                "http://schema.org/DrugCostCategory"
+                "DrugCostCategory"
             ],
             costCurrency: [
-                "http://schema.org/Text"
+                "Text"
             ],
             costOrigin: [
-                "http://schema.org/Text"
+                "Text"
             ],
             costPerUnit: [
-                "http://schema.org/Text",
-                "http://schema.org/QualitativeValue",
-                "http://schema.org/Number"
+                "Text",
+                "QualitativeValue",
+                "Number"
             ],
             drugUnit: [
-                "http://schema.org/Text"
+                "Text"
             ]
         }
     ],
     [
-        "http://schema.org/patient",
+        "patient",
         {
-            _id: "http://schema.org/Patient",
+            _id: "Patient",
             _name: "Patient",
             _parent: [
-                "http://schema.org/Person",
-                "http://schema.org/MedicalAudience"
+                "Person",
+                "MedicalAudience"
             ],
             diagnosis: [
-                "http://schema.org/MedicalCondition"
+                "MedicalCondition"
             ],
             drug: [
-                "http://schema.org/Drug"
+                "Drug"
             ],
             healthCondition: [
-                "http://schema.org/MedicalCondition"
+                "MedicalCondition"
             ]
         }
     ],
     [
-        "http://schema.org/drugclass",
+        "drugclass",
         {
-            _id: "http://schema.org/DrugClass",
+            _id: "DrugClass",
             _name: "DrugClass",
             _parent: [
-                "http://schema.org/MedicalEnumeration"
+                "MedicalEnumeration"
             ],
             drug: [
-                "http://schema.org/Drug"
+                "Drug"
             ]
         }
     ],
     [
-        "http://schema.org/qualitativevalue",
+        "qualitativevalue",
         {
-            _id: "http://schema.org/QualitativeValue",
+            _id: "QualitativeValue",
             _name: "QualitativeValue",
             _parent: [
-                "http://schema.org/Enumeration"
+                "Enumeration"
             ],
             additionalProperty: [
-                "http://schema.org/PropertyValue"
+                "PropertyValue"
             ],
             equal: [
-                "http://schema.org/QualitativeValue"
+                "QualitativeValue"
             ],
             greater: [
-                "http://schema.org/QualitativeValue"
+                "QualitativeValue"
             ],
             greaterOrEqual: [
-                "http://schema.org/QualitativeValue"
+                "QualitativeValue"
             ],
             lesser: [
-                "http://schema.org/QualitativeValue"
+                "QualitativeValue"
             ],
             lesserOrEqual: [
-                "http://schema.org/QualitativeValue"
+                "QualitativeValue"
             ],
             nonEqual: [
-                "http://schema.org/QualitativeValue"
+                "QualitativeValue"
             ],
             valueReference: [
-                "http://schema.org/StructuredValue",
-                "http://schema.org/Enumeration",
-                "http://schema.org/QualitativeValue",
-                "http://schema.org/PropertyValue",
-                "http://schema.org/QuantitativeValue"
+                "StructuredValue",
+                "Enumeration",
+                "QualitativeValue",
+                "PropertyValue",
+                "QuantitativeValue"
             ]
         }
     ],
     [
-        "http://schema.org/drugcost",
+        "drugcost",
         {
             _values: []
         }
     ],
     [
-        "http://schema.org/medicalenumeration",
+        "medicalenumeration",
         {
             _values: []
         }
     ],
     [
-        "http://schema.org/medicinesystem",
+        "medicinesystem",
         {
             _values: [
                 "TraditionalChinese",
@@ -11880,7 +11880,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/medicaltrialdesign",
+        "medicaltrialdesign",
         {
             _values: [
                 "MultiCenterTrial",
@@ -11896,13 +11896,13 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/patient",
+        "patient",
         {
             _values: []
         }
     ],
     [
-        "http://schema.org/medicalaudience",
+        "medicalaudience",
         {
             _values: [
                 "MedicalResearcher",
@@ -11911,13 +11911,13 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/drugclass",
+        "drugclass",
         {
             _values: []
         }
     ],
     [
-        "http://schema.org/gendertype",
+        "gendertype",
         {
             _values: [
                 "Male",
@@ -11926,7 +11926,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/medicalobservationalstudydesign",
+        "medicalobservationalstudydesign",
         {
             _values: [
                 "Registry",
@@ -11939,7 +11939,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/physicalexam",
+        "physicalexam",
         {
             _values: [
                 "Neck",
@@ -11960,13 +11960,13 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/qualitativevalue",
+        "qualitativevalue",
         {
             _values: []
         }
     ],
     [
-        "http://schema.org/itemavailability",
+        "itemavailability",
         {
             _values: [
                 "SoldOut",
@@ -11982,19 +11982,19 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/paymentmethod",
+        "paymentmethod",
         {
             _values: []
         }
     ],
     [
-        "http://schema.org/bedtype",
+        "bedtype",
         {
             _values: []
         }
     ],
     [
-        "http://schema.org/itemlistordertype",
+        "itemlistordertype",
         {
             _values: [
                 "ItemListOrderDescending",
@@ -12004,7 +12004,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/musicalbumreleasetype",
+        "musicalbumreleasetype",
         {
             _values: [
                 "SingleRelease",
@@ -12015,7 +12015,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/drugcostcategory",
+        "drugcostcategory",
         {
             _values: [
                 "ReimbursementCap",
@@ -12025,7 +12025,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/drugprescriptionstatus",
+        "drugprescriptionstatus",
         {
             _values: [
                 "OTC",
@@ -12034,7 +12034,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/drugpregnancycategory",
+        "drugpregnancycategory",
         {
             _values: [
                 "FDAcategoryX",
@@ -12047,7 +12047,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/restricteddiet",
+        "restricteddiet",
         {
             _values: [
                 "HinduDiet",
@@ -12065,7 +12065,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/physicalactivitycategory",
+        "physicalactivitycategory",
         {
             _values: [
                 "AnaerobicActivity",
@@ -12079,7 +12079,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/contactpointoption",
+        "contactpointoption",
         {
             _values: [
                 "TollFree",
@@ -12088,13 +12088,13 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/businessfunction",
+        "businessfunction",
         {
             _values: []
         }
     ],
     [
-        "http://schema.org/paymentstatustype",
+        "paymentstatustype",
         {
             _values: [
                 "PaymentComplete",
@@ -12106,7 +12106,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/medicalstudystatus",
+        "medicalstudystatus",
         {
             _values: [
                 "Terminated",
@@ -12123,7 +12123,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/actionstatustype",
+        "actionstatustype",
         {
             _values: [
                 "FailedActionStatus",
@@ -12134,19 +12134,19 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/creditcard",
+        "creditcard",
         {
             _values: []
         }
     ],
     [
-        "http://schema.org/paymentcard",
+        "paymentcard",
         {
             _values: []
         }
     ],
     [
-        "http://schema.org/medicalspecialty",
+        "medicalspecialty",
         {
             _values: [
                 "PrimaryCare",
@@ -12193,13 +12193,13 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/specialty",
+        "specialty",
         {
             _values: []
         }
     ],
     [
-        "http://schema.org/steeringpositionvalue",
+        "steeringpositionvalue",
         {
             _values: [
                 "RightHandDriving",
@@ -12208,7 +12208,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/reservationstatustype",
+        "reservationstatustype",
         {
             _values: [
                 "ReservationConfirmed",
@@ -12219,7 +12219,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/medicalproceduretype",
+        "medicalproceduretype",
         {
             _values: [
                 "NoninvasiveProcedure",
@@ -12228,13 +12228,13 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/parcelservice",
+        "parcelservice",
         {
             _values: []
         }
     ],
     [
-        "http://schema.org/deliverymethod",
+        "deliverymethod",
         {
             _values: [
                 "OnSitePickup"
@@ -12242,7 +12242,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/orderstatus",
+        "orderstatus",
         {
             _values: [
                 "OrderProblem",
@@ -12257,7 +12257,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/medicaldevicepurpose",
+        "medicaldevicepurpose",
         {
             _values: [
                 "Therapeutic",
@@ -12266,7 +12266,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/bookformattype",
+        "bookformattype",
         {
             _values: [
                 "AudiobookFormat",
@@ -12278,7 +12278,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/infectiousagentclass",
+        "infectiousagentclass",
         {
             _values: [
                 "MulticellularParasite",
@@ -12291,7 +12291,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/carusagetype",
+        "carusagetype",
         {
             _values: [
                 "RentalVehicleUsage",
@@ -12301,7 +12301,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/medicalevidencelevel",
+        "medicalevidencelevel",
         {
             _values: [
                 "EvidenceLevelA",
@@ -12311,7 +12311,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/digitaldocumentpermissiontype",
+        "digitaldocumentpermissiontype",
         {
             _values: [
                 "ReadPermission",
@@ -12321,7 +12321,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/eventstatustype",
+        "eventstatustype",
         {
             _values: [
                 "EventRescheduled",
@@ -12333,7 +12333,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/mapcategorytype",
+        "mapcategorytype",
         {
             _values: [
                 "ParkingMap",
@@ -12344,7 +12344,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/musicalbumproductiontype",
+        "musicalbumproductiontype",
         {
             _values: [
                 "DemoAlbum",
@@ -12360,7 +12360,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/musicreleaseformattype",
+        "musicreleaseformattype",
         {
             _values: [
                 "VinylFormat",
@@ -12374,13 +12374,13 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/businessentitytype",
+        "businessentitytype",
         {
             _values: []
         }
     ],
     [
-        "http://schema.org/offeritemcondition",
+        "offeritemcondition",
         {
             _values: [
                 "DamagedCondition",
@@ -12391,7 +12391,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/rsvpresponsetype",
+        "rsvpresponsetype",
         {
             _values: [
                 "RsvpResponseYes",
@@ -12401,7 +12401,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/dayofweek",
+        "dayofweek",
         {
             _values: [
                 "Wednesday",
@@ -12416,7 +12416,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/boardingpolicytype",
+        "boardingpolicytype",
         {
             _values: [
                 "GroupBoardingPolicy",
@@ -12425,7 +12425,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/medicalimagingtechnique",
+        "medicalimagingtechnique",
         {
             _values: [
                 "Ultrasound",
@@ -12437,7 +12437,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/gameserverstatus",
+        "gameserverstatus",
         {
             _values: [
                 "OfflinePermanently",
@@ -12448,13 +12448,13 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/lockerdelivery",
+        "lockerdelivery",
         {
             _values: []
         }
     ],
     [
-        "http://schema.org/drivewheelconfigurationvalue",
+        "drivewheelconfigurationvalue",
         {
             _values: [
                 "FrontWheelDriveConfiguration",
@@ -12465,7 +12465,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/gameplaymode",
+        "gameplaymode",
         {
             _values: [
                 "CoOp",
@@ -12475,7 +12475,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "http://schema.org/warrantyscope",
+        "warrantyscope",
         {
             _values: []
         }

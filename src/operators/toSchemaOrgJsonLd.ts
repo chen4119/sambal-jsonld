@@ -86,7 +86,7 @@ function getSchemaOrgProps(schema, typeProps) {
         const propId = `${SCHEMA_CONTEXT}/${propName}`;
         typeProps[propId] = {
             name: propName,
-            types: schema[propName]
+            types: schema[propName].map(type => `${SCHEMA_CONTEXT}/${type}`)
         };
     }
 }

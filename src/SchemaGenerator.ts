@@ -1,8 +1,9 @@
 import fs from "fs";
 import ts from "typescript";
 import {makeVariableStatement, EXPORT_MODIFIER, objectToObjectLiteral, makeArrayLiteral, makeStringLiteral, makeIdentifier, makeNew} from "./ast";
-import JsonLd, {Node, Link} from "./JsonLd";
+import JsonLd, {Node} from "./JsonLd";
 import {JSONLD_ID, JSONLD_TYPE, JSONLD_VALUE, SCHEMA_CONTEXT, SAMBAL_ID, SAMBAL_NAME, SAMBAL_PARENT, SAMBAL_VALUES, SCHEMA_ENUMERATION} from "./constants";
+import {makeRelativeIRI} from "./utils";
 
 const SUBCLASS_EDGE = "http://www.w3.org/2000/01/rdf-schema#subClassOf";
 const LABEL_EDGE = "http://www.w3.org/2000/01/rdf-schema#label";
@@ -37,21 +38,21 @@ type SchemaEnumeration = {
 }
 
 class SchemaGenerator {
-    private classPropertiesMap: Map<string, SchemaClass> = new Map<string, SchemaClass>();
-    private enumValuesMap: Map<string, SchemaEnumeration> = new Map<string, SchemaEnumeration>();
-    constructor() {
-        
+    private classPropertiesMap: Map<string, SchemaClass>;
+    private enumValuesMap: Map<string, SchemaEnumeration>;
+    constructor(private base?: string) {
+        this.classPropertiesMap = new Map<string, SchemaClass>();
+        this.enumValuesMap = new Map<string, SchemaEnumeration>();
     }
 
     writeSchema(schemaFile: string, output: string) {
-
         const content = fs.readFileSync(schemaFile, "utf-8");
         const schemaJson = JSON.parse(content);
         
         this.parseSchema(schemaJson);
         const statements = [];
         this.makeSchemaMap(statements);
-        this.writeJavascript(statements);
+        this.writeJavascript(statements, output);
     }
 
     parseSchema(schemaJson: any) {
@@ -60,11 +61,14 @@ class SchemaGenerator {
         this.iterateAllClasses(jsonLd.graphMap);
         this.iterateAllProperties(jsonLd.graphMap);
         this.iterateEnumValues(jsonLd.graphMap);
+    }
 
-        return {
-            classProperties: this.classPropertiesMap,
-            enums: this.enumValuesMap
-        };
+    get classProperties() {
+        return this.classPropertiesMap;
+    }
+
+    get enums() {
+        return this.enumValuesMap;
     }
 
     private makeSchemaMap(statements) {
@@ -72,23 +76,23 @@ class SchemaGenerator {
         for (const classId of this.classPropertiesMap.keys()) {
             const clazz: SchemaClass = this.classPropertiesMap.get(classId); 
             const obj = {};
-            obj[SAMBAL_ID] = classId;
+            obj[SAMBAL_ID] = makeRelativeIRI(this.base, classId);
             obj[SAMBAL_NAME] = clazz.name;
             if (clazz.parent) {
-                obj[SAMBAL_PARENT] = clazz.parent;
+                obj[SAMBAL_PARENT] = clazz.parent.map(t => makeRelativeIRI(this.base, t))
             }
             clazz.properties.sort((a, b) => a.name.localeCompare(b.name));
             for (const prop of clazz.properties) {
-                obj[prop.name] = prop.types;
+                obj[prop.name] = prop.types.map(t => makeRelativeIRI(this.base, t));
             }
-            mappings.push(makeArrayLiteral([makeStringLiteral(classId.toLowerCase()), objectToObjectLiteral(obj)]));
+            mappings.push(makeArrayLiteral([makeStringLiteral(makeRelativeIRI(this.base, classId).toLowerCase()), objectToObjectLiteral(obj)]));
         }
         for (const classId of this.enumValuesMap.keys()) {
             const enumeration: SchemaEnumeration = this.enumValuesMap.get(classId);
             const obj = {
                 [SAMBAL_VALUES]: enumeration.values
             };
-            mappings.push(makeArrayLiteral([makeStringLiteral(classId.toLowerCase()), objectToObjectLiteral(obj)]));
+            mappings.push(makeArrayLiteral([makeStringLiteral(makeRelativeIRI(this.base, classId).toLowerCase()), objectToObjectLiteral(obj)]));
         }
         const stmt = makeVariableStatement([EXPORT_MODIFIER], "schemaMap", makeNew(makeIdentifier("Map"), [makeArrayLiteral(mappings)]));
         statements.push(stmt);
