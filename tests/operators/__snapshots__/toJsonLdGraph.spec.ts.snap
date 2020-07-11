@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`toJsonLdGraph BlogPost to schema.org 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@graph": Array [
+    Object {
+      "@id": "_:1",
+      "author": Object {
+        "@id": "fasdf",
+      },
+      "dateCreated": "2019-09-06",
+      "description": "Some description",
+      "headline": "Fourth post",
+      "keywords": Array [
+        "schema.org",
+      ],
+    },
+    Object {
+      "@id": "fasdf",
+      "name": "Jane Doe",
+      "telephone": "(425) 123-4567",
+      "url": "http://www.janedoe.com",
+    },
+  ],
+}
+`;

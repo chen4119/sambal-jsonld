@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`toSchemaOrgJsonLd blogpost to schema.org 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@id": "blog1",
+  "@type": "BlogPosting",
+  "author": Object {
+    "@id": "fasdf",
+    "@type": "Person",
+    "name": "Jane Doe",
+    "telephone": "(425) 123-4567",
+    "url": "http://www.janedoe.com",
+  },
+  "dateCreated": "2019-09-06",
+  "description": "Some description",
+  "headline": "Fourth post",
+  "keywords": Array [
+    "schema.org",
+  ],
+  "version": 3,
+}
+`;
+
+exports[`toSchemaOrgJsonLd blogpost to schema.org with absolute @id URI 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@id": "http://chen4119.me#blog1",
+  "@type": "BlogPosting",
+  "author": Object {
+    "@id": "http://chen4119.me#fasdf",
+    "@type": "Person",
+    "name": "Jane Doe",
+    "telephone": "(425) 123-4567",
+    "url": "http://www.janedoe.com",
+  },
+  "dateCreated": "2019-09-06",
+  "description": "Some description",
+  "headline": "Fourth post",
+  "keywords": Array [
+    "schema.org",
+  ],
+  "version": 3,
+}
+`;
+
+exports[`toSchemaOrgJsonLd person to schema.org 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "name": "Jane Doe",
+  "sameAs": Array [
+    "https://github.com/chen4119",
+    "https://www.linkedin.com/in/wan-chun-chen-9a95a010",
+  ],
+  "telephone": "(425) 123-4567",
+  "url": "http://www.janedoe.com",
+}
+`;
+
+exports[`toSchemaOrgJsonLd person to schema.org with givenName 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "givenName": "Wan Chun",
+  "name": "Jane Doe",
+  "sameAs": Array [
+    "https://github.com/chen4119",
+    "https://www.linkedin.com/in/wan-chun-chen-9a95a010",
+  ],
+  "telephone": "(425) 123-4567",
+  "url": "http://www.janedoe.com",
+}
+`;

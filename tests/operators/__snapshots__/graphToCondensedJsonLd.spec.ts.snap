@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`graphToCondensedJsonLd gets Jane Doe jsonld 1`] = `
+Object {
+  "@id": "http://www.janedoe.com/about",
+  "@type": "Person",
+  "name": "Jane Doe",
+  "telephone": "(425) 123-4567",
+}
+`;
+
+exports[`graphToCondensedJsonLd has 2 jsonld 1`] = `
+Array [
+  Object {
+    "@id": "https://chen4119.me/about.html#about",
+    "@type": "Person",
+    "familyName": "Chen",
+    "gender": "Male",
+    "givenName": "Wan Chun",
+    "name": "Wan Chun Chen",
+    "sameAs": Array [
+      "https://github.com/chen4119",
+      "https://www.linkedin.com/in/wan-chun-chen-9a95a010",
+    ],
+    "url": "https://chen4119.me/about.html",
+  },
+  Object {
+    "@id": "http://chen4119.me/post2",
+    "@type": "BlogPosting",
+    "author": Object {
+      "@id": "http://www.janedoe.com/about",
+      "@type": "Person",
+      "name": "Jane Doe",
+      "telephone": "(425) 123-4567",
+    },
+    "dateCreated": "2019-09-06",
+    "description": "Some description",
+    "headline": "Second post",
+    "keywords": Array [
+      "schema.org",
+    ],
+  },
+]
+`;

@@ -39,25 +39,32 @@ type SchemaEnumeration = {
 class SchemaGenerator {
     private classPropertiesMap: Map<string, SchemaClass> = new Map<string, SchemaClass>();
     private enumValuesMap: Map<string, SchemaEnumeration> = new Map<string, SchemaEnumeration>();
-    constructor(private schema: string, private output: string) {
+    constructor() {
         
     }
 
-    run() {
+    writeSchema(schemaFile: string, output: string) {
 
-        const content = fs.readFileSync(this.schema, "utf-8");
+        const content = fs.readFileSync(schemaFile, "utf-8");
         const schemaJson = JSON.parse(content);
+        
+        this.parseSchema(schemaJson);
+        const statements = [];
+        this.makeSchemaMap(statements);
+        this.writeJavascript(statements);
+    }
+
+    parseSchema(schemaJson: any) {
         const jsonLd = new JsonLd(schemaJson);
 
         this.iterateAllClasses(jsonLd.graphMap);
         this.iterateAllProperties(jsonLd.graphMap);
         this.iterateEnumValues(jsonLd.graphMap);
 
-        console.log(this.classPropertiesMap.size);
-        console.log(this.enumValuesMap.size);
-        const statements = [];
-        this.makeSchemaMap(statements);
-        this.writeJavascript(statements);
+        return {
+            classProperties: this.classPropertiesMap,
+            enums: this.enumValuesMap
+        };
     }
 
     private makeSchemaMap(statements) {
@@ -252,12 +259,12 @@ class SchemaGenerator {
         return node.links.findIndex(l => l.edge === SUPERSEDEDBY_EDGE) >= 0;
     }
 
-    private writeJavascript(statements) {
+    private writeJavascript(statements, output) {
         const tsPrinter = ts.createPrinter({
             newLine: ts.NewLineKind.LineFeed
         });
         const sourceFile = ts.createSourceFile(
-            this.output,
+            output,
             "",
             ts.ScriptTarget.Latest,
             false,
@@ -269,7 +276,7 @@ class SchemaGenerator {
             sourceFile
         );
 
-        fs.writeFileSync(this.output, tsSource, "utf-8");
+        fs.writeFileSync(output, tsSource, "utf-8");
     }
 }
 

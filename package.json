@@ -28,10 +28,11 @@
     "build": "npm run clean && tsc",
     "clean": "rimraf ./dist",
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "lint": "tslint -c tslint.json 'src/**/*.ts'"
   },
   "dependencies": {
-    "lodash": "4.17.11",
+    "lodash": "4.17.15",
     "moment": "2.24.0"
   },
   "devDependencies": {
@@ -39,8 +40,8 @@
     "@babel/preset-env": "7.9.6",
     "@babel/preset-typescript": "7.9.0",
     "@types/jest": "25.2.1",
-    "@types/node": "10.12.10",
-    "@types/lodash": "4.14.118",
+    "@types/node": "10.17.21",
+    "@types/lodash": "4.14.151",
     "babel-jest": "25.5.1",
     "jest": "25.5.4",
     "rimraf": "3.0.0",
