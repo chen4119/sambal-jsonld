@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hydrateJsonLd fetch local and http @id 1`] = `
+Object {
+  "address": Object {
+    "state": "NY",
+    "street": "123 main st",
+  },
+  "author": Object {
+    "email": "jane@hotmail.com",
+    "name": "Jane doe",
+  },
+  "dateCreated": "2019-09-06",
+  "description": "Some description",
+  "headline": "Fourth post",
+  "keywords": Array [
+    "schema.org",
+  ],
+}
+`;
+
+exports[`hydrateJsonLd recursively fetch @id 1`] = `
+Object {
+  "address": Object {
+    "state": "NY",
+    "street": "123 main st",
+  },
+  "author": Object {
+    "email": "jane@hotmail.com",
+    "name": "Jane doe",
+    "profile": Object {
+      "worksFor": Array [
+        Object {
+          "@type": "Organization",
+          "name": "Big company",
+        },
+      ],
+    },
+  },
+  "dateCreated": "2019-09-06",
+  "description": "Some description",
+  "headline": "Fourth post",
+  "keywords": Array [
+    "schema.org",
+  ],
+}
+`;

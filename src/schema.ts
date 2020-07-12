@@ -186,8 +186,7 @@ export const schemaMap = new Map([
             location: [
                 "Text",
                 "Place",
-                "PostalAddress",
-                "VirtualLocation"
+                "PostalAddress"
             ],
             logo: [
                 "URL",
@@ -490,43 +489,33 @@ export const schemaMap = new Map([
                 "GeoCoordinates"
             ],
             geoContains: [
-                "Place",
-                "GeospatialGeometry"
+                "Place"
             ],
             geoCoveredBy: [
-                "GeospatialGeometry",
                 "Place"
             ],
             geoCovers: [
-                "GeospatialGeometry",
                 "Place"
             ],
             geoCrosses: [
-                "Place",
-                "GeospatialGeometry"
+                "Place"
             ],
             geoDisjoint: [
-                "GeospatialGeometry",
                 "Place"
             ],
             geoEquals: [
-                "Place",
-                "GeospatialGeometry"
+                "Place"
             ],
             geoIntersects: [
-                "Place",
-                "GeospatialGeometry"
+                "Place"
             ],
             geoOverlaps: [
-                "Place",
-                "GeospatialGeometry"
+                "Place"
             ],
             geoTouches: [
-                "Place",
-                "GeospatialGeometry"
+                "Place"
             ],
             geoWithin: [
-                "GeospatialGeometry",
                 "Place"
             ],
             globalLocationNumber: [
@@ -1102,8 +1091,7 @@ export const schemaMap = new Map([
                 "Thing"
             ],
             serviceType: [
-                "Text",
-                "GovernmentBenefitsType"
+                "Text"
             ],
             slogan: [
                 "Text"
@@ -1173,8 +1161,7 @@ export const schemaMap = new Map([
             location: [
                 "Text",
                 "Place",
-                "PostalAddress",
-                "VirtualLocation"
+                "PostalAddress"
             ],
             maximumAttendeeCapacity: [
                 "Integer"
@@ -2700,8 +2687,7 @@ export const schemaMap = new Map([
             location: [
                 "Text",
                 "Place",
-                "PostalAddress",
-                "VirtualLocation"
+                "PostalAddress"
             ],
             object: [
                 "Thing"
@@ -5164,8 +5150,7 @@ export const schemaMap = new Map([
                 "Text"
             ],
             industry: [
-                "Text",
-                "DefinedTerm"
+                "Text"
             ],
             jobBenefits: [
                 "Text"
@@ -5183,7 +5168,6 @@ export const schemaMap = new Map([
                 "Text"
             ],
             skills: [
-                "DefinedTerm",
                 "Text"
             ],
             specialCommitments: [
@@ -7163,7 +7147,6 @@ export const schemaMap = new Map([
             ],
             educationalCredentialAwarded: [
                 "Text",
-                "EducationalOccupationalCredential",
                 "URL"
             ],
             hasCourseInstance: [
@@ -7568,7 +7551,6 @@ export const schemaMap = new Map([
                 "Text"
             ],
             skills: [
-                "DefinedTerm",
                 "Text"
             ]
         }

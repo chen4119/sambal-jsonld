@@ -4,9 +4,9 @@ import {
 } from "../constants";
 import {isObjectLiteral} from "../utils";
 
-export function graphToCondensedJsonLd(json: object, id?: string) {
-    if (isObjectLiteral(json) && json[JSONLD_GRAPH]) {
-        const jsonld = new JsonLd(json);
+export function graphToCondensedJsonLd(jsonldGraph: object, id?: string) {
+    if (isObjectLiteral(jsonldGraph) && jsonldGraph[JSONLD_GRAPH]) {
+        const jsonld = new JsonLd(jsonldGraph);
         if (id) {
             return jsonld.getCondensedNode(id, true);
         }

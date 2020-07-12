@@ -2,7 +2,7 @@ import fs from "fs";
 import ts from "typescript";
 import {makeVariableStatement, EXPORT_MODIFIER, objectToObjectLiteral, makeArrayLiteral, makeStringLiteral, makeIdentifier, makeNew} from "./ast";
 import JsonLd, {Node} from "./JsonLd";
-import {JSONLD_ID, JSONLD_TYPE, JSONLD_VALUE, SCHEMA_CONTEXT, SAMBAL_ID, SAMBAL_NAME, SAMBAL_PARENT, SAMBAL_VALUES, SCHEMA_ENUMERATION} from "./constants";
+import {JSONLD_ID, JSONLD_TYPE, JSONLD_VALUE, SCHEMA_CONTEXT, SAMBAL_ID, SAMBAL_NAME, SAMBAL_PARENT, SAMBAL_VALUES, SCHEMA_ENUMERATION, SCHEMA_PRIMITIVE_SET} from "./constants";
 import {makeRelativeIRI} from "./utils";
 
 const SUBCLASS_EDGE = "http://www.w3.org/2000/01/rdf-schema#subClassOf";
@@ -230,7 +230,11 @@ class SchemaGenerator {
         const types = [];
         for (const link of propertyNode.links) {
             if (link.edge === RANGE_INCLUDES_EDGE) {
-                types.push(link.node.data[JSONLD_ID]);
+                const typeId = link.node.data[JSONLD_ID];
+                const isValid = SCHEMA_PRIMITIVE_SET.has(typeId) || this.classPropertiesMap.has(typeId) || this.enumValuesMap.has(typeId);
+                if (isValid) {
+                    types.push(link.node.data[JSONLD_ID]);
+                }
             }
         }
         return types;

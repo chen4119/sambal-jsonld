@@ -9,12 +9,15 @@ export async function hydrateJsonLd(json: object, fetcher: (url) => Promise<any>
         }
         return resolvedArray;
     } else if (isObjectLiteral(json)) {
-        for (const propName of Object.keys(json)) {
-            const propValue = await hydrateJsonLd(json[propName], fetcher, context);
-            json[propName] = propValue;
-        }
         const jsonld = new JsonLd(json, context);
-        return await jsonld.resolveJson(fetcher);
+        const hydratedJson = await jsonld.resolveJson(fetcher);
+        if (hydratedJson) {
+            for (const propName of Object.keys(hydratedJson)) {
+                const propValue = await hydrateJsonLd(hydratedJson[propName], fetcher, context);
+                hydratedJson[propName] = propValue;
+            }
+        }
+        return hydratedJson;
     }
     return json;
 }
