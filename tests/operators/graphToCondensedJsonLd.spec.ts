@@ -7,17 +7,17 @@ describe('graphToCondensedJsonLd', () => {
         "@context": "http://schema.org",
         "@graph": [
             {
-            "@type": "Person",
-            "familyName": "Chen",
-            "gender": "Male",
-            "givenName": "Wan Chun",
-            "name": "Wan Chun Chen",
-            "sameAs": [
-                "https://github.com/chen4119",
-                "https://www.linkedin.com/in/wan-chun-chen-9a95a010"
-            ],
-            "url": "https://chen4119.me/about.html",
-            "@id": "https://chen4119.me/about.html#about"
+                "@type": "Person",
+                "familyName": "Chen",
+                "gender": "Male",
+                "givenName": "Wan Chun",
+                "name": "Wan Chun Chen",
+                "sameAs": [
+                    "https://github.com/chen4119",
+                    "https://www.linkedin.com/in/wan-chun-chen-9a95a010"
+                ],
+                "url": "https://chen4119.me/about.html",
+                "@id": "https://chen4119.me/about.html#about"
             },
             {
                 "@id": "http://chen4119.me/post2",

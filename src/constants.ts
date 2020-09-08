@@ -5,7 +5,7 @@ export const JSONLD_GRAPH = "@graph";
 export const JSONLD_VALUE = "@value";
 export const JSONLD_BASE = "@base";
 
-export const SCHEMA_CONTEXT = "http://schema.org";
+export const SCHEMA_CONTEXT = "https://schema.org";
 
 export const SAMBAL_ID = "_id";
 export const SAMBAL_NAME = "_name";

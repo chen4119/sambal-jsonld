@@ -9,7 +9,9 @@ const SUBCLASS_EDGE = "http://www.w3.org/2000/01/rdf-schema#subClassOf";
 const LABEL_EDGE = "http://www.w3.org/2000/01/rdf-schema#label";
 const CLASS = "rdfs:Class";
 const PROPERTY = "rdf:Property";
-const PENDING = "http://pending.schema.org";
+const PENDING = "https://pending.schema.org";
+const ATTIC = "https://attic.schema.org";
+const META = "https://meta.schema.org";
 
 const SUPERSEDEDBY_EDGE = `${SCHEMA_CONTEXT}/supersededBy`;
 const DOMAIN_INCLUDES_EDGE = `${SCHEMA_CONTEXT}/domainIncludes`;
@@ -251,12 +253,15 @@ class SchemaGenerator {
     }
 
     private ignoreNode(node: Node) {
-        return this.isSuperseded(node) || this.isSchemaPending(node);
+        return this.isSuperseded(node) || this.isSchemaPendingOrAtticOrMeta(node);
     }
 
-    private isSchemaPending(node: Node) {
+    private isSchemaPendingOrAtticOrMeta(node: Node) {
         for (const link of node.links) {
-            if (link.edge === PART_OF_EDGE && link.node.data[JSONLD_ID] === PENDING) {
+            if (link.edge === PART_OF_EDGE &&
+                (link.node.data[JSONLD_ID] === PENDING ||
+                link.node.data[JSONLD_ID] === ATTIC ||
+                link.node.data[JSONLD_ID] === META)) {
                 return true;
             }
         }

@@ -2,7 +2,7 @@
 
 exports[`toSchemaOrgJsonLd blogpost to schema.org 1`] = `
 Object {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@id": "blog1",
   "@type": "BlogPosting",
   "author": Object {
@@ -24,7 +24,7 @@ Object {
 
 exports[`toSchemaOrgJsonLd blogpost to schema.org with absolute @id URI 1`] = `
 Object {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@id": "http://chen4119.me#blog1",
   "@type": "BlogPosting",
   "author": Object {
@@ -46,7 +46,7 @@ Object {
 
 exports[`toSchemaOrgJsonLd person to schema.org 1`] = `
 Object {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@type": "Person",
   "name": "Jane Doe",
   "sameAs": Array [
@@ -60,9 +60,8 @@ Object {
 
 exports[`toSchemaOrgJsonLd person to schema.org with givenName 1`] = `
 Object {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@type": "Person",
-  "givenName": "Wan Chun",
   "name": "Jane Doe",
   "sameAs": Array [
     "https://github.com/chen4119",

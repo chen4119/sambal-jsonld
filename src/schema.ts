@@ -1,5 +1,15 @@
 export const schemaMap = new Map([
     [
+        "enumeration",
+        {
+            _id: "Enumeration",
+            _name: "Enumeration",
+            _parent: [
+                "Intangible"
+            ]
+        }
+    ],
+    [
         "intangible",
         {
             _id: "Intangible",
@@ -37,8 +47,8 @@ export const schemaMap = new Map([
                 "ImageObject"
             ],
             mainEntityOfPage: [
-                "CreativeWork",
-                "URL"
+                "URL",
+                "CreativeWork"
             ],
             name: [
                 "Text"
@@ -50,8 +60,8 @@ export const schemaMap = new Map([
                 "URL"
             ],
             subjectOf: [
-                "Event",
-                "CreativeWork"
+                "CreativeWork",
+                "Event"
             ],
             url: [
                 "URL"
@@ -59,22 +69,258 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "duration",
+        "place",
         {
-            _id: "Duration",
-            _name: "Duration",
+            _id: "Place",
+            _name: "Place",
             _parent: [
-                "Quantity"
+                "Thing"
+            ],
+            additionalProperty: [
+                "PropertyValue"
+            ],
+            address: [
+                "PostalAddress",
+                "Text"
+            ],
+            aggregateRating: [
+                "AggregateRating"
+            ],
+            amenityFeature: [
+                "LocationFeatureSpecification"
+            ],
+            branchCode: [
+                "Text"
+            ],
+            containedInPlace: [
+                "Place"
+            ],
+            containsPlace: [
+                "Place"
+            ],
+            event: [
+                "Event"
+            ],
+            faxNumber: [
+                "Text"
+            ],
+            geo: [
+                "GeoCoordinates",
+                "GeoShape"
+            ],
+            geoContains: [
+                "Place"
+            ],
+            geoCoveredBy: [
+                "Place"
+            ],
+            geoCovers: [
+                "Place"
+            ],
+            geoCrosses: [
+                "Place"
+            ],
+            geoDisjoint: [
+                "Place"
+            ],
+            geoEquals: [
+                "Place"
+            ],
+            geoIntersects: [
+                "Place"
+            ],
+            geoOverlaps: [
+                "Place"
+            ],
+            geoTouches: [
+                "Place"
+            ],
+            geoWithin: [
+                "Place"
+            ],
+            globalLocationNumber: [
+                "Text"
+            ],
+            hasMap: [
+                "Map",
+                "URL"
+            ],
+            isAccessibleForFree: [
+                "Boolean"
+            ],
+            isicV4: [
+                "Text"
+            ],
+            latitude: [
+                "Number",
+                "Text"
+            ],
+            logo: [
+                "URL",
+                "ImageObject"
+            ],
+            longitude: [
+                "Text",
+                "Number"
+            ],
+            maximumAttendeeCapacity: [
+                "Integer"
+            ],
+            openingHoursSpecification: [
+                "OpeningHoursSpecification"
+            ],
+            photo: [
+                "ImageObject",
+                "Photograph"
+            ],
+            publicAccess: [
+                "Boolean"
+            ],
+            review: [
+                "Review"
+            ],
+            slogan: [
+                "Text"
+            ],
+            smokingAllowed: [
+                "Boolean"
+            ],
+            specialOpeningHoursSpecification: [
+                "OpeningHoursSpecification"
+            ],
+            telephone: [
+                "Text"
             ]
         }
     ],
     [
-        "quantity",
+        "event",
         {
-            _id: "Quantity",
-            _name: "Quantity",
+            _id: "Event",
+            _name: "Event",
             _parent: [
-                "Intangible"
+                "Thing"
+            ],
+            about: [
+                "Thing"
+            ],
+            actor: [
+                "Person"
+            ],
+            aggregateRating: [
+                "AggregateRating"
+            ],
+            attendee: [
+                "Person",
+                "Organization"
+            ],
+            audience: [
+                "Audience"
+            ],
+            composer: [
+                "Person",
+                "Organization"
+            ],
+            contributor: [
+                "Organization",
+                "Person"
+            ],
+            director: [
+                "Person"
+            ],
+            doorTime: [
+                "Time",
+                "DateTime"
+            ],
+            duration: [
+                "Duration"
+            ],
+            endDate: [
+                "Date",
+                "DateTime"
+            ],
+            eventStatus: [
+                "EventStatusType"
+            ],
+            funder: [
+                "Person",
+                "Organization"
+            ],
+            inLanguage: [
+                "Language",
+                "Text"
+            ],
+            isAccessibleForFree: [
+                "Boolean"
+            ],
+            location: [
+                "Place",
+                "PostalAddress",
+                "Text"
+            ],
+            maximumAttendeeCapacity: [
+                "Integer"
+            ],
+            offers: [
+                "Demand",
+                "Offer"
+            ],
+            organizer: [
+                "Person",
+                "Organization"
+            ],
+            performer: [
+                "Organization",
+                "Person"
+            ],
+            previousStartDate: [
+                "Date"
+            ],
+            recordedIn: [
+                "CreativeWork"
+            ],
+            remainingAttendeeCapacity: [
+                "Integer"
+            ],
+            review: [
+                "Review"
+            ],
+            sponsor: [
+                "Organization",
+                "Person"
+            ],
+            startDate: [
+                "Date",
+                "DateTime"
+            ],
+            subEvent: [
+                "Event"
+            ],
+            superEvent: [
+                "Event"
+            ],
+            translator: [
+                "Person",
+                "Organization"
+            ],
+            typicalAgeRange: [
+                "Text"
+            ],
+            workFeatured: [
+                "CreativeWork"
+            ],
+            workPerformed: [
+                "CreativeWork"
+            ]
+        }
+    ],
+    [
+        "integer",
+        {
+            _id: "Integer",
+            _name: "Integer",
+            _parent: [
+                "Number"
             ]
         }
     ],
@@ -114,9 +360,9 @@ export const schemaMap = new Map([
             ],
             areaServed: [
                 "Text",
+                "GeoShape",
                 "AdministrativeArea",
-                "Place",
-                "GeoShape"
+                "Place"
             ],
             award: [
                 "Text"
@@ -184,9 +430,9 @@ export const schemaMap = new Map([
                 "Text"
             ],
             location: [
-                "Text",
                 "Place",
-                "PostalAddress"
+                "PostalAddress",
+                "Text"
             ],
             logo: [
                 "URL",
@@ -200,8 +446,8 @@ export const schemaMap = new Map([
                 "Organization"
             ],
             memberOf: [
-                "Organization",
-                "ProgramMembership"
+                "ProgramMembership",
+                "Organization"
             ],
             naics: [
                 "Text"
@@ -210,8 +456,8 @@ export const schemaMap = new Map([
                 "QuantitativeValue"
             ],
             owns: [
-                "Product",
-                "OwnershipInfo"
+                "OwnershipInfo",
+                "Product"
             ],
             parentOrganization: [
                 "Organization"
@@ -230,8 +476,8 @@ export const schemaMap = new Map([
                 "Text"
             ],
             sponsor: [
-                "Person",
-                "Organization"
+                "Organization",
+                "Person"
             ],
             subOrganization: [
                 "Organization"
@@ -248,17 +494,65 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "enumeration",
+        "drugcost",
         {
-            _id: "Enumeration",
-            _name: "Enumeration",
+            _id: "DrugCost",
+            _name: "DrugCost",
             _parent: [
-                "Intangible"
+                "MedicalEntity"
             ],
-            supersededBy: [
-                "Enumeration",
-                "Class",
-                "Property"
+            applicableLocation: [
+                "AdministrativeArea"
+            ],
+            costCategory: [
+                "DrugCostCategory"
+            ],
+            costCurrency: [
+                "Text"
+            ],
+            costOrigin: [
+                "Text"
+            ],
+            costPerUnit: [
+                "Text",
+                "QualitativeValue",
+                "Number"
+            ],
+            drugUnit: [
+                "Text"
+            ]
+        }
+    ],
+    [
+        "medicalentity",
+        {
+            _id: "MedicalEntity",
+            _name: "MedicalEntity",
+            _parent: [
+                "Thing"
+            ],
+            code: [
+                "MedicalCode"
+            ],
+            guideline: [
+                "MedicalGuideline"
+            ],
+            legalStatus: [
+                "DrugLegalStatus",
+                "MedicalEnumeration",
+                "Text"
+            ],
+            medicineSystem: [
+                "MedicineSystem"
+            ],
+            recognizingAuthority: [
+                "Organization"
+            ],
+            relevantSpecialty: [
+                "MedicalSpecialty"
+            ],
+            study: [
+                "MedicalStudy"
             ]
         }
     ],
@@ -311,8 +605,8 @@ export const schemaMap = new Map([
                 "Person"
             ],
             colleague: [
-                "URL",
-                "Person"
+                "Person",
+                "URL"
             ],
             contactPoint: [
                 "ContactPoint"
@@ -358,12 +652,12 @@ export const schemaMap = new Map([
                 "Place"
             ],
             height: [
-                "Distance",
-                "QuantitativeValue"
+                "QuantitativeValue",
+                "Distance"
             ],
             homeLocation: [
-                "Place",
-                "ContactPoint"
+                "ContactPoint",
+                "Place"
             ],
             honorificPrefix: [
                 "Text"
@@ -384,8 +678,8 @@ export const schemaMap = new Map([
                 "Offer"
             ],
             memberOf: [
-                "Organization",
-                "ProgramMembership"
+                "ProgramMembership",
+                "Organization"
             ],
             naics: [
                 "Text"
@@ -394,12 +688,12 @@ export const schemaMap = new Map([
                 "Country"
             ],
             netWorth: [
-                "MonetaryAmount",
-                "PriceSpecification"
+                "PriceSpecification",
+                "MonetaryAmount"
             ],
             owns: [
-                "Product",
-                "OwnershipInfo"
+                "OwnershipInfo",
+                "Product"
             ],
             parent: [
                 "Person"
@@ -421,8 +715,8 @@ export const schemaMap = new Map([
                 "Person"
             ],
             sponsor: [
-                "Person",
-                "Organization"
+                "Organization",
+                "Person"
             ],
             spouse: [
                 "Person"
@@ -449,160 +743,129 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "place",
+        "product",
         {
-            _id: "Place",
-            _name: "Place",
+            _id: "Product",
+            _name: "Product",
             _parent: [
                 "Thing"
             ],
             additionalProperty: [
                 "PropertyValue"
             ],
-            address: [
-                "PostalAddress",
-                "Text"
-            ],
             aggregateRating: [
                 "AggregateRating"
             ],
-            amenityFeature: [
-                "LocationFeatureSpecification"
+            audience: [
+                "Audience"
             ],
-            branchCode: [
+            award: [
                 "Text"
             ],
-            containedInPlace: [
-                "Place"
+            brand: [
+                "Brand",
+                "Organization"
             ],
-            containsPlace: [
-                "Place"
+            category: [
+                "URL",
+                "Text",
+                "Thing",
+                "PhysicalActivityCategory"
             ],
-            event: [
-                "Event"
-            ],
-            faxNumber: [
+            color: [
                 "Text"
             ],
-            geo: [
-                "GeoShape",
-                "GeoCoordinates"
+            depth: [
+                "Distance",
+                "QuantitativeValue"
             ],
-            geoContains: [
-                "Place"
-            ],
-            geoCoveredBy: [
-                "Place"
-            ],
-            geoCovers: [
-                "Place"
-            ],
-            geoCrosses: [
-                "Place"
-            ],
-            geoDisjoint: [
-                "Place"
-            ],
-            geoEquals: [
-                "Place"
-            ],
-            geoIntersects: [
-                "Place"
-            ],
-            geoOverlaps: [
-                "Place"
-            ],
-            geoTouches: [
-                "Place"
-            ],
-            geoWithin: [
-                "Place"
-            ],
-            globalLocationNumber: [
+            gtin12: [
                 "Text"
             ],
-            hasMap: [
-                "Map",
-                "URL"
-            ],
-            isAccessibleForFree: [
-                "Boolean"
-            ],
-            isicV4: [
+            gtin13: [
                 "Text"
             ],
-            latitude: [
-                "Number",
+            gtin14: [
                 "Text"
+            ],
+            gtin8: [
+                "Text"
+            ],
+            hasEnergyConsumptionDetails: [],
+            height: [
+                "QuantitativeValue",
+                "Distance"
+            ],
+            isAccessoryOrSparePartFor: [
+                "Product"
+            ],
+            isConsumableFor: [
+                "Product"
+            ],
+            isRelatedTo: [
+                "Service",
+                "Product"
+            ],
+            isSimilarTo: [
+                "Service",
+                "Product"
+            ],
+            isVariantOf: [
+                "ProductModel"
+            ],
+            itemCondition: [
+                "OfferItemCondition"
             ],
             logo: [
                 "URL",
                 "ImageObject"
             ],
-            longitude: [
+            manufacturer: [
+                "Organization"
+            ],
+            material: [
+                "URL",
                 "Text",
-                "Number"
+                "Product"
             ],
-            maximumAttendeeCapacity: [
-                "Integer"
+            model: [
+                "ProductModel",
+                "Text"
             ],
-            openingHoursSpecification: [
-                "OpeningHoursSpecification"
+            mpn: [
+                "Text"
             ],
-            photo: [
-                "Photograph",
-                "ImageObject"
+            offers: [
+                "Demand",
+                "Offer"
             ],
-            publicAccess: [
-                "Boolean"
+            productID: [
+                "Text"
+            ],
+            productionDate: [
+                "Date"
+            ],
+            purchaseDate: [
+                "Date"
+            ],
+            releaseDate: [
+                "Date"
             ],
             review: [
                 "Review"
             ],
+            sku: [
+                "Text"
+            ],
             slogan: [
                 "Text"
             ],
-            smokingAllowed: [
-                "Boolean"
+            weight: [
+                "QuantitativeValue"
             ],
-            specialOpeningHoursSpecification: [
-                "OpeningHoursSpecification"
-            ],
-            telephone: [
-                "Text"
-            ]
-        }
-    ],
-    [
-        "medicalentity",
-        {
-            _id: "MedicalEntity",
-            _name: "MedicalEntity",
-            _parent: [
-                "Thing"
-            ],
-            code: [
-                "MedicalCode"
-            ],
-            guideline: [
-                "MedicalGuideline"
-            ],
-            legalStatus: [
-                "Text",
-                "MedicalEnumeration",
-                "DrugLegalStatus"
-            ],
-            medicineSystem: [
-                "MedicineSystem"
-            ],
-            recognizingAuthority: [
-                "Organization"
-            ],
-            relevantSpecialty: [
-                "MedicalSpecialty"
-            ],
-            study: [
-                "MedicalStudy"
+            width: [
+                "Distance",
+                "QuantitativeValue"
             ]
         }
     ],
@@ -663,12 +926,12 @@ export const schemaMap = new Map([
                 "Text"
             ],
             pageEnd: [
-                "Text",
-                "Integer"
-            ],
-            pageStart: [
                 "Integer",
                 "Text"
+            ],
+            pageStart: [
+                "Text",
+                "Integer"
             ],
             pagination: [
                 "Text"
@@ -730,8 +993,8 @@ export const schemaMap = new Map([
                 "Audience"
             ],
             audio: [
-                "MusicRecording",
                 "AudioObject",
+                "MusicRecording",
                 "Clip"
             ],
             author: [
@@ -762,27 +1025,27 @@ export const schemaMap = new Map([
                 "Text"
             ],
             contributor: [
-                "Person",
-                "Organization"
+                "Organization",
+                "Person"
             ],
             copyrightHolder: [
-                "Person",
-                "Organization"
+                "Organization",
+                "Person"
             ],
             copyrightYear: [
                 "Number"
             ],
             creator: [
-                "Organization",
-                "Person"
+                "Person",
+                "Organization"
             ],
             dateCreated: [
                 "Date",
                 "DateTime"
             ],
             dateModified: [
-                "Date",
-                "DateTime"
+                "DateTime",
+                "Date"
             ],
             datePublished: [
                 "DateTime",
@@ -818,8 +1081,8 @@ export const schemaMap = new Map([
                 "Organization"
             ],
             genre: [
-                "Text",
-                "URL"
+                "URL",
+                "Text"
             ],
             hasPart: [
                 "CreativeWork"
@@ -841,26 +1104,27 @@ export const schemaMap = new Map([
                 "Boolean"
             ],
             isBasedOn: [
-                "CreativeWork",
                 "URL",
+                "CreativeWork",
                 "Product"
             ],
             isFamilyFriendly: [
                 "Boolean"
             ],
             isPartOf: [
-                "CreativeWork",
-                "URL"
+                "URL",
+                "CreativeWork"
             ],
             keywords: [
+                "URL",
                 "Text"
             ],
             learningResourceType: [
                 "Text"
             ],
             license: [
-                "CreativeWork",
-                "URL"
+                "URL",
+                "CreativeWork"
             ],
             locationCreated: [
                 "Place"
@@ -877,16 +1141,16 @@ export const schemaMap = new Map([
                 "Thing"
             ],
             offers: [
-                "Offer",
-                "Demand"
+                "Demand",
+                "Offer"
             ],
             position: [
                 "Text",
                 "Integer"
             ],
             producer: [
-                "Person",
-                "Organization"
+                "Organization",
+                "Person"
             ],
             provider: [
                 "Person",
@@ -896,8 +1160,8 @@ export const schemaMap = new Map([
                 "PublicationEvent"
             ],
             publisher: [
-                "Person",
-                "Organization"
+                "Organization",
+                "Person"
             ],
             publisherImprint: [
                 "Organization"
@@ -916,8 +1180,8 @@ export const schemaMap = new Map([
                 "Review"
             ],
             schemaVersion: [
-                "Text",
-                "URL"
+                "URL",
+                "Text"
             ],
             sourceOrganization: [
                 "Organization"
@@ -929,17 +1193,17 @@ export const schemaMap = new Map([
                 "Place"
             ],
             sponsor: [
-                "Person",
-                "Organization"
+                "Organization",
+                "Person"
             ],
             temporal: [
                 "Text",
                 "DateTime"
             ],
             temporalCoverage: [
-                "URL",
                 "Text",
-                "DateTime"
+                "DateTime",
+                "URL"
             ],
             text: [
                 "Text"
@@ -961,12 +1225,12 @@ export const schemaMap = new Map([
                 "Text"
             ],
             version: [
-                "Number",
-                "Text"
+                "Text",
+                "Number"
             ],
             video: [
-                "VideoObject",
-                "Clip"
+                "Clip",
+                "VideoObject"
             ],
             workExample: [
                 "CreativeWork"
@@ -994,8 +1258,8 @@ export const schemaMap = new Map([
                 "Organization"
             ],
             broadcastFrequency: [
-                "BroadcastFrequencySpecification",
-                "Text"
+                "Text",
+                "BroadcastFrequencySpecification"
             ],
             broadcastTimezone: [
                 "Text"
@@ -1028,9 +1292,9 @@ export const schemaMap = new Map([
             ],
             areaServed: [
                 "Text",
+                "GeoShape",
                 "AdministrativeArea",
-                "Place",
-                "GeoShape"
+                "Place"
             ],
             audience: [
                 "Audience"
@@ -1046,14 +1310,14 @@ export const schemaMap = new Map([
                 "Organization"
             ],
             broker: [
-                "Person",
-                "Organization"
+                "Organization",
+                "Person"
             ],
             category: [
+                "URL",
                 "Text",
-                "PhysicalActivityCategory",
                 "Thing",
-                "URL"
+                "PhysicalActivityCategory"
             ],
             hasOfferCatalog: [
                 "OfferCatalog"
@@ -1066,16 +1330,16 @@ export const schemaMap = new Map([
                 "Product"
             ],
             isSimilarTo: [
-                "Product",
-                "Service"
+                "Service",
+                "Product"
             ],
             logo: [
                 "URL",
                 "ImageObject"
             ],
             offers: [
-                "Offer",
-                "Demand"
+                "Demand",
+                "Offer"
             ],
             provider: [
                 "Person",
@@ -1099,133 +1363,22 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "event",
+        "duration",
         {
-            _id: "Event",
-            _name: "Event",
+            _id: "Duration",
+            _name: "Duration",
             _parent: [
-                "Thing"
-            ],
-            about: [
-                "Thing"
-            ],
-            actor: [
-                "Person"
-            ],
-            aggregateRating: [
-                "AggregateRating"
-            ],
-            attendee: [
-                "Organization",
-                "Person"
-            ],
-            audience: [
-                "Audience"
-            ],
-            composer: [
-                "Organization",
-                "Person"
-            ],
-            contributor: [
-                "Person",
-                "Organization"
-            ],
-            director: [
-                "Person"
-            ],
-            doorTime: [
-                "DateTime",
-                "Time"
-            ],
-            duration: [
-                "Duration"
-            ],
-            endDate: [
-                "Date",
-                "DateTime"
-            ],
-            eventStatus: [
-                "EventStatusType"
-            ],
-            funder: [
-                "Person",
-                "Organization"
-            ],
-            inLanguage: [
-                "Language",
-                "Text"
-            ],
-            isAccessibleForFree: [
-                "Boolean"
-            ],
-            location: [
-                "Text",
-                "Place",
-                "PostalAddress"
-            ],
-            maximumAttendeeCapacity: [
-                "Integer"
-            ],
-            offers: [
-                "Offer",
-                "Demand"
-            ],
-            organizer: [
-                "Organization",
-                "Person"
-            ],
-            performer: [
-                "Person",
-                "Organization"
-            ],
-            previousStartDate: [
-                "Date"
-            ],
-            recordedIn: [
-                "CreativeWork"
-            ],
-            remainingAttendeeCapacity: [
-                "Integer"
-            ],
-            review: [
-                "Review"
-            ],
-            sponsor: [
-                "Person",
-                "Organization"
-            ],
-            startDate: [
-                "DateTime",
-                "Date"
-            ],
-            subEvent: [
-                "Event"
-            ],
-            superEvent: [
-                "Event"
-            ],
-            translator: [
-                "Person",
-                "Organization"
-            ],
-            typicalAgeRange: [
-                "Text"
-            ],
-            workFeatured: [
-                "CreativeWork"
-            ],
-            workPerformed: [
-                "CreativeWork"
+                "Quantity"
             ]
         }
     ],
     [
-        "integer",
+        "quantity",
         {
-            _id: "Integer",
-            _name: "Integer",
+            _id: "Quantity",
+            _name: "Quantity",
             _parent: [
-                "Number"
+                "Intangible"
             ]
         }
     ],
@@ -1246,6 +1399,98 @@ export const schemaMap = new Map([
             ],
             userInteractionCount: [
                 "Integer"
+            ]
+        }
+    ],
+    [
+        "tvepisode",
+        {
+            _id: "TVEpisode",
+            _name: "TVEpisode",
+            _parent: [
+                "Episode"
+            ],
+            countryOfOrigin: [
+                "Country"
+            ]
+        }
+    ],
+    [
+        "episode",
+        {
+            _id: "Episode",
+            _name: "Episode",
+            _parent: [
+                "CreativeWork"
+            ],
+            actor: [
+                "Person"
+            ],
+            director: [
+                "Person"
+            ],
+            episodeNumber: [
+                "Text",
+                "Integer"
+            ],
+            musicBy: [
+                "Person",
+                "MusicGroup"
+            ],
+            partOfSeason: [
+                "CreativeWorkSeason"
+            ],
+            partOfSeries: [
+                "CreativeWorkSeries"
+            ],
+            productionCompany: [
+                "Organization"
+            ],
+            trailer: [
+                "VideoObject"
+            ]
+        }
+    ],
+    [
+        "tvclip",
+        {
+            _id: "TVClip",
+            _name: "TVClip",
+            _parent: [
+                "Clip"
+            ]
+        }
+    ],
+    [
+        "clip",
+        {
+            _id: "Clip",
+            _name: "Clip",
+            _parent: [
+                "CreativeWork"
+            ],
+            actor: [
+                "Person"
+            ],
+            clipNumber: [
+                "Text",
+                "Integer"
+            ],
+            director: [
+                "Person"
+            ],
+            musicBy: [
+                "Person",
+                "MusicGroup"
+            ],
+            partOfEpisode: [
+                "Episode"
+            ],
+            partOfSeason: [
+                "CreativeWorkSeason"
+            ],
+            partOfSeries: [
+                "CreativeWorkSeries"
             ]
         }
     ],
@@ -1294,104 +1539,12 @@ export const schemaMap = new Map([
                 "Organization"
             ],
             seasonNumber: [
-                "Text",
-                "Integer"
+                "Integer",
+                "Text"
             ],
             startDate: [
-                "DateTime",
-                "Date"
-            ],
-            trailer: [
-                "VideoObject"
-            ]
-        }
-    ],
-    [
-        "tvclip",
-        {
-            _id: "TVClip",
-            _name: "TVClip",
-            _parent: [
-                "Clip"
-            ]
-        }
-    ],
-    [
-        "clip",
-        {
-            _id: "Clip",
-            _name: "Clip",
-            _parent: [
-                "CreativeWork"
-            ],
-            actor: [
-                "Person"
-            ],
-            clipNumber: [
-                "Text",
-                "Integer"
-            ],
-            director: [
-                "Person"
-            ],
-            musicBy: [
-                "MusicGroup",
-                "Person"
-            ],
-            partOfEpisode: [
-                "Episode"
-            ],
-            partOfSeason: [
-                "CreativeWorkSeason"
-            ],
-            partOfSeries: [
-                "CreativeWorkSeries"
-            ]
-        }
-    ],
-    [
-        "tvepisode",
-        {
-            _id: "TVEpisode",
-            _name: "TVEpisode",
-            _parent: [
-                "Episode"
-            ],
-            countryOfOrigin: [
-                "Country"
-            ]
-        }
-    ],
-    [
-        "episode",
-        {
-            _id: "Episode",
-            _name: "Episode",
-            _parent: [
-                "CreativeWork"
-            ],
-            actor: [
-                "Person"
-            ],
-            director: [
-                "Person"
-            ],
-            episodeNumber: [
-                "Text",
-                "Integer"
-            ],
-            musicBy: [
-                "MusicGroup",
-                "Person"
-            ],
-            partOfSeason: [
-                "CreativeWorkSeason"
-            ],
-            partOfSeries: [
-                "CreativeWorkSeries"
-            ],
-            productionCompany: [
-                "Organization"
+                "Date",
+                "DateTime"
             ],
             trailer: [
                 "VideoObject"
@@ -1404,8 +1557,8 @@ export const schemaMap = new Map([
             _id: "TVSeries",
             _name: "TVSeries",
             _parent: [
-                "CreativeWorkSeries",
-                "CreativeWork"
+                "CreativeWork",
+                "CreativeWorkSeries"
             ],
             actor: [
                 "Person"
@@ -1423,8 +1576,8 @@ export const schemaMap = new Map([
                 "Episode"
             ],
             musicBy: [
-                "MusicGroup",
-                "Person"
+                "Person",
+                "MusicGroup"
             ],
             numberOfEpisodes: [
                 "Integer"
@@ -1446,8 +1599,8 @@ export const schemaMap = new Map([
             _id: "CreativeWorkSeries",
             _name: "CreativeWorkSeries",
             _parent: [
-                "CreativeWork",
-                "Series"
+                "Series",
+                "CreativeWork"
             ],
             endDate: [
                 "Date",
@@ -1457,8 +1610,8 @@ export const schemaMap = new Map([
                 "Text"
             ],
             startDate: [
-                "DateTime",
-                "Date"
+                "Date",
+                "DateTime"
             ]
         }
     ],
@@ -1479,6 +1632,88 @@ export const schemaMap = new Map([
             _name: "URL",
             _parent: [
                 "Text"
+            ]
+        }
+    ],
+    [
+        "flight",
+        {
+            _id: "Flight",
+            _name: "Flight",
+            _parent: [
+                "Trip"
+            ],
+            aircraft: [
+                "Text",
+                "Vehicle"
+            ],
+            arrivalAirport: [
+                "Airport"
+            ],
+            arrivalGate: [
+                "Text"
+            ],
+            arrivalTerminal: [
+                "Text"
+            ],
+            boardingPolicy: [
+                "BoardingPolicyType"
+            ],
+            departureAirport: [
+                "Airport"
+            ],
+            departureGate: [
+                "Text"
+            ],
+            departureTerminal: [
+                "Text"
+            ],
+            estimatedFlightDuration: [
+                "Text",
+                "Duration"
+            ],
+            flightDistance: [
+                "Text",
+                "Distance"
+            ],
+            flightNumber: [
+                "Text"
+            ],
+            mealService: [
+                "Text"
+            ],
+            seller: [
+                "Person",
+                "Organization"
+            ],
+            webCheckinTime: [
+                "DateTime"
+            ]
+        }
+    ],
+    [
+        "trip",
+        {
+            _id: "Trip",
+            _name: "Trip",
+            _parent: [
+                "Intangible"
+            ],
+            arrivalTime: [
+                "Time",
+                "DateTime"
+            ],
+            departureTime: [
+                "DateTime",
+                "Time"
+            ],
+            offers: [
+                "Demand",
+                "Offer"
+            ],
+            provider: [
+                "Person",
+                "Organization"
             ]
         }
     ],
@@ -1529,84 +1764,67 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "flight",
+        "invoice",
         {
-            _id: "Flight",
-            _name: "Flight",
-            _parent: [
-                "Trip"
-            ],
-            aircraft: [
-                "Text",
-                "Vehicle"
-            ],
-            arrivalAirport: [
-                "Airport"
-            ],
-            arrivalGate: [
-                "Text"
-            ],
-            arrivalTerminal: [
-                "Text"
-            ],
-            boardingPolicy: [
-                "BoardingPolicyType"
-            ],
-            departureAirport: [
-                "Airport"
-            ],
-            departureGate: [
-                "Text"
-            ],
-            departureTerminal: [
-                "Text"
-            ],
-            estimatedFlightDuration: [
-                "Duration",
-                "Text"
-            ],
-            flightDistance: [
-                "Distance",
-                "Text"
-            ],
-            flightNumber: [
-                "Text"
-            ],
-            mealService: [
-                "Text"
-            ],
-            seller: [
-                "Organization",
-                "Person"
-            ],
-            webCheckinTime: [
-                "DateTime"
-            ]
-        }
-    ],
-    [
-        "trip",
-        {
-            _id: "Trip",
-            _name: "Trip",
+            _id: "Invoice",
+            _name: "Invoice",
             _parent: [
                 "Intangible"
             ],
-            arrivalTime: [
-                "DateTime",
-                "Time"
+            accountId: [
+                "Text"
             ],
-            departureTime: [
-                "DateTime",
-                "Time"
+            billingPeriod: [
+                "Duration"
             ],
-            offers: [
-                "Offer",
-                "Demand"
+            broker: [
+                "Organization",
+                "Person"
+            ],
+            category: [
+                "URL",
+                "Text",
+                "Thing",
+                "PhysicalActivityCategory"
+            ],
+            confirmationNumber: [
+                "Text"
+            ],
+            customer: [
+                "Organization",
+                "Person"
+            ],
+            minimumPaymentDue: [
+                "MonetaryAmount",
+                "PriceSpecification"
+            ],
+            paymentDueDate: [
+                "DateTime",
+                "Date"
+            ],
+            paymentMethod: [
+                "PaymentMethod"
+            ],
+            paymentMethodId: [
+                "Text"
+            ],
+            paymentStatus: [
+                "PaymentStatusType",
+                "Text"
             ],
             provider: [
                 "Person",
                 "Organization"
+            ],
+            referencesOrder: [
+                "Order"
+            ],
+            scheduledPaymentDate: [
+                "Date"
+            ],
+            totalPaymentDue: [
+                "PriceSpecification",
+                "MonetaryAmount"
             ]
         }
     ],
@@ -1622,8 +1840,8 @@ export const schemaMap = new Map([
                 "DateTime"
             ],
             broker: [
-                "Person",
-                "Organization"
+                "Organization",
+                "Person"
             ],
             modifiedTime: [
                 "DateTime"
@@ -1651,134 +1869,13 @@ export const schemaMap = new Map([
                 "Ticket"
             ],
             totalPrice: [
-                "PriceSpecification",
                 "Number",
+                "PriceSpecification",
                 "Text"
             ],
             underName: [
-                "Organization",
-                "Person"
-            ]
-        }
-    ],
-    [
-        "invoice",
-        {
-            _id: "Invoice",
-            _name: "Invoice",
-            _parent: [
-                "Intangible"
-            ],
-            accountId: [
-                "Text"
-            ],
-            billingPeriod: [
-                "Duration"
-            ],
-            broker: [
                 "Person",
                 "Organization"
-            ],
-            category: [
-                "Text",
-                "PhysicalActivityCategory",
-                "Thing",
-                "URL"
-            ],
-            confirmationNumber: [
-                "Text"
-            ],
-            customer: [
-                "Organization",
-                "Person"
-            ],
-            minimumPaymentDue: [
-                "PriceSpecification",
-                "MonetaryAmount"
-            ],
-            paymentDueDate: [
-                "Date",
-                "DateTime"
-            ],
-            paymentMethod: [
-                "PaymentMethod"
-            ],
-            paymentMethodId: [
-                "Text"
-            ],
-            paymentStatus: [
-                "Text",
-                "PaymentStatusType"
-            ],
-            provider: [
-                "Person",
-                "Organization"
-            ],
-            referencesOrder: [
-                "Order"
-            ],
-            scheduledPaymentDate: [
-                "Date"
-            ],
-            totalPaymentDue: [
-                "MonetaryAmount",
-                "PriceSpecification"
-            ]
-        }
-    ],
-    [
-        "webpage",
-        {
-            _id: "WebPage",
-            _name: "WebPage",
-            _parent: [
-                "CreativeWork"
-            ],
-            breadcrumb: [
-                "BreadcrumbList",
-                "Text"
-            ],
-            lastReviewed: [
-                "Date"
-            ],
-            mainContentOfPage: [
-                "WebPageElement"
-            ],
-            primaryImageOfPage: [
-                "ImageObject"
-            ],
-            relatedLink: [
-                "URL"
-            ],
-            reviewedBy: [
-                "Organization",
-                "Person"
-            ],
-            significantLink: [
-                "URL"
-            ],
-            speakable: [
-                "SpeakableSpecification",
-                "URL"
-            ],
-            specialty: [
-                "Specialty"
-            ]
-        }
-    ],
-    [
-        "webpageelement",
-        {
-            _id: "WebPageElement",
-            _name: "WebPageElement",
-            _parent: [
-                "CreativeWork"
-            ],
-            cssSelector: [
-                "CssSelectorType"
-            ],
-            xpath: [
-                "XPathType"
             ]
         }
     ],
@@ -1839,8 +1936,8 @@ export const schemaMap = new Map([
                 "Text"
             ],
             preparation: [
-                "Text",
-                "MedicalEntity"
+                "MedicalEntity",
+                "Text"
             ],
             procedureType: [
                 "MedicalProcedureType"
@@ -1921,8 +2018,8 @@ export const schemaMap = new Map([
             ],
             bodyType: [
                 "URL",
-                "QualitativeValue",
-                "Text"
+                "Text",
+                "QualitativeValue"
             ],
             cargoVolume: [
                 "QuantitativeValue"
@@ -1947,9 +2044,9 @@ export const schemaMap = new Map([
                 "QuantitativeValue"
             ],
             fuelType: [
+                "URL",
                 "Text",
-                "QualitativeValue",
-                "URL"
+                "QualitativeValue"
             ],
             knownVehicleDamages: [
                 "Text"
@@ -1978,8 +2075,8 @@ export const schemaMap = new Map([
                 "Number"
             ],
             numberOfForwardGears: [
-                "QuantitativeValue",
-                "Number"
+                "Number",
+                "QuantitativeValue"
             ],
             numberOfPreviousOwners: [
                 "QuantitativeValue",
@@ -1995,17 +2092,14 @@ export const schemaMap = new Map([
                 "Date"
             ],
             seatingCapacity: [
-                "QuantitativeValue",
-                "Number"
+                "Number",
+                "QuantitativeValue"
             ],
             speed: [
                 "QuantitativeValue"
             ],
             steeringPosition: [
                 "SteeringPositionValue"
-            ],
-            stupidProperty: [
-                "QuantitativeValue"
             ],
             tongueWeight: [
                 "QuantitativeValue"
@@ -2036,141 +2130,18 @@ export const schemaMap = new Map([
                 "Number"
             ],
             vehicleSpecialUsage: [
-                "CarUsageType",
-                "Text"
+                "Text",
+                "CarUsageType"
             ],
             vehicleTransmission: [
-                "QualitativeValue",
                 "Text",
-                "URL"
+                "URL",
+                "QualitativeValue"
             ],
             weightTotal: [
                 "QuantitativeValue"
             ],
             wheelbase: [
-                "QuantitativeValue"
-            ]
-        }
-    ],
-    [
-        "product",
-        {
-            _id: "Product",
-            _name: "Product",
-            _parent: [
-                "Thing"
-            ],
-            additionalProperty: [
-                "PropertyValue"
-            ],
-            aggregateRating: [
-                "AggregateRating"
-            ],
-            audience: [
-                "Audience"
-            ],
-            award: [
-                "Text"
-            ],
-            brand: [
-                "Brand",
-                "Organization"
-            ],
-            category: [
-                "Text",
-                "PhysicalActivityCategory",
-                "Thing",
-                "URL"
-            ],
-            color: [
-                "Text"
-            ],
-            depth: [
-                "QuantitativeValue",
-                "Distance"
-            ],
-            gtin12: [
-                "Text"
-            ],
-            gtin13: [
-                "Text"
-            ],
-            gtin14: [
-                "Text"
-            ],
-            gtin8: [
-                "Text"
-            ],
-            height: [
-                "Distance",
-                "QuantitativeValue"
-            ],
-            isAccessoryOrSparePartFor: [
-                "Product"
-            ],
-            isConsumableFor: [
-                "Product"
-            ],
-            isRelatedTo: [
-                "Service",
-                "Product"
-            ],
-            isSimilarTo: [
-                "Product",
-                "Service"
-            ],
-            itemCondition: [
-                "OfferItemCondition"
-            ],
-            logo: [
-                "URL",
-                "ImageObject"
-            ],
-            manufacturer: [
-                "Organization"
-            ],
-            material: [
-                "URL",
-                "Text",
-                "Product"
-            ],
-            model: [
-                "ProductModel",
-                "Text"
-            ],
-            mpn: [
-                "Text"
-            ],
-            offers: [
-                "Offer",
-                "Demand"
-            ],
-            productID: [
-                "Text"
-            ],
-            productionDate: [
-                "Date"
-            ],
-            purchaseDate: [
-                "Date"
-            ],
-            releaseDate: [
-                "Date"
-            ],
-            review: [
-                "Review"
-            ],
-            sku: [
-                "Text"
-            ],
-            slogan: [
-                "Text"
-            ],
-            weight: [
-                "QuantitativeValue"
-            ],
-            width: [
-                "Distance",
                 "QuantitativeValue"
             ]
         }
@@ -2219,6 +2190,39 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "lodgingreservation",
+        {
+            _id: "LodgingReservation",
+            _name: "LodgingReservation",
+            _parent: [
+                "Reservation"
+            ],
+            checkinTime: [
+                "DateTime",
+                "Time"
+            ],
+            checkoutTime: [
+                "Time",
+                "DateTime"
+            ],
+            lodgingUnitDescription: [
+                "Text"
+            ],
+            lodgingUnitType: [
+                "QualitativeValue",
+                "Text"
+            ],
+            numAdults: [
+                "Integer",
+                "QuantitativeValue"
+            ],
+            numChildren: [
+                "Integer",
+                "QuantitativeValue"
+            ]
+        }
+    ],
+    [
         "order",
         {
             _id: "Order",
@@ -2233,8 +2237,8 @@ export const schemaMap = new Map([
                 "PostalAddress"
             ],
             broker: [
-                "Person",
-                "Organization"
+                "Organization",
+                "Person"
             ],
             confirmationNumber: [
                 "Text"
@@ -2278,8 +2282,8 @@ export const schemaMap = new Map([
                 "Invoice"
             ],
             paymentDueDate: [
-                "Date",
-                "DateTime"
+                "DateTime",
+                "Date"
             ],
             paymentMethod: [
                 "PaymentMethod"
@@ -2291,8 +2295,8 @@ export const schemaMap = new Map([
                 "URL"
             ],
             seller: [
-                "Organization",
-                "Person"
+                "Person",
+                "Organization"
             ]
         }
     ],
@@ -2311,8 +2315,8 @@ export const schemaMap = new Map([
                 "Text"
             ],
             programmingLanguage: [
-                "Text",
-                "ComputerLanguage"
+                "ComputerLanguage",
+                "Text"
             ],
             runtimePlatform: [
                 "Text"
@@ -2356,99 +2360,62 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "monetaryamountdistribution",
+        "medicaldevice",
         {
-            _id: "MonetaryAmountDistribution",
-            _name: "MonetaryAmountDistribution",
+            _id: "MedicalDevice",
+            _name: "MedicalDevice",
             _parent: [
-                "QuantitativeValueDistribution"
+                "MedicalEntity"
             ],
-            currency: [
-                "Text"
-            ]
-        }
-    ],
-    [
-        "quantitativevaluedistribution",
-        {
-            _id: "QuantitativeValueDistribution",
-            _name: "QuantitativeValueDistribution",
-            _parent: [
-                "StructuredValue"
+            adverseOutcome: [
+                "MedicalEntity"
             ],
-            duration: [
-                "Duration"
+            contraindication: [
+                "Text",
+                "MedicalContraindication"
             ],
-            median: [
-                "Number"
-            ],
-            percentile10: [
-                "Number"
-            ],
-            percentile25: [
-                "Number"
-            ],
-            percentile75: [
-                "Number"
-            ],
-            percentile90: [
-                "Number"
-            ]
-        }
-    ],
-    [
-        "menuitem",
-        {
-            _id: "MenuItem",
-            _name: "MenuItem",
-            _parent: [
-                "Intangible"
-            ],
-            menuAddOn: [
-                "MenuItem",
-                "MenuSection"
-            ],
-            nutrition: [
-                "NutritionInformation"
-            ],
-            offers: [
-                "Offer",
-                "Demand"
-            ],
-            suitableForDiet: [
-                "RestrictedDiet"
-            ]
-        }
-    ],
-    [
-        "menusection",
-        {
-            _id: "MenuSection",
-            _name: "MenuSection",
-            _parent: [
-                "CreativeWork"
-            ],
-            hasMenuItem: [
-                "MenuItem"
-            ],
-            hasMenuSection: [
-                "MenuSection"
-            ]
-        }
-    ],
-    [
-        "audience",
-        {
-            _id: "Audience",
-            _name: "Audience",
-            _parent: [
-                "Intangible"
-            ],
-            audienceType: [
+            postOp: [
                 "Text"
             ],
-            geographicArea: [
-                "AdministrativeArea"
+            preOp: [
+                "Text"
+            ],
+            procedure: [
+                "Text"
+            ],
+            seriousAdverseOutcome: [
+                "MedicalEntity"
+            ]
+        }
+    ],
+    [
+        "patient",
+        {
+            _id: "Patient",
+            _name: "Patient",
+            _parent: [
+                "MedicalAudience",
+                "Person"
+            ],
+            diagnosis: [
+                "MedicalCondition"
+            ],
+            drug: [
+                "Drug"
+            ],
+            healthCondition: [
+                "MedicalCondition"
+            ]
+        }
+    ],
+    [
+        "medicalaudience",
+        {
+            _id: "MedicalAudience",
+            _name: "MedicalAudience",
+            _parent: [
+                "PeopleAudience",
+                "Audience"
             ]
         }
     ],
@@ -2484,6 +2451,35 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "audience",
+        {
+            _id: "Audience",
+            _name: "Audience",
+            _parent: [
+                "Intangible"
+            ],
+            audienceType: [
+                "Text"
+            ],
+            geographicArea: [
+                "AdministrativeArea"
+            ]
+        }
+    ],
+    [
+        "drugclass",
+        {
+            _id: "DrugClass",
+            _name: "DrugClass",
+            _parent: [
+                "MedicalEntity"
+            ],
+            drug: [
+                "Drug"
+            ]
+        }
+    ],
+    [
         "medicalcondition",
         {
             _id: "MedicalCondition",
@@ -2493,8 +2489,8 @@ export const schemaMap = new Map([
             ],
             associatedAnatomy: [
                 "SuperficialAnatomy",
-                "AnatomicalSystem",
-                "AnatomicalStructure"
+                "AnatomicalStructure",
+                "AnatomicalSystem"
             ],
             differentialDiagnosis: [
                 "DDxElement"
@@ -2599,9 +2595,9 @@ export const schemaMap = new Map([
                 "URL"
             ],
             legalStatus: [
-                "Text",
+                "DrugLegalStatus",
                 "MedicalEnumeration",
-                "DrugLegalStatus"
+                "Text"
             ],
             manufacturer: [
                 "Organization"
@@ -2628,8 +2624,8 @@ export const schemaMap = new Map([
                 "URL"
             ],
             prescriptionStatus: [
-                "Text",
-                "DrugPrescriptionStatus"
+                "DrugPrescriptionStatus",
+                "Text"
             ],
             proprietaryName: [
                 "Text"
@@ -2638,8 +2634,8 @@ export const schemaMap = new Map([
                 "Drug"
             ],
             warning: [
-                "URL",
-                "Text"
+                "Text",
+                "URL"
             ]
         }
     ],
@@ -2675,8 +2671,8 @@ export const schemaMap = new Map([
                 "Organization"
             ],
             endTime: [
-                "DateTime",
-                "Time"
+                "Time",
+                "DateTime"
             ],
             error: [
                 "Thing"
@@ -2685,9 +2681,9 @@ export const schemaMap = new Map([
                 "Thing"
             ],
             location: [
-                "Text",
                 "Place",
-                "PostalAddress"
+                "PostalAddress",
+                "Text"
             ],
             object: [
                 "Thing"
@@ -2700,8 +2696,8 @@ export const schemaMap = new Map([
                 "Thing"
             ],
             startTime: [
-                "Time",
-                "DateTime"
+                "DateTime",
+                "Time"
             ],
             target: [
                 "EntryPoint"
@@ -2720,8 +2716,8 @@ export const schemaMap = new Map([
                 "MedicalCondition"
             ],
             sponsor: [
-                "Person",
-                "Organization"
+                "Organization",
+                "Person"
             ],
             status: [
                 "Text",
@@ -2763,6 +2759,39 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "monetaryamount",
+        {
+            _id: "MonetaryAmount",
+            _name: "MonetaryAmount",
+            _parent: [
+                "StructuredValue"
+            ],
+            currency: [
+                "Text"
+            ],
+            maxValue: [
+                "Number"
+            ],
+            minValue: [
+                "Number"
+            ],
+            validFrom: [
+                "DateTime",
+                "Date"
+            ],
+            validThrough: [
+                "Date",
+                "DateTime"
+            ],
+            value: [
+                "StructuredValue",
+                "Boolean",
+                "Text",
+                "Number"
+            ]
+        }
+    ],
+    [
         "deliverychargespecification",
         {
             _id: "DeliveryChargeSpecification",
@@ -2775,14 +2804,14 @@ export const schemaMap = new Map([
             ],
             areaServed: [
                 "Text",
+                "GeoShape",
                 "AdministrativeArea",
-                "Place",
-                "GeoShape"
+                "Place"
             ],
             eligibleRegion: [
+                "GeoShape",
                 "Place",
-                "Text",
-                "GeoShape"
+                "Text"
             ]
         }
     ],
@@ -2807,19 +2836,19 @@ export const schemaMap = new Map([
                 "Number"
             ],
             price: [
-                "Text",
-                "Number"
+                "Number",
+                "Text"
             ],
             priceCurrency: [
                 "Text"
             ],
             validFrom: [
-                "Date",
-                "DateTime"
-            ],
-            validThrough: [
                 "DateTime",
                 "Date"
+            ],
+            validThrough: [
+                "Date",
+                "DateTime"
             ],
             valueAddedTaxIncluded: [
                 "Boolean"
@@ -2827,58 +2856,12 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "monetaryamount",
+        "gardenstore",
         {
-            _id: "MonetaryAmount",
-            _name: "MonetaryAmount",
+            _id: "GardenStore",
+            _name: "GardenStore",
             _parent: [
-                "StructuredValue"
-            ],
-            currency: [
-                "Text"
-            ],
-            maxValue: [
-                "Number"
-            ],
-            minValue: [
-                "Number"
-            ],
-            validFrom: [
-                "Date",
-                "DateTime"
-            ],
-            validThrough: [
-                "DateTime",
-                "Date"
-            ],
-            value: [
-                "Number",
-                "Text",
-                "StructuredValue",
-                "Boolean"
-            ]
-        }
-    ],
-    [
-        "programmembership",
-        {
-            _id: "ProgramMembership",
-            _name: "ProgramMembership",
-            _parent: [
-                "Intangible"
-            ],
-            hostingOrganization: [
-                "Organization"
-            ],
-            member: [
-                "Person",
-                "Organization"
-            ],
-            membershipNumber: [
-                "Text"
-            ],
-            programName: [
-                "Text"
+                "Store"
             ]
         }
     ],
@@ -2921,6 +2904,28 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "foodestablishmentreservation",
+        {
+            _id: "FoodEstablishmentReservation",
+            _name: "FoodEstablishmentReservation",
+            _parent: [
+                "Reservation"
+            ],
+            endTime: [
+                "Time",
+                "DateTime"
+            ],
+            partySize: [
+                "Integer",
+                "QuantitativeValue"
+            ],
+            startTime: [
+                "DateTime",
+                "Time"
+            ]
+        }
+    ],
+    [
         "mediaobject",
         {
             _id: "MediaObject",
@@ -2954,12 +2959,12 @@ export const schemaMap = new Map([
                 "URL"
             ],
             endTime: [
-                "DateTime",
-                "Time"
+                "Time",
+                "DateTime"
             ],
             height: [
-                "Distance",
-                "QuantitativeValue"
+                "QuantitativeValue",
+                "Distance"
             ],
             playerType: [
                 "Text"
@@ -2971,12 +2976,12 @@ export const schemaMap = new Map([
                 "Place"
             ],
             requiresSubscription: [
-                "Boolean",
-                "MediaSubscription"
+                "MediaSubscription",
+                "Boolean"
             ],
             startTime: [
-                "Time",
-                "DateTime"
+                "DateTime",
+                "Time"
             ],
             uploadDate: [
                 "Date"
@@ -2984,28 +2989,6 @@ export const schemaMap = new Map([
             width: [
                 "Distance",
                 "QuantitativeValue"
-            ]
-        }
-    ],
-    [
-        "foodestablishmentreservation",
-        {
-            _id: "FoodEstablishmentReservation",
-            _name: "FoodEstablishmentReservation",
-            _parent: [
-                "Reservation"
-            ],
-            endTime: [
-                "DateTime",
-                "Time"
-            ],
-            partySize: [
-                "QuantitativeValue",
-                "Integer"
-            ],
-            startTime: [
-                "Time",
-                "DateTime"
             ]
         }
     ],
@@ -3024,8 +3007,8 @@ export const schemaMap = new Map([
                 "Person"
             ],
             musicBy: [
-                "MusicGroup",
-                "Person"
+                "Person",
+                "MusicGroup"
             ],
             productionCompany: [
                 "Organization"
@@ -3074,9 +3057,9 @@ export const schemaMap = new Map([
             ],
             areaServed: [
                 "Text",
+                "GeoShape",
                 "AdministrativeArea",
-                "Place",
-                "GeoShape"
+                "Place"
             ],
             availableLanguage: [
                 "Text",
@@ -3098,8 +3081,8 @@ export const schemaMap = new Map([
                 "OpeningHoursSpecification"
             ],
             productSupported: [
-                "Text",
-                "Product"
+                "Product",
+                "Text"
             ],
             telephone: [
                 "Text"
@@ -3133,39 +3116,6 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "lodgingreservation",
-        {
-            _id: "LodgingReservation",
-            _name: "LodgingReservation",
-            _parent: [
-                "Reservation"
-            ],
-            checkinTime: [
-                "Time",
-                "DateTime"
-            ],
-            checkoutTime: [
-                "Time",
-                "DateTime"
-            ],
-            lodgingUnitDescription: [
-                "Text"
-            ],
-            lodgingUnitType: [
-                "Text",
-                "QualitativeValue"
-            ],
-            numAdults: [
-                "Integer",
-                "QuantitativeValue"
-            ],
-            numChildren: [
-                "Integer",
-                "QuantitativeValue"
-            ]
-        }
-    ],
-    [
         "quantitativevalue",
         {
             _id: "QuantitativeValue",
@@ -3183,23 +3133,76 @@ export const schemaMap = new Map([
                 "Number"
             ],
             unitCode: [
-                "URL",
-                "Text"
+                "Text",
+                "URL"
             ],
             unitText: [
                 "Text"
             ],
             value: [
-                "Number",
-                "Text",
                 "StructuredValue",
-                "Boolean"
+                "Boolean",
+                "Text",
+                "Number"
             ],
             valueReference: [
-                "StructuredValue",
-                "Enumeration",
                 "QualitativeValue",
-                "PropertyValue",
+                "QuantitativeValue",
+                "Enumeration",
+                "StructuredValue",
+                "PropertyValue"
+            ]
+        }
+    ],
+    [
+        "visualartwork",
+        {
+            _id: "VisualArtwork",
+            _name: "VisualArtwork",
+            _parent: [
+                "CreativeWork"
+            ],
+            artEdition: [
+                "Text",
+                "Integer"
+            ],
+            artform: [
+                "URL",
+                "Text"
+            ],
+            artist: [
+                "Person"
+            ],
+            artMedium: [
+                "URL",
+                "Text"
+            ],
+            artworkSurface: [
+                "URL",
+                "Text"
+            ],
+            colorist: [
+                "Person"
+            ],
+            depth: [
+                "Distance",
+                "QuantitativeValue"
+            ],
+            height: [
+                "QuantitativeValue",
+                "Distance"
+            ],
+            inker: [
+                "Person"
+            ],
+            letterer: [
+                "Person"
+            ],
+            penciler: [
+                "Person"
+            ],
+            width: [
+                "Distance",
                 "QuantitativeValue"
             ]
         }
@@ -3245,12 +3248,12 @@ export const schemaMap = new Map([
                 "Text"
             ],
             pageEnd: [
-                "Text",
-                "Integer"
-            ],
-            pageStart: [
                 "Integer",
                 "Text"
+            ],
+            pageStart: [
+                "Text",
+                "Integer"
             ],
             pagination: [
                 "Text"
@@ -3283,59 +3286,6 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "visualartwork",
-        {
-            _id: "VisualArtwork",
-            _name: "VisualArtwork",
-            _parent: [
-                "CreativeWork"
-            ],
-            artEdition: [
-                "Integer",
-                "Text"
-            ],
-            artform: [
-                "Text",
-                "URL"
-            ],
-            artist: [
-                "Person"
-            ],
-            artMedium: [
-                "Text",
-                "URL"
-            ],
-            artworkSurface: [
-                "URL",
-                "Text"
-            ],
-            colorist: [
-                "Person"
-            ],
-            depth: [
-                "QuantitativeValue",
-                "Distance"
-            ],
-            height: [
-                "Distance",
-                "QuantitativeValue"
-            ],
-            inker: [
-                "Person"
-            ],
-            letterer: [
-                "Person"
-            ],
-            penciler: [
-                "Person"
-            ],
-            width: [
-                "Distance",
-                "QuantitativeValue"
-            ]
-        }
-    ],
-    [
         "locationfeaturespecification",
         {
             _id: "LocationFeatureSpecification",
@@ -3347,12 +3297,12 @@ export const schemaMap = new Map([
                 "OpeningHoursSpecification"
             ],
             validFrom: [
-                "Date",
-                "DateTime"
-            ],
-            validThrough: [
                 "DateTime",
                 "Date"
+            ],
+            validThrough: [
+                "Date",
+                "DateTime"
             ]
         }
     ],
@@ -3375,24 +3325,24 @@ export const schemaMap = new Map([
                 "Text"
             ],
             unitCode: [
-                "URL",
-                "Text"
+                "Text",
+                "URL"
             ],
             unitText: [
                 "Text"
             ],
             value: [
-                "Number",
-                "Text",
                 "StructuredValue",
-                "Boolean"
+                "Boolean",
+                "Text",
+                "Number"
             ],
             valueReference: [
-                "StructuredValue",
-                "Enumeration",
                 "QualitativeValue",
-                "PropertyValue",
-                "QuantitativeValue"
+                "QuantitativeValue",
+                "Enumeration",
+                "StructuredValue",
+                "PropertyValue"
             ]
         }
     ],
@@ -3414,51 +3364,12 @@ export const schemaMap = new Map([
                 "Time"
             ],
             validFrom: [
-                "Date",
-                "DateTime"
-            ],
-            validThrough: [
                 "DateTime",
                 "Date"
-            ]
-        }
-    ],
-    [
-        "property",
-        {
-            _id: "Property",
-            _name: "Property",
-            _parent: [
-                "Intangible"
             ],
-            domainIncludes: [
-                "Class"
-            ],
-            inverseOf: [
-                "Property"
-            ],
-            rangeIncludes: [
-                "Class"
-            ],
-            supersededBy: [
-                "Enumeration",
-                "Class",
-                "Property"
-            ]
-        }
-    ],
-    [
-        "class",
-        {
-            _id: "Class",
-            _name: "Class",
-            _parent: [
-                "Intangible"
-            ],
-            supersededBy: [
-                "Enumeration",
-                "Class",
-                "Property"
+            validThrough: [
+                "Date",
+                "DateTime"
             ]
         }
     ],
@@ -3489,9 +3400,6 @@ export const schemaMap = new Map([
             _parent: [
                 "Event"
             ],
-            isAccessibleForFree: [
-                "Boolean"
-            ],
             publishedBy: [
                 "Person",
                 "Organization"
@@ -3502,86 +3410,53 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "softwareapplication",
+        "quantitativevaluedistribution",
         {
-            _id: "SoftwareApplication",
-            _name: "SoftwareApplication",
+            _id: "QuantitativeValueDistribution",
+            _name: "QuantitativeValueDistribution",
             _parent: [
-                "CreativeWork"
+                "StructuredValue"
             ],
-            applicationCategory: [
-                "Text",
-                "URL"
+            duration: [
+                "Duration"
             ],
-            applicationSubCategory: [
-                "Text",
-                "URL"
+            median: [
+                "Number"
             ],
-            applicationSuite: [
+            percentile10: [
+                "Number"
+            ],
+            percentile25: [
+                "Number"
+            ],
+            percentile75: [
+                "Number"
+            ],
+            percentile90: [
+                "Number"
+            ]
+        }
+    ],
+    [
+        "flightreservation",
+        {
+            _id: "FlightReservation",
+            _name: "FlightReservation",
+            _parent: [
+                "Reservation"
+            ],
+            boardingGroup: [
                 "Text"
             ],
-            availableOnDevice: [
+            passengerPriorityStatus: [
+                "QualitativeValue",
                 "Text"
             ],
-            countriesNotSupported: [
+            passengerSequenceNumber: [
                 "Text"
             ],
-            countriesSupported: [
+            securityScreening: [
                 "Text"
-            ],
-            downloadUrl: [
-                "URL"
-            ],
-            featureList: [
-                "Text",
-                "URL"
-            ],
-            fileSize: [
-                "Text"
-            ],
-            installUrl: [
-                "URL"
-            ],
-            memoryRequirements: [
-                "URL",
-                "Text"
-            ],
-            operatingSystem: [
-                "Text"
-            ],
-            permissions: [
-                "Text"
-            ],
-            processorRequirements: [
-                "Text"
-            ],
-            releaseNotes: [
-                "URL",
-                "Text"
-            ],
-            screenshot: [
-                "ImageObject",
-                "URL"
-            ],
-            softwareAddOn: [
-                "SoftwareApplication"
-            ],
-            softwareHelp: [
-                "CreativeWork"
-            ],
-            softwareRequirements: [
-                "URL",
-                "Text"
-            ],
-            softwareVersion: [
-                "Text"
-            ],
-            storageRequirements: [
-                "Text",
-                "URL"
-            ],
-            supportingData: [
-                "DataFeed"
             ]
         }
     ],
@@ -3638,32 +3513,32 @@ export const schemaMap = new Map([
                 "Intangible"
             ],
             availabilityEnds: [
-                "DateTime",
                 "Date",
+                "DateTime",
                 "Time"
             ],
             availabilityStarts: [
-                "DateTime",
+                "Time",
                 "Date",
-                "Time"
+                "DateTime"
             ],
             category: [
+                "URL",
                 "Text",
-                "PhysicalActivityCategory",
                 "Thing",
-                "URL"
+                "PhysicalActivityCategory"
             ],
             eligibleRegion: [
+                "GeoShape",
                 "Place",
-                "Text",
-                "GeoShape"
+                "Text"
             ],
             expectsAcceptanceOf: [
                 "Offer"
             ],
             requiresSubscription: [
-                "Boolean",
-                "MediaSubscription"
+                "MediaSubscription",
+                "Boolean"
             ]
         }
     ],
@@ -3676,8 +3551,48 @@ export const schemaMap = new Map([
                 "Intangible"
             ],
             broadcastFrequencyValue: [
-                "QuantitativeValue",
-                "Number"
+                "Number",
+                "QuantitativeValue"
+            ]
+        }
+    ],
+    [
+        "webpage",
+        {
+            _id: "WebPage",
+            _name: "WebPage",
+            _parent: [
+                "CreativeWork"
+            ],
+            breadcrumb: [
+                "BreadcrumbList",
+                "Text"
+            ],
+            lastReviewed: [
+                "Date"
+            ],
+            mainContentOfPage: [
+                "WebPageElement"
+            ],
+            primaryImageOfPage: [
+                "ImageObject"
+            ],
+            relatedLink: [
+                "URL"
+            ],
+            reviewedBy: [
+                "Organization",
+                "Person"
+            ],
+            significantLink: [
+                "URL"
+            ],
+            speakable: [
+                "SpeakableSpecification",
+                "URL"
+            ],
+            specialty: [
+                "Specialty"
             ]
         }
     ],
@@ -3702,8 +3617,8 @@ export const schemaMap = new Map([
                 "Duration"
             ],
             musicBy: [
-                "MusicGroup",
-                "Person"
+                "Person",
+                "MusicGroup"
             ],
             productionCompany: [
                 "Organization"
@@ -3776,87 +3691,22 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "hotelroom",
+        "nerve",
         {
-            _id: "HotelRoom",
-            _name: "HotelRoom",
-            _parent: [
-                "Room"
-            ],
-            bed: [
-                "BedType",
-                "BedDetails",
-                "Text"
-            ],
-            occupancy: [
-                "QuantitativeValue"
-            ]
-        }
-    ],
-    [
-        "room",
-        {
-            _id: "Room",
-            _name: "Room",
-            _parent: [
-                "Accommodation"
-            ]
-        }
-    ],
-    [
-        "accommodation",
-        {
-            _id: "Accommodation",
-            _name: "Accommodation",
-            _parent: [
-                "Place"
-            ],
-            amenityFeature: [
-                "LocationFeatureSpecification"
-            ],
-            floorSize: [
-                "QuantitativeValue"
-            ],
-            numberOfRooms: [
-                "QuantitativeValue",
-                "Number"
-            ],
-            permittedUsage: [
-                "Text"
-            ],
-            petsAllowed: [
-                "Text",
-                "Boolean"
-            ]
-        }
-    ],
-    [
-        "lymphaticvessel",
-        {
-            _id: "LymphaticVessel",
-            _name: "LymphaticVessel",
-            _parent: [
-                "Vessel"
-            ],
-            originatesFrom: [
-                "Vessel"
-            ],
-            regionDrained: [
-                "AnatomicalStructure",
-                "AnatomicalSystem"
-            ],
-            runsTo: [
-                "Vessel"
-            ]
-        }
-    ],
-    [
-        "vessel",
-        {
-            _id: "Vessel",
-            _name: "Vessel",
+            _id: "Nerve",
+            _name: "Nerve",
             _parent: [
                 "AnatomicalStructure"
+            ],
+            nerveMotor: [
+                "Muscle"
+            ],
+            sensoryUnit: [
+                "AnatomicalStructure",
+                "SuperficialAnatomy"
+            ],
+            sourcedFrom: [
+                "BrainStructure"
             ]
         }
     ],
@@ -3895,6 +3745,46 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "brainstructure",
+        {
+            _id: "BrainStructure",
+            _name: "BrainStructure",
+            _parent: [
+                "AnatomicalStructure"
+            ]
+        }
+    ],
+    [
+        "lymphaticvessel",
+        {
+            _id: "LymphaticVessel",
+            _name: "LymphaticVessel",
+            _parent: [
+                "Vessel"
+            ],
+            originatesFrom: [
+                "Vessel"
+            ],
+            regionDrained: [
+                "AnatomicalStructure",
+                "AnatomicalSystem"
+            ],
+            runsTo: [
+                "Vessel"
+            ]
+        }
+    ],
+    [
+        "vessel",
+        {
+            _id: "Vessel",
+            _name: "Vessel",
+            _parent: [
+                "AnatomicalStructure"
+            ]
+        }
+    ],
+    [
         "treatmentindication",
         {
             _id: "TreatmentIndication",
@@ -3915,26 +3805,24 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "newsarticle",
+        "programmembership",
         {
-            _id: "NewsArticle",
-            _name: "NewsArticle",
+            _id: "ProgramMembership",
+            _name: "ProgramMembership",
             _parent: [
-                "Article"
+                "Intangible"
             ],
-            dateline: [
+            hostingOrganization: [
+                "Organization"
+            ],
+            member: [
+                "Person",
+                "Organization"
+            ],
+            membershipNumber: [
                 "Text"
             ],
-            printColumn: [
-                "Text"
-            ],
-            printEdition: [
-                "Text"
-            ],
-            printPage: [
-                "Text"
-            ],
-            printSection: [
+            programName: [
                 "Text"
             ]
         }
@@ -3963,9 +3851,9 @@ export const schemaMap = new Map([
                 "Text"
             ],
             hasMenu: [
-                "URL",
                 "Menu",
-                "Text"
+                "Text",
+                "URL"
             ],
             servesCuisine: [
                 "Text"
@@ -4010,6 +3898,90 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "softwareapplication",
+        {
+            _id: "SoftwareApplication",
+            _name: "SoftwareApplication",
+            _parent: [
+                "CreativeWork"
+            ],
+            applicationCategory: [
+                "URL",
+                "Text"
+            ],
+            applicationSubCategory: [
+                "URL",
+                "Text"
+            ],
+            applicationSuite: [
+                "Text"
+            ],
+            availableOnDevice: [
+                "Text"
+            ],
+            countriesNotSupported: [
+                "Text"
+            ],
+            countriesSupported: [
+                "Text"
+            ],
+            downloadUrl: [
+                "URL"
+            ],
+            featureList: [
+                "URL",
+                "Text"
+            ],
+            fileSize: [
+                "Text"
+            ],
+            installUrl: [
+                "URL"
+            ],
+            memoryRequirements: [
+                "URL",
+                "Text"
+            ],
+            operatingSystem: [
+                "Text"
+            ],
+            permissions: [
+                "Text"
+            ],
+            processorRequirements: [
+                "Text"
+            ],
+            releaseNotes: [
+                "Text",
+                "URL"
+            ],
+            screenshot: [
+                "ImageObject",
+                "URL"
+            ],
+            softwareAddOn: [
+                "SoftwareApplication"
+            ],
+            softwareHelp: [
+                "CreativeWork"
+            ],
+            softwareRequirements: [
+                "URL",
+                "Text"
+            ],
+            softwareVersion: [
+                "Text"
+            ],
+            storageRequirements: [
+                "URL",
+                "Text"
+            ],
+            supportingData: [
+                "DataFeed"
+            ]
+        }
+    ],
+    [
         "message",
         {
             _id: "Message",
@@ -4018,14 +3990,14 @@ export const schemaMap = new Map([
                 "CreativeWork"
             ],
             bccRecipient: [
-                "ContactPoint",
                 "Person",
+                "ContactPoint",
                 "Organization"
             ],
             ccRecipient: [
-                "ContactPoint",
                 "Person",
-                "Organization"
+                "Organization",
+                "ContactPoint"
             ],
             dateRead: [
                 "Date",
@@ -4041,37 +4013,125 @@ export const schemaMap = new Map([
                 "CreativeWork"
             ],
             recipient: [
+                "Audience",
                 "Person",
-                "Organization",
                 "ContactPoint",
-                "Audience"
+                "Organization"
             ],
             sender: [
                 "Organization",
-                "Audience",
-                "Person"
+                "Person",
+                "Audience"
             ],
             toRecipient: [
-                "Person",
-                "Organization",
+                "ContactPoint",
                 "Audience",
-                "ContactPoint"
+                "Organization",
+                "Person"
             ]
         }
     ],
     [
-        "returnaction",
+        "communicateaction",
         {
-            _id: "ReturnAction",
-            _name: "ReturnAction",
+            _id: "CommunicateAction",
+            _name: "CommunicateAction",
+            _parent: [
+                "InteractAction"
+            ],
+            about: [
+                "Thing"
+            ],
+            inLanguage: [
+                "Language",
+                "Text"
+            ],
+            recipient: [
+                "Audience",
+                "Person",
+                "ContactPoint",
+                "Organization"
+            ]
+        }
+    ],
+    [
+        "interactaction",
+        {
+            _id: "InteractAction",
+            _name: "InteractAction",
+            _parent: [
+                "Action"
+            ]
+        }
+    ],
+    [
+        "payaction",
+        {
+            _id: "PayAction",
+            _name: "PayAction",
+            _parent: [
+                "TradeAction"
+            ],
+            recipient: [
+                "Audience",
+                "Person",
+                "ContactPoint",
+                "Organization"
+            ]
+        }
+    ],
+    [
+        "tradeaction",
+        {
+            _id: "TradeAction",
+            _name: "TradeAction",
+            _parent: [
+                "Action"
+            ],
+            price: [
+                "Number",
+                "Text"
+            ],
+            priceCurrency: [
+                "Text"
+            ],
+            priceSpecification: [
+                "PriceSpecification"
+            ]
+        }
+    ],
+    [
+        "donateaction",
+        {
+            _id: "DonateAction",
+            _name: "DonateAction",
+            _parent: [
+                "TradeAction"
+            ],
+            recipient: [
+                "Audience",
+                "Person",
+                "ContactPoint",
+                "Organization"
+            ]
+        }
+    ],
+    [
+        "sendaction",
+        {
+            _id: "SendAction",
+            _name: "SendAction",
             _parent: [
                 "TransferAction"
             ],
+            deliveryMethod: [
+                "DeliveryMethod"
+            ],
             recipient: [
+                "Audience",
                 "Person",
-                "Organization",
                 "ContactPoint",
-                "Audience"
+                "Organization"
             ]
         }
     ],
@@ -4092,106 +4152,28 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "tipaction",
+        "authorizeaction",
         {
-            _id: "TipAction",
-            _name: "TipAction",
+            _id: "AuthorizeAction",
+            _name: "AuthorizeAction",
             _parent: [
-                "TradeAction"
+                "AllocateAction"
             ],
             recipient: [
+                "Audience",
                 "Person",
-                "Organization",
                 "ContactPoint",
-                "Audience"
+                "Organization"
             ]
         }
     ],
     [
-        "tradeaction",
+        "allocateaction",
         {
-            _id: "TradeAction",
-            _name: "TradeAction",
+            _id: "AllocateAction",
+            _name: "AllocateAction",
             _parent: [
-                "Action"
-            ],
-            price: [
-                "Text",
-                "Number"
-            ],
-            priceCurrency: [
-                "Text"
-            ],
-            priceSpecification: [
-                "PriceSpecification"
-            ]
-        }
-    ],
-    [
-        "donateaction",
-        {
-            _id: "DonateAction",
-            _name: "DonateAction",
-            _parent: [
-                "TradeAction"
-            ],
-            recipient: [
-                "Person",
-                "Organization",
-                "ContactPoint",
-                "Audience"
-            ]
-        }
-    ],
-    [
-        "communicateaction",
-        {
-            _id: "CommunicateAction",
-            _name: "CommunicateAction",
-            _parent: [
-                "InteractAction"
-            ],
-            about: [
-                "Thing"
-            ],
-            inLanguage: [
-                "Language",
-                "Text"
-            ],
-            recipient: [
-                "Person",
-                "Organization",
-                "ContactPoint",
-                "Audience"
-            ]
-        }
-    ],
-    [
-        "interactaction",
-        {
-            _id: "InteractAction",
-            _name: "InteractAction",
-            _parent: [
-                "Action"
-            ]
-        }
-    ],
-    [
-        "sendaction",
-        {
-            _id: "SendAction",
-            _name: "SendAction",
-            _parent: [
-                "TransferAction"
-            ],
-            deliveryMethod: [
-                "DeliveryMethod"
-            ],
-            recipient: [
-                "Person",
-                "Organization",
-                "ContactPoint",
-                "Audience"
+                "OrganizeAction"
             ]
         }
     ],
@@ -4204,52 +4186,112 @@ export const schemaMap = new Map([
                 "TransferAction"
             ],
             recipient: [
+                "Audience",
                 "Person",
-                "Organization",
                 "ContactPoint",
-                "Audience"
+                "Organization"
             ]
         }
     ],
     [
-        "payaction",
+        "tipaction",
         {
-            _id: "PayAction",
-            _name: "PayAction",
+            _id: "TipAction",
+            _name: "TipAction",
             _parent: [
                 "TradeAction"
             ],
             recipient: [
+                "Audience",
                 "Person",
-                "Organization",
                 "ContactPoint",
-                "Audience"
+                "Organization"
             ]
         }
     ],
     [
-        "authorizeaction",
+        "returnaction",
         {
-            _id: "AuthorizeAction",
-            _name: "AuthorizeAction",
+            _id: "ReturnAction",
+            _name: "ReturnAction",
             _parent: [
-                "AllocateAction"
+                "TransferAction"
             ],
             recipient: [
+                "Audience",
                 "Person",
-                "Organization",
                 "ContactPoint",
-                "Audience"
+                "Organization"
             ]
         }
     ],
     [
-        "allocateaction",
+        "jobposting",
         {
-            _id: "AllocateAction",
-            _name: "AllocateAction",
+            _id: "JobPosting",
+            _name: "JobPosting",
             _parent: [
-                "OrganizeAction"
+                "Intangible"
+            ],
+            baseSalary: [
+                "PriceSpecification",
+                "MonetaryAmount",
+                "Number"
+            ],
+            datePosted: [
+                "DateTime",
+                "Date"
+            ],
+            employmentType: [
+                "Text"
+            ],
+            estimatedSalary: [
+                "MonetaryAmount",
+                "MonetaryAmountDistribution",
+                "Number"
+            ],
+            experienceRequirements: [
+                "Text"
+            ],
+            hiringOrganization: [
+                "Organization"
+            ],
+            incentiveCompensation: [
+                "Text"
+            ],
+            industry: [
+                "Text"
+            ],
+            jobBenefits: [
+                "Text"
+            ],
+            jobLocation: [
+                "Place"
+            ],
+            relevantOccupation: [
+                "Occupation"
+            ],
+            responsibilities: [
+                "Text"
+            ],
+            salaryCurrency: [
+                "Text"
+            ],
+            skills: [
+                "Text"
+            ],
+            specialCommitments: [
+                "Text"
+            ],
+            title: [
+                "Text"
+            ],
+            validThrough: [
+                "Date",
+                "DateTime"
+            ],
+            workHours: [
+                "Text"
             ]
         }
     ],
@@ -4269,13 +4311,13 @@ export const schemaMap = new Map([
             ],
             engineType: [
                 "Text",
-                "QualitativeValue",
-                "URL"
+                "URL",
+                "QualitativeValue"
             ],
             fuelType: [
+                "URL",
                 "Text",
-                "QualitativeValue",
-                "URL"
+                "QualitativeValue"
             ],
             torque: [
                 "QuantitativeValue"
@@ -4305,22 +4347,22 @@ export const schemaMap = new Map([
             ],
             areaServed: [
                 "Text",
+                "GeoShape",
                 "AdministrativeArea",
-                "Place",
-                "GeoShape"
+                "Place"
             ],
             availability: [
                 "ItemAvailability"
             ],
             availabilityEnds: [
-                "DateTime",
                 "Date",
+                "DateTime",
                 "Time"
             ],
             availabilityStarts: [
-                "DateTime",
+                "Time",
                 "Date",
-                "Time"
+                "DateTime"
             ],
             availableAtOrFrom: [
                 "Place"
@@ -4332,10 +4374,10 @@ export const schemaMap = new Map([
                 "BusinessFunction"
             ],
             category: [
+                "URL",
                 "Text",
-                "PhysicalActivityCategory",
                 "Thing",
-                "URL"
+                "PhysicalActivityCategory"
             ],
             deliveryLeadTime: [
                 "QuantitativeValue"
@@ -4350,9 +4392,9 @@ export const schemaMap = new Map([
                 "QuantitativeValue"
             ],
             eligibleRegion: [
+                "GeoShape",
                 "Place",
-                "Text",
-                "GeoShape"
+                "Text"
             ],
             eligibleTransactionVolume: [
                 "PriceSpecification"
@@ -4379,13 +4421,13 @@ export const schemaMap = new Map([
                 "OfferItemCondition"
             ],
             itemOffered: [
+                "CreativeWork",
+                "MenuItem",
                 "Service",
                 "Trip",
-                "MenuItem",
+                "AggregateOffer",
                 "Event",
-                "CreativeWork",
-                "Product",
-                "AggregateOffer"
+                "Product"
             ],
             mpn: [
                 "Text"
@@ -4395,8 +4437,8 @@ export const schemaMap = new Map([
                 "Organization"
             ],
             price: [
-                "Text",
-                "Number"
+                "Number",
+                "Text"
             ],
             priceCurrency: [
                 "Text"
@@ -4411,8 +4453,8 @@ export const schemaMap = new Map([
                 "Review"
             ],
             seller: [
-                "Organization",
-                "Person"
+                "Person",
+                "Organization"
             ],
             serialNumber: [
                 "Text"
@@ -4421,12 +4463,12 @@ export const schemaMap = new Map([
                 "Text"
             ],
             validFrom: [
-                "Date",
-                "DateTime"
-            ],
-            validThrough: [
                 "DateTime",
                 "Date"
+            ],
+            validThrough: [
+                "Date",
+                "DateTime"
             ],
             warranty: [
                 "WarrantyPromise"
@@ -4450,22 +4492,22 @@ export const schemaMap = new Map([
             ],
             areaServed: [
                 "Text",
+                "GeoShape",
                 "AdministrativeArea",
-                "Place",
-                "GeoShape"
+                "Place"
             ],
             availability: [
                 "ItemAvailability"
             ],
             availabilityEnds: [
-                "DateTime",
                 "Date",
+                "DateTime",
                 "Time"
             ],
             availabilityStarts: [
-                "DateTime",
+                "Time",
                 "Date",
-                "Time"
+                "DateTime"
             ],
             availableAtOrFrom: [
                 "Place"
@@ -4489,9 +4531,9 @@ export const schemaMap = new Map([
                 "QuantitativeValue"
             ],
             eligibleRegion: [
+                "GeoShape",
                 "Place",
-                "Text",
-                "GeoShape"
+                "Text"
             ],
             eligibleTransactionVolume: [
                 "PriceSpecification"
@@ -4518,13 +4560,13 @@ export const schemaMap = new Map([
                 "OfferItemCondition"
             ],
             itemOffered: [
+                "CreativeWork",
+                "MenuItem",
                 "Service",
                 "Trip",
-                "MenuItem",
+                "AggregateOffer",
                 "Event",
-                "CreativeWork",
-                "Product",
-                "AggregateOffer"
+                "Product"
             ],
             mpn: [
                 "Text"
@@ -4533,8 +4575,8 @@ export const schemaMap = new Map([
                 "PriceSpecification"
             ],
             seller: [
-                "Organization",
-                "Person"
+                "Person",
+                "Organization"
             ],
             serialNumber: [
                 "Text"
@@ -4543,12 +4585,12 @@ export const schemaMap = new Map([
                 "Text"
             ],
             validFrom: [
-                "Date",
-                "DateTime"
-            ],
-            validThrough: [
                 "DateTime",
                 "Date"
+            ],
+            validThrough: [
+                "Date",
+                "DateTime"
             ],
             warranty: [
                 "WarrantyPromise"
@@ -4624,35 +4666,6 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "medicaldevice",
-        {
-            _id: "MedicalDevice",
-            _name: "MedicalDevice",
-            _parent: [
-                "MedicalEntity"
-            ],
-            adverseOutcome: [
-                "MedicalEntity"
-            ],
-            contraindication: [
-                "Text",
-                "MedicalContraindication"
-            ],
-            postOp: [
-                "Text"
-            ],
-            preOp: [
-                "Text"
-            ],
-            procedure: [
-                "Text"
-            ],
-            seriousAdverseOutcome: [
-                "MedicalEntity"
-            ]
-        }
-    ],
-    [
         "bustrip",
         {
             _id: "BusTrip",
@@ -4661,8 +4674,8 @@ export const schemaMap = new Map([
                 "Trip"
             ],
             arrivalBusStop: [
-                "BusStation",
-                "BusStop"
+                "BusStop",
+                "BusStation"
             ],
             busName: [
                 "Text"
@@ -4677,20 +4690,20 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "busstation",
+        "busstop",
         {
-            _id: "BusStation",
-            _name: "BusStation",
+            _id: "BusStop",
+            _name: "BusStop",
             _parent: [
                 "CivicStructure"
             ]
         }
     ],
     [
-        "busstop",
+        "busstation",
         {
-            _id: "BusStop",
-            _name: "BusStop",
+            _id: "BusStation",
+            _name: "BusStation",
             _parent: [
                 "CivicStructure"
             ]
@@ -4703,6 +4716,43 @@ export const schemaMap = new Map([
             _name: "ComputerLanguage",
             _parent: [
                 "Intangible"
+            ]
+        }
+    ],
+    [
+        "room",
+        {
+            _id: "Room",
+            _name: "Room",
+            _parent: [
+                "Accommodation"
+            ]
+        }
+    ],
+    [
+        "accommodation",
+        {
+            _id: "Accommodation",
+            _name: "Accommodation",
+            _parent: [
+                "Place"
+            ],
+            amenityFeature: [
+                "LocationFeatureSpecification"
+            ],
+            floorSize: [
+                "QuantitativeValue"
+            ],
+            numberOfRooms: [
+                "Number",
+                "QuantitativeValue"
+            ],
+            permittedUsage: [
+                "Text"
+            ],
+            petsAllowed: [
+                "Text",
+                "Boolean"
             ]
         }
     ],
@@ -4726,26 +4776,6 @@ export const schemaMap = new Map([
             _name: "ScholarlyArticle",
             _parent: [
                 "Article"
-            ]
-        }
-    ],
-    [
-        "joint",
-        {
-            _id: "Joint",
-            _name: "Joint",
-            _parent: [
-                "AnatomicalStructure"
-            ],
-            biomechnicalClass: [
-                "Text"
-            ],
-            functionalClass: [
-                "MedicalEntity",
-                "Text"
-            ],
-            structuralClass: [
-                "Text"
             ]
         }
     ],
@@ -4817,9 +4847,9 @@ export const schemaMap = new Map([
                 "Person"
             ],
             gamePlatform: [
-                "Thing",
+                "Text",
                 "URL",
-                "Text"
+                "Thing"
             ],
             gameServer: [
                 "GameServer"
@@ -4828,8 +4858,8 @@ export const schemaMap = new Map([
                 "CreativeWork"
             ],
             musicBy: [
-                "MusicGroup",
-                "Person"
+                "Person",
+                "MusicGroup"
             ],
             playMode: [
                 "GamePlayMode"
@@ -4854,9 +4884,9 @@ export const schemaMap = new Map([
                 "Thing"
             ],
             gameLocation: [
+                "Place",
                 "PostalAddress",
-                "URL",
-                "Place"
+                "URL"
             ],
             numberOfPlayers: [
                 "QuantitativeValue"
@@ -4896,29 +4926,6 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "textdigitaldocument",
-        {
-            _id: "TextDigitalDocument",
-            _name: "TextDigitalDocument",
-            _parent: [
-                "DigitalDocument"
-            ]
-        }
-    ],
-    [
-        "digitaldocument",
-        {
-            _id: "DigitalDocument",
-            _name: "DigitalDocument",
-            _parent: [
-                "CreativeWork"
-            ],
-            hasDigitalDocumentPermission: [
-                "DigitalDocumentPermission"
-            ]
-        }
-    ],
-    [
         "taxireservation",
         {
             _id: "TaxiReservation",
@@ -4927,8 +4934,8 @@ export const schemaMap = new Map([
                 "Reservation"
             ],
             partySize: [
-                "QuantitativeValue",
-                "Integer"
+                "Integer",
+                "QuantitativeValue"
             ],
             pickupLocation: [
                 "Place"
@@ -4944,56 +4951,18 @@ export const schemaMap = new Map([
             _id: "Question",
             _name: "Question",
             _parent: [
-                "CreativeWork"
+                "Comment"
             ],
             acceptedAnswer: [
-                "ItemList",
-                "Answer"
+                "Answer",
+                "ItemList"
             ],
             answerCount: [
                 "Integer"
             ],
-            downvoteCount: [
-                "Integer"
-            ],
             suggestedAnswer: [
-                "ItemList",
-                "Answer"
-            ],
-            upvoteCount: [
-                "Integer"
-            ]
-        }
-    ],
-    [
-        "itemlist",
-        {
-            _id: "ItemList",
-            _name: "ItemList",
-            _parent: [
-                "Intangible"
-            ],
-            itemListElement: [
-                "Thing",
-                "Text",
-                "ListItem"
-            ],
-            itemListOrder: [
-                "Text",
-                "ItemListOrderType"
-            ],
-            numberOfItems: [
-                "Integer"
-            ]
-        }
-    ],
-    [
-        "answer",
-        {
-            _id: "Answer",
-            _name: "Answer",
-            _parent: [
-                "Comment"
+                "Answer",
+                "ItemList"
             ]
         }
     ],
@@ -5009,7 +4978,7 @@ export const schemaMap = new Map([
                 "Integer"
             ],
             parentItem: [
-                "Question"
+                "Comment"
             ],
             upvoteCount: [
                 "Integer"
@@ -5017,48 +4986,34 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "loanorcredit",
+        "answer",
         {
-            _id: "LoanOrCredit",
-            _name: "LoanOrCredit",
+            _id: "Answer",
+            _name: "Answer",
             _parent: [
-                "FinancialProduct"
-            ],
-            amount: [
-                "MonetaryAmount",
-                "Number"
-            ],
-            currency: [
-                "Text"
-            ],
-            loanTerm: [
-                "QuantitativeValue"
-            ],
-            requiredCollateral: [
-                "Text",
-                "Thing"
+                "Comment"
             ]
         }
     ],
     [
-        "financialproduct",
+        "itemlist",
         {
-            _id: "FinancialProduct",
-            _name: "FinancialProduct",
+            _id: "ItemList",
+            _name: "ItemList",
             _parent: [
-                "Service"
+                "Intangible"
             ],
-            annualPercentageRate: [
-                "Number",
-                "QuantitativeValue"
-            ],
-            feesAndCommissionsSpecification: [
+            itemListElement: [
                 "Text",
-                "URL"
+                "Thing",
+                "ListItem"
             ],
-            interestRate: [
-                "QuantitativeValue",
-                "Number"
+            itemListOrder: [
+                "ItemListOrderType",
+                "Text"
+            ],
+            numberOfItems: [
+                "Integer"
             ]
         }
     ],
@@ -5072,8 +5027,8 @@ export const schemaMap = new Map([
             ],
             baseSalary: [
                 "PriceSpecification",
-                "Number",
-                "MonetaryAmount"
+                "MonetaryAmount",
+                "Number"
             ],
             salaryCurrency: [
                 "Text"
@@ -5106,82 +5061,12 @@ export const schemaMap = new Map([
                 "DateTime"
             ],
             roleName: [
-                "URL",
-                "Text"
+                "Text",
+                "URL"
             ],
             startDate: [
-                "DateTime",
-                "Date"
-            ]
-        }
-    ],
-    [
-        "jobposting",
-        {
-            _id: "JobPosting",
-            _name: "JobPosting",
-            _parent: [
-                "Intangible"
-            ],
-            baseSalary: [
-                "PriceSpecification",
-                "Number",
-                "MonetaryAmount"
-            ],
-            datePosted: [
                 "Date",
                 "DateTime"
-            ],
-            employmentType: [
-                "Text"
-            ],
-            estimatedSalary: [
-                "Number",
-                "MonetaryAmountDistribution",
-                "MonetaryAmount"
-            ],
-            experienceRequirements: [
-                "Text"
-            ],
-            hiringOrganization: [
-                "Organization"
-            ],
-            incentiveCompensation: [
-                "Text"
-            ],
-            industry: [
-                "Text"
-            ],
-            jobBenefits: [
-                "Text"
-            ],
-            jobLocation: [
-                "Place"
-            ],
-            relevantOccupation: [
-                "Occupation"
-            ],
-            responsibilities: [
-                "Text"
-            ],
-            salaryCurrency: [
-                "Text"
-            ],
-            skills: [
-                "Text"
-            ],
-            specialCommitments: [
-                "Text"
-            ],
-            title: [
-                "Text"
-            ],
-            validThrough: [
-                "DateTime",
-                "Date"
-            ],
-            workHours: [
-                "Text"
             ]
         }
     ],
@@ -5212,18 +5097,32 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "busorcoach",
+        "waterfall",
         {
-            _id: "BusOrCoach",
-            _name: "BusOrCoach",
+            _id: "Waterfall",
+            _name: "Waterfall",
             _parent: [
-                "Vehicle"
-            ],
-            acrissCode: [
-                "Text"
-            ],
-            roofLoad: [
-                "QuantitativeValue"
+                "BodyOfWater"
+            ]
+        }
+    ],
+    [
+        "bodyofwater",
+        {
+            _id: "BodyOfWater",
+            _name: "BodyOfWater",
+            _parent: [
+                "Landform"
+            ]
+        }
+    ],
+    [
+        "landform",
+        {
+            _id: "Landform",
+            _name: "Landform",
+            _parent: [
+                "Place"
             ]
         }
     ],
@@ -5281,8 +5180,8 @@ export const schemaMap = new Map([
                 "Person"
             ],
             bestRating: [
-                "Number",
-                "Text"
+                "Text",
+                "Number"
             ],
             ratingValue: [
                 "Text",
@@ -5292,52 +5191,18 @@ export const schemaMap = new Map([
                 "Text"
             ],
             worstRating: [
-                "Text",
-                "Number"
+                "Number",
+                "Text"
             ]
         }
     ],
     [
-        "propertyvaluespecification",
+        "autowash",
         {
-            _id: "PropertyValueSpecification",
-            _name: "PropertyValueSpecification",
+            _id: "AutoWash",
+            _name: "AutoWash",
             _parent: [
-                "Intangible"
-            ],
-            defaultValue: [
-                "Text",
-                "Thing"
-            ],
-            maxValue: [
-                "Number"
-            ],
-            minValue: [
-                "Number"
-            ],
-            multipleValues: [
-                "Boolean"
-            ],
-            readonlyValue: [
-                "Boolean"
-            ],
-            stepValue: [
-                "Number"
-            ],
-            valueMaxLength: [
-                "Number"
-            ],
-            valueMinLength: [
-                "Number"
-            ],
-            valueName: [
-                "Text"
-            ],
-            valuePattern: [
-                "Text"
-            ],
-            valueRequired: [
-                "Boolean"
+                "AutomotiveBusiness"
             ]
         }
     ],
@@ -5372,6 +5237,32 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "medicalconditionstage",
+        {
+            _id: "MedicalConditionStage",
+            _name: "MedicalConditionStage",
+            _parent: [
+                "MedicalIntangible"
+            ],
+            stageAsNumber: [
+                "Number"
+            ],
+            subStageSuffix: [
+                "Text"
+            ]
+        }
+    ],
+    [
+        "medicalintangible",
+        {
+            _id: "MedicalIntangible",
+            _name: "MedicalIntangible",
+            _parent: [
+                "MedicalEntity"
+            ]
+        }
+    ],
+    [
         "country",
         {
             _id: "Country",
@@ -5392,30 +5283,13 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "rentaction",
-        {
-            _id: "RentAction",
-            _name: "RentAction",
-            _parent: [
-                "TradeAction"
-            ],
-            landlord: [
-                "Organization",
-                "Person"
-            ],
-            realEstateAgent: [
-                "RealEstateAgent"
-            ]
-        }
-    ],
-    [
         "movietheater",
         {
             _id: "MovieTheater",
             _name: "MovieTheater",
             _parent: [
-                "CivicStructure",
-                "EntertainmentBusiness"
+                "EntertainmentBusiness",
+                "CivicStructure"
             ],
             screenCount: [
                 "Number"
@@ -5433,20 +5307,6 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "educationalorganization",
-        {
-            _id: "EducationalOrganization",
-            _name: "EducationalOrganization",
-            _parent: [
-                "CivicStructure",
-                "Organization"
-            ],
-            alumni: [
-                "Person"
-            ]
-        }
-    ],
-    [
         "sellaction",
         {
             _id: "SellAction",
@@ -5460,22 +5320,62 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "menuitem",
+        {
+            _id: "MenuItem",
+            _name: "MenuItem",
+            _parent: [
+                "Intangible"
+            ],
+            menuAddOn: [
+                "MenuItem",
+                "MenuSection"
+            ],
+            nutrition: [
+                "NutritionInformation"
+            ],
+            offers: [
+                "Demand",
+                "Offer"
+            ],
+            suitableForDiet: [
+                "RestrictedDiet"
+            ]
+        }
+    ],
+    [
+        "menusection",
+        {
+            _id: "MenuSection",
+            _name: "MenuSection",
+            _parent: [
+                "CreativeWork"
+            ],
+            hasMenuItem: [
+                "MenuItem"
+            ],
+            hasMenuSection: [
+                "MenuSection"
+            ]
+        }
+    ],
+    [
+        "collectionpage",
+        {
+            _id: "CollectionPage",
+            _name: "CollectionPage",
+            _parent: [
+                "WebPage"
+            ]
+        }
+    ],
+    [
         "mountain",
         {
             _id: "Mountain",
             _name: "Mountain",
             _parent: [
                 "Landform"
-            ]
-        }
-    ],
-    [
-        "landform",
-        {
-            _id: "Landform",
-            _name: "Landform",
-            _parent: [
-                "Place"
             ]
         }
     ],
@@ -5506,9 +5406,9 @@ export const schemaMap = new Map([
                 "Text"
             ],
             recipeInstructions: [
-                "ItemList",
+                "CreativeWork",
                 "Text",
-                "CreativeWork"
+                "ItemList"
             ],
             recipeYield: [
                 "QuantitativeValue",
@@ -5538,25 +5438,25 @@ export const schemaMap = new Map([
                 "Duration"
             ],
             step: [
-                "Text",
-                "HowToSection",
                 "CreativeWork",
-                "HowToStep"
+                "HowToStep",
+                "HowToSection",
+                "Text"
             ],
             supply: [
-                "Text",
-                "HowToSupply"
+                "HowToSupply",
+                "Text"
             ],
             tool: [
-                "Text",
-                "HowToTool"
+                "HowToTool",
+                "Text"
             ],
             totalTime: [
                 "Duration"
             ],
             yield: [
-                "Text",
-                "QuantitativeValue"
+                "QuantitativeValue",
+                "Text"
             ]
         }
     ],
@@ -5566,8 +5466,8 @@ export const schemaMap = new Map([
             _id: "HowToDirection",
             _name: "HowToDirection",
             _parent: [
-                "ListItem",
-                "CreativeWork"
+                "CreativeWork",
+                "ListItem"
             ],
             afterMedia: [
                 "URL",
@@ -5578,8 +5478,8 @@ export const schemaMap = new Map([
                 "URL"
             ],
             duringMedia: [
-                "URL",
-                "MediaObject"
+                "MediaObject",
+                "URL"
             ],
             performTime: [
                 "Duration"
@@ -5588,12 +5488,12 @@ export const schemaMap = new Map([
                 "Duration"
             ],
             supply: [
-                "Text",
-                "HowToSupply"
+                "HowToSupply",
+                "Text"
             ],
             tool: [
-                "Text",
-                "HowToTool"
+                "HowToTool",
+                "Text"
             ],
             totalTime: [
                 "Duration"
@@ -5695,14 +5595,14 @@ export const schemaMap = new Map([
             _id: "Hospital",
             _name: "Hospital",
             _parent: [
-                "CivicStructure",
                 "EmergencyService",
+                "CivicStructure",
                 "MedicalOrganization"
             ],
             availableService: [
-                "MedicalTest",
                 "MedicalTherapy",
-                "MedicalProcedure"
+                "MedicalProcedure",
+                "MedicalTest"
             ],
             medicalSpecialty: [
                 "MedicalSpecialty"
@@ -5748,10 +5648,6 @@ export const schemaMap = new Map([
             ],
             issn: [
                 "Text"
-            ],
-            variablesMeasured: [
-                "Text",
-                "PropertyValue"
             ]
         }
     ],
@@ -5773,35 +5669,11 @@ export const schemaMap = new Map([
                 "QuantitativeValue"
             ],
             unitCode: [
-                "URL",
-                "Text"
+                "Text",
+                "URL"
             ],
             unitText: [
                 "Text"
-            ]
-        }
-    ],
-    [
-        "ownershipinfo",
-        {
-            _id: "OwnershipInfo",
-            _name: "OwnershipInfo",
-            _parent: [
-                "StructuredValue"
-            ],
-            acquiredFrom: [
-                "Organization",
-                "Person"
-            ],
-            ownedFrom: [
-                "DateTime"
-            ],
-            ownedThrough: [
-                "DateTime"
-            ],
-            typeOfGood: [
-                "Product",
-                "Service"
             ]
         }
     ],
@@ -5867,8 +5739,8 @@ export const schemaMap = new Map([
             ],
             sender: [
                 "Organization",
-                "Audience",
-                "Person"
+                "Person",
+                "Audience"
             ]
         }
     ],
@@ -5891,8 +5763,8 @@ export const schemaMap = new Map([
                 "CreativeWork"
             ],
             byArtist: [
-                "Person",
-                "MusicGroup"
+                "MusicGroup",
+                "Person"
             ],
             duration: [
                 "Duration"
@@ -5929,8 +5801,8 @@ export const schemaMap = new Map([
                 "MusicAlbumReleaseType"
             ],
             byArtist: [
-                "Person",
-                "MusicGroup"
+                "MusicGroup",
+                "Person"
             ]
         }
     ],
@@ -5946,8 +5818,8 @@ export const schemaMap = new Map([
                 "Integer"
             ],
             track: [
-                "MusicRecording",
-                "ItemList"
+                "ItemList",
+                "MusicRecording"
             ]
         }
     ],
@@ -5993,8 +5865,8 @@ export const schemaMap = new Map([
                 "MediaObject"
             ],
             exifData: [
-                "Text",
-                "PropertyValue"
+                "PropertyValue",
+                "Text"
             ],
             representativeOfPage: [
                 "Boolean"
@@ -6015,12 +5887,14 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "crematorium",
+        "howtostep",
         {
-            _id: "Crematorium",
-            _name: "Crematorium",
+            _id: "HowToStep",
+            _name: "HowToStep",
             _parent: [
-                "CivicStructure"
+                "ItemList",
+                "ListItem",
+                "CreativeWork"
             ]
         }
     ],
@@ -6030,62 +5904,9 @@ export const schemaMap = new Map([
             _id: "HowToSection",
             _name: "HowToSection",
             _parent: [
-                "ListItem",
-                "CreativeWork",
-                "ItemList"
-            ]
-        }
-    ],
-    [
-        "howtostep",
-        {
-            _id: "HowToStep",
-            _name: "HowToStep",
-            _parent: [
                 "CreativeWork",
                 "ListItem",
                 "ItemList"
-            ]
-        }
-    ],
-    [
-        "musiccomposition",
-        {
-            _id: "MusicComposition",
-            _name: "MusicComposition",
-            _parent: [
-                "CreativeWork"
-            ],
-            composer: [
-                "Organization",
-                "Person"
-            ],
-            firstPerformance: [
-                "Event"
-            ],
-            includedComposition: [
-                "MusicComposition"
-            ],
-            iswcCode: [
-                "Text"
-            ],
-            lyricist: [
-                "Person"
-            ],
-            lyrics: [
-                "CreativeWork"
-            ],
-            musicalKey: [
-                "Text"
-            ],
-            musicArrangement: [
-                "MusicComposition"
-            ],
-            musicCompositionForm: [
-                "Text"
-            ],
-            recordedAs: [
-                "MusicRecording"
             ]
         }
     ],
@@ -6096,41 +5917,6 @@ export const schemaMap = new Map([
             _name: "PhysicalTherapy",
             _parent: [
                 "MedicalTherapy"
-            ]
-        }
-    ],
-    [
-        "drugstrength",
-        {
-            _id: "DrugStrength",
-            _name: "DrugStrength",
-            _parent: [
-                "MedicalIntangible"
-            ],
-            activeIngredient: [
-                "Text"
-            ],
-            availableIn: [
-                "AdministrativeArea"
-            ],
-            maximumIntake: [
-                "MaximumDoseSchedule"
-            ],
-            strengthUnit: [
-                "Text"
-            ],
-            strengthValue: [
-                "Number"
-            ]
-        }
-    ],
-    [
-        "medicalintangible",
-        {
-            _id: "MedicalIntangible",
-            _name: "MedicalIntangible",
-            _parent: [
-                "MedicalEntity"
             ]
         }
     ],
@@ -6207,6 +5993,19 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "digitaldocument",
+        {
+            _id: "DigitalDocument",
+            _name: "DigitalDocument",
+            _parent: [
+                "CreativeWork"
+            ],
+            hasDigitalDocumentPermission: [
+                "DigitalDocumentPermission"
+            ]
+        }
+    ],
+    [
         "contactpage",
         {
             _id: "ContactPage",
@@ -6226,29 +6025,6 @@ export const schemaMap = new Map([
             ],
             trialDesign: [
                 "MedicalTrialDesign"
-            ]
-        }
-    ],
-    [
-        "doseschedule",
-        {
-            _id: "DoseSchedule",
-            _name: "DoseSchedule",
-            _parent: [
-                "MedicalIntangible"
-            ],
-            doseUnit: [
-                "Text"
-            ],
-            doseValue: [
-                "Number",
-                "QualitativeValue"
-            ],
-            frequency: [
-                "Text"
-            ],
-            targetPopulation: [
-                "Text"
             ]
         }
     ],
@@ -6286,12 +6062,12 @@ export const schemaMap = new Map([
                 "CreativeWork"
             ],
             activityDuration: [
-                "Duration",
-                "QualitativeValue"
+                "QuantitativeValue",
+                "Duration"
             ],
             activityFrequency: [
-                "QualitativeValue",
-                "Text"
+                "Text",
+                "QuantitativeValue"
             ],
             additionalVariable: [
                 "Text"
@@ -6300,19 +6076,19 @@ export const schemaMap = new Map([
                 "Text"
             ],
             intensity: [
-                "QualitativeValue",
-                "Text"
+                "Text",
+                "QuantitativeValue"
             ],
             repetitions: [
-                "QualitativeValue",
+                "QuantitativeValue",
                 "Number"
             ],
             restPeriods: [
                 "Text",
-                "QualitativeValue"
+                "QuantitativeValue"
             ],
             workload: [
-                "QualitativeValue",
+                "QuantitativeValue",
                 "Energy"
             ]
         }
@@ -6327,14 +6103,14 @@ export const schemaMap = new Map([
             ],
             associatedAnatomy: [
                 "SuperficialAnatomy",
-                "AnatomicalSystem",
-                "AnatomicalStructure"
+                "AnatomicalStructure",
+                "AnatomicalSystem"
             ],
             category: [
+                "URL",
                 "Text",
-                "PhysicalActivityCategory",
                 "Thing",
-                "URL"
+                "PhysicalActivityCategory"
             ],
             epidemiology: [
                 "Text"
@@ -6355,25 +6131,27 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "gardenstore",
+        "newsarticle",
         {
-            _id: "GardenStore",
-            _name: "GardenStore",
+            _id: "NewsArticle",
+            _name: "NewsArticle",
             _parent: [
-                "Store"
-            ]
-        }
-    ],
-    [
-        "medicalcause",
-        {
-            _id: "MedicalCause",
-            _name: "MedicalCause",
-            _parent: [
-                "MedicalEntity"
+                "Article"
             ],
-            causeOf: [
-                "MedicalEntity"
+            dateline: [
+                "Text"
+            ],
+            printColumn: [
+                "Text"
+            ],
+            printEdition: [
+                "Text"
+            ],
+            printPage: [
+                "Text"
+            ],
+            printSection: [
+                "Text"
             ]
         }
     ],
@@ -6386,8 +6164,8 @@ export const schemaMap = new Map([
                 "Intangible"
             ],
             dateIssued: [
-                "DateTime",
-                "Date"
+                "Date",
+                "DateTime"
             ],
             issuedBy: [
                 "Organization"
@@ -6402,17 +6180,17 @@ export const schemaMap = new Map([
                 "Text"
             ],
             ticketToken: [
-                "URL",
-                "Text"
+                "Text",
+                "URL"
             ],
             totalPrice: [
-                "PriceSpecification",
                 "Number",
+                "PriceSpecification",
                 "Text"
             ],
             underName: [
-                "Organization",
-                "Person"
+                "Person",
+                "Organization"
             ]
         }
     ],
@@ -6426,9 +6204,9 @@ export const schemaMap = new Map([
                 "MedicalOrganization"
             ],
             availableService: [
-                "MedicalTest",
                 "MedicalTherapy",
-                "MedicalProcedure"
+                "MedicalProcedure",
+                "MedicalTest"
             ],
             medicalSpecialty: [
                 "MedicalSpecialty"
@@ -6490,8 +6268,8 @@ export const schemaMap = new Map([
                 "Text"
             ],
             elevation: [
-                "Number",
-                "Text"
+                "Text",
+                "Number"
             ],
             line: [
                 "Text"
@@ -6517,8 +6295,47 @@ export const schemaMap = new Map([
                 "Language"
             ],
             touristType: [
-                "Audience",
+                "Text",
+                "Audience"
+            ]
+        }
+    ],
+    [
+        "musicrelease",
+        {
+            _id: "MusicRelease",
+            _name: "MusicRelease",
+            _parent: [
+                "MusicPlaylist"
+            ],
+            catalogNumber: [
                 "Text"
+            ],
+            creditedTo: [
+                "Person",
+                "Organization"
+            ],
+            duration: [
+                "Duration"
+            ],
+            musicReleaseFormat: [
+                "MusicReleaseFormatType"
+            ],
+            recordLabel: [
+                "Organization"
+            ],
+            releaseOf: [
+                "MusicAlbum"
+            ]
+        }
+    ],
+    [
+        "saleevent",
+        {
+            _id: "SaleEvent",
+            _name: "SaleEvent",
+            _parent: [
+                "Event"
             ]
         }
     ],
@@ -6531,8 +6348,8 @@ export const schemaMap = new Map([
                 "Intangible"
             ],
             seatingType: [
-                "Text",
-                "QualitativeValue"
+                "QualitativeValue",
+                "Text"
             ],
             seatNumber: [
                 "Text"
@@ -6546,21 +6363,51 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "businessaudience",
+        "bedandbreakfast",
         {
-            _id: "BusinessAudience",
-            _name: "BusinessAudience",
+            _id: "BedAndBreakfast",
+            _name: "BedAndBreakfast",
             _parent: [
+                "LodgingBusiness"
+            ]
+        }
+    ],
+    [
+        "lodgingbusiness",
+        {
+            _id: "LodgingBusiness",
+            _name: "LodgingBusiness",
+            _parent: [
+                "LocalBusiness"
+            ],
+            amenityFeature: [
+                "LocationFeatureSpecification"
+            ],
+            audience: [
                 "Audience"
             ],
-            numberOfEmployees: [
+            availableLanguage: [
+                "Text",
+                "Language"
+            ],
+            checkinTime: [
+                "DateTime",
+                "Time"
+            ],
+            checkoutTime: [
+                "Time",
+                "DateTime"
+            ],
+            numberOfRooms: [
+                "Number",
                 "QuantitativeValue"
             ],
-            yearlyRevenue: [
-                "QuantitativeValue"
+            petsAllowed: [
+                "Text",
+                "Boolean"
             ],
-            yearsInOperation: [
-                "QuantitativeValue"
+            starRating: [
+                "Rating"
             ]
         }
     ],
@@ -6619,31 +6466,27 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "musicrelease",
+        "drugstrength",
         {
-            _id: "MusicRelease",
-            _name: "MusicRelease",
+            _id: "DrugStrength",
+            _name: "DrugStrength",
             _parent: [
-                "MusicPlaylist"
+                "MedicalIntangible"
             ],
-            catalogNumber: [
+            activeIngredient: [
                 "Text"
             ],
-            creditedTo: [
-                "Person",
-                "Organization"
+            availableIn: [
+                "AdministrativeArea"
             ],
-            duration: [
-                "Duration"
+            maximumIntake: [
+                "MaximumDoseSchedule"
             ],
-            musicReleaseFormat: [
-                "MusicReleaseFormatType"
+            strengthUnit: [
+                "Text"
             ],
-            recordLabel: [
-                "Organization"
-            ],
-            releaseOf: [
-                "MusicAlbum"
+            strengthValue: [
+                "Number"
             ]
         }
     ],
@@ -6662,9 +6505,9 @@ export const schemaMap = new Map([
                 "Boolean"
             ],
             legalStatus: [
-                "Text",
+                "DrugLegalStatus",
                 "MedicalEnumeration",
-                "DrugLegalStatus"
+                "Text"
             ],
             manufacturer: [
                 "Organization"
@@ -6689,6 +6532,16 @@ export const schemaMap = new Map([
             ],
             targetPopulation: [
                 "Text"
+            ]
+        }
+    ],
+    [
+        "distance",
+        {
+            _id: "Distance",
+            _name: "Distance",
+            _parent: [
+                "Quantity"
             ]
         }
     ],
@@ -6733,44 +6586,6 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "radioseries",
-        {
-            _id: "RadioSeries",
-            _name: "RadioSeries",
-            _parent: [
-                "CreativeWorkSeries"
-            ],
-            actor: [
-                "Person"
-            ],
-            containsSeason: [
-                "CreativeWorkSeason"
-            ],
-            director: [
-                "Person"
-            ],
-            episode: [
-                "Episode"
-            ],
-            musicBy: [
-                "MusicGroup",
-                "Person"
-            ],
-            numberOfEpisodes: [
-                "Integer"
-            ],
-            numberOfSeasons: [
-                "Integer"
-            ],
-            productionCompany: [
-                "Organization"
-            ],
-            trailer: [
-                "VideoObject"
-            ]
-        }
-    ],
-    [
         "videogameseries",
         {
             _id: "VideoGameSeries",
@@ -6800,18 +6615,18 @@ export const schemaMap = new Map([
                 "Thing"
             ],
             gameLocation: [
+                "Place",
                 "PostalAddress",
-                "URL",
-                "Place"
+                "URL"
             ],
             gamePlatform: [
-                "Thing",
+                "Text",
                 "URL",
-                "Text"
+                "Thing"
             ],
             musicBy: [
-                "MusicGroup",
-                "Person"
+                "Person",
+                "MusicGroup"
             ],
             numberOfEpisodes: [
                 "Integer"
@@ -6855,8 +6670,8 @@ export const schemaMap = new Map([
                 "Person"
             ],
             musicBy: [
-                "MusicGroup",
-                "Person"
+                "Person",
+                "MusicGroup"
             ],
             thumbnail: [
                 "ImageObject"
@@ -6873,6 +6688,44 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "radioseries",
+        {
+            _id: "RadioSeries",
+            _name: "RadioSeries",
+            _parent: [
+                "CreativeWorkSeries"
+            ],
+            actor: [
+                "Person"
+            ],
+            containsSeason: [
+                "CreativeWorkSeason"
+            ],
+            director: [
+                "Person"
+            ],
+            episode: [
+                "Episode"
+            ],
+            musicBy: [
+                "Person",
+                "MusicGroup"
+            ],
+            numberOfEpisodes: [
+                "Integer"
+            ],
+            numberOfSeasons: [
+                "Integer"
+            ],
+            productionCompany: [
+                "Organization"
+            ],
+            trailer: [
+                "VideoObject"
+            ]
+        }
+    ],
+    [
         "musicgroup",
         {
             _id: "MusicGroup",
@@ -6884,12 +6737,12 @@ export const schemaMap = new Map([
                 "MusicAlbum"
             ],
             genre: [
-                "Text",
-                "URL"
+                "URL",
+                "Text"
             ],
             track: [
-                "MusicRecording",
-                "ItemList"
+                "ItemList",
+                "MusicRecording"
             ]
         }
     ],
@@ -6912,24 +6765,60 @@ export const schemaMap = new Map([
                 "InteractAction"
             ],
             followee: [
-                "Organization",
-                "Person"
+                "Person",
+                "Organization"
             ]
         }
     ],
     [
-        "ddxelement",
+        "anatomicalsystem",
         {
-            _id: "DDxElement",
-            _name: "DDxElement",
+            _id: "AnatomicalSystem",
+            _name: "AnatomicalSystem",
             _parent: [
-                "MedicalIntangible"
+                "MedicalEntity"
             ],
-            diagnosis: [
+            associatedPathophysiology: [
+                "Text"
+            ],
+            comprisedOf: [
+                "AnatomicalSystem",
+                "AnatomicalStructure"
+            ],
+            relatedCondition: [
                 "MedicalCondition"
             ],
-            distinguishingSign: [
-                "MedicalSignOrSymptom"
+            relatedStructure: [
+                "AnatomicalStructure"
+            ],
+            relatedTherapy: [
+                "MedicalTherapy"
+            ]
+        }
+    ],
+    [
+        "superficialanatomy",
+        {
+            _id: "SuperficialAnatomy",
+            _name: "SuperficialAnatomy",
+            _parent: [
+                "MedicalEntity"
+            ],
+            associatedPathophysiology: [
+                "Text"
+            ],
+            relatedAnatomy: [
+                "AnatomicalStructure",
+                "AnatomicalSystem"
+            ],
+            relatedCondition: [
+                "MedicalCondition"
+            ],
+            relatedTherapy: [
+                "MedicalTherapy"
+            ],
+            significance: [
+                "Text"
             ]
         }
     ],
@@ -6981,8 +6870,8 @@ export const schemaMap = new Map([
                 "Event"
             ],
             courseMode: [
-                "URL",
-                "Text"
+                "Text",
+                "URL"
             ],
             instructor: [
                 "Person"
@@ -7051,15 +6940,53 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "investmentordeposit",
+        "webpageelement",
         {
-            _id: "InvestmentOrDeposit",
-            _name: "InvestmentOrDeposit",
+            _id: "WebPageElement",
+            _name: "WebPageElement",
             _parent: [
-                "FinancialProduct"
+                "CreativeWork"
             ],
-            amount: [
-                "MonetaryAmount",
+            cssSelector: [
+                "CssSelectorType"
+            ],
+            xpath: [
+                "XPathType"
+            ]
+        }
+    ],
+    [
+        "financialservice",
+        {
+            _id: "FinancialService",
+            _name: "FinancialService",
+            _parent: [
+                "LocalBusiness"
+            ],
+            feesAndCommissionsSpecification: [
+                "URL",
+                "Text"
+            ]
+        }
+    ],
+    [
+        "financialproduct",
+        {
+            _id: "FinancialProduct",
+            _name: "FinancialProduct",
+            _parent: [
+                "Service"
+            ],
+            annualPercentageRate: [
+                "Number",
+                "QuantitativeValue"
+            ],
+            feesAndCommissionsSpecification: [
+                "URL",
+                "Text"
+            ],
+            interestRate: [
+                "QuantitativeValue",
                 "Number"
             ]
         }
@@ -7071,6 +6998,21 @@ export const schemaMap = new Map([
             _name: "ShoeStore",
             _parent: [
                 "Store"
+            ]
+        }
+    ],
+    [
+        "datafeed",
+        {
+            _id: "DataFeed",
+            _name: "DataFeed",
+            _parent: [
+                "Dataset"
+            ],
+            dataFeedElement: [
+                "DataFeedItem",
+                "Text",
+                "Thing"
             ]
         }
     ],
@@ -7103,19 +7045,44 @@ export const schemaMap = new Map([
                 "Offer"
             ],
             highPrice: [
-                "Text",
-                "Number"
+                "Number",
+                "Text"
             ],
             lowPrice: [
-                "Text",
-                "Number"
+                "Number",
+                "Text"
             ],
             offerCount: [
                 "Integer"
             ],
             offers: [
-                "Offer",
-                "Demand"
+                "Demand",
+                "Offer"
+            ]
+        }
+    ],
+    [
+        "alignmentobject",
+        {
+            _id: "AlignmentObject",
+            _name: "AlignmentObject",
+            _parent: [
+                "Intangible"
+            ],
+            alignmentType: [
+                "Text"
+            ],
+            educationalFramework: [
+                "Text"
+            ],
+            targetDescription: [
+                "Text"
+            ],
+            targetName: [
+                "Text"
+            ],
+            targetUrl: [
+                "URL"
             ]
         }
     ],
@@ -7135,61 +7102,23 @@ export const schemaMap = new Map([
             _id: "Course",
             _name: "Course",
             _parent: [
-                "CreativeWork"
+                "CreativeWork",
+                "LearningResource"
             ],
             courseCode: [
                 "Text"
             ],
             coursePrerequisites: [
                 "AlignmentObject",
-                "Text",
-                "Course"
+                "Course",
+                "Text"
             ],
             educationalCredentialAwarded: [
-                "Text",
-                "URL"
+                "URL",
+                "Text"
             ],
             hasCourseInstance: [
                 "CourseInstance"
-            ]
-        }
-    ],
-    [
-        "lodgingbusiness",
-        {
-            _id: "LodgingBusiness",
-            _name: "LodgingBusiness",
-            _parent: [
-                "LocalBusiness"
-            ],
-            amenityFeature: [
-                "LocationFeatureSpecification"
-            ],
-            audience: [
-                "Audience"
-            ],
-            availableLanguage: [
-                "Text",
-                "Language"
-            ],
-            checkinTime: [
-                "Time",
-                "DateTime"
-            ],
-            checkoutTime: [
-                "Time",
-                "DateTime"
-            ],
-            numberOfRooms: [
-                "QuantitativeValue",
-                "Number"
-            ],
-            petsAllowed: [
-                "Text",
-                "Boolean"
-            ],
-            starRating: [
-                "Rating"
             ]
         }
     ],
@@ -7225,12 +7154,12 @@ export const schemaMap = new Map([
                 "CreativeWork"
             ],
             pageEnd: [
-                "Text",
-                "Integer"
-            ],
-            pageStart: [
                 "Integer",
                 "Text"
+            ],
+            pageStart: [
+                "Text",
+                "Integer"
             ],
             pagination: [
                 "Text"
@@ -7246,19 +7175,29 @@ export const schemaMap = new Map([
                 "CreativeWork"
             ],
             pageEnd: [
-                "Text",
-                "Integer"
-            ],
-            pageStart: [
                 "Integer",
                 "Text"
+            ],
+            pageStart: [
+                "Text",
+                "Integer"
             ],
             pagination: [
                 "Text"
             ],
             volumeNumber: [
-                "Text",
-                "Integer"
+                "Integer",
+                "Text"
+            ]
+        }
+    ],
+    [
+        "mosque",
+        {
+            _id: "Mosque",
+            _name: "Mosque",
+            _parent: [
+                "PlaceOfWorship"
             ]
         }
     ],
@@ -7328,6 +7267,71 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "musiccomposition",
+        {
+            _id: "MusicComposition",
+            _name: "MusicComposition",
+            _parent: [
+                "CreativeWork"
+            ],
+            composer: [
+                "Person",
+                "Organization"
+            ],
+            firstPerformance: [
+                "Event"
+            ],
+            includedComposition: [
+                "MusicComposition"
+            ],
+            iswcCode: [
+                "Text"
+            ],
+            lyricist: [
+                "Person"
+            ],
+            lyrics: [
+                "CreativeWork"
+            ],
+            musicalKey: [
+                "Text"
+            ],
+            musicArrangement: [
+                "MusicComposition"
+            ],
+            musicCompositionForm: [
+                "Text"
+            ],
+            recordedAs: [
+                "MusicRecording"
+            ]
+        }
+    ],
+    [
+        "school",
+        {
+            _id: "School",
+            _name: "School",
+            _parent: [
+                "EducationalOrganization"
+            ]
+        }
+    ],
+    [
+        "educationalorganization",
+        {
+            _id: "EducationalOrganization",
+            _name: "EducationalOrganization",
+            _parent: [
+                "Organization",
+                "CivicStructure"
+            ],
+            alumni: [
+                "Person"
+            ]
+        }
+    ],
+    [
         "photograph",
         {
             _id: "Photograph",
@@ -7338,15 +7342,12 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "replyaction",
+        "continent",
         {
-            _id: "ReplyAction",
-            _name: "ReplyAction",
+            _id: "Continent",
+            _name: "Continent",
             _parent: [
-                "CommunicateAction"
-            ],
-            resultComment: [
-                "Comment"
+                "Landform"
             ]
         }
     ],
@@ -7371,12 +7372,95 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "propertyvaluespecification",
+        {
+            _id: "PropertyValueSpecification",
+            _name: "PropertyValueSpecification",
+            _parent: [
+                "Intangible"
+            ],
+            defaultValue: [
+                "Thing",
+                "Text"
+            ],
+            maxValue: [
+                "Number"
+            ],
+            minValue: [
+                "Number"
+            ],
+            multipleValues: [
+                "Boolean"
+            ],
+            readonlyValue: [
+                "Boolean"
+            ],
+            stepValue: [
+                "Number"
+            ],
+            valueMaxLength: [
+                "Number"
+            ],
+            valueMinLength: [
+                "Number"
+            ],
+            valueName: [
+                "Text"
+            ],
+            valuePattern: [
+                "Text"
+            ],
+            valueRequired: [
+                "Boolean"
+            ]
+        }
+    ],
+    [
         "maximumdoseschedule",
         {
             _id: "MaximumDoseSchedule",
             _name: "MaximumDoseSchedule",
             _parent: [
                 "DoseSchedule"
+            ]
+        }
+    ],
+    [
+        "doseschedule",
+        {
+            _id: "DoseSchedule",
+            _name: "DoseSchedule",
+            _parent: [
+                "MedicalIntangible"
+            ],
+            doseUnit: [
+                "Text"
+            ],
+            doseValue: [
+                "Number",
+                "QualitativeValue"
+            ],
+            frequency: [
+                "Text"
+            ],
+            targetPopulation: [
+                "Text"
+            ]
+        }
+    ],
+    [
+        "ddxelement",
+        {
+            _id: "DDxElement",
+            _name: "DDxElement",
+            _parent: [
+                "MedicalIntangible"
+            ],
+            diagnosis: [
+                "MedicalCondition"
+            ],
+            distinguishingSign: [
+                "MedicalSignOrSymptom"
             ]
         }
     ],
@@ -7404,16 +7488,6 @@ export const schemaMap = new Map([
             ],
             orderQuantity: [
                 "Number"
-            ]
-        }
-    ],
-    [
-        "distance",
-        {
-            _id: "Distance",
-            _name: "Distance",
-            _parent: [
-                "Quantity"
             ]
         }
     ],
@@ -7448,14 +7522,22 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "dentist",
+        "preschool",
         {
-            _id: "Dentist",
-            _name: "Dentist",
+            _id: "Preschool",
+            _name: "Preschool",
             _parent: [
-                "LocalBusiness",
-                "MedicalOrganization",
-                "MedicalBusiness"
+                "EducationalOrganization"
+            ]
+        }
+    ],
+    [
+        "howtotool",
+        {
+            _id: "HowToTool",
+            _name: "HowToTool",
+            _parent: [
+                "HowToItem"
             ]
         }
     ],
@@ -7468,23 +7550,8 @@ export const schemaMap = new Map([
                 "TradeAction"
             ],
             seller: [
-                "Organization",
-                "Person"
-            ]
-        }
-    ],
-    [
-        "datafeed",
-        {
-            _id: "DataFeed",
-            _name: "DataFeed",
-            _parent: [
-                "Dataset"
-            ],
-            dataFeedElement: [
-                "Text",
-                "DataFeedItem",
-                "Thing"
+                "Person",
+                "Organization"
             ]
         }
     ],
@@ -7500,15 +7567,15 @@ export const schemaMap = new Map([
                 "Text"
             ],
             broadcastFrequency: [
-                "BroadcastFrequencySpecification",
-                "Text"
+                "Text",
+                "BroadcastFrequencySpecification"
             ],
             broadcastServiceTier: [
                 "Text"
             ],
             genre: [
-                "Text",
-                "URL"
+                "URL",
+                "Text"
             ],
             inBroadcastLineup: [
                 "CableOrSatelliteService"
@@ -7537,9 +7604,9 @@ export const schemaMap = new Map([
                 "Intangible"
             ],
             estimatedSalary: [
-                "Number",
+                "MonetaryAmount",
                 "MonetaryAmountDistribution",
-                "MonetaryAmount"
+                "Number"
             ],
             experienceRequirements: [
                 "Text"
@@ -7562,36 +7629,6 @@ export const schemaMap = new Map([
             _name: "CableOrSatelliteService",
             _parent: [
                 "Service"
-            ]
-        }
-    ],
-    [
-        "nerve",
-        {
-            _id: "Nerve",
-            _name: "Nerve",
-            _parent: [
-                "AnatomicalStructure"
-            ],
-            nerveMotor: [
-                "Muscle"
-            ],
-            sensoryUnit: [
-                "SuperficialAnatomy",
-                "AnatomicalStructure"
-            ],
-            sourcedFrom: [
-                "BrainStructure"
-            ]
-        }
-    ],
-    [
-        "brainstructure",
-        {
-            _id: "BrainStructure",
-            _name: "BrainStructure",
-            _parent: [
-                "AnatomicalStructure"
             ]
         }
     ],
@@ -7676,26 +7713,29 @@ export const schemaMap = new Map([
                 "Event"
             ],
             awayTeam: [
-                "Person",
-                "SportsTeam"
-            ],
-            competitor: [
-                "Person",
-                "SportsTeam"
-            ],
-            homeTeam: [
                 "SportsTeam",
                 "Person"
+            ],
+            competitor: [
+                "SportsTeam",
+                "Person"
+            ],
+            homeTeam: [
+                "Person",
+                "SportsTeam"
             ]
         }
     ],
     [
-        "continent",
+        "replyaction",
         {
-            _id: "Continent",
-            _name: "Continent",
+            _id: "ReplyAction",
+            _name: "ReplyAction",
             _parent: [
-                "Landform"
+                "CommunicateAction"
+            ],
+            resultComment: [
+                "Comment"
             ]
         }
     ],
@@ -7723,16 +7763,6 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "bodyofwater",
-        {
-            _id: "BodyOfWater",
-            _name: "BodyOfWater",
-            _parent: [
-                "Landform"
-            ]
-        }
-    ],
-    [
         "diet",
         {
             _id: "Diet",
@@ -7745,8 +7775,8 @@ export const schemaMap = new Map([
                 "Text"
             ],
             endorsers: [
-                "Person",
-                "Organization"
+                "Organization",
+                "Person"
             ],
             expertConsiderations: [
                 "Text"
@@ -7776,8 +7806,8 @@ export const schemaMap = new Map([
                 "Text"
             ],
             elevation: [
-                "Number",
-                "Text"
+                "Text",
+                "Number"
             ],
             latitude: [
                 "Number",
@@ -7799,6 +7829,67 @@ export const schemaMap = new Map([
             _name: "OfferCatalog",
             _parent: [
                 "ItemList"
+            ]
+        }
+    ],
+    [
+        "loanorcredit",
+        {
+            _id: "LoanOrCredit",
+            _name: "LoanOrCredit",
+            _parent: [
+                "FinancialProduct"
+            ],
+            amount: [
+                "Number",
+                "MonetaryAmount"
+            ],
+            currency: [
+                "Text"
+            ],
+            loanTerm: [
+                "QuantitativeValue"
+            ],
+            requiredCollateral: [
+                "Text",
+                "Thing"
+            ]
+        }
+    ],
+    [
+        "collection",
+        {
+            _id: "Collection",
+            _name: "Collection",
+            _parent: [
+                "CreativeWork"
+            ]
+        }
+    ],
+    [
+        "typeandquantitynode",
+        {
+            _id: "TypeAndQuantityNode",
+            _name: "TypeAndQuantityNode",
+            _parent: [
+                "StructuredValue"
+            ],
+            amountOfThisGood: [
+                "Number"
+            ],
+            businessFunction: [
+                "BusinessFunction"
+            ],
+            typeOfGood: [
+                "Service",
+                "Product"
+            ],
+            unitCode: [
+                "Text",
+                "URL"
+            ],
+            unitText: [
+                "Text"
             ]
         }
     ],
@@ -7846,97 +7937,12 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "superficialanatomy",
-        {
-            _id: "SuperficialAnatomy",
-            _name: "SuperficialAnatomy",
-            _parent: [
-                "MedicalEntity"
-            ],
-            associatedPathophysiology: [
-                "Text"
-            ],
-            relatedAnatomy: [
-                "AnatomicalStructure",
-                "AnatomicalSystem"
-            ],
-            relatedCondition: [
-                "MedicalCondition"
-            ],
-            relatedTherapy: [
-                "MedicalTherapy"
-            ],
-            significance: [
-                "Text"
-            ]
-        }
-    ],
-    [
-        "anatomicalsystem",
-        {
-            _id: "AnatomicalSystem",
-            _name: "AnatomicalSystem",
-            _parent: [
-                "MedicalEntity"
-            ],
-            associatedPathophysiology: [
-                "Text"
-            ],
-            comprisedOf: [
-                "AnatomicalSystem",
-                "AnatomicalStructure"
-            ],
-            relatedCondition: [
-                "MedicalCondition"
-            ],
-            relatedStructure: [
-                "AnatomicalStructure"
-            ],
-            relatedTherapy: [
-                "MedicalTherapy"
-            ]
-        }
-    ],
-    [
         "shoppingcenter",
         {
             _id: "ShoppingCenter",
             _name: "ShoppingCenter",
             _parent: [
                 "LocalBusiness"
-            ]
-        }
-    ],
-    [
-        "confirmaction",
-        {
-            _id: "ConfirmAction",
-            _name: "ConfirmAction",
-            _parent: [
-                "InformAction"
-            ]
-        }
-    ],
-    [
-        "informaction",
-        {
-            _id: "InformAction",
-            _name: "InformAction",
-            _parent: [
-                "CommunicateAction"
-            ],
-            event: [
-                "Event"
-            ]
-        }
-    ],
-    [
-        "howtotool",
-        {
-            _id: "HowToTool",
-            _name: "HowToTool",
-            _parent: [
-                "HowToItem"
             ]
         }
     ],
@@ -8043,12 +8049,32 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "medicalcontraindication",
+        "museum",
         {
-            _id: "MedicalContraindication",
-            _name: "MedicalContraindication",
+            _id: "Museum",
+            _name: "Museum",
             _parent: [
-                "MedicalEntity"
+                "CivicStructure"
+            ]
+        }
+    ],
+    [
+        "beautysalon",
+        {
+            _id: "BeautySalon",
+            _name: "BeautySalon",
+            _parent: [
+                "HealthAndBeautyBusiness"
+            ]
+        }
+    ],
+    [
+        "healthandbeautybusiness",
+        {
+            _id: "HealthAndBeautyBusiness",
+            _name: "HealthAndBeautyBusiness",
+            _parent: [
+                "LocalBusiness"
             ]
         }
     ],
@@ -8141,31 +8167,11 @@ export const schemaMap = new Map([
                 "Date"
             ],
             dateModified: [
-                "Date",
-                "DateTime"
+                "DateTime",
+                "Date"
             ],
             item: [
                 "Thing"
-            ]
-        }
-    ],
-    [
-        "cityhall",
-        {
-            _id: "CityHall",
-            _name: "CityHall",
-            _parent: [
-                "GovernmentBuilding"
-            ]
-        }
-    ],
-    [
-        "governmentbuilding",
-        {
-            _id: "GovernmentBuilding",
-            _name: "GovernmentBuilding",
-            _parent: [
-                "CivicStructure"
             ]
         }
     ],
@@ -8185,13 +8191,13 @@ export const schemaMap = new Map([
             _id: "Physician",
             _name: "Physician",
             _parent: [
-                "MedicalOrganization",
-                "MedicalBusiness"
+                "MedicalBusiness",
+                "MedicalOrganization"
             ],
             availableService: [
-                "MedicalTest",
                 "MedicalTherapy",
-                "MedicalProcedure"
+                "MedicalProcedure",
+                "MedicalTest"
             ],
             hospitalAffiliation: [
                 "Hospital"
@@ -8212,19 +8218,12 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "beddetails",
+        "conversation",
         {
-            _id: "BedDetails",
-            _name: "BedDetails",
+            _id: "Conversation",
+            _name: "Conversation",
             _parent: [
-                "Intangible"
-            ],
-            numberOfBeds: [
-                "Number"
-            ],
-            typeOfBed: [
-                "Text",
-                "BedType"
+                "CreativeWork"
             ]
         }
     ],
@@ -8239,39 +8238,26 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "distillery",
+        "ownershipinfo",
         {
-            _id: "Distillery",
-            _name: "Distillery",
-            _parent: [
-                "FoodEstablishment"
-            ]
-        }
-    ],
-    [
-        "typeandquantitynode",
-        {
-            _id: "TypeAndQuantityNode",
-            _name: "TypeAndQuantityNode",
+            _id: "OwnershipInfo",
+            _name: "OwnershipInfo",
             _parent: [
                 "StructuredValue"
             ],
-            amountOfThisGood: [
-                "Number"
+            acquiredFrom: [
+                "Organization",
+                "Person"
             ],
-            businessFunction: [
-                "BusinessFunction"
+            ownedFrom: [
+                "DateTime"
+            ],
+            ownedThrough: [
+                "DateTime"
             ],
             typeOfGood: [
-                "Product",
-                "Service"
-            ],
-            unitCode: [
-                "URL",
-                "Text"
-            ],
-            unitText: [
-                "Text"
+                "Service",
+                "Product"
             ]
         }
     ],
@@ -8296,8 +8282,8 @@ export const schemaMap = new Map([
                 "Duration"
             ],
             validFrom: [
-                "Date",
-                "DateTime"
+                "DateTime",
+                "Date"
             ],
             validIn: [
                 "AdministrativeArea"
@@ -8328,6 +8314,25 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "businessaudience",
+        {
+            _id: "BusinessAudience",
+            _name: "BusinessAudience",
+            _parent: [
+                "Audience"
+            ],
+            numberOfEmployees: [
+                "QuantitativeValue"
+            ],
+            yearlyRevenue: [
+                "QuantitativeValue"
+            ],
+            yearsInOperation: [
+                "QuantitativeValue"
+            ]
+        }
+    ],
+    [
         "volcano",
         {
             _id: "Volcano",
@@ -8338,12 +8343,36 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "cafeorcoffeeshop",
+        {
+            _id: "CafeOrCoffeeShop",
+            _name: "CafeOrCoffeeShop",
+            _parent: [
+                "FoodEstablishment"
+            ]
+        }
+    ],
+    [
         "medicalwebpage",
         {
             _id: "MedicalWebPage",
             _name: "MedicalWebPage",
             _parent: [
                 "WebPage"
+            ],
+            medicalAudience: [
+                "MedicalAudienceType",
+                "MedicalAudience"
+            ]
+        }
+    ],
+    [
+        "atlas",
+        {
+            _id: "Atlas",
+            _name: "Atlas",
+            _parent: [
+                "CreativeWork"
             ]
         }
     ],
@@ -8386,36 +8415,12 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "icecreamshop",
-        {
-            _id: "IceCreamShop",
-            _name: "IceCreamShop",
-            _parent: [
-                "FoodEstablishment"
-            ]
-        }
-    ],
-    [
         "insuranceagency",
         {
             _id: "InsuranceAgency",
             _name: "InsuranceAgency",
             _parent: [
                 "FinancialService"
-            ]
-        }
-    ],
-    [
-        "financialservice",
-        {
-            _id: "FinancialService",
-            _name: "FinancialService",
-            _parent: [
-                "LocalBusiness"
-            ],
-            feesAndCommissionsSpecification: [
-                "Text",
-                "URL"
             ]
         }
     ],
@@ -8437,12 +8442,23 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "seabodyofwater",
+        "stadiumorarena",
         {
-            _id: "SeaBodyOfWater",
-            _name: "SeaBodyOfWater",
+            _id: "StadiumOrArena",
+            _name: "StadiumOrArena",
             _parent: [
-                "BodyOfWater"
+                "CivicStructure",
+                "SportsActivityLocation"
+            ]
+        }
+    ],
+    [
+        "conveniencestore",
+        {
+            _id: "ConvenienceStore",
+            _name: "ConvenienceStore",
+            _parent: [
+                "Store"
             ]
         }
     ],
@@ -8463,31 +8479,6 @@ export const schemaMap = new Map([
             ],
             tributary: [
                 "AnatomicalStructure"
-            ]
-        }
-    ],
-    [
-        "alignmentobject",
-        {
-            _id: "AlignmentObject",
-            _name: "AlignmentObject",
-            _parent: [
-                "Intangible"
-            ],
-            alignmentType: [
-                "Text"
-            ],
-            educationalFramework: [
-                "Text"
-            ],
-            targetDescription: [
-                "Text"
-            ],
-            targetName: [
-                "Text"
-            ],
-            targetUrl: [
-                "URL"
             ]
         }
     ],
@@ -8522,8 +8513,8 @@ export const schemaMap = new Map([
             _id: "AutoPartsStore",
             _name: "AutoPartsStore",
             _parent: [
-                "AutomotiveBusiness",
-                "Store"
+                "Store",
+                "AutomotiveBusiness"
             ]
         }
     ],
@@ -8548,26 +8539,26 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "borrowaction",
+        {
+            _id: "BorrowAction",
+            _name: "BorrowAction",
+            _parent: [
+                "TransferAction"
+            ],
+            lender: [
+                "Person",
+                "Organization"
+            ]
+        }
+    ],
+    [
         "ligament",
         {
             _id: "Ligament",
             _name: "Ligament",
             _parent: [
                 "AnatomicalStructure"
-            ]
-        }
-    ],
-    [
-        "writeaction",
-        {
-            _id: "WriteAction",
-            _name: "WriteAction",
-            _parent: [
-                "CreateAction"
-            ],
-            inLanguage: [
-                "Language",
-                "Text"
             ]
         }
     ],
@@ -8658,6 +8649,19 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "mobileapplication",
+        {
+            _id: "MobileApplication",
+            _name: "MobileApplication",
+            _parent: [
+                "SoftwareApplication"
+            ],
+            carrierRequirements: [
+                "Text"
+            ]
+        }
+    ],
+    [
         "downloadaction",
         {
             _id: "DownloadAction",
@@ -8710,22 +8714,22 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "healthandbeautybusiness",
-        {
-            _id: "HealthAndBeautyBusiness",
-            _name: "HealthAndBeautyBusiness",
-            _parent: [
-                "LocalBusiness"
-            ]
-        }
-    ],
-    [
         "animalshelter",
         {
             _id: "AnimalShelter",
             _name: "AnimalShelter",
             _parent: [
                 "LocalBusiness"
+            ]
+        }
+    ],
+    [
+        "textdigitaldocument",
+        {
+            _id: "TextDigitalDocument",
+            _name: "TextDigitalDocument",
+            _parent: [
+                "DigitalDocument"
             ]
         }
     ],
@@ -8776,21 +8780,17 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "suite",
+        "hotelroom",
         {
-            _id: "Suite",
-            _name: "Suite",
+            _id: "HotelRoom",
+            _name: "HotelRoom",
             _parent: [
-                "Accommodation"
+                "Room"
             ],
             bed: [
-                "BedType",
                 "BedDetails",
+                "BedType",
                 "Text"
-            ],
-            numberOfRooms: [
-                "QuantitativeValue",
-                "Number"
             ],
             occupancy: [
                 "QuantitativeValue"
@@ -8806,8 +8806,30 @@ export const schemaMap = new Map([
                 "Accommodation"
             ],
             numberOfRooms: [
-                "QuantitativeValue",
-                "Number"
+                "Number",
+                "QuantitativeValue"
+            ],
+            occupancy: [
+                "QuantitativeValue"
+            ]
+        }
+    ],
+    [
+        "suite",
+        {
+            _id: "Suite",
+            _name: "Suite",
+            _parent: [
+                "Accommodation"
+            ],
+            bed: [
+                "BedDetails",
+                "BedType",
+                "Text"
+            ],
+            numberOfRooms: [
+                "Number",
+                "QuantitativeValue"
             ],
             occupancy: [
                 "QuantitativeValue"
@@ -8823,8 +8845,8 @@ export const schemaMap = new Map([
                 "House"
             ],
             numberOfRooms: [
-                "QuantitativeValue",
-                "Number"
+                "Number",
+                "QuantitativeValue"
             ],
             occupancy: [
                 "QuantitativeValue"
@@ -8840,8 +8862,8 @@ export const schemaMap = new Map([
                 "Accommodation"
             ],
             numberOfRooms: [
-                "QuantitativeValue",
-                "Number"
+                "Number",
+                "QuantitativeValue"
             ]
         }
     ],
@@ -8897,9 +8919,9 @@ export const schemaMap = new Map([
                 "Intangible"
             ],
             grantee: [
-                "Person",
                 "ContactPoint",
                 "Organization",
+                "Person",
                 "Audience"
             ],
             permissionType: [
@@ -8980,6 +9002,23 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "beddetails",
+        {
+            _id: "BedDetails",
+            _name: "BedDetails",
+            _parent: [
+                "Intangible"
+            ],
+            numberOfBeds: [
+                "Number"
+            ],
+            typeOfBed: [
+                "BedType",
+                "Text"
+            ]
+        }
+    ],
+    [
         "rsvpaction",
         {
             _id: "RsvpAction",
@@ -8999,12 +9038,15 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "generalcontractor",
+        "informaction",
         {
-            _id: "GeneralContractor",
-            _name: "GeneralContractor",
+            _id: "InformAction",
+            _name: "InformAction",
             _parent: [
-                "HomeAndConstructionBusiness"
+                "CommunicateAction"
+            ],
+            event: [
+                "Event"
             ]
         }
     ],
@@ -9039,12 +9081,18 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "waterfall",
+        "busorcoach",
         {
-            _id: "Waterfall",
-            _name: "Waterfall",
+            _id: "BusOrCoach",
+            _name: "BusOrCoach",
             _parent: [
-                "BodyOfWater"
+                "Vehicle"
+            ],
+            acrissCode: [
+                "Text"
+            ],
+            roofLoad: [
+                "QuantitativeValue"
             ]
         }
     ],
@@ -9082,6 +9130,19 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "performaction",
+        {
+            _id: "PerformAction",
+            _name: "PerformAction",
+            _parent: [
+                "PlayAction"
+            ],
+            entertainmentBusiness: [
+                "EntertainmentBusiness"
+            ]
+        }
+    ],
+    [
         "medicalguidelinecontraindication",
         {
             _id: "MedicalGuidelineContraindication",
@@ -9105,12 +9166,16 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "autowash",
+        "investmentordeposit",
         {
-            _id: "AutoWash",
-            _name: "AutoWash",
+            _id: "InvestmentOrDeposit",
+            _name: "InvestmentOrDeposit",
             _parent: [
-                "AutomotiveBusiness"
+                "FinancialProduct"
+            ],
+            amount: [
+                "Number",
+                "MonetaryAmount"
             ]
         }
     ],
@@ -9125,22 +9190,22 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "eventvenue",
+        "distillery",
         {
-            _id: "EventVenue",
-            _name: "EventVenue",
+            _id: "Distillery",
+            _name: "Distillery",
             _parent: [
-                "CivicStructure"
+                "FoodEstablishment"
             ]
         }
     ],
     [
-        "museum",
+        "medicalcontraindication",
         {
-            _id: "Museum",
-            _name: "Museum",
+            _id: "MedicalContraindication",
+            _name: "MedicalContraindication",
             _parent: [
-                "CivicStructure"
+                "MedicalEntity"
             ]
         }
     ],
@@ -9181,6 +9246,16 @@ export const schemaMap = new Map([
             _name: "AutoRepair",
             _parent: [
                 "AutomotiveBusiness"
+            ]
+        }
+    ],
+    [
+        "crematorium",
+        {
+            _id: "Crematorium",
+            _name: "Crematorium",
+            _parent: [
+                "CivicStructure"
             ]
         }
     ],
@@ -9333,6 +9408,16 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "datadownload",
+        {
+            _id: "DataDownload",
+            _name: "DataDownload",
+            _parent: [
+                "MediaObject"
+            ]
+        }
+    ],
+    [
         "cancelaction",
         {
             _id: "CancelAction",
@@ -9343,35 +9428,49 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "rentaction",
+        {
+            _id: "RentAction",
+            _name: "RentAction",
+            _parent: [
+                "TradeAction"
+            ],
+            landlord: [
+                "Organization",
+                "Person"
+            ],
+            realEstateAgent: [
+                "RealEstateAgent"
+            ]
+        }
+    ],
+    [
+        "joint",
+        {
+            _id: "Joint",
+            _name: "Joint",
+            _parent: [
+                "AnatomicalStructure"
+            ],
+            biomechnicalClass: [
+                "Text"
+            ],
+            functionalClass: [
+                "MedicalEntity",
+                "Text"
+            ],
+            structuralClass: [
+                "Text"
+            ]
+        }
+    ],
+    [
         "drawaction",
         {
             _id: "DrawAction",
             _name: "DrawAction",
             _parent: [
                 "CreateAction"
-            ]
-        }
-    ],
-    [
-        "conversation",
-        {
-            _id: "Conversation",
-            _name: "Conversation",
-            _parent: [
-                "CreativeWork"
-            ]
-        }
-    ],
-    [
-        "medicalguidelinerecommendation",
-        {
-            _id: "MedicalGuidelineRecommendation",
-            _name: "MedicalGuidelineRecommendation",
-            _parent: [
-                "MedicalGuideline"
-            ],
-            recommendationStrength: [
-                "Text"
             ]
         }
     ],
@@ -9416,6 +9515,19 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "druglegalstatus",
+        {
+            _id: "DrugLegalStatus",
+            _name: "DrugLegalStatus",
+            _parent: [
+                "MedicalIntangible"
+            ],
+            applicableLocation: [
+                "AdministrativeArea"
+            ]
+        }
+    ],
+    [
         "realestateagent",
         {
             _id: "RealEstateAgent",
@@ -9450,25 +9562,35 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "currencyconversionservice",
+        {
+            _id: "CurrencyConversionService",
+            _name: "CurrencyConversionService",
+            _parent: [
+                "FinancialProduct"
+            ]
+        }
+    ],
+    [
+        "medicalguidelinerecommendation",
+        {
+            _id: "MedicalGuidelineRecommendation",
+            _name: "MedicalGuidelineRecommendation",
+            _parent: [
+                "MedicalGuideline"
+            ],
+            recommendationStrength: [
+                "Text"
+            ]
+        }
+    ],
+    [
         "medicalsymptom",
         {
             _id: "MedicalSymptom",
             _name: "MedicalSymptom",
             _parent: [
                 "MedicalSignOrSymptom"
-            ]
-        }
-    ],
-    [
-        "performaction",
-        {
-            _id: "PerformAction",
-            _name: "PerformAction",
-            _parent: [
-                "PlayAction"
-            ],
-            entertainmentBusiness: [
-                "EntertainmentBusiness"
             ]
         }
     ],
@@ -9515,12 +9637,25 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "bookstore",
+        "educationalaudience",
         {
-            _id: "BookStore",
-            _name: "BookStore",
+            _id: "EducationalAudience",
+            _name: "EducationalAudience",
             _parent: [
-                "Store"
+                "Audience"
+            ],
+            educationalRole: [
+                "Text"
+            ]
+        }
+    ],
+    [
+        "danceevent",
+        {
+            _id: "DanceEvent",
+            _name: "DanceEvent",
+            _parent: [
+                "Event"
             ]
         }
     ],
@@ -9531,16 +9666,6 @@ export const schemaMap = new Map([
             _name: "OccupationalTherapy",
             _parent: [
                 "MedicalTherapy"
-            ]
-        }
-    ],
-    [
-        "collection",
-        {
-            _id: "Collection",
-            _name: "Collection",
-            _parent: [
-                "CreativeWork"
             ]
         }
     ],
@@ -9568,6 +9693,16 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "governmentbuilding",
+        {
+            _id: "GovernmentBuilding",
+            _name: "GovernmentBuilding",
+            _parent: [
+                "CivicStructure"
+            ]
+        }
+    ],
+    [
         "foodevent",
         {
             _id: "FoodEvent",
@@ -9584,6 +9719,35 @@ export const schemaMap = new Map([
             _name: "OutletStore",
             _parent: [
                 "Store"
+            ]
+        }
+    ],
+    [
+        "inviteaction",
+        {
+            _id: "InviteAction",
+            _name: "InviteAction",
+            _parent: [
+                "CommunicateAction"
+            ],
+            event: [
+                "Event"
+            ]
+        }
+    ],
+    [
+        "artery",
+        {
+            _id: "Artery",
+            _name: "Artery",
+            _parent: [
+                "Vessel"
+            ],
+            arterialBranch: [
+                "AnatomicalStructure"
+            ],
+            supplyTo: [
+                "AnatomicalStructure"
             ]
         }
     ],
@@ -9655,16 +9819,6 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "agreeaction",
-        {
-            _id: "AgreeAction",
-            _name: "AgreeAction",
-            _parent: [
-                "ReactAction"
-            ]
-        }
-    ],
-    [
         "businessevent",
         {
             _id: "BusinessEvent",
@@ -9690,8 +9844,8 @@ export const schemaMap = new Map([
             _id: "MedicalCode",
             _name: "MedicalCode",
             _parent: [
-                "CategoryCode",
-                "MedicalIntangible"
+                "MedicalIntangible",
+                "CategoryCode"
             ],
             codingSystem: [
                 "Text"
@@ -9699,42 +9853,19 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "druglegalstatus",
+        "audiobook",
         {
-            _id: "DrugLegalStatus",
-            _name: "DrugLegalStatus",
+            _id: "Audiobook",
+            _name: "Audiobook",
             _parent: [
-                "MedicalIntangible"
+                "Book",
+                "AudioObject"
             ],
-            applicableLocation: [
-                "AdministrativeArea"
-            ]
-        }
-    ],
-    [
-        "medicalconditionstage",
-        {
-            _id: "MedicalConditionStage",
-            _name: "MedicalConditionStage",
-            _parent: [
-                "MedicalIntangible"
+            duration: [
+                "Duration"
             ],
-            stageAsNumber: [
-                "Number"
-            ],
-            subStageSuffix: [
-                "Text"
-            ]
-        }
-    ],
-    [
-        "pharmacy",
-        {
-            _id: "Pharmacy",
-            _name: "Pharmacy",
-            _parent: [
-                "MedicalBusiness",
-                "MedicalOrganization"
+            readBy: [
+                "Person"
             ]
         }
     ],
@@ -9755,6 +9886,16 @@ export const schemaMap = new Map([
             _name: "InternetCafe",
             _parent: [
                 "LocalBusiness"
+            ]
+        }
+    ],
+    [
+        "theaterevent",
+        {
+            _id: "TheaterEvent",
+            _name: "TheaterEvent",
+            _parent: [
+                "Event"
             ]
         }
     ],
@@ -9809,12 +9950,15 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "dayspa",
+        "monetaryamountdistribution",
         {
-            _id: "DaySpa",
-            _name: "DaySpa",
+            _id: "MonetaryAmountDistribution",
+            _name: "MonetaryAmountDistribution",
             _parent: [
-                "HealthAndBeautyBusiness"
+                "QuantitativeValueDistribution"
+            ],
+            currency: [
+                "Text"
             ]
         }
     ],
@@ -9859,6 +10003,28 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "rentalcarreservation",
+        {
+            _id: "RentalCarReservation",
+            _name: "RentalCarReservation",
+            _parent: [
+                "Reservation"
+            ],
+            dropoffLocation: [
+                "Place"
+            ],
+            dropoffTime: [
+                "DateTime"
+            ],
+            pickupLocation: [
+                "Place"
+            ],
+            pickupTime: [
+                "DateTime"
+            ]
+        }
+    ],
+    [
         "artgallery",
         {
             _id: "ArtGallery",
@@ -9880,8 +10046,8 @@ export const schemaMap = new Map([
                 "GeoCoordinates"
             ],
             geoRadius: [
-                "Number",
                 "Text",
+                "Number",
                 "Distance"
             ]
         }
@@ -9893,19 +10059,6 @@ export const schemaMap = new Map([
             _name: "TattooParlor",
             _parent: [
                 "HealthAndBeautyBusiness"
-            ]
-        }
-    ],
-    [
-        "inviteaction",
-        {
-            _id: "InviteAction",
-            _name: "InviteAction",
-            _parent: [
-                "CommunicateAction"
-            ],
-            event: [
-                "Event"
             ]
         }
     ],
@@ -9923,42 +10076,14 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "audiobook",
+        "dentist",
         {
-            _id: "Audiobook",
-            _name: "Audiobook",
+            _id: "Dentist",
+            _name: "Dentist",
             _parent: [
-                "AudioObject",
-                "Book"
-            ],
-            duration: [
-                "Duration"
-            ],
-            readBy: [
-                "Person"
-            ]
-        }
-    ],
-    [
-        "stupidtype",
-        {
-            _id: "StupidType",
-            _name: "StupidType",
-            _parent: [
-                "Thing"
-            ],
-            stupidProperty: [
-                "QuantitativeValue"
-            ]
-        }
-    ],
-    [
-        "rejectaction",
-        {
-            _id: "RejectAction",
-            _name: "RejectAction",
-            _parent: [
-                "AllocateAction"
+                "MedicalOrganization",
+                "LocalBusiness",
+                "MedicalBusiness"
             ]
         }
     ],
@@ -9993,6 +10118,16 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "professionalservice",
+        {
+            _id: "ProfessionalService",
+            _name: "ProfessionalService",
+            _parent: [
+                "LocalBusiness"
+            ]
+        }
+    ],
+    [
         "energy",
         {
             _id: "Energy",
@@ -10003,22 +10138,22 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "rejectaction",
+        {
+            _id: "RejectAction",
+            _name: "RejectAction",
+            _parent: [
+                "AllocateAction"
+            ]
+        }
+    ],
+    [
         "resort",
         {
             _id: "Resort",
             _name: "Resort",
             _parent: [
                 "LodgingBusiness"
-            ]
-        }
-    ],
-    [
-        "datadownload",
-        {
-            _id: "DataDownload",
-            _name: "DataDownload",
-            _parent: [
-                "MediaObject"
             ]
         }
     ],
@@ -10043,12 +10178,16 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "atlas",
+        "writeaction",
         {
-            _id: "Atlas",
-            _name: "Atlas",
+            _id: "WriteAction",
+            _name: "WriteAction",
             _parent: [
-                "CreativeWork"
+                "CreateAction"
+            ],
+            inLanguage: [
+                "Language",
+                "Text"
             ]
         }
     ],
@@ -10073,38 +10212,6 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "rentalcarreservation",
-        {
-            _id: "RentalCarReservation",
-            _name: "RentalCarReservation",
-            _parent: [
-                "Reservation"
-            ],
-            dropoffLocation: [
-                "Place"
-            ],
-            dropoffTime: [
-                "DateTime"
-            ],
-            pickupLocation: [
-                "Place"
-            ],
-            pickupTime: [
-                "DateTime"
-            ]
-        }
-    ],
-    [
-        "cafeorcoffeeshop",
-        {
-            _id: "CafeOrCoffeeShop",
-            _name: "CafeOrCoffeeShop",
-            _parent: [
-                "FoodEstablishment"
-            ]
-        }
-    ],
-    [
         "notedigitaldocument",
         {
             _id: "NoteDigitalDocument",
@@ -10115,25 +10222,12 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "mobileapplication",
+        "drinkaction",
         {
-            _id: "MobileApplication",
-            _name: "MobileApplication",
+            _id: "DrinkAction",
+            _name: "DrinkAction",
             _parent: [
-                "SoftwareApplication"
-            ],
-            carrierRequirements: [
-                "Text"
-            ]
-        }
-    ],
-    [
-        "danceevent",
-        {
-            _id: "DanceEvent",
-            _name: "DanceEvent",
-            _parent: [
-                "Event"
+                "ConsumeAction"
             ]
         }
     ],
@@ -10144,6 +10238,16 @@ export const schemaMap = new Map([
             _name: "TennisComplex",
             _parent: [
                 "SportsActivityLocation"
+            ]
+        }
+    ],
+    [
+        "bookstore",
+        {
+            _id: "BookStore",
+            _name: "BookStore",
+            _parent: [
+                "Store"
             ]
         }
     ],
@@ -10163,8 +10267,8 @@ export const schemaMap = new Map([
             _id: "Campground",
             _name: "Campground",
             _parent: [
-                "LodgingBusiness",
-                "CivicStructure"
+                "CivicStructure",
+                "LodgingBusiness"
             ]
         }
     ],
@@ -10198,6 +10302,16 @@ export const schemaMap = new Map([
             ],
             question: [
                 "Question"
+            ]
+        }
+    ],
+    [
+        "researcher",
+        {
+            _id: "Researcher",
+            _name: "Researcher",
+            _parent: [
+                "Audience"
             ]
         }
     ],
@@ -10245,36 +10359,6 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "performingartstheater",
-        {
-            _id: "PerformingArtsTheater",
-            _name: "PerformingArtsTheater",
-            _parent: [
-                "CivicStructure"
-            ]
-        }
-    ],
-    [
-        "currencyconversionservice",
-        {
-            _id: "CurrencyConversionService",
-            _name: "CurrencyConversionService",
-            _parent: [
-                "FinancialProduct"
-            ]
-        }
-    ],
-    [
-        "roofingcontractor",
-        {
-            _id: "RoofingContractor",
-            _name: "RoofingContractor",
-            _parent: [
-                "HomeAndConstructionBusiness"
-            ]
-        }
-    ],
-    [
         "rvpark",
         {
             _id: "RVPark",
@@ -10295,23 +10379,35 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "stadiumorarena",
+        "hobbyshop",
         {
-            _id: "StadiumOrArena",
-            _name: "StadiumOrArena",
+            _id: "HobbyShop",
+            _name: "HobbyShop",
             _parent: [
-                "SportsActivityLocation",
-                "CivicStructure"
+                "Store"
             ]
         }
     ],
     [
-        "conveniencestore",
+        "seabodyofwater",
         {
-            _id: "ConvenienceStore",
-            _name: "ConvenienceStore",
+            _id: "SeaBodyOfWater",
+            _name: "SeaBodyOfWater",
             _parent: [
-                "Store"
+                "BodyOfWater"
+            ]
+        }
+    ],
+    [
+        "medicalcause",
+        {
+            _id: "MedicalCause",
+            _name: "MedicalCause",
+            _parent: [
+                "MedicalEntity"
+            ],
+            causeOf: [
+                "MedicalEntity"
             ]
         }
     ],
@@ -10341,6 +10437,7 @@ export const schemaMap = new Map([
             _id: "SkiResort",
             _name: "SkiResort",
             _parent: [
+                "Resort",
                 "SportsActivityLocation"
             ]
         }
@@ -10356,32 +10453,22 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "canal",
+        {
+            _id: "Canal",
+            _name: "Canal",
+            _parent: [
+                "BodyOfWater"
+            ]
+        }
+    ],
+    [
         "ngo",
         {
             _id: "NGO",
             _name: "NGO",
             _parent: [
                 "Organization"
-            ]
-        }
-    ],
-    [
-        "fmradiochannel",
-        {
-            _id: "FMRadioChannel",
-            _name: "FMRadioChannel",
-            _parent: [
-                "RadioChannel"
-            ]
-        }
-    ],
-    [
-        "radiochannel",
-        {
-            _id: "RadioChannel",
-            _name: "RadioChannel",
-            _parent: [
-                "BroadcastChannel"
             ]
         }
     ],
@@ -10416,6 +10503,16 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "barcode",
+        {
+            _id: "Barcode",
+            _name: "Barcode",
+            _parent: [
+                "ImageObject"
+            ]
+        }
+    ],
+    [
         "acceptaction",
         {
             _id: "AcceptAction",
@@ -10446,26 +10543,6 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "collectionpage",
-        {
-            _id: "CollectionPage",
-            _name: "CollectionPage",
-            _parent: [
-                "WebPage"
-            ]
-        }
-    ],
-    [
-        "saleevent",
-        {
-            _id: "SaleEvent",
-            _name: "SaleEvent",
-            _parent: [
-                "Event"
-            ]
-        }
-    ],
-    [
         "nightclub",
         {
             _id: "NightClub",
@@ -10486,18 +10563,12 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "artery",
+        "confirmaction",
         {
-            _id: "Artery",
-            _name: "Artery",
+            _id: "ConfirmAction",
+            _name: "ConfirmAction",
             _parent: [
-                "Vessel"
-            ],
-            arterialBranch: [
-                "AnatomicalStructure"
-            ],
-            supplyTo: [
-                "AnatomicalStructure"
+                "InformAction"
             ]
         }
     ],
@@ -10512,35 +10583,22 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "flightreservation",
-        {
-            _id: "FlightReservation",
-            _name: "FlightReservation",
-            _parent: [
-                "Reservation"
-            ],
-            boardingGroup: [
-                "Text"
-            ],
-            passengerPriorityStatus: [
-                "Text",
-                "QualitativeValue"
-            ],
-            passengerSequenceNumber: [
-                "Text"
-            ],
-            securityScreening: [
-                "Text"
-            ]
-        }
-    ],
-    [
         "publicswimmingpool",
         {
             _id: "PublicSwimmingPool",
             _name: "PublicSwimmingPool",
             _parent: [
                 "SportsActivityLocation"
+            ]
+        }
+    ],
+    [
+        "radiochannel",
+        {
+            _id: "RadioChannel",
+            _name: "RadioChannel",
+            _parent: [
+                "BroadcastChannel"
             ]
         }
     ],
@@ -10561,40 +10619,6 @@ export const schemaMap = new Map([
             _name: "Cemetery",
             _parent: [
                 "CivicStructure"
-            ]
-        }
-    ],
-    [
-        "borrowaction",
-        {
-            _id: "BorrowAction",
-            _name: "BorrowAction",
-            _parent: [
-                "TransferAction"
-            ],
-            lender: [
-                "Person",
-                "Organization"
-            ]
-        }
-    ],
-    [
-        "autodealer",
-        {
-            _id: "AutoDealer",
-            _name: "AutoDealer",
-            _parent: [
-                "AutomotiveBusiness"
-            ]
-        }
-    ],
-    [
-        "bedandbreakfast",
-        {
-            _id: "BedAndBreakfast",
-            _name: "BedAndBreakfast",
-            _parent: [
-                "LodgingBusiness"
             ]
         }
     ],
@@ -10639,6 +10663,16 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "roofingcontractor",
+        {
+            _id: "RoofingContractor",
+            _name: "RoofingContractor",
+            _parent: [
+                "HomeAndConstructionBusiness"
+            ]
+        }
+    ],
+    [
         "radioseason",
         {
             _id: "RadioSeason",
@@ -10655,19 +10689,6 @@ export const schemaMap = new Map([
             _name: "PsychologicalTreatment",
             _parent: [
                 "TherapeuticProcedure"
-            ]
-        }
-    ],
-    [
-        "orderaction",
-        {
-            _id: "OrderAction",
-            _name: "OrderAction",
-            _parent: [
-                "TradeAction"
-            ],
-            deliveryMethod: [
-                "DeliveryMethod"
             ]
         }
     ],
@@ -10696,16 +10717,6 @@ export const schemaMap = new Map([
         {
             _id: "MobilePhoneStore",
             _name: "MobilePhoneStore",
-            _parent: [
-                "Store"
-            ]
-        }
-    ],
-    [
-        "hobbyshop",
-        {
-            _id: "HobbyShop",
-            _name: "HobbyShop",
             _parent: [
                 "Store"
             ]
@@ -10795,16 +10806,6 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "theaterevent",
-        {
-            _id: "TheaterEvent",
-            _name: "TheaterEvent",
-            _parent: [
-                "Event"
-            ]
-        }
-    ],
-    [
         "takeaction",
         {
             _id: "TakeAction",
@@ -10835,16 +10836,6 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "zoo",
-        {
-            _id: "Zoo",
-            _name: "Zoo",
-            _parent: [
-                "CivicStructure"
-            ]
-        }
-    ],
-    [
         "homegoodsstore",
         {
             _id: "HomeGoodsStore",
@@ -10865,16 +10856,6 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "school",
-        {
-            _id: "School",
-            _name: "School",
-            _parent: [
-                "EducationalOrganization"
-            ]
-        }
-    ],
-    [
         "televisionstation",
         {
             _id: "TelevisionStation",
@@ -10891,16 +10872,6 @@ export const schemaMap = new Map([
             _name: "PaymentService",
             _parent: [
                 "FinancialProduct"
-            ]
-        }
-    ],
-    [
-        "professionalservice",
-        {
-            _id: "ProfessionalService",
-            _name: "ProfessionalService",
-            _parent: [
-                "LocalBusiness"
             ]
         }
     ],
@@ -10955,6 +10926,16 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "generalcontractor",
+        {
+            _id: "GeneralContractor",
+            _name: "GeneralContractor",
+            _parent: [
+                "HomeAndConstructionBusiness"
+            ]
+        }
+    ],
+    [
         "shareaction",
         {
             _id: "ShareAction",
@@ -10971,6 +10952,16 @@ export const schemaMap = new Map([
             _name: "WPHeader",
             _parent: [
                 "WebPageElement"
+            ]
+        }
+    ],
+    [
+        "icecreamshop",
+        {
+            _id: "IceCreamShop",
+            _name: "IceCreamShop",
+            _parent: [
+                "FoodEstablishment"
             ]
         }
     ],
@@ -11028,12 +11019,12 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "barcode",
+        "zoo",
         {
-            _id: "Barcode",
-            _name: "Barcode",
+            _id: "Zoo",
+            _name: "Zoo",
             _parent: [
-                "ImageObject"
+                "CivicStructure"
             ]
         }
     ],
@@ -11088,6 +11079,16 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "agreeaction",
+        {
+            _id: "AgreeAction",
+            _name: "AgreeAction",
+            _parent: [
+                "ReactAction"
+            ]
+        }
+    ],
+    [
         "employmentagency",
         {
             _id: "EmploymentAgency",
@@ -11104,16 +11105,6 @@ export const schemaMap = new Map([
             _name: "PrependAction",
             _parent: [
                 "InsertAction"
-            ]
-        }
-    ],
-    [
-        "canal",
-        {
-            _id: "Canal",
-            _name: "Canal",
-            _parent: [
-                "BodyOfWater"
             ]
         }
     ],
@@ -11135,6 +11126,27 @@ export const schemaMap = new Map([
             _name: "Hotel",
             _parent: [
                 "LodgingBusiness"
+            ]
+        }
+    ],
+    [
+        "comiccoverart",
+        {
+            _id: "ComicCoverArt",
+            _name: "ComicCoverArt",
+            _parent: [
+                "ComicStory",
+                "CoverArt"
+            ]
+        }
+    ],
+    [
+        "coverart",
+        {
+            _id: "CoverArt",
+            _name: "CoverArt",
+            _parent: [
+                "VisualArtwork"
             ]
         }
     ],
@@ -11179,12 +11191,12 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "drinkaction",
+        "televisionchannel",
         {
-            _id: "DrinkAction",
-            _name: "DrinkAction",
+            _id: "TelevisionChannel",
+            _name: "TelevisionChannel",
             _parent: [
-                "ConsumeAction"
+                "BroadcastChannel"
             ]
         }
     ],
@@ -11219,16 +11231,6 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "coverart",
-        {
-            _id: "CoverArt",
-            _name: "CoverArt",
-            _parent: [
-                "VisualArtwork"
-            ]
-        }
-    ],
-    [
         "travelagency",
         {
             _id: "TravelAgency",
@@ -11259,6 +11261,16 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "bankorcreditunion",
+        {
+            _id: "BankOrCreditUnion",
+            _name: "BankOrCreditUnion",
+            _parent: [
+                "FinancialService"
+            ]
+        }
+    ],
+    [
         "videogallery",
         {
             _id: "VideoGallery",
@@ -11279,19 +11291,6 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "educationalaudience",
-        {
-            _id: "EducationalAudience",
-            _name: "EducationalAudience",
-            _parent: [
-                "Audience"
-            ],
-            educationalRole: [
-                "Text"
-            ]
-        }
-    ],
-    [
         "hostel",
         {
             _id: "Hostel",
@@ -11302,12 +11301,35 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "orderaction",
+        {
+            _id: "OrderAction",
+            _name: "OrderAction",
+            _parent: [
+                "TradeAction"
+            ],
+            deliveryMethod: [
+                "DeliveryMethod"
+            ]
+        }
+    ],
+    [
         "movingcompany",
         {
             _id: "MovingCompany",
             _name: "MovingCompany",
             _parent: [
                 "HomeAndConstructionBusiness"
+            ]
+        }
+    ],
+    [
+        "cityhall",
+        {
+            _id: "CityHall",
+            _name: "CityHall",
+            _parent: [
+                "GovernmentBuilding"
             ]
         }
     ],
@@ -11332,13 +11354,12 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "comiccoverart",
+        "autodealer",
         {
-            _id: "ComicCoverArt",
-            _name: "ComicCoverArt",
+            _id: "AutoDealer",
+            _name: "AutoDealer",
             _parent: [
-                "ComicStory",
-                "CoverArt"
+                "AutomotiveBusiness"
             ]
         }
     ],
@@ -11356,6 +11377,27 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "fmradiochannel",
+        {
+            _id: "FMRadioChannel",
+            _name: "FMRadioChannel",
+            _parent: [
+                "RadioChannel"
+            ]
+        }
+    ],
+    [
+        "pharmacy",
+        {
+            _id: "Pharmacy",
+            _name: "Pharmacy",
+            _parent: [
+                "MedicalBusiness",
+                "MedicalOrganization"
+            ]
+        }
+    ],
+    [
         "paintaction",
         {
             _id: "PaintAction",
@@ -11366,12 +11408,12 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "bankorcreditunion",
+        "performingartstheater",
         {
-            _id: "BankOrCreditUnion",
-            _name: "BankOrCreditUnion",
+            _id: "PerformingArtsTheater",
+            _name: "PerformingArtsTheater",
             _parent: [
-                "FinancialService"
+                "CivicStructure"
             ]
         }
     ],
@@ -11392,16 +11434,6 @@ export const schemaMap = new Map([
             _name: "City",
             _parent: [
                 "AdministrativeArea"
-            ]
-        }
-    ],
-    [
-        "mosque",
-        {
-            _id: "Mosque",
-            _name: "Mosque",
-            _parent: [
-                "PlaceOfWorship"
             ]
         }
     ],
@@ -11460,6 +11492,16 @@ export const schemaMap = new Map([
         {
             _id: "HairSalon",
             _name: "HairSalon",
+            _parent: [
+                "HealthAndBeautyBusiness"
+            ]
+        }
+    ],
+    [
+        "dayspa",
+        {
+            _id: "DaySpa",
+            _name: "DaySpa",
             _parent: [
                 "HealthAndBeautyBusiness"
             ]
@@ -11566,16 +11608,6 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "preschool",
-        {
-            _id: "Preschool",
-            _name: "Preschool",
-            _parent: [
-                "EducationalOrganization"
-            ]
-        }
-    ],
-    [
         "riverbodyofwater",
         {
             _id: "RiverBodyOfWater",
@@ -11602,6 +11634,16 @@ export const schemaMap = new Map([
             _name: "MeetingRoom",
             _parent: [
                 "Room"
+            ]
+        }
+    ],
+    [
+        "eventvenue",
+        {
+            _id: "EventVenue",
+            _name: "EventVenue",
+            _parent: [
+                "CivicStructure"
             ]
         }
     ],
@@ -11656,16 +11698,6 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "beautysalon",
-        {
-            _id: "BeautySalon",
-            _name: "BeautySalon",
-            _parent: [
-                "HealthAndBeautyBusiness"
-            ]
-        }
-    ],
-    [
         "trainreservation",
         {
             _id: "TrainReservation",
@@ -11692,16 +11724,6 @@ export const schemaMap = new Map([
             _name: "OceanBodyOfWater",
             _parent: [
                 "BodyOfWater"
-            ]
-        }
-    ],
-    [
-        "televisionchannel",
-        {
-            _id: "TelevisionChannel",
-            _name: "TelevisionChannel",
-            _parent: [
-                "BroadcastChannel"
             ]
         }
     ],
@@ -11736,69 +11758,6 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "drugcost",
-        {
-            _id: "DrugCost",
-            _name: "DrugCost",
-            _parent: [
-                "MedicalEnumeration"
-            ],
-            applicableLocation: [
-                "AdministrativeArea"
-            ],
-            costCategory: [
-                "DrugCostCategory"
-            ],
-            costCurrency: [
-                "Text"
-            ],
-            costOrigin: [
-                "Text"
-            ],
-            costPerUnit: [
-                "Text",
-                "QualitativeValue",
-                "Number"
-            ],
-            drugUnit: [
-                "Text"
-            ]
-        }
-    ],
-    [
-        "patient",
-        {
-            _id: "Patient",
-            _name: "Patient",
-            _parent: [
-                "Person",
-                "MedicalAudience"
-            ],
-            diagnosis: [
-                "MedicalCondition"
-            ],
-            drug: [
-                "Drug"
-            ],
-            healthCondition: [
-                "MedicalCondition"
-            ]
-        }
-    ],
-    [
-        "drugclass",
-        {
-            _id: "DrugClass",
-            _name: "DrugClass",
-            _parent: [
-                "MedicalEnumeration"
-            ],
-            drug: [
-                "Drug"
-            ]
-        }
-    ],
-    [
         "qualitativevalue",
         {
             _id: "QualitativeValue",
@@ -11828,22 +11787,25 @@ export const schemaMap = new Map([
                 "QualitativeValue"
             ],
             valueReference: [
-                "StructuredValue",
-                "Enumeration",
                 "QualitativeValue",
-                "PropertyValue",
-                "QuantitativeValue"
+                "QuantitativeValue",
+                "Enumeration",
+                "StructuredValue",
+                "PropertyValue"
             ]
         }
     ],
     [
-        "drugcost",
+        "steeringpositionvalue",
         {
-            _values: []
+            _values: [
+                "RightHandDriving",
+                "LeftHandDriving"
+            ]
         }
     ],
     [
-        "medicalenumeration",
+        "qualitativevalue",
         {
             _values: []
         }
@@ -11859,6 +11821,12 @@ export const schemaMap = new Map([
                 "Ayurvedic",
                 "Chiropractic"
             ]
+        }
+    ],
+    [
+        "medicalenumeration",
+        {
+            _values: []
         }
     ],
     [
@@ -11878,27 +11846,6 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "patient",
-        {
-            _values: []
-        }
-    ],
-    [
-        "medicalaudience",
-        {
-            _values: [
-                "MedicalResearcher",
-                "Clinician"
-            ]
-        }
-    ],
-    [
-        "drugclass",
-        {
-            _values: []
-        }
-    ],
-    [
         "gendertype",
         {
             _values: [
@@ -11913,9 +11860,9 @@ export const schemaMap = new Map([
             _values: [
                 "Registry",
                 "Longitudinal",
+                "CaseSeries",
                 "CohortStudy",
                 "CrossSectional",
-                "CaseSeries",
                 "Observational"
             ]
         }
@@ -11930,21 +11877,15 @@ export const schemaMap = new Map([
                 "Lung",
                 "Ear",
                 "Skin",
+                "MusculoskeletalExam",
                 "Head",
                 "Genitourinary",
-                "MusculoskeletalExam",
                 "Neuro",
                 "CardiovascularExam",
                 "Eye",
                 "Abdomen",
                 "Appearance"
             ]
-        }
-    ],
-    [
-        "qualitativevalue",
-        {
-            _values: []
         }
     ],
     [
@@ -11986,13 +11927,16 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "musicalbumreleasetype",
+        "musicreleaseformattype",
         {
             _values: [
-                "SingleRelease",
-                "AlbumRelease",
-                "EPRelease",
-                "BroadcastRelease"
+                "VinylFormat",
+                "CassetteFormat",
+                "DigitalAudioTapeFormat",
+                "DVDFormat",
+                "LaserDiscFormat",
+                "CDFormat",
+                "DigitalFormat"
             ]
         }
     ],
@@ -12019,9 +11963,9 @@ export const schemaMap = new Map([
         "drugpregnancycategory",
         {
             _values: [
-                "FDAcategoryX",
                 "FDAnotEvaluated",
                 "FDAcategoryB",
+                "FDAcategoryX",
                 "FDAcategoryC",
                 "FDAcategoryA",
                 "FDAcategoryD"
@@ -12034,14 +11978,14 @@ export const schemaMap = new Map([
             _values: [
                 "HinduDiet",
                 "GlutenFreeDiet",
+                "HalalDiet",
                 "VeganDiet",
                 "VegetarianDiet",
                 "KosherDiet",
                 "DiabeticDiet",
-                "LowSaltDiet",
                 "LowFatDiet",
+                "LowSaltDiet",
                 "LowLactoseDiet",
-                "HalalDiet",
                 "LowCalorieDiet"
             ]
         }
@@ -12070,7 +12014,7 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "businessfunction",
+        "statusenumeration",
         {
             _values: []
         }
@@ -12088,19 +12032,13 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "medicalstudystatus",
+        "musicalbumreleasetype",
         {
             _values: [
-                "Terminated",
-                "ActiveNotRecruiting",
-                "Withdrawn",
-                "EnrollingByInvitation",
-                "NotYetRecruiting",
-                "Recruiting",
-                "ResultsNotAvailable",
-                "Completed",
-                "ResultsAvailable",
-                "Suspended"
+                "SingleRelease",
+                "AlbumRelease",
+                "EPRelease",
+                "BroadcastRelease"
             ]
         }
     ],
@@ -12116,6 +12054,23 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "medicalstudystatus",
+        {
+            _values: [
+                "Terminated",
+                "ResultsNotAvailable",
+                "Withdrawn",
+                "EnrollingByInvitation",
+                "NotYetRecruiting",
+                "Recruiting",
+                "ActiveNotRecruiting",
+                "Completed",
+                "ResultsAvailable",
+                "Suspended"
+            ]
+        }
+    ],
+    [
         "creditcard",
         {
             _values: []
@@ -12125,68 +12080,6 @@ export const schemaMap = new Map([
         "paymentcard",
         {
             _values: []
-        }
-    ],
-    [
-        "medicalspecialty",
-        {
-            _values: [
-                "PrimaryCare",
-                "SpeechPathology",
-                "Genetic",
-                "Rheumatologic",
-                "Anesthesia",
-                "Emergency",
-                "Gynecologic",
-                "Surgical",
-                "Dentistry",
-                "Nursing",
-                "Hematologic",
-                "Pulmonary",
-                "Neurologic",
-                "PharmacySpecialty",
-                "PublicHealth",
-                "Geriatric",
-                "Podiatric",
-                "Urologic",
-                "Musculoskeletal",
-                "Dermatology",
-                "DietNutrition",
-                "Physiotherapy",
-                "RespiratoryTherapy",
-                "Psychiatric",
-                "CommunityHealth",
-                "Cardiovascular",
-                "Toxicologic",
-                "Gastroenterologic",
-                "Midwifery",
-                "Oncologic",
-                "Renal",
-                "PlasticSurgery",
-                "LaboratoryScience",
-                "Obstetric",
-                "Otolaryngologic",
-                "Endocrine",
-                "Pathology",
-                "Infectious",
-                "Optometric",
-                "Pediatric"
-            ]
-        }
-    ],
-    [
-        "specialty",
-        {
-            _values: []
-        }
-    ],
-    [
-        "steeringpositionvalue",
-        {
-            _values: [
-                "RightHandDriving",
-                "LeftHandDriving"
-            ]
         }
     ],
     [
@@ -12210,16 +12103,14 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "parcelservice",
-        {
-            _values: []
-        }
-    ],
-    [
-        "deliverymethod",
+        "medicalimagingtechnique",
         {
             _values: [
-                "OnSitePickup"
+                "Ultrasound",
+                "MRI",
+                "PET",
+                "CT",
+                "XRay"
             ]
         }
     ],
@@ -12244,6 +12135,16 @@ export const schemaMap = new Map([
             _values: [
                 "Therapeutic",
                 "Diagnostic"
+            ]
+        }
+    ],
+    [
+        "deliverymethod",
+        {
+            _values: [
+                "ParcelService",
+                "OnSitePickup",
+                "LockerDelivery"
             ]
         }
     ],
@@ -12293,6 +12194,21 @@ export const schemaMap = new Map([
         }
     ],
     [
+        "dayofweek",
+        {
+            _values: [
+                "PublicHolidays",
+                "Monday",
+                "Friday",
+                "Sunday",
+                "Thursday",
+                "Tuesday",
+                "Saturday",
+                "Wednesday"
+            ]
+        }
+    ],
+    [
         "digitaldocumentpermissiontype",
         {
             _values: [
@@ -12306,11 +12222,22 @@ export const schemaMap = new Map([
         "eventstatustype",
         {
             _values: [
-                "EventRescheduled",
                 "EventPostponed",
                 "EventMovedOnline",
+                "EventRescheduled",
                 "EventScheduled",
                 "EventCancelled"
+            ]
+        }
+    ],
+    [
+        "gameserverstatus",
+        {
+            _values: [
+                "OfflinePermanently",
+                "OnlineFull",
+                "OfflineTemporarily",
+                "Online"
             ]
         }
     ],
@@ -12331,10 +12258,10 @@ export const schemaMap = new Map([
             _values: [
                 "DemoAlbum",
                 "SpokenWordAlbum",
+                "DJMixAlbum",
                 "SoundtrackAlbum",
                 "RemixAlbum",
                 "LiveAlbum",
-                "DJMixAlbum",
                 "MixtapeAlbum",
                 "StudioAlbum",
                 "CompilationAlbum"
@@ -12342,17 +12269,21 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "musicreleaseformattype",
+        "specialty",
         {
-            _values: [
-                "VinylFormat",
-                "CassetteFormat",
-                "DigitalAudioTapeFormat",
-                "DVDFormat",
-                "LaserDiscFormat",
-                "DigitalFormat",
-                "CDFormat"
-            ]
+            _values: []
+        }
+    ],
+    [
+        "businessfunction",
+        {
+            _values: []
+        }
+    ],
+    [
+        "warrantyscope",
+        {
+            _values: []
         }
     ],
     [
@@ -12383,17 +12314,58 @@ export const schemaMap = new Map([
         }
     ],
     [
-        "dayofweek",
+        "medicalspecialty",
         {
             _values: [
-                "Wednesday",
-                "PublicHolidays",
-                "Monday",
-                "Friday",
-                "Sunday",
-                "Saturday",
-                "Thursday",
-                "Tuesday"
+                "PrimaryCare",
+                "SpeechPathology",
+                "Genetic",
+                "Rheumatologic",
+                "Anesthesia",
+                "Emergency",
+                "Gynecologic",
+                "Surgical",
+                "Dentistry",
+                "Nursing",
+                "Hematologic",
+                "Pulmonary",
+                "Neurologic",
+                "PharmacySpecialty",
+                "PublicHealth",
+                "Geriatric",
+                "Urologic",
+                "Midwifery",
+                "Musculoskeletal",
+                "Dermatology",
+                "DietNutrition",
+                "Physiotherapy",
+                "RespiratoryTherapy",
+                "Psychiatric",
+                "CommunityHealth",
+                "Cardiovascular",
+                "Toxicologic",
+                "Gastroenterologic",
+                "Podiatric",
+                "Renal",
+                "PlasticSurgery",
+                "LaboratoryScience",
+                "Obstetric",
+                "Otolaryngologic",
+                "Endocrine",
+                "Pathology",
+                "Infectious",
+                "Oncologic",
+                "Optometric",
+                "Pediatric"
+            ]
+        }
+    ],
+    [
+        "medicalaudiencetype",
+        {
+            _values: [
+                "MedicalResearcher",
+                "Clinician"
             ]
         }
     ],
@@ -12404,35 +12376,6 @@ export const schemaMap = new Map([
                 "GroupBoardingPolicy",
                 "ZoneBoardingPolicy"
             ]
-        }
-    ],
-    [
-        "medicalimagingtechnique",
-        {
-            _values: [
-                "Ultrasound",
-                "MRI",
-                "PET",
-                "CT",
-                "XRay"
-            ]
-        }
-    ],
-    [
-        "gameserverstatus",
-        {
-            _values: [
-                "OfflinePermanently",
-                "OnlineFull",
-                "OfflineTemporarily",
-                "Online"
-            ]
-        }
-    ],
-    [
-        "lockerdelivery",
-        {
-            _values: []
         }
     ],
     [
@@ -12454,12 +12397,6 @@ export const schemaMap = new Map([
                 "MultiPlayer",
                 "SinglePlayer"
             ]
-        }
-    ],
-    [
-        "warrantyscope",
-        {
-            _values: []
         }
     ]
 ]);

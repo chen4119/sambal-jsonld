@@ -2,7 +2,7 @@
 
 exports[`toJsonLdGraph BlogPost to schema.org 1`] = `
 Object {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": Array [
     Object {
       "@id": "_:1",
