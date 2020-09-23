@@ -2,7 +2,7 @@ import fs from "fs";
 import ts from "typescript";
 import {makeVariableStatement, EXPORT_MODIFIER, objectToObjectLiteral, makeArrayLiteral, makeStringLiteral, makeIdentifier, makeNew} from "./ast";
 import JsonLd, {Node} from "./JsonLd";
-import {JSONLD_ID, JSONLD_TYPE, JSONLD_VALUE, SCHEMA_CONTEXT, SAMBAL_ID, SAMBAL_NAME, SAMBAL_PARENT, SAMBAL_VALUES, SCHEMA_ENUMERATION, SCHEMA_PRIMITIVE_SET} from "./constants";
+import {JSONLD_ID, JSONLD_TYPE, JSONLD_VALUE, SCHEMA_CONTEXT, SAMBAL_NAME, SAMBAL_PARENT, SAMBAL_VALUES, SCHEMA_ENUMERATION, SCHEMA_PRIMITIVE_SET} from "./constants";
 import {makeRelativeIRI} from "./utils";
 
 const SUBCLASS_EDGE = "http://www.w3.org/2000/01/rdf-schema#subClassOf";
@@ -78,7 +78,6 @@ class SchemaGenerator {
         for (const classId of this.classPropertiesMap.keys()) {
             const clazz: SchemaClass = this.classPropertiesMap.get(classId); 
             const obj = {};
-            obj[SAMBAL_ID] = makeRelativeIRI(this.base, classId);
             obj[SAMBAL_NAME] = clazz.name;
             if (clazz.parent) {
                 obj[SAMBAL_PARENT] = clazz.parent.map(t => makeRelativeIRI(this.base, t))

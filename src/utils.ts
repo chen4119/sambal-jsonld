@@ -1,5 +1,5 @@
 import {schemaMap} from "./schema";
-import {SAMBAL_PARENT, SCHEMA_CONTEXT} from "./constants";
+import {SAMBAL_PARENT, SCHEMA_CONTEXT, SAMBAL_VALUES} from "./constants";
 
 export function isObjectLiteral(obj: any) {
     return obj !== null && typeof(obj) === "object" && Object.getPrototypeOf(obj) === Object.prototype;
@@ -26,35 +26,46 @@ export function makeRelativeIRI(base: string, absoluteUri: string) {
     return absoluteUri;
 }
 
+export function makeAbsoluteSchemaOrgIRI(name: string) {
+    return `${SCHEMA_CONTEXT}/${name}`;
+}
 export function isBlankNodeIRI(iri: string) {
     return iri.startsWith("_:");
 }
 
-export function isSchemaOrgType(typeId: string) {
-    const key = makeRelativeIRI(`${SCHEMA_CONTEXT}/`, typeId).toLowerCase();
+export function isSchemaOrgType(absTypeIRI: string) {
+    const key = makeRelativeIRI(`${SCHEMA_CONTEXT}/`, absTypeIRI).toLowerCase();
     return schemaMap.has(key);
 }
 
-export function getSchemaOrgType(typeId: string) {
-    const key = makeRelativeIRI(`${SCHEMA_CONTEXT}/`, typeId).toLowerCase();
+export function getSchemaOrgType(absTypeIRI: string) {
+    const key = makeRelativeIRI(`${SCHEMA_CONTEXT}/`, absTypeIRI).toLowerCase();
     return schemaMap.get(key);
 }
 
-export function getSchemaOrgParentTypes(typeId: string) {
-    const parents = [];
-    if (isSchemaOrgType(typeId)) {
-        getParentTypes(getSchemaOrgType(typeId), parents);
+export function getSchemaOrgParentTypes(absTypeIRI: string) {
+    const parents = new Set<string>();
+    if (isSchemaOrgType(absTypeIRI)) {
+        getParentTypes(getSchemaOrgType(absTypeIRI), parents);
     }
-    return parents;
+    return [...parents.values()];
 }
 
-export function getParentTypes(schema, parents) {
+function getParentTypes(schema, parents: Set<string>) {
     const schemaParents = schema[SAMBAL_PARENT];
     if (schemaParents) {
         for (const parentName of schemaParents) {
             const parentSchema = getSchemaOrgType(`${SCHEMA_CONTEXT}/${parentName}`);
-            parents.push(parentSchema);
+            parents.add(parentName);
             getParentTypes(parentSchema, parents);
         }
     }
+}
+
+export function isSchemaOrgEnumeration(absTypeIRI: string) {
+    const schema = getSchemaOrgType(absTypeIRI);
+    if (schema && schema[SAMBAL_VALUES]) {
+        return true;
+    }
+    return false;
 }

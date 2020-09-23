@@ -3,7 +3,16 @@ export {hydrateJsonLd} from "./operators/hydrateJsonLd";
 export {toSchemaOrgJsonLd} from "./operators/toSchemaOrgJsonLd";
 export {toJsonLdGraph} from "./operators/toJsonLdGraph";
 export {graphToCondensedJsonLd} from "./operators/graphToCondensedJsonLd";
-export {getSchemaOrgType, isSchemaOrgType} from "./utils";
+export {
+    getSchemaOrgType,
+    isSchemaOrgType,
+    isSchemaOrgEnumeration,
+    getSchemaOrgParentTypes,
+    makeAbsoluteSchemaOrgIRI,
+    isBlankNodeIRI,
+    makeAbsoluteIRI,
+    makeRelativeIRI
+} from "./utils";
 export {schemaTypeArray} from "./schemaTypeArray";
 export {
     JSONLD_ID,
@@ -24,7 +33,6 @@ export {
     SCHEMA_BOOL,
     SCHEMA_URL,
     SCHEMA_PRIMITIVE_SET,
-    SAMBAL_ID,
     SAMBAL_NAME,
     SAMBAL_PARENT,
     SAMBAL_VALUES

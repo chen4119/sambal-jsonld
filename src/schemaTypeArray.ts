@@ -1,319 +1,246 @@
 export const schemaTypeArray = [
     [
-        "Thing"
-    ],
-    [
-        "Thing",
-        "Action"
-    ],
-    [
-        "Thing",
-        "Action",
-        "AchieveAction"
-    ],
-    [
-        "Thing",
         "Action",
         "AchieveAction",
         "LoseAction"
     ],
     [
-        "Thing",
         "Action",
         "AchieveAction",
         "TieAction"
     ],
     [
-        "Thing",
         "Action",
         "AchieveAction",
         "WinAction"
     ],
     [
-        "Thing",
         "Action",
-        "AssessAction"
+        "AchieveAction"
     ],
     [
-        "Thing",
-        "Action",
-        "AssessAction",
-        "ChooseAction"
-    ],
-    [
-        "Thing",
         "Action",
         "AssessAction",
         "ChooseAction",
         "VoteAction"
     ],
     [
-        "Thing",
+        "Action",
+        "AssessAction",
+        "ChooseAction"
+    ],
+    [
         "Action",
         "AssessAction",
         "IgnoreAction"
     ],
     [
-        "Thing",
-        "Action",
-        "AssessAction",
-        "ReactAction"
-    ],
-    [
-        "Thing",
         "Action",
         "AssessAction",
         "ReactAction",
         "AgreeAction"
     ],
     [
-        "Thing",
         "Action",
         "AssessAction",
         "ReactAction",
         "DisagreeAction"
     ],
     [
-        "Thing",
         "Action",
         "AssessAction",
         "ReactAction",
         "DislikeAction"
     ],
     [
-        "Thing",
         "Action",
         "AssessAction",
         "ReactAction",
         "EndorseAction"
     ],
     [
-        "Thing",
         "Action",
         "AssessAction",
         "ReactAction",
         "LikeAction"
     ],
     [
-        "Thing",
         "Action",
         "AssessAction",
         "ReactAction",
         "WantAction"
     ],
     [
-        "Thing",
+        "Action",
+        "AssessAction",
+        "ReactAction"
+    ],
+    [
         "Action",
         "AssessAction",
         "ReviewAction"
     ],
     [
-        "Thing",
         "Action",
-        "ConsumeAction"
+        "AssessAction"
     ],
     [
-        "Thing",
         "Action",
         "ConsumeAction",
         "DrinkAction"
     ],
     [
-        "Thing",
         "Action",
         "ConsumeAction",
         "EatAction"
     ],
     [
-        "Thing",
         "Action",
         "ConsumeAction",
         "InstallAction"
     ],
     [
-        "Thing",
         "Action",
         "ConsumeAction",
         "ListenAction"
     ],
     [
-        "Thing",
         "Action",
         "ConsumeAction",
         "ReadAction"
     ],
     [
-        "Thing",
-        "Action",
-        "ConsumeAction",
-        "UseAction"
-    ],
-    [
-        "Thing",
         "Action",
         "ConsumeAction",
         "UseAction",
         "WearAction"
     ],
     [
-        "Thing",
+        "Action",
+        "ConsumeAction",
+        "UseAction"
+    ],
+    [
         "Action",
         "ConsumeAction",
         "ViewAction"
     ],
     [
-        "Thing",
         "Action",
         "ConsumeAction",
         "WatchAction"
     ],
     [
-        "Thing",
         "Action",
-        "ControlAction"
+        "ConsumeAction"
     ],
     [
-        "Thing",
         "Action",
         "ControlAction",
         "ActivateAction"
     ],
     [
-        "Thing",
         "Action",
         "ControlAction",
         "DeactivateAction"
     ],
     [
-        "Thing",
         "Action",
         "ControlAction",
         "ResumeAction"
     ],
     [
-        "Thing",
         "Action",
         "ControlAction",
         "SuspendAction"
     ],
     [
-        "Thing",
         "Action",
-        "CreateAction"
+        "ControlAction"
     ],
     [
-        "Thing",
         "Action",
         "CreateAction",
         "CookAction"
     ],
     [
-        "Thing",
         "Action",
         "CreateAction",
         "DrawAction"
     ],
     [
-        "Thing",
         "Action",
         "CreateAction",
         "FilmAction"
     ],
     [
-        "Thing",
         "Action",
         "CreateAction",
         "PaintAction"
     ],
     [
-        "Thing",
         "Action",
         "CreateAction",
         "PhotographAction"
     ],
     [
-        "Thing",
         "Action",
         "CreateAction",
         "WriteAction"
     ],
     [
-        "Thing",
         "Action",
-        "FindAction"
+        "CreateAction"
     ],
     [
-        "Thing",
         "Action",
         "FindAction",
         "CheckAction"
     ],
     [
-        "Thing",
         "Action",
         "FindAction",
         "DiscoverAction"
     ],
     [
-        "Thing",
         "Action",
         "FindAction",
         "TrackAction"
     ],
     [
-        "Thing",
         "Action",
-        "InteractAction"
+        "FindAction"
     ],
     [
-        "Thing",
         "Action",
         "InteractAction",
         "BefriendAction"
     ],
     [
-        "Thing",
-        "Action",
-        "InteractAction",
-        "CommunicateAction"
-    ],
-    [
-        "Thing",
         "Action",
         "InteractAction",
         "CommunicateAction",
         "AskAction"
     ],
     [
-        "Thing",
         "Action",
         "InteractAction",
         "CommunicateAction",
         "CheckInAction"
     ],
     [
-        "Thing",
         "Action",
         "InteractAction",
         "CommunicateAction",
         "CheckOutAction"
     ],
     [
-        "Thing",
         "Action",
         "InteractAction",
         "CommunicateAction",
         "CommentAction"
     ],
     [
-        "Thing",
-        "Action",
-        "InteractAction",
-        "CommunicateAction",
-        "InformAction"
-    ],
-    [
-        "Thing",
         "Action",
         "InteractAction",
         "CommunicateAction",
@@ -321,7 +248,6 @@ export const schemaTypeArray = [
         "ConfirmAction"
     ],
     [
-        "Thing",
         "Action",
         "InteractAction",
         "CommunicateAction",
@@ -329,323 +255,270 @@ export const schemaTypeArray = [
         "RsvpAction"
     ],
     [
-        "Thing",
+        "Action",
+        "InteractAction",
+        "CommunicateAction",
+        "InformAction"
+    ],
+    [
         "Action",
         "InteractAction",
         "CommunicateAction",
         "InviteAction"
     ],
     [
-        "Thing",
         "Action",
         "InteractAction",
         "CommunicateAction",
         "ReplyAction"
     ],
     [
-        "Thing",
         "Action",
         "InteractAction",
         "CommunicateAction",
         "ShareAction"
     ],
     [
-        "Thing",
+        "Action",
+        "InteractAction",
+        "CommunicateAction"
+    ],
+    [
         "Action",
         "InteractAction",
         "FollowAction"
     ],
     [
-        "Thing",
         "Action",
         "InteractAction",
         "JoinAction"
     ],
     [
-        "Thing",
         "Action",
         "InteractAction",
         "LeaveAction"
     ],
     [
-        "Thing",
         "Action",
         "InteractAction",
         "MarryAction"
     ],
     [
-        "Thing",
         "Action",
         "InteractAction",
         "RegisterAction"
     ],
     [
-        "Thing",
         "Action",
         "InteractAction",
         "SubscribeAction"
     ],
     [
-        "Thing",
         "Action",
         "InteractAction",
         "UnRegisterAction"
     ],
     [
-        "Thing",
         "Action",
-        "MoveAction"
+        "InteractAction"
     ],
     [
-        "Thing",
         "Action",
         "MoveAction",
         "ArriveAction"
     ],
     [
-        "Thing",
         "Action",
         "MoveAction",
         "DepartAction"
     ],
     [
-        "Thing",
         "Action",
         "MoveAction",
         "TravelAction"
     ],
     [
-        "Thing",
         "Action",
-        "OrganizeAction"
+        "MoveAction"
     ],
     [
-        "Thing",
-        "Action",
-        "OrganizeAction",
-        "AllocateAction"
-    ],
-    [
-        "Thing",
         "Action",
         "OrganizeAction",
         "AllocateAction",
         "AcceptAction"
     ],
     [
-        "Thing",
         "Action",
         "OrganizeAction",
         "AllocateAction",
         "AssignAction"
     ],
     [
-        "Thing",
         "Action",
         "OrganizeAction",
         "AllocateAction",
         "AuthorizeAction"
     ],
     [
-        "Thing",
         "Action",
         "OrganizeAction",
         "AllocateAction",
         "RejectAction"
     ],
     [
-        "Thing",
+        "Action",
+        "OrganizeAction",
+        "AllocateAction"
+    ],
+    [
         "Action",
         "OrganizeAction",
         "ApplyAction"
     ],
     [
-        "Thing",
         "Action",
         "OrganizeAction",
         "BookmarkAction"
     ],
     [
-        "Thing",
-        "Action",
-        "OrganizeAction",
-        "PlanAction"
-    ],
-    [
-        "Thing",
         "Action",
         "OrganizeAction",
         "PlanAction",
         "CancelAction"
     ],
     [
-        "Thing",
         "Action",
         "OrganizeAction",
         "PlanAction",
         "ReserveAction"
     ],
     [
-        "Thing",
         "Action",
         "OrganizeAction",
         "PlanAction",
         "ScheduleAction"
     ],
     [
-        "Thing",
         "Action",
-        "PlayAction"
+        "OrganizeAction",
+        "PlanAction"
     ],
     [
-        "Thing",
+        "Action",
+        "OrganizeAction"
+    ],
+    [
         "Action",
         "PlayAction",
         "ExerciseAction"
     ],
     [
-        "Thing",
         "Action",
         "PlayAction",
         "PerformAction"
     ],
     [
-        "Thing",
+        "Action",
+        "PlayAction"
+    ],
+    [
         "Action",
         "SearchAction"
     ],
     [
-        "Thing",
-        "Action",
-        "TradeAction"
-    ],
-    [
-        "Thing",
         "Action",
         "TradeAction",
         "BuyAction"
     ],
     [
-        "Thing",
         "Action",
         "TradeAction",
         "DonateAction"
     ],
     [
-        "Thing",
         "Action",
         "TradeAction",
         "OrderAction"
     ],
     [
-        "Thing",
         "Action",
         "TradeAction",
         "PayAction"
     ],
     [
-        "Thing",
         "Action",
         "TradeAction",
         "PreOrderAction"
     ],
     [
-        "Thing",
         "Action",
         "TradeAction",
         "QuoteAction"
     ],
     [
-        "Thing",
         "Action",
         "TradeAction",
         "RentAction"
     ],
     [
-        "Thing",
         "Action",
         "TradeAction",
         "SellAction"
     ],
     [
-        "Thing",
         "Action",
         "TradeAction",
         "TipAction"
     ],
     [
-        "Thing",
         "Action",
-        "TransferAction"
+        "TradeAction"
     ],
     [
-        "Thing",
         "Action",
         "TransferAction",
         "BorrowAction"
     ],
     [
-        "Thing",
         "Action",
         "TransferAction",
         "DownloadAction"
     ],
     [
-        "Thing",
         "Action",
         "TransferAction",
         "GiveAction"
     ],
     [
-        "Thing",
         "Action",
         "TransferAction",
         "LendAction"
     ],
     [
-        "Thing",
         "Action",
         "TransferAction",
         "ReceiveAction"
     ],
     [
-        "Thing",
         "Action",
         "TransferAction",
         "ReturnAction"
     ],
     [
-        "Thing",
         "Action",
         "TransferAction",
         "SendAction"
     ],
     [
-        "Thing",
         "Action",
         "TransferAction",
         "TakeAction"
     ],
     [
-        "Thing",
         "Action",
-        "UpdateAction"
+        "TransferAction"
     ],
     [
-        "Thing",
-        "Action",
-        "UpdateAction",
-        "AddAction"
-    ],
-    [
-        "Thing",
-        "Action",
-        "UpdateAction",
-        "AddAction",
-        "InsertAction"
-    ],
-    [
-        "Thing",
         "Action",
         "UpdateAction",
         "AddAction",
@@ -653,7 +526,6 @@ export const schemaTypeArray = [
         "AppendAction"
     ],
     [
-        "Thing",
         "Action",
         "UpdateAction",
         "AddAction",
@@ -661,66 +533,55 @@ export const schemaTypeArray = [
         "PrependAction"
     ],
     [
-        "Thing",
+        "Action",
+        "UpdateAction",
+        "AddAction",
+        "InsertAction"
+    ],
+    [
+        "Action",
+        "UpdateAction",
+        "AddAction"
+    ],
+    [
         "Action",
         "UpdateAction",
         "DeleteAction"
     ],
     [
-        "Thing",
         "Action",
         "UpdateAction",
         "ReplaceAction"
     ],
     [
-        "Thing",
-        "CreativeWork"
+        "Action",
+        "UpdateAction"
     ],
     [
-        "Thing",
-        "CreativeWork",
-        "Article"
+        "Action"
     ],
     [
-        "Thing",
         "CreativeWork",
         "Article",
         "NewsArticle"
     ],
     [
-        "Thing",
         "CreativeWork",
         "Article",
         "Report"
     ],
     [
-        "Thing",
-        "CreativeWork",
-        "Article",
-        "ScholarlyArticle"
-    ],
-    [
-        "Thing",
         "CreativeWork",
         "Article",
         "ScholarlyArticle",
         "MedicalScholarlyArticle"
     ],
     [
-        "Thing",
         "CreativeWork",
         "Article",
-        "SocialMediaPosting"
+        "ScholarlyArticle"
     ],
     [
-        "Thing",
-        "CreativeWork",
-        "Article",
-        "SocialMediaPosting",
-        "BlogPosting"
-    ],
-    [
-        "Thing",
         "CreativeWork",
         "Article",
         "SocialMediaPosting",
@@ -728,551 +589,453 @@ export const schemaTypeArray = [
         "LiveBlogPosting"
     ],
     [
-        "Thing",
+        "CreativeWork",
+        "Article",
+        "SocialMediaPosting",
+        "BlogPosting"
+    ],
+    [
         "CreativeWork",
         "Article",
         "SocialMediaPosting",
         "DiscussionForumPosting"
     ],
     [
-        "Thing",
         "CreativeWork",
         "Article",
-        "TechArticle"
+        "SocialMediaPosting"
     ],
     [
-        "Thing",
         "CreativeWork",
         "Article",
         "TechArticle",
         "APIReference"
     ],
     [
-        "Thing",
+        "CreativeWork",
+        "Article",
+        "TechArticle"
+    ],
+    [
+        "CreativeWork",
+        "Article"
+    ],
+    [
         "CreativeWork",
         "Atlas"
     ],
     [
-        "Thing",
         "CreativeWork",
         "Blog"
     ],
     [
-        "Thing",
-        "CreativeWork",
-        "Book"
-    ],
-    [
-        "Thing",
         "CreativeWork",
         "Book",
         "Audiobook"
     ],
     [
-        "Thing",
+        "CreativeWork",
+        "Book"
+    ],
+    [
         "CreativeWork",
         "Chapter"
     ],
     [
-        "Thing",
-        "CreativeWork",
-        "Clip"
-    ],
-    [
-        "Thing",
         "CreativeWork",
         "Clip",
         "MovieClip"
     ],
     [
-        "Thing",
         "CreativeWork",
         "Clip",
         "RadioClip"
     ],
     [
-        "Thing",
         "CreativeWork",
         "Clip",
         "TVClip"
     ],
     [
-        "Thing",
         "CreativeWork",
         "Clip",
         "VideoGameClip"
     ],
     [
-        "Thing",
+        "CreativeWork",
+        "Clip"
+    ],
+    [
         "CreativeWork",
         "Collection"
     ],
     [
-        "Thing",
-        "CreativeWork",
-        "ComicStory"
-    ],
-    [
-        "Thing",
         "CreativeWork",
         "ComicStory",
         "ComicCoverArt"
     ],
     [
-        "Thing",
         "CreativeWork",
-        "Comment"
+        "ComicStory"
     ],
     [
-        "Thing",
         "CreativeWork",
         "Comment",
         "Answer"
     ],
     [
-        "Thing",
         "CreativeWork",
         "Comment",
         "Question"
     ],
     [
-        "Thing",
+        "CreativeWork",
+        "Comment"
+    ],
+    [
         "CreativeWork",
         "Conversation"
     ],
     [
-        "Thing",
         "CreativeWork",
         "Course"
     ],
     [
-        "Thing",
-        "CreativeWork",
-        "CreativeWorkSeason"
-    ],
-    [
-        "Thing",
         "CreativeWork",
         "CreativeWorkSeason",
         "RadioSeason"
     ],
     [
-        "Thing",
         "CreativeWork",
         "CreativeWorkSeason",
         "TVSeason"
     ],
     [
-        "Thing",
         "CreativeWork",
-        "CreativeWorkSeries"
+        "CreativeWorkSeason"
     ],
     [
-        "Thing",
         "CreativeWork",
         "CreativeWorkSeries",
         "BookSeries"
     ],
     [
-        "Thing",
         "CreativeWork",
         "CreativeWorkSeries",
         "MovieSeries"
     ],
     [
-        "Thing",
-        "CreativeWork",
-        "CreativeWorkSeries",
-        "Periodical"
-    ],
-    [
-        "Thing",
         "CreativeWork",
         "CreativeWorkSeries",
         "Periodical",
         "ComicSeries"
     ],
     [
-        "Thing",
         "CreativeWork",
         "CreativeWorkSeries",
         "Periodical",
         "Newspaper"
     ],
     [
-        "Thing",
+        "CreativeWork",
+        "CreativeWorkSeries",
+        "Periodical"
+    ],
+    [
         "CreativeWork",
         "CreativeWorkSeries",
         "RadioSeries"
     ],
     [
-        "Thing",
         "CreativeWork",
         "CreativeWorkSeries",
         "TVSeries"
     ],
     [
-        "Thing",
         "CreativeWork",
         "CreativeWorkSeries",
         "VideoGameSeries"
     ],
     [
-        "Thing",
+        "CreativeWork",
+        "CreativeWorkSeries"
+    ],
+    [
         "CreativeWork",
         "DataCatalog"
     ],
     [
-        "Thing",
-        "CreativeWork",
-        "Dataset"
-    ],
-    [
-        "Thing",
         "CreativeWork",
         "Dataset",
         "DataFeed"
     ],
     [
-        "Thing",
+        "CreativeWork",
+        "Dataset"
+    ],
+    [
         "CreativeWork",
         "Diet"
     ],
     [
-        "Thing",
-        "CreativeWork",
-        "DigitalDocument"
-    ],
-    [
-        "Thing",
         "CreativeWork",
         "DigitalDocument",
         "NoteDigitalDocument"
     ],
     [
-        "Thing",
         "CreativeWork",
         "DigitalDocument",
         "PresentationDigitalDocument"
     ],
     [
-        "Thing",
         "CreativeWork",
         "DigitalDocument",
         "SpreadsheetDigitalDocument"
     ],
     [
-        "Thing",
         "CreativeWork",
         "DigitalDocument",
         "TextDigitalDocument"
     ],
     [
-        "Thing",
         "CreativeWork",
-        "Episode"
+        "DigitalDocument"
     ],
     [
-        "Thing",
         "CreativeWork",
         "Episode",
         "RadioEpisode"
     ],
     [
-        "Thing",
         "CreativeWork",
         "Episode",
         "TVEpisode"
     ],
     [
-        "Thing",
+        "CreativeWork",
+        "Episode"
+    ],
+    [
         "CreativeWork",
         "ExercisePlan"
     ],
     [
-        "Thing",
-        "CreativeWork",
-        "Game"
-    ],
-    [
-        "Thing",
         "CreativeWork",
         "Game",
         "VideoGame"
     ],
     [
-        "Thing",
         "CreativeWork",
-        "HowTo"
+        "Game"
     ],
     [
-        "Thing",
         "CreativeWork",
         "HowTo",
         "Recipe"
     ],
     [
-        "Thing",
+        "CreativeWork",
+        "HowTo"
+    ],
+    [
         "CreativeWork",
         "HowToDirection"
     ],
     [
-        "Thing",
         "CreativeWork",
         "HowToSection"
     ],
     [
-        "Thing",
         "CreativeWork",
         "HowToStep"
     ],
     [
-        "Thing",
         "CreativeWork",
         "HowToTip"
     ],
     [
-        "Thing",
         "CreativeWork",
         "Map"
     ],
     [
-        "Thing",
-        "CreativeWork",
-        "MediaObject"
-    ],
-    [
-        "Thing",
-        "CreativeWork",
-        "MediaObject",
-        "AudioObject"
-    ],
-    [
-        "Thing",
         "CreativeWork",
         "MediaObject",
         "AudioObject",
         "Audiobook"
     ],
     [
-        "Thing",
+        "CreativeWork",
+        "MediaObject",
+        "AudioObject"
+    ],
+    [
         "CreativeWork",
         "MediaObject",
         "DataDownload"
     ],
     [
-        "Thing",
-        "CreativeWork",
-        "MediaObject",
-        "ImageObject"
-    ],
-    [
-        "Thing",
         "CreativeWork",
         "MediaObject",
         "ImageObject",
         "Barcode"
     ],
     [
-        "Thing",
+        "CreativeWork",
+        "MediaObject",
+        "ImageObject"
+    ],
+    [
         "CreativeWork",
         "MediaObject",
         "MusicVideoObject"
     ],
     [
-        "Thing",
         "CreativeWork",
         "MediaObject",
         "VideoObject"
     ],
     [
-        "Thing",
+        "CreativeWork",
+        "MediaObject"
+    ],
+    [
         "CreativeWork",
         "Menu"
     ],
     [
-        "Thing",
         "CreativeWork",
         "MenuSection"
     ],
     [
-        "Thing",
-        "CreativeWork",
-        "Message"
-    ],
-    [
-        "Thing",
         "CreativeWork",
         "Message",
         "EmailMessage"
     ],
     [
-        "Thing",
+        "CreativeWork",
+        "Message"
+    ],
+    [
         "CreativeWork",
         "Movie"
     ],
     [
-        "Thing",
         "CreativeWork",
         "MusicComposition"
     ],
     [
-        "Thing",
-        "CreativeWork",
-        "MusicPlaylist"
-    ],
-    [
-        "Thing",
         "CreativeWork",
         "MusicPlaylist",
         "MusicAlbum"
     ],
     [
-        "Thing",
         "CreativeWork",
         "MusicPlaylist",
         "MusicRelease"
     ],
     [
-        "Thing",
+        "CreativeWork",
+        "MusicPlaylist"
+    ],
+    [
         "CreativeWork",
         "MusicRecording"
     ],
     [
-        "Thing",
         "CreativeWork",
         "Painting"
     ],
     [
-        "Thing",
         "CreativeWork",
         "Photograph"
     ],
     [
-        "Thing",
-        "CreativeWork",
-        "PublicationIssue"
-    ],
-    [
-        "Thing",
         "CreativeWork",
         "PublicationIssue",
         "ComicIssue"
     ],
     [
-        "Thing",
+        "CreativeWork",
+        "PublicationIssue"
+    ],
+    [
         "CreativeWork",
         "PublicationVolume"
     ],
     [
-        "Thing",
-        "CreativeWork",
-        "Review"
-    ],
-    [
-        "Thing",
         "CreativeWork",
         "Review",
         "ClaimReview"
     ],
     [
-        "Thing",
+        "CreativeWork",
+        "Review"
+    ],
+    [
         "CreativeWork",
         "Sculpture"
     ],
     [
-        "Thing",
-        "CreativeWork",
-        "SoftwareApplication"
-    ],
-    [
-        "Thing",
         "CreativeWork",
         "SoftwareApplication",
         "MobileApplication"
     ],
     [
-        "Thing",
         "CreativeWork",
         "SoftwareApplication",
         "VideoGame"
     ],
     [
-        "Thing",
         "CreativeWork",
         "SoftwareApplication",
         "WebApplication"
     ],
     [
-        "Thing",
+        "CreativeWork",
+        "SoftwareApplication"
+    ],
+    [
         "CreativeWork",
         "SoftwareSourceCode"
     ],
     [
-        "Thing",
         "CreativeWork",
         "TVSeason"
     ],
     [
-        "Thing",
         "CreativeWork",
         "TVSeries"
     ],
     [
-        "Thing",
         "CreativeWork",
         "Thesis"
     ],
     [
-        "Thing",
-        "CreativeWork",
-        "VisualArtwork"
-    ],
-    [
-        "Thing",
-        "CreativeWork",
-        "VisualArtwork",
-        "CoverArt"
-    ],
-    [
-        "Thing",
         "CreativeWork",
         "VisualArtwork",
         "CoverArt",
         "ComicCoverArt"
     ],
     [
-        "Thing",
         "CreativeWork",
-        "WebPage"
+        "VisualArtwork",
+        "CoverArt"
     ],
     [
-        "Thing",
+        "CreativeWork",
+        "VisualArtwork"
+    ],
+    [
         "CreativeWork",
         "WebPage",
         "AboutPage"
     ],
     [
-        "Thing",
         "CreativeWork",
         "WebPage",
         "CheckoutPage"
     ],
     [
-        "Thing",
-        "CreativeWork",
-        "WebPage",
-        "CollectionPage"
-    ],
-    [
-        "Thing",
-        "CreativeWork",
-        "WebPage",
-        "CollectionPage",
-        "MediaGallery"
-    ],
-    [
-        "Thing",
         "CreativeWork",
         "WebPage",
         "CollectionPage",
@@ -1280,7 +1043,6 @@ export const schemaTypeArray = [
         "ImageGallery"
     ],
     [
-        "Thing",
         "CreativeWork",
         "WebPage",
         "CollectionPage",
@@ -1288,263 +1050,215 @@ export const schemaTypeArray = [
         "VideoGallery"
     ],
     [
-        "Thing",
+        "CreativeWork",
+        "WebPage",
+        "CollectionPage",
+        "MediaGallery"
+    ],
+    [
+        "CreativeWork",
+        "WebPage",
+        "CollectionPage"
+    ],
+    [
         "CreativeWork",
         "WebPage",
         "ContactPage"
     ],
     [
-        "Thing",
         "CreativeWork",
         "WebPage",
         "FAQPage"
     ],
     [
-        "Thing",
         "CreativeWork",
         "WebPage",
         "ItemPage"
     ],
     [
-        "Thing",
         "CreativeWork",
         "WebPage",
         "MedicalWebPage"
     ],
     [
-        "Thing",
         "CreativeWork",
         "WebPage",
         "ProfilePage"
     ],
     [
-        "Thing",
         "CreativeWork",
         "WebPage",
         "QAPage"
     ],
     [
-        "Thing",
         "CreativeWork",
         "WebPage",
         "SearchResultsPage"
     ],
     [
-        "Thing",
         "CreativeWork",
-        "WebPageElement"
+        "WebPage"
     ],
     [
-        "Thing",
         "CreativeWork",
         "WebPageElement",
         "SiteNavigationElement"
     ],
     [
-        "Thing",
         "CreativeWork",
         "WebPageElement",
         "Table"
     ],
     [
-        "Thing",
         "CreativeWork",
         "WebPageElement",
         "WPAdBlock"
     ],
     [
-        "Thing",
         "CreativeWork",
         "WebPageElement",
         "WPFooter"
     ],
     [
-        "Thing",
         "CreativeWork",
         "WebPageElement",
         "WPHeader"
     ],
     [
-        "Thing",
         "CreativeWork",
         "WebPageElement",
         "WPSideBar"
     ],
     [
-        "Thing",
+        "CreativeWork",
+        "WebPageElement"
+    ],
+    [
         "CreativeWork",
         "WebSite"
     ],
     [
-        "Thing",
-        "Event"
+        "CreativeWork"
     ],
     [
-        "Thing",
         "Event",
         "BusinessEvent"
     ],
     [
-        "Thing",
         "Event",
         "ChildrensEvent"
     ],
     [
-        "Thing",
         "Event",
         "ComedyEvent"
     ],
     [
-        "Thing",
         "Event",
         "CourseInstance"
     ],
     [
-        "Thing",
         "Event",
         "DanceEvent"
     ],
     [
-        "Thing",
         "Event",
         "DeliveryEvent"
     ],
     [
-        "Thing",
         "Event",
         "EducationEvent"
     ],
     [
-        "Thing",
         "Event",
         "ExhibitionEvent"
     ],
     [
-        "Thing",
         "Event",
         "Festival"
     ],
     [
-        "Thing",
         "Event",
         "FoodEvent"
     ],
     [
-        "Thing",
         "Event",
         "LiteraryEvent"
     ],
     [
-        "Thing",
         "Event",
         "MusicEvent"
     ],
     [
-        "Thing",
-        "Event",
-        "PublicationEvent"
-    ],
-    [
-        "Thing",
         "Event",
         "PublicationEvent",
         "BroadcastEvent"
     ],
     [
-        "Thing",
         "Event",
         "PublicationEvent",
         "OnDemandEvent"
     ],
     [
-        "Thing",
+        "Event",
+        "PublicationEvent"
+    ],
+    [
         "Event",
         "SaleEvent"
     ],
     [
-        "Thing",
         "Event",
         "ScreeningEvent"
     ],
     [
-        "Thing",
         "Event",
         "SocialEvent"
     ],
     [
-        "Thing",
         "Event",
         "SportsEvent"
     ],
     [
-        "Thing",
         "Event",
         "TheaterEvent"
     ],
     [
-        "Thing",
         "Event",
         "VisualArtsEvent"
     ],
     [
-        "Thing",
-        "Intangible"
+        "Event"
     ],
     [
-        "Thing",
         "Intangible",
         "ActionAccessSpecification"
     ],
     [
-        "Thing",
         "Intangible",
         "AlignmentObject"
     ],
     [
-        "Thing",
-        "Intangible",
-        "Audience"
-    ],
-    [
-        "Thing",
         "Intangible",
         "Audience",
         "BusinessAudience"
     ],
     [
-        "Thing",
         "Intangible",
         "Audience",
         "EducationalAudience"
     ],
     [
-        "Thing",
-        "Intangible",
-        "Audience",
-        "MedicalAudience"
-    ],
-    [
-        "Thing",
         "Intangible",
         "Audience",
         "MedicalAudience",
         "Patient"
     ],
     [
-        "Thing",
         "Intangible",
         "Audience",
-        "PeopleAudience"
-    ],
-    [
-        "Thing",
-        "Intangible",
-        "Audience",
-        "PeopleAudience",
         "MedicalAudience"
     ],
     [
-        "Thing",
         "Intangible",
         "Audience",
         "PeopleAudience",
@@ -1552,429 +1266,354 @@ export const schemaTypeArray = [
         "Patient"
     ],
     [
-        "Thing",
+        "Intangible",
+        "Audience",
+        "PeopleAudience",
+        "MedicalAudience"
+    ],
+    [
         "Intangible",
         "Audience",
         "PeopleAudience",
         "ParentAudience"
     ],
     [
-        "Thing",
+        "Intangible",
+        "Audience",
+        "PeopleAudience"
+    ],
+    [
         "Intangible",
         "Audience",
         "Researcher"
     ],
     [
-        "Thing",
+        "Intangible",
+        "Audience"
+    ],
+    [
         "Intangible",
         "BedDetails"
     ],
     [
-        "Thing",
         "Intangible",
         "Brand"
     ],
     [
-        "Thing",
-        "Intangible",
-        "BroadcastChannel"
-    ],
-    [
-        "Thing",
-        "Intangible",
-        "BroadcastChannel",
-        "RadioChannel"
-    ],
-    [
-        "Thing",
         "Intangible",
         "BroadcastChannel",
         "RadioChannel",
         "AMRadioChannel"
     ],
     [
-        "Thing",
         "Intangible",
         "BroadcastChannel",
         "RadioChannel",
         "FMRadioChannel"
     ],
     [
-        "Thing",
+        "Intangible",
+        "BroadcastChannel",
+        "RadioChannel"
+    ],
+    [
         "Intangible",
         "BroadcastChannel",
         "TelevisionChannel"
     ],
     [
-        "Thing",
+        "Intangible",
+        "BroadcastChannel"
+    ],
+    [
         "Intangible",
         "BroadcastFrequencySpecification"
     ],
     [
-        "Thing",
         "Intangible",
         "ComputerLanguage"
     ],
     [
-        "Thing",
         "Intangible",
         "DataFeedItem"
     ],
     [
-        "Thing",
         "Intangible",
         "Demand"
     ],
     [
-        "Thing",
         "Intangible",
         "DigitalDocumentPermission"
     ],
     [
-        "Thing",
         "Intangible",
         "EntryPoint"
     ],
     [
-        "Thing",
         "Intangible",
         "Enumeration"
     ],
     [
-        "Thing",
         "Intangible",
         "GameServer"
     ],
     [
-        "Thing",
         "Intangible",
         "Invoice"
     ],
     [
-        "Thing",
-        "Intangible",
-        "ItemList"
-    ],
-    [
-        "Thing",
         "Intangible",
         "ItemList",
         "BreadcrumbList"
     ],
     [
-        "Thing",
         "Intangible",
         "ItemList",
         "HowToSection"
     ],
     [
-        "Thing",
         "Intangible",
         "ItemList",
         "HowToStep"
     ],
     [
-        "Thing",
         "Intangible",
         "ItemList",
         "OfferCatalog"
     ],
     [
-        "Thing",
+        "Intangible",
+        "ItemList"
+    ],
+    [
         "Intangible",
         "JobPosting"
     ],
     [
-        "Thing",
         "Intangible",
         "Language"
     ],
     [
-        "Thing",
-        "Intangible",
-        "ListItem"
-    ],
-    [
-        "Thing",
         "Intangible",
         "ListItem",
         "HowToDirection"
     ],
     [
-        "Thing",
-        "Intangible",
-        "ListItem",
-        "HowToItem"
-    ],
-    [
-        "Thing",
         "Intangible",
         "ListItem",
         "HowToItem",
         "HowToSupply"
     ],
     [
-        "Thing",
         "Intangible",
         "ListItem",
         "HowToItem",
         "HowToTool"
     ],
     [
-        "Thing",
+        "Intangible",
+        "ListItem",
+        "HowToItem"
+    ],
+    [
         "Intangible",
         "ListItem",
         "HowToSection"
     ],
     [
-        "Thing",
         "Intangible",
         "ListItem",
         "HowToStep"
     ],
     [
-        "Thing",
         "Intangible",
         "ListItem",
         "HowToTip"
     ],
     [
-        "Thing",
+        "Intangible",
+        "ListItem"
+    ],
+    [
         "Intangible",
         "MediaSubscription"
     ],
     [
-        "Thing",
         "Intangible",
         "MenuItem"
     ],
     [
-        "Thing",
         "Intangible",
         "Occupation"
     ],
     [
-        "Thing",
-        "Intangible",
-        "Offer"
-    ],
-    [
-        "Thing",
         "Intangible",
         "Offer",
         "AggregateOffer"
     ],
     [
-        "Thing",
+        "Intangible",
+        "Offer"
+    ],
+    [
         "Intangible",
         "Order"
     ],
     [
-        "Thing",
         "Intangible",
         "OrderItem"
     ],
     [
-        "Thing",
         "Intangible",
         "ParcelDelivery"
     ],
     [
-        "Thing",
-        "Intangible",
-        "Permit"
-    ],
-    [
-        "Thing",
         "Intangible",
         "Permit",
         "GovernmentPermit"
     ],
     [
-        "Thing",
+        "Intangible",
+        "Permit"
+    ],
+    [
         "Intangible",
         "ProgramMembership"
     ],
     [
-        "Thing",
         "Intangible",
         "PropertyValueSpecification"
     ],
     [
-        "Thing",
-        "Intangible",
-        "Quantity"
-    ],
-    [
-        "Thing",
         "Intangible",
         "Quantity",
         "Distance"
     ],
     [
-        "Thing",
         "Intangible",
         "Quantity",
         "Duration"
     ],
     [
-        "Thing",
         "Intangible",
         "Quantity",
         "Energy"
     ],
     [
-        "Thing",
         "Intangible",
         "Quantity",
         "Mass"
     ],
     [
-        "Thing",
         "Intangible",
-        "Rating"
+        "Quantity"
     ],
     [
-        "Thing",
-        "Intangible",
-        "Rating",
-        "AggregateRating"
-    ],
-    [
-        "Thing",
         "Intangible",
         "Rating",
         "AggregateRating",
         "EmployerAggregateRating"
     ],
     [
-        "Thing",
+        "Intangible",
+        "Rating",
+        "AggregateRating"
+    ],
+    [
         "Intangible",
         "Rating",
         "EndorsementRating"
     ],
     [
-        "Thing",
         "Intangible",
-        "Reservation"
+        "Rating"
     ],
     [
-        "Thing",
         "Intangible",
         "Reservation",
         "BusReservation"
     ],
     [
-        "Thing",
         "Intangible",
         "Reservation",
         "EventReservation"
     ],
     [
-        "Thing",
         "Intangible",
         "Reservation",
         "FlightReservation"
     ],
     [
-        "Thing",
         "Intangible",
         "Reservation",
         "FoodEstablishmentReservation"
     ],
     [
-        "Thing",
         "Intangible",
         "Reservation",
         "LodgingReservation"
     ],
     [
-        "Thing",
         "Intangible",
         "Reservation",
         "RentalCarReservation"
     ],
     [
-        "Thing",
         "Intangible",
         "Reservation",
         "ReservationPackage"
     ],
     [
-        "Thing",
         "Intangible",
         "Reservation",
         "TaxiReservation"
     ],
     [
-        "Thing",
         "Intangible",
         "Reservation",
         "TrainReservation"
     ],
     [
-        "Thing",
         "Intangible",
-        "Role"
+        "Reservation"
     ],
     [
-        "Thing",
-        "Intangible",
-        "Role",
-        "OrganizationRole"
-    ],
-    [
-        "Thing",
         "Intangible",
         "Role",
         "OrganizationRole",
         "EmployeeRole"
     ],
     [
-        "Thing",
+        "Intangible",
+        "Role",
+        "OrganizationRole"
+    ],
+    [
         "Intangible",
         "Role",
         "PerformanceRole"
     ],
     [
-        "Thing",
+        "Intangible",
+        "Role"
+    ],
+    [
         "Intangible",
         "Seat"
     ],
     [
-        "Thing",
-        "Intangible",
-        "Series"
-    ],
-    [
-        "Thing",
-        "Intangible",
-        "Series",
-        "CreativeWorkSeries"
-    ],
-    [
-        "Thing",
         "Intangible",
         "Series",
         "CreativeWorkSeries",
         "BookSeries"
     ],
     [
-        "Thing",
         "Intangible",
         "Series",
         "CreativeWorkSeries",
         "MovieSeries"
     ],
     [
-        "Thing",
-        "Intangible",
-        "Series",
-        "CreativeWorkSeries",
-        "Periodical"
-    ],
-    [
-        "Thing",
         "Intangible",
         "Series",
         "CreativeWorkSeries",
@@ -1982,7 +1621,6 @@ export const schemaTypeArray = [
         "ComicSeries"
     ],
     [
-        "Thing",
         "Intangible",
         "Series",
         "CreativeWorkSeries",
@@ -1990,58 +1628,49 @@ export const schemaTypeArray = [
         "Newspaper"
     ],
     [
-        "Thing",
+        "Intangible",
+        "Series",
+        "CreativeWorkSeries",
+        "Periodical"
+    ],
+    [
         "Intangible",
         "Series",
         "CreativeWorkSeries",
         "RadioSeries"
     ],
     [
-        "Thing",
         "Intangible",
         "Series",
         "CreativeWorkSeries",
         "TVSeries"
     ],
     [
-        "Thing",
         "Intangible",
         "Series",
         "CreativeWorkSeries",
         "VideoGameSeries"
     ],
     [
-        "Thing",
         "Intangible",
-        "Service"
+        "Series",
+        "CreativeWorkSeries"
     ],
     [
-        "Thing",
+        "Intangible",
+        "Series"
+    ],
+    [
         "Intangible",
         "Service",
         "BroadcastService"
     ],
     [
-        "Thing",
         "Intangible",
         "Service",
         "CableOrSatelliteService"
     ],
     [
-        "Thing",
-        "Intangible",
-        "Service",
-        "FinancialProduct"
-    ],
-    [
-        "Thing",
-        "Intangible",
-        "Service",
-        "FinancialProduct",
-        "BankAccount"
-    ],
-    [
-        "Thing",
         "Intangible",
         "Service",
         "FinancialProduct",
@@ -2049,21 +1678,18 @@ export const schemaTypeArray = [
         "DepositAccount"
     ],
     [
-        "Thing",
+        "Intangible",
+        "Service",
+        "FinancialProduct",
+        "BankAccount"
+    ],
+    [
         "Intangible",
         "Service",
         "FinancialProduct",
         "CurrencyConversionService"
     ],
     [
-        "Thing",
-        "Intangible",
-        "Service",
-        "FinancialProduct",
-        "InvestmentOrDeposit"
-    ],
-    [
-        "Thing",
         "Intangible",
         "Service",
         "FinancialProduct",
@@ -2071,368 +1697,307 @@ export const schemaTypeArray = [
         "DepositAccount"
     ],
     [
-        "Thing",
+        "Intangible",
+        "Service",
+        "FinancialProduct",
+        "InvestmentOrDeposit"
+    ],
+    [
         "Intangible",
         "Service",
         "FinancialProduct",
         "LoanOrCredit"
     ],
     [
-        "Thing",
         "Intangible",
         "Service",
         "FinancialProduct",
         "PaymentService"
     ],
     [
-        "Thing",
+        "Intangible",
+        "Service",
+        "FinancialProduct"
+    ],
+    [
         "Intangible",
         "Service",
         "FoodService"
     ],
     [
-        "Thing",
         "Intangible",
         "Service",
         "GovernmentService"
     ],
     [
-        "Thing",
         "Intangible",
         "Service",
         "TaxiService"
     ],
     [
-        "Thing",
+        "Intangible",
+        "Service"
+    ],
+    [
         "Intangible",
         "ServiceChannel"
     ],
     [
-        "Thing",
         "Intangible",
         "SpeakableSpecification"
     ],
     [
-        "Thing",
-        "Intangible",
-        "StructuredValue"
-    ],
-    [
-        "Thing",
-        "Intangible",
-        "StructuredValue",
-        "ContactPoint"
-    ],
-    [
-        "Thing",
         "Intangible",
         "StructuredValue",
         "ContactPoint",
         "PostalAddress"
     ],
     [
-        "Thing",
+        "Intangible",
+        "StructuredValue",
+        "ContactPoint"
+    ],
+    [
         "Intangible",
         "StructuredValue",
         "EngineSpecification"
     ],
     [
-        "Thing",
         "Intangible",
         "StructuredValue",
         "GeoCoordinates"
     ],
     [
-        "Thing",
-        "Intangible",
-        "StructuredValue",
-        "GeoShape"
-    ],
-    [
-        "Thing",
         "Intangible",
         "StructuredValue",
         "GeoShape",
         "GeoCircle"
     ],
     [
-        "Thing",
+        "Intangible",
+        "StructuredValue",
+        "GeoShape"
+    ],
+    [
         "Intangible",
         "StructuredValue",
         "InteractionCounter"
     ],
     [
-        "Thing",
         "Intangible",
         "StructuredValue",
         "MonetaryAmount"
     ],
     [
-        "Thing",
         "Intangible",
         "StructuredValue",
         "NutritionInformation"
     ],
     [
-        "Thing",
         "Intangible",
         "StructuredValue",
         "OpeningHoursSpecification"
     ],
     [
-        "Thing",
         "Intangible",
         "StructuredValue",
         "OwnershipInfo"
     ],
     [
-        "Thing",
-        "Intangible",
-        "StructuredValue",
-        "PriceSpecification"
-    ],
-    [
-        "Thing",
         "Intangible",
         "StructuredValue",
         "PriceSpecification",
         "CompoundPriceSpecification"
     ],
     [
-        "Thing",
         "Intangible",
         "StructuredValue",
         "PriceSpecification",
         "DeliveryChargeSpecification"
     ],
     [
-        "Thing",
         "Intangible",
         "StructuredValue",
         "PriceSpecification",
         "PaymentChargeSpecification"
     ],
     [
-        "Thing",
         "Intangible",
         "StructuredValue",
         "PriceSpecification",
         "UnitPriceSpecification"
     ],
     [
-        "Thing",
         "Intangible",
         "StructuredValue",
-        "PropertyValue"
+        "PriceSpecification"
     ],
     [
-        "Thing",
         "Intangible",
         "StructuredValue",
         "PropertyValue",
         "LocationFeatureSpecification"
     ],
     [
-        "Thing",
+        "Intangible",
+        "StructuredValue",
+        "PropertyValue"
+    ],
+    [
         "Intangible",
         "StructuredValue",
         "QuantitativeValue"
     ],
     [
-        "Thing",
-        "Intangible",
-        "StructuredValue",
-        "QuantitativeValueDistribution"
-    ],
-    [
-        "Thing",
         "Intangible",
         "StructuredValue",
         "QuantitativeValueDistribution",
         "MonetaryAmountDistribution"
     ],
     [
-        "Thing",
+        "Intangible",
+        "StructuredValue",
+        "QuantitativeValueDistribution"
+    ],
+    [
         "Intangible",
         "StructuredValue",
         "TypeAndQuantityNode"
     ],
     [
-        "Thing",
         "Intangible",
         "StructuredValue",
         "WarrantyPromise"
     ],
     [
-        "Thing",
+        "Intangible",
+        "StructuredValue"
+    ],
+    [
         "Intangible",
         "Ticket"
     ],
     [
-        "Thing",
-        "Intangible",
-        "Trip"
-    ],
-    [
-        "Thing",
         "Intangible",
         "Trip",
         "BusTrip"
     ],
     [
-        "Thing",
         "Intangible",
         "Trip",
         "Flight"
     ],
     [
-        "Thing",
         "Intangible",
         "Trip",
         "TrainTrip"
     ],
     [
-        "Thing",
-        "MedicalEntity"
+        "Intangible",
+        "Trip"
     ],
     [
-        "Thing",
-        "MedicalEntity",
-        "AnatomicalStructure"
+        "Intangible"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "AnatomicalStructure",
         "Bone"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "AnatomicalStructure",
         "BrainStructure"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "AnatomicalStructure",
         "Joint"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "AnatomicalStructure",
         "Ligament"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "AnatomicalStructure",
         "Muscle"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "AnatomicalStructure",
         "Nerve"
     ],
     [
-        "Thing",
-        "MedicalEntity",
-        "AnatomicalStructure",
-        "Vessel"
-    ],
-    [
-        "Thing",
         "MedicalEntity",
         "AnatomicalStructure",
         "Vessel",
         "Artery"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "AnatomicalStructure",
         "Vessel",
         "LymphaticVessel"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "AnatomicalStructure",
         "Vessel",
         "Vein"
     ],
     [
-        "Thing",
+        "MedicalEntity",
+        "AnatomicalStructure",
+        "Vessel"
+    ],
+    [
+        "MedicalEntity",
+        "AnatomicalStructure"
+    ],
+    [
         "MedicalEntity",
         "AnatomicalSystem"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "DrugClass"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "DrugCost"
     ],
     [
-        "Thing",
-        "MedicalEntity",
-        "LifestyleModification"
-    ],
-    [
-        "Thing",
         "MedicalEntity",
         "LifestyleModification",
         "Diet"
     ],
     [
-        "Thing",
-        "MedicalEntity",
-        "LifestyleModification",
-        "PhysicalActivity"
-    ],
-    [
-        "Thing",
         "MedicalEntity",
         "LifestyleModification",
         "PhysicalActivity",
         "ExercisePlan"
     ],
     [
-        "Thing",
+        "MedicalEntity",
+        "LifestyleModification",
+        "PhysicalActivity"
+    ],
+    [
+        "MedicalEntity",
+        "LifestyleModification"
+    ],
+    [
         "MedicalEntity",
         "MedicalCause"
     ],
     [
-        "Thing",
-        "MedicalEntity",
-        "MedicalCondition"
-    ],
-    [
-        "Thing",
         "MedicalEntity",
         "MedicalCondition",
         "InfectiousDisease"
     ],
     [
-        "Thing",
-        "MedicalEntity",
-        "MedicalCondition",
-        "MedicalSignOrSymptom"
-    ],
-    [
-        "Thing",
-        "MedicalEntity",
-        "MedicalCondition",
-        "MedicalSignOrSymptom",
-        "MedicalSign"
-    ],
-    [
-        "Thing",
         "MedicalEntity",
         "MedicalCondition",
         "MedicalSignOrSymptom",
@@ -2440,162 +2005,135 @@ export const schemaTypeArray = [
         "VitalSign"
     ],
     [
-        "Thing",
+        "MedicalEntity",
+        "MedicalCondition",
+        "MedicalSignOrSymptom",
+        "MedicalSign"
+    ],
+    [
         "MedicalEntity",
         "MedicalCondition",
         "MedicalSignOrSymptom",
         "MedicalSymptom"
     ],
     [
-        "Thing",
+        "MedicalEntity",
+        "MedicalCondition",
+        "MedicalSignOrSymptom"
+    ],
+    [
+        "MedicalEntity",
+        "MedicalCondition"
+    ],
+    [
         "MedicalEntity",
         "MedicalContraindication"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalDevice"
     ],
     [
-        "Thing",
-        "MedicalEntity",
-        "MedicalGuideline"
-    ],
-    [
-        "Thing",
         "MedicalEntity",
         "MedicalGuideline",
         "MedicalGuidelineContraindication"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalGuideline",
         "MedicalGuidelineRecommendation"
     ],
     [
-        "Thing",
         "MedicalEntity",
-        "MedicalIndication"
+        "MedicalGuideline"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalIndication",
         "ApprovedIndication"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalIndication",
         "PreventionIndication"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalIndication",
         "TreatmentIndication"
     ],
     [
-        "Thing",
         "MedicalEntity",
-        "MedicalIntangible"
+        "MedicalIndication"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalIntangible",
         "DDxElement"
     ],
     [
-        "Thing",
-        "MedicalEntity",
-        "MedicalIntangible",
-        "DoseSchedule"
-    ],
-    [
-        "Thing",
         "MedicalEntity",
         "MedicalIntangible",
         "DoseSchedule",
         "MaximumDoseSchedule"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalIntangible",
         "DoseSchedule",
         "RecommendedDoseSchedule"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalIntangible",
         "DoseSchedule",
         "ReportedDoseSchedule"
     ],
     [
-        "Thing",
+        "MedicalEntity",
+        "MedicalIntangible",
+        "DoseSchedule"
+    ],
+    [
         "MedicalEntity",
         "MedicalIntangible",
         "DrugLegalStatus"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalIntangible",
         "DrugStrength"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalIntangible",
         "MedicalCode"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalIntangible",
         "MedicalConditionStage"
     ],
     [
-        "Thing",
         "MedicalEntity",
-        "MedicalProcedure"
+        "MedicalIntangible"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalProcedure",
         "DiagnosticProcedure"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalProcedure",
         "PalliativeProcedure"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalProcedure",
         "SurgicalProcedure"
     ],
     [
-        "Thing",
-        "MedicalEntity",
-        "MedicalProcedure",
-        "TherapeuticProcedure"
-    ],
-    [
-        "Thing",
-        "MedicalEntity",
-        "MedicalProcedure",
-        "TherapeuticProcedure",
-        "MedicalTherapy"
-    ],
-    [
-        "Thing",
         "MedicalEntity",
         "MedicalProcedure",
         "TherapeuticProcedure",
@@ -2603,7 +2141,6 @@ export const schemaTypeArray = [
         "OccupationalTherapy"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalProcedure",
         "TherapeuticProcedure",
@@ -2611,7 +2148,6 @@ export const schemaTypeArray = [
         "PalliativeProcedure"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalProcedure",
         "TherapeuticProcedure",
@@ -2619,7 +2155,6 @@ export const schemaTypeArray = [
         "PhysicalTherapy"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalProcedure",
         "TherapeuticProcedure",
@@ -2627,656 +2162,554 @@ export const schemaTypeArray = [
         "RadiationTherapy"
     ],
     [
-        "Thing",
+        "MedicalEntity",
+        "MedicalProcedure",
+        "TherapeuticProcedure",
+        "MedicalTherapy"
+    ],
+    [
         "MedicalEntity",
         "MedicalProcedure",
         "TherapeuticProcedure",
         "PsychologicalTreatment"
     ],
     [
-        "Thing",
         "MedicalEntity",
-        "MedicalRiskEstimator"
+        "MedicalProcedure",
+        "TherapeuticProcedure"
     ],
     [
-        "Thing",
+        "MedicalEntity",
+        "MedicalProcedure"
+    ],
+    [
         "MedicalEntity",
         "MedicalRiskEstimator",
         "MedicalRiskCalculator"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalRiskEstimator",
         "MedicalRiskScore"
     ],
     [
-        "Thing",
+        "MedicalEntity",
+        "MedicalRiskEstimator"
+    ],
+    [
         "MedicalEntity",
         "MedicalRiskFactor"
     ],
     [
-        "Thing",
-        "MedicalEntity",
-        "MedicalStudy"
-    ],
-    [
-        "Thing",
         "MedicalEntity",
         "MedicalStudy",
         "MedicalObservationalStudy"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalStudy",
         "MedicalTrial"
     ],
     [
-        "Thing",
         "MedicalEntity",
-        "MedicalTest"
+        "MedicalStudy"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalTest",
         "BloodTest"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalTest",
         "ImagingTest"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalTest",
         "MedicalTestPanel"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "MedicalTest",
         "PathologyTest"
     ],
     [
-        "Thing",
         "MedicalEntity",
-        "Substance"
+        "MedicalTest"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "Substance",
         "DietarySupplement"
     ],
     [
-        "Thing",
         "MedicalEntity",
         "Substance",
         "Drug"
     ],
     [
-        "Thing",
+        "MedicalEntity",
+        "Substance"
+    ],
+    [
         "MedicalEntity",
         "SuperficialAnatomy"
     ],
     [
-        "Thing",
-        "Organization"
+        "MedicalEntity"
     ],
     [
-        "Thing",
         "Organization",
         "Airline"
     ],
     [
-        "Thing",
         "Organization",
         "Corporation"
     ],
     [
-        "Thing",
-        "Organization",
-        "EducationalOrganization"
-    ],
-    [
-        "Thing",
         "Organization",
         "EducationalOrganization",
         "CollegeOrUniversity"
     ],
     [
-        "Thing",
         "Organization",
         "EducationalOrganization",
         "ElementarySchool"
     ],
     [
-        "Thing",
         "Organization",
         "EducationalOrganization",
         "HighSchool"
     ],
     [
-        "Thing",
         "Organization",
         "EducationalOrganization",
         "MiddleSchool"
     ],
     [
-        "Thing",
         "Organization",
         "EducationalOrganization",
         "Preschool"
     ],
     [
-        "Thing",
         "Organization",
         "EducationalOrganization",
         "School"
     ],
     [
-        "Thing",
+        "Organization",
+        "EducationalOrganization"
+    ],
+    [
         "Organization",
         "GovernmentOrganization"
     ],
     [
-        "Thing",
-        "Organization",
-        "LocalBusiness"
-    ],
-    [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "AnimalShelter"
     ],
     [
-        "Thing",
-        "Organization",
-        "LocalBusiness",
-        "AutomotiveBusiness"
-    ],
-    [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "AutomotiveBusiness",
         "AutoBodyShop"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "AutomotiveBusiness",
         "AutoDealer"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "AutomotiveBusiness",
         "AutoPartsStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "AutomotiveBusiness",
         "AutoRental"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "AutomotiveBusiness",
         "AutoRepair"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "AutomotiveBusiness",
         "AutoWash"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "AutomotiveBusiness",
         "GasStation"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "AutomotiveBusiness",
         "MotorcycleDealer"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "AutomotiveBusiness",
         "MotorcycleRepair"
     ],
     [
-        "Thing",
+        "Organization",
+        "LocalBusiness",
+        "AutomotiveBusiness"
+    ],
+    [
         "Organization",
         "LocalBusiness",
         "ChildCare"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Dentist"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "DryCleaningOrLaundry"
     ],
     [
-        "Thing",
-        "Organization",
-        "LocalBusiness",
-        "EmergencyService"
-    ],
-    [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "EmergencyService",
         "FireStation"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "EmergencyService",
         "Hospital"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "EmergencyService",
         "PoliceStation"
     ],
     [
-        "Thing",
+        "Organization",
+        "LocalBusiness",
+        "EmergencyService"
+    ],
+    [
         "Organization",
         "LocalBusiness",
         "EmploymentAgency"
     ],
     [
-        "Thing",
-        "Organization",
-        "LocalBusiness",
-        "EntertainmentBusiness"
-    ],
-    [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "EntertainmentBusiness",
         "AdultEntertainment"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "EntertainmentBusiness",
         "AmusementPark"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "EntertainmentBusiness",
         "ArtGallery"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "EntertainmentBusiness",
         "Casino"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "EntertainmentBusiness",
         "ComedyClub"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "EntertainmentBusiness",
         "MovieTheater"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "EntertainmentBusiness",
         "NightClub"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
-        "FinancialService"
+        "EntertainmentBusiness"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "FinancialService",
         "AccountingService"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "FinancialService",
         "AutomatedTeller"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "FinancialService",
         "BankOrCreditUnion"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "FinancialService",
         "InsuranceAgency"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
-        "FoodEstablishment"
+        "FinancialService"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "FoodEstablishment",
         "Bakery"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "FoodEstablishment",
         "BarOrPub"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "FoodEstablishment",
         "Brewery"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "FoodEstablishment",
         "CafeOrCoffeeShop"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "FoodEstablishment",
         "Distillery"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "FoodEstablishment",
         "FastFoodRestaurant"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "FoodEstablishment",
         "IceCreamShop"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "FoodEstablishment",
         "Restaurant"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "FoodEstablishment",
         "Winery"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
-        "GovernmentOffice"
+        "FoodEstablishment"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "GovernmentOffice",
         "PostOffice"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
-        "HealthAndBeautyBusiness"
+        "GovernmentOffice"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "HealthAndBeautyBusiness",
         "BeautySalon"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "HealthAndBeautyBusiness",
         "DaySpa"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "HealthAndBeautyBusiness",
         "HairSalon"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "HealthAndBeautyBusiness",
         "HealthClub"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "HealthAndBeautyBusiness",
         "NailSalon"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "HealthAndBeautyBusiness",
         "TattooParlor"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
-        "HomeAndConstructionBusiness"
+        "HealthAndBeautyBusiness"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "HomeAndConstructionBusiness",
         "Electrician"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "HomeAndConstructionBusiness",
         "GeneralContractor"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "HomeAndConstructionBusiness",
         "HVACBusiness"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "HomeAndConstructionBusiness",
         "HousePainter"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "HomeAndConstructionBusiness",
         "Locksmith"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "HomeAndConstructionBusiness",
         "MovingCompany"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "HomeAndConstructionBusiness",
         "Plumber"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "HomeAndConstructionBusiness",
         "RoofingContractor"
     ],
     [
-        "Thing",
+        "Organization",
+        "LocalBusiness",
+        "HomeAndConstructionBusiness"
+    ],
+    [
         "Organization",
         "LocalBusiness",
         "InternetCafe"
     ],
     [
-        "Thing",
-        "Organization",
-        "LocalBusiness",
-        "LegalService"
-    ],
-    [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "LegalService",
         "Attorney"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "LegalService",
         "Notary"
     ],
     [
-        "Thing",
+        "Organization",
+        "LocalBusiness",
+        "LegalService"
+    ],
+    [
         "Organization",
         "LocalBusiness",
         "Library"
     ],
     [
-        "Thing",
-        "Organization",
-        "LocalBusiness",
-        "LodgingBusiness"
-    ],
-    [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "LodgingBusiness",
         "BedAndBreakfast"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "LodgingBusiness",
         "Campground"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "LodgingBusiness",
         "Hostel"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "LodgingBusiness",
         "Hotel"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "LodgingBusiness",
         "Motel"
     ],
     [
-        "Thing",
-        "Organization",
-        "LocalBusiness",
-        "LodgingBusiness",
-        "Resort"
-    ],
-    [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "LodgingBusiness",
@@ -3284,792 +2717,668 @@ export const schemaTypeArray = [
         "SkiResort"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
-        "MedicalBusiness"
+        "LodgingBusiness",
+        "Resort"
     ],
     [
-        "Thing",
+        "Organization",
+        "LocalBusiness",
+        "LodgingBusiness"
+    ],
+    [
         "Organization",
         "LocalBusiness",
         "MedicalBusiness",
         "Dentist"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "MedicalBusiness",
         "MedicalClinic"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "MedicalBusiness",
         "Optician"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "MedicalBusiness",
         "Pharmacy"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "MedicalBusiness",
         "Physician"
     ],
     [
-        "Thing",
+        "Organization",
+        "LocalBusiness",
+        "MedicalBusiness"
+    ],
+    [
         "Organization",
         "LocalBusiness",
         "ProfessionalService"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "RadioStation"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "RealEstateAgent"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "RecyclingCenter"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "SelfStorage"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "ShoppingCenter"
     ],
     [
-        "Thing",
-        "Organization",
-        "LocalBusiness",
-        "SportsActivityLocation"
-    ],
-    [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "SportsActivityLocation",
         "BowlingAlley"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "SportsActivityLocation",
         "ExerciseGym"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "SportsActivityLocation",
         "GolfCourse"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "SportsActivityLocation",
         "HealthClub"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "SportsActivityLocation",
         "PublicSwimmingPool"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "SportsActivityLocation",
         "SkiResort"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "SportsActivityLocation",
         "SportsClub"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "SportsActivityLocation",
         "StadiumOrArena"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "SportsActivityLocation",
         "TennisComplex"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
-        "Store"
+        "SportsActivityLocation"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "AutoPartsStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "BikeStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "BookStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "ClothingStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "ComputerStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "ConvenienceStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "DepartmentStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "ElectronicsStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "Florist"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "FurnitureStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "GardenStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "GroceryStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "HardwareStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "HobbyShop"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "HomeGoodsStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "JewelryStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "LiquorStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "MensClothingStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "MobilePhoneStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "MovieRentalStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "MusicStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "OfficeEquipmentStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "OutletStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "PawnShop"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "PetStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "ShoeStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "SportingGoodsStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "TireShop"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "ToyStore"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "Store",
         "WholesaleStore"
     ],
     [
-        "Thing",
+        "Organization",
+        "LocalBusiness",
+        "Store"
+    ],
+    [
         "Organization",
         "LocalBusiness",
         "TelevisionStation"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "TouristInformationCenter"
     ],
     [
-        "Thing",
         "Organization",
         "LocalBusiness",
         "TravelAgency"
     ],
     [
-        "Thing",
         "Organization",
-        "MedicalOrganization"
+        "LocalBusiness"
     ],
     [
-        "Thing",
         "Organization",
         "MedicalOrganization",
         "Dentist"
     ],
     [
-        "Thing",
         "Organization",
         "MedicalOrganization",
         "DiagnosticLab"
     ],
     [
-        "Thing",
         "Organization",
         "MedicalOrganization",
         "Hospital"
     ],
     [
-        "Thing",
         "Organization",
         "MedicalOrganization",
         "MedicalClinic"
     ],
     [
-        "Thing",
         "Organization",
         "MedicalOrganization",
         "Pharmacy"
     ],
     [
-        "Thing",
         "Organization",
         "MedicalOrganization",
         "Physician"
     ],
     [
-        "Thing",
         "Organization",
         "MedicalOrganization",
         "VeterinaryCare"
     ],
     [
-        "Thing",
+        "Organization",
+        "MedicalOrganization"
+    ],
+    [
         "Organization",
         "NGO"
     ],
     [
-        "Thing",
-        "Organization",
-        "PerformingGroup"
-    ],
-    [
-        "Thing",
         "Organization",
         "PerformingGroup",
         "DanceGroup"
     ],
     [
-        "Thing",
         "Organization",
         "PerformingGroup",
         "MusicGroup"
     ],
     [
-        "Thing",
         "Organization",
         "PerformingGroup",
         "TheaterGroup"
     ],
     [
-        "Thing",
         "Organization",
-        "SportsOrganization"
+        "PerformingGroup"
     ],
     [
-        "Thing",
         "Organization",
         "SportsOrganization",
         "SportsTeam"
     ],
     [
-        "Thing",
+        "Organization",
+        "SportsOrganization"
+    ],
+    [
         "Organization",
         "WorkersUnion"
     ],
     [
-        "Thing",
-        "Person"
+        "Organization"
     ],
     [
-        "Thing",
         "Person",
         "Patient"
     ],
     [
-        "Thing",
-        "Place"
+        "Person"
     ],
     [
-        "Thing",
-        "Place",
-        "Accommodation"
-    ],
-    [
-        "Thing",
         "Place",
         "Accommodation",
         "Apartment"
     ],
     [
-        "Thing",
         "Place",
         "Accommodation",
         "CampingPitch"
     ],
     [
-        "Thing",
-        "Place",
-        "Accommodation",
-        "House"
-    ],
-    [
-        "Thing",
         "Place",
         "Accommodation",
         "House",
         "SingleFamilyResidence"
     ],
     [
-        "Thing",
         "Place",
         "Accommodation",
-        "Room"
+        "House"
     ],
     [
-        "Thing",
         "Place",
         "Accommodation",
         "Room",
         "HotelRoom"
     ],
     [
-        "Thing",
         "Place",
         "Accommodation",
         "Room",
         "MeetingRoom"
     ],
     [
-        "Thing",
+        "Place",
+        "Accommodation",
+        "Room"
+    ],
+    [
         "Place",
         "Accommodation",
         "Suite"
     ],
     [
-        "Thing",
         "Place",
-        "AdministrativeArea"
+        "Accommodation"
     ],
     [
-        "Thing",
         "Place",
         "AdministrativeArea",
         "City"
     ],
     [
-        "Thing",
         "Place",
         "AdministrativeArea",
         "Country"
     ],
     [
-        "Thing",
         "Place",
         "AdministrativeArea",
         "State"
     ],
     [
-        "Thing",
         "Place",
-        "CivicStructure"
+        "AdministrativeArea"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "Airport"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "Aquarium"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "Beach"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "Bridge"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "BusStation"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "BusStop"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "Campground"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "Cemetery"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "Crematorium"
     ],
     [
-        "Thing",
-        "Place",
-        "CivicStructure",
-        "EducationalOrganization"
-    ],
-    [
-        "Thing",
         "Place",
         "CivicStructure",
         "EducationalOrganization",
         "CollegeOrUniversity"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "EducationalOrganization",
         "ElementarySchool"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "EducationalOrganization",
         "HighSchool"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "EducationalOrganization",
         "MiddleSchool"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "EducationalOrganization",
         "Preschool"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "EducationalOrganization",
         "School"
     ],
     [
-        "Thing",
+        "Place",
+        "CivicStructure",
+        "EducationalOrganization"
+    ],
+    [
         "Place",
         "CivicStructure",
         "EventVenue"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "FireStation"
     ],
     [
-        "Thing",
-        "Place",
-        "CivicStructure",
-        "GovernmentBuilding"
-    ],
-    [
-        "Thing",
         "Place",
         "CivicStructure",
         "GovernmentBuilding",
         "CityHall"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "GovernmentBuilding",
         "Courthouse"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "GovernmentBuilding",
         "DefenceEstablishment"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "GovernmentBuilding",
         "Embassy"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "GovernmentBuilding",
         "LegislativeBuilding"
     ],
     [
-        "Thing",
+        "Place",
+        "CivicStructure",
+        "GovernmentBuilding"
+    ],
+    [
         "Place",
         "CivicStructure",
         "Hospital"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "MovieTheater"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "Museum"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "MusicVenue"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "Park"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "ParkingFacility"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "PerformingArtsTheater"
     ],
     [
-        "Thing",
-        "Place",
-        "CivicStructure",
-        "PlaceOfWorship"
-    ],
-    [
-        "Thing",
         "Place",
         "CivicStructure",
         "PlaceOfWorship",
         "BuddhistTemple"
     ],
     [
-        "Thing",
-        "Place",
-        "CivicStructure",
-        "PlaceOfWorship",
-        "Church"
-    ],
-    [
-        "Thing",
         "Place",
         "CivicStructure",
         "PlaceOfWorship",
@@ -4077,658 +3386,559 @@ export const schemaTypeArray = [
         "CatholicChurch"
     ],
     [
-        "Thing",
+        "Place",
+        "CivicStructure",
+        "PlaceOfWorship",
+        "Church"
+    ],
+    [
         "Place",
         "CivicStructure",
         "PlaceOfWorship",
         "HinduTemple"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "PlaceOfWorship",
         "Mosque"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "PlaceOfWorship",
         "Synagogue"
     ],
     [
-        "Thing",
+        "Place",
+        "CivicStructure",
+        "PlaceOfWorship"
+    ],
+    [
         "Place",
         "CivicStructure",
         "Playground"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "PoliceStation"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "RVPark"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "StadiumOrArena"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "SubwayStation"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "TaxiStand"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "TrainStation"
     ],
     [
-        "Thing",
         "Place",
         "CivicStructure",
         "Zoo"
     ],
     [
-        "Thing",
         "Place",
-        "Landform"
+        "CivicStructure"
     ],
     [
-        "Thing",
-        "Place",
-        "Landform",
-        "BodyOfWater"
-    ],
-    [
-        "Thing",
         "Place",
         "Landform",
         "BodyOfWater",
         "Canal"
     ],
     [
-        "Thing",
         "Place",
         "Landform",
         "BodyOfWater",
         "LakeBodyOfWater"
     ],
     [
-        "Thing",
         "Place",
         "Landform",
         "BodyOfWater",
         "OceanBodyOfWater"
     ],
     [
-        "Thing",
         "Place",
         "Landform",
         "BodyOfWater",
         "Pond"
     ],
     [
-        "Thing",
         "Place",
         "Landform",
         "BodyOfWater",
         "Reservoir"
     ],
     [
-        "Thing",
         "Place",
         "Landform",
         "BodyOfWater",
         "RiverBodyOfWater"
     ],
     [
-        "Thing",
         "Place",
         "Landform",
         "BodyOfWater",
         "SeaBodyOfWater"
     ],
     [
-        "Thing",
         "Place",
         "Landform",
         "BodyOfWater",
         "Waterfall"
     ],
     [
-        "Thing",
+        "Place",
+        "Landform",
+        "BodyOfWater"
+    ],
+    [
         "Place",
         "Landform",
         "Continent"
     ],
     [
-        "Thing",
         "Place",
         "Landform",
         "Mountain"
     ],
     [
-        "Thing",
         "Place",
         "Landform",
         "Volcano"
     ],
     [
-        "Thing",
+        "Place",
+        "Landform"
+    ],
+    [
         "Place",
         "LandmarksOrHistoricalBuildings"
     ],
     [
-        "Thing",
-        "Place",
-        "LocalBusiness"
-    ],
-    [
-        "Thing",
         "Place",
         "LocalBusiness",
         "AnimalShelter"
     ],
     [
-        "Thing",
-        "Place",
-        "LocalBusiness",
-        "AutomotiveBusiness"
-    ],
-    [
-        "Thing",
         "Place",
         "LocalBusiness",
         "AutomotiveBusiness",
         "AutoBodyShop"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "AutomotiveBusiness",
         "AutoDealer"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "AutomotiveBusiness",
         "AutoPartsStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "AutomotiveBusiness",
         "AutoRental"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "AutomotiveBusiness",
         "AutoRepair"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "AutomotiveBusiness",
         "AutoWash"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "AutomotiveBusiness",
         "GasStation"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "AutomotiveBusiness",
         "MotorcycleDealer"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "AutomotiveBusiness",
         "MotorcycleRepair"
     ],
     [
-        "Thing",
+        "Place",
+        "LocalBusiness",
+        "AutomotiveBusiness"
+    ],
+    [
         "Place",
         "LocalBusiness",
         "ChildCare"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Dentist"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "DryCleaningOrLaundry"
     ],
     [
-        "Thing",
-        "Place",
-        "LocalBusiness",
-        "EmergencyService"
-    ],
-    [
-        "Thing",
         "Place",
         "LocalBusiness",
         "EmergencyService",
         "FireStation"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "EmergencyService",
         "Hospital"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "EmergencyService",
         "PoliceStation"
     ],
     [
-        "Thing",
+        "Place",
+        "LocalBusiness",
+        "EmergencyService"
+    ],
+    [
         "Place",
         "LocalBusiness",
         "EmploymentAgency"
     ],
     [
-        "Thing",
-        "Place",
-        "LocalBusiness",
-        "EntertainmentBusiness"
-    ],
-    [
-        "Thing",
         "Place",
         "LocalBusiness",
         "EntertainmentBusiness",
         "AdultEntertainment"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "EntertainmentBusiness",
         "AmusementPark"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "EntertainmentBusiness",
         "ArtGallery"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "EntertainmentBusiness",
         "Casino"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "EntertainmentBusiness",
         "ComedyClub"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "EntertainmentBusiness",
         "MovieTheater"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "EntertainmentBusiness",
         "NightClub"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
-        "FinancialService"
+        "EntertainmentBusiness"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "FinancialService",
         "AccountingService"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "FinancialService",
         "AutomatedTeller"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "FinancialService",
         "BankOrCreditUnion"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "FinancialService",
         "InsuranceAgency"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
-        "FoodEstablishment"
+        "FinancialService"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "FoodEstablishment",
         "Bakery"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "FoodEstablishment",
         "BarOrPub"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "FoodEstablishment",
         "Brewery"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "FoodEstablishment",
         "CafeOrCoffeeShop"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "FoodEstablishment",
         "Distillery"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "FoodEstablishment",
         "FastFoodRestaurant"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "FoodEstablishment",
         "IceCreamShop"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "FoodEstablishment",
         "Restaurant"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "FoodEstablishment",
         "Winery"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
-        "GovernmentOffice"
+        "FoodEstablishment"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "GovernmentOffice",
         "PostOffice"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
-        "HealthAndBeautyBusiness"
+        "GovernmentOffice"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "HealthAndBeautyBusiness",
         "BeautySalon"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "HealthAndBeautyBusiness",
         "DaySpa"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "HealthAndBeautyBusiness",
         "HairSalon"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "HealthAndBeautyBusiness",
         "HealthClub"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "HealthAndBeautyBusiness",
         "NailSalon"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "HealthAndBeautyBusiness",
         "TattooParlor"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
-        "HomeAndConstructionBusiness"
+        "HealthAndBeautyBusiness"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "HomeAndConstructionBusiness",
         "Electrician"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "HomeAndConstructionBusiness",
         "GeneralContractor"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "HomeAndConstructionBusiness",
         "HVACBusiness"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "HomeAndConstructionBusiness",
         "HousePainter"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "HomeAndConstructionBusiness",
         "Locksmith"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "HomeAndConstructionBusiness",
         "MovingCompany"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "HomeAndConstructionBusiness",
         "Plumber"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "HomeAndConstructionBusiness",
         "RoofingContractor"
     ],
     [
-        "Thing",
+        "Place",
+        "LocalBusiness",
+        "HomeAndConstructionBusiness"
+    ],
+    [
         "Place",
         "LocalBusiness",
         "InternetCafe"
     ],
     [
-        "Thing",
-        "Place",
-        "LocalBusiness",
-        "LegalService"
-    ],
-    [
-        "Thing",
         "Place",
         "LocalBusiness",
         "LegalService",
         "Attorney"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "LegalService",
         "Notary"
     ],
     [
-        "Thing",
+        "Place",
+        "LocalBusiness",
+        "LegalService"
+    ],
+    [
         "Place",
         "LocalBusiness",
         "Library"
     ],
     [
-        "Thing",
-        "Place",
-        "LocalBusiness",
-        "LodgingBusiness"
-    ],
-    [
-        "Thing",
         "Place",
         "LocalBusiness",
         "LodgingBusiness",
         "BedAndBreakfast"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "LodgingBusiness",
         "Campground"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "LodgingBusiness",
         "Hostel"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "LodgingBusiness",
         "Hotel"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "LodgingBusiness",
         "Motel"
     ],
     [
-        "Thing",
-        "Place",
-        "LocalBusiness",
-        "LodgingBusiness",
-        "Resort"
-    ],
-    [
-        "Thing",
         "Place",
         "LocalBusiness",
         "LodgingBusiness",
@@ -4736,453 +3946,402 @@ export const schemaTypeArray = [
         "SkiResort"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
-        "MedicalBusiness"
+        "LodgingBusiness",
+        "Resort"
     ],
     [
-        "Thing",
+        "Place",
+        "LocalBusiness",
+        "LodgingBusiness"
+    ],
+    [
         "Place",
         "LocalBusiness",
         "MedicalBusiness",
         "Dentist"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "MedicalBusiness",
         "MedicalClinic"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "MedicalBusiness",
         "Optician"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "MedicalBusiness",
         "Pharmacy"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "MedicalBusiness",
         "Physician"
     ],
     [
-        "Thing",
+        "Place",
+        "LocalBusiness",
+        "MedicalBusiness"
+    ],
+    [
         "Place",
         "LocalBusiness",
         "ProfessionalService"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "RadioStation"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "RealEstateAgent"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "RecyclingCenter"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "SelfStorage"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "ShoppingCenter"
     ],
     [
-        "Thing",
-        "Place",
-        "LocalBusiness",
-        "SportsActivityLocation"
-    ],
-    [
-        "Thing",
         "Place",
         "LocalBusiness",
         "SportsActivityLocation",
         "BowlingAlley"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "SportsActivityLocation",
         "ExerciseGym"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "SportsActivityLocation",
         "GolfCourse"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "SportsActivityLocation",
         "HealthClub"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "SportsActivityLocation",
         "PublicSwimmingPool"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "SportsActivityLocation",
         "SkiResort"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "SportsActivityLocation",
         "SportsClub"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "SportsActivityLocation",
         "StadiumOrArena"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "SportsActivityLocation",
         "TennisComplex"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
-        "Store"
+        "SportsActivityLocation"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "AutoPartsStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "BikeStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "BookStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "ClothingStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "ComputerStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "ConvenienceStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "DepartmentStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "ElectronicsStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "Florist"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "FurnitureStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "GardenStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "GroceryStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "HardwareStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "HobbyShop"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "HomeGoodsStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "JewelryStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "LiquorStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "MensClothingStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "MobilePhoneStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "MovieRentalStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "MusicStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "OfficeEquipmentStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "OutletStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "PawnShop"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "PetStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "ShoeStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "SportingGoodsStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "TireShop"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "ToyStore"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "Store",
         "WholesaleStore"
     ],
     [
-        "Thing",
+        "Place",
+        "LocalBusiness",
+        "Store"
+    ],
+    [
         "Place",
         "LocalBusiness",
         "TelevisionStation"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "TouristInformationCenter"
     ],
     [
-        "Thing",
         "Place",
         "LocalBusiness",
         "TravelAgency"
     ],
     [
-        "Thing",
         "Place",
-        "Residence"
+        "LocalBusiness"
     ],
     [
-        "Thing",
         "Place",
         "Residence",
         "ApartmentComplex"
     ],
     [
-        "Thing",
         "Place",
         "Residence",
         "GatedResidenceCommunity"
     ],
     [
-        "Thing",
+        "Place",
+        "Residence"
+    ],
+    [
         "Place",
         "TouristAttraction"
     ],
     [
-        "Thing",
-        "Product"
+        "Place"
     ],
     [
-        "Thing",
         "Product",
         "IndividualProduct"
     ],
     [
-        "Thing",
         "Product",
         "ProductModel"
     ],
     [
-        "Thing",
         "Product",
         "SomeProducts"
     ],
     [
-        "Thing",
-        "Product",
-        "Vehicle"
-    ],
-    [
-        "Thing",
         "Product",
         "Vehicle",
         "BusOrCoach"
     ],
     [
-        "Thing",
         "Product",
         "Vehicle",
         "Car"
     ],
     [
-        "Thing",
         "Product",
         "Vehicle",
         "Motorcycle"
     ],
     [
-        "Thing",
         "Product",
         "Vehicle",
         "MotorizedBicycle"
+    ],
+    [
+        "Product",
+        "Vehicle"
+    ],
+    [
+        "Product"
     ]
 ];

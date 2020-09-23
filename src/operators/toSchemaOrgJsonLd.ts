@@ -1,16 +1,13 @@
 import moment from 'moment';
 import JsonLd, {Node} from "../JsonLd";
 import {
-    SAMBAL_PARENT,
     SCHEMA_CONTEXT,
     JSONLD_CONTEXT,
     JSONLD_TYPE,
     JSONLD_GRAPH,
     JSONLD_ID,
     SAMBAL_NAME,
-    SAMBAL_ID,
     SCHEMA_PRIMITIVE_SET,
-    SCHEMA_ENUMERATION,
     SCHEMA_NUMBER,
     SCHEMA_INTEGER,
     SCHEMA_BOOL,
@@ -24,7 +21,6 @@ import {
     isSchemaOrgType,
     getSchemaOrgType,
     getSchemaOrgParentTypes,
-    getParentTypes,
     isUrl,
     makeAbsoluteIRI,
     isBlankNodeIRI
@@ -92,14 +88,14 @@ function getSchemaOrgProps(schema, typeProps) {
 }
 
 function nodeToSchemaOrgType(node: Node, type: string, baseIRI: string) {
-    const typeId = `${SCHEMA_CONTEXT}/${type}`;
-    const typeSchema = getSchemaOrgType(typeId);
+    const absTypeIRI = `${SCHEMA_CONTEXT}/${type}`;
+    const typeSchema = getSchemaOrgType(absTypeIRI);
     const typeName = typeSchema[SAMBAL_NAME];
-    const parents = [];
-    getParentTypes(typeSchema, parents);
+    const parents = getSchemaOrgParentTypes(absTypeIRI);
     const typeProps = {};
     getSchemaOrgProps(typeSchema, typeProps);
-    for (const parentSchema of parents) {
+    for (const parentName of parents) {
+        const parentSchema = getSchemaOrgType(`${SCHEMA_CONTEXT}/${parentName}`);
         getSchemaOrgProps(parentSchema, typeProps);
     }
     return populateSchemaOrgType(node, typeName, typeProps, baseIRI);
@@ -238,26 +234,19 @@ function getClassTypeName(json: any, propTypes: string[]) {
                 return json[JSONLD_TYPE];
             }
         }
-        return null;
-    }
-    for (const typeId of propTypes) {
-        if (!SCHEMA_PRIMITIVE_SET.has(typeId) && !isEnumeration(typeId)) {
-            return getSchemaOrgType(typeId)[SAMBAL_NAME];
-        }
     }
     return null;
 }
 
-function isDescendantOf(schemaTypeId: string, parentTypeId: string) {
-    if (schemaTypeId.toLowerCase() === parentTypeId.toLowerCase()) {
+function isDescendantOf(absSchemaIRI: string, absParentIRI: string) {
+    if (absSchemaIRI.toLowerCase() === absParentIRI.toLowerCase()) {
         return true;
     }
-    if (isSchemaOrgType(schemaTypeId) && isSchemaOrgType(parentTypeId)) {
-        const schema = getSchemaOrgType(schemaTypeId);
-        const parents = [];
-        getParentTypes(schema, parents);
-        for (const parentSchema of parents) {
-            if (parentSchema[SAMBAL_ID] === parentTypeId) {
+    if (isSchemaOrgType(absSchemaIRI) && isSchemaOrgType(absParentIRI)) {
+        const schema = getSchemaOrgType(absSchemaIRI);
+        const parents = getSchemaOrgParentTypes(absSchemaIRI);
+        for (const parentName of parents) {
+            if (`${SCHEMA_CONTEXT}/${parentName}` === absParentIRI) {
                 return true;
             }
         }
@@ -265,12 +254,3 @@ function isDescendantOf(schemaTypeId: string, parentTypeId: string) {
     return false;
 }
 
-function isEnumeration(typeId: string) {
-    const parentSchemas = getSchemaOrgParentTypes(typeId);
-    for (const schema of parentSchemas) {
-        if (schema[SAMBAL_ID] === SCHEMA_ENUMERATION) {
-            return true;
-        }
-    }
-    return false;
-}

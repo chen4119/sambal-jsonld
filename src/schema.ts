@@ -2,7 +2,6 @@ export const schemaMap = new Map([
     [
         "enumeration",
         {
-            _id: "Enumeration",
             _name: "Enumeration",
             _parent: [
                 "Intangible"
@@ -12,7 +11,6 @@ export const schemaMap = new Map([
     [
         "intangible",
         {
-            _id: "Intangible",
             _name: "Intangible",
             _parent: [
                 "Thing"
@@ -22,7 +20,6 @@ export const schemaMap = new Map([
     [
         "thing",
         {
-            _id: "Thing",
             _name: "Thing",
             _parent: [],
             additionalType: [
@@ -71,7 +68,6 @@ export const schemaMap = new Map([
     [
         "place",
         {
-            _id: "Place",
             _name: "Place",
             _parent: [
                 "Thing"
@@ -196,7 +192,6 @@ export const schemaMap = new Map([
     [
         "event",
         {
-            _id: "Event",
             _name: "Event",
             _parent: [
                 "Thing"
@@ -317,7 +312,6 @@ export const schemaMap = new Map([
     [
         "integer",
         {
-            _id: "Integer",
             _name: "Integer",
             _parent: [
                 "Number"
@@ -327,7 +321,6 @@ export const schemaMap = new Map([
     [
         "airline",
         {
-            _id: "Airline",
             _name: "Airline",
             _parent: [
                 "Organization"
@@ -343,7 +336,6 @@ export const schemaMap = new Map([
     [
         "organization",
         {
-            _id: "Organization",
             _name: "Organization",
             _parent: [
                 "Thing"
@@ -496,7 +488,6 @@ export const schemaMap = new Map([
     [
         "drugcost",
         {
-            _id: "DrugCost",
             _name: "DrugCost",
             _parent: [
                 "MedicalEntity"
@@ -526,7 +517,6 @@ export const schemaMap = new Map([
     [
         "medicalentity",
         {
-            _id: "MedicalEntity",
             _name: "MedicalEntity",
             _parent: [
                 "Thing"
@@ -559,7 +549,6 @@ export const schemaMap = new Map([
     [
         "structuredvalue",
         {
-            _id: "StructuredValue",
             _name: "StructuredValue",
             _parent: [
                 "Intangible"
@@ -569,7 +558,6 @@ export const schemaMap = new Map([
     [
         "person",
         {
-            _id: "Person",
             _name: "Person",
             _parent: [
                 "Thing"
@@ -745,7 +733,6 @@ export const schemaMap = new Map([
     [
         "product",
         {
-            _id: "Product",
             _name: "Product",
             _parent: [
                 "Thing"
@@ -872,7 +859,6 @@ export const schemaMap = new Map([
     [
         "liveblogposting",
         {
-            _id: "LiveBlogPosting",
             _name: "LiveBlogPosting",
             _parent: [
                 "BlogPosting"
@@ -891,7 +877,6 @@ export const schemaMap = new Map([
     [
         "blogposting",
         {
-            _id: "BlogPosting",
             _name: "BlogPosting",
             _parent: [
                 "SocialMediaPosting"
@@ -901,7 +886,6 @@ export const schemaMap = new Map([
     [
         "socialmediaposting",
         {
-            _id: "SocialMediaPosting",
             _name: "SocialMediaPosting",
             _parent: [
                 "Article"
@@ -914,7 +898,6 @@ export const schemaMap = new Map([
     [
         "article",
         {
-            _id: "Article",
             _name: "Article",
             _parent: [
                 "CreativeWork"
@@ -948,7 +931,6 @@ export const schemaMap = new Map([
     [
         "creativework",
         {
-            _id: "CreativeWork",
             _name: "CreativeWork",
             _parent: [
                 "Thing"
@@ -1243,7 +1225,6 @@ export const schemaMap = new Map([
     [
         "broadcastservice",
         {
-            _id: "BroadcastService",
             _name: "BroadcastService",
             _parent: [
                 "Service"
@@ -1282,7 +1263,6 @@ export const schemaMap = new Map([
     [
         "service",
         {
-            _id: "Service",
             _name: "Service",
             _parent: [
                 "Intangible"
@@ -1365,7 +1345,6 @@ export const schemaMap = new Map([
     [
         "duration",
         {
-            _id: "Duration",
             _name: "Duration",
             _parent: [
                 "Quantity"
@@ -1375,7 +1354,6 @@ export const schemaMap = new Map([
     [
         "quantity",
         {
-            _id: "Quantity",
             _name: "Quantity",
             _parent: [
                 "Intangible"
@@ -1385,7 +1363,6 @@ export const schemaMap = new Map([
     [
         "interactioncounter",
         {
-            _id: "InteractionCounter",
             _name: "InteractionCounter",
             _parent: [
                 "StructuredValue"
@@ -1405,7 +1382,6 @@ export const schemaMap = new Map([
     [
         "tvepisode",
         {
-            _id: "TVEpisode",
             _name: "TVEpisode",
             _parent: [
                 "Episode"
@@ -1418,7 +1394,6 @@ export const schemaMap = new Map([
     [
         "episode",
         {
-            _id: "Episode",
             _name: "Episode",
             _parent: [
                 "CreativeWork"
@@ -1454,7 +1429,6 @@ export const schemaMap = new Map([
     [
         "tvclip",
         {
-            _id: "TVClip",
             _name: "TVClip",
             _parent: [
                 "Clip"
@@ -1464,7 +1438,6 @@ export const schemaMap = new Map([
     [
         "clip",
         {
-            _id: "Clip",
             _name: "Clip",
             _parent: [
                 "CreativeWork"
@@ -1497,7 +1470,6 @@ export const schemaMap = new Map([
     [
         "tvseason",
         {
-            _id: "TVSeason",
             _name: "TVSeason",
             _parent: [
                 "CreativeWork",
@@ -1511,7 +1483,6 @@ export const schemaMap = new Map([
     [
         "creativeworkseason",
         {
-            _id: "CreativeWorkSeason",
             _name: "CreativeWorkSeason",
             _parent: [
                 "CreativeWork"
@@ -1554,7 +1525,6 @@ export const schemaMap = new Map([
     [
         "tvseries",
         {
-            _id: "TVSeries",
             _name: "TVSeries",
             _parent: [
                 "CreativeWork",
@@ -1596,7 +1566,6 @@ export const schemaMap = new Map([
     [
         "creativeworkseries",
         {
-            _id: "CreativeWorkSeries",
             _name: "CreativeWorkSeries",
             _parent: [
                 "Series",
@@ -1618,7 +1587,6 @@ export const schemaMap = new Map([
     [
         "series",
         {
-            _id: "Series",
             _name: "Series",
             _parent: [
                 "Intangible"
@@ -1628,7 +1596,6 @@ export const schemaMap = new Map([
     [
         "url",
         {
-            _id: "URL",
             _name: "URL",
             _parent: [
                 "Text"
@@ -1638,7 +1605,6 @@ export const schemaMap = new Map([
     [
         "flight",
         {
-            _id: "Flight",
             _name: "Flight",
             _parent: [
                 "Trip"
@@ -1694,7 +1660,6 @@ export const schemaMap = new Map([
     [
         "trip",
         {
-            _id: "Trip",
             _name: "Trip",
             _parent: [
                 "Intangible"
@@ -1720,7 +1685,6 @@ export const schemaMap = new Map([
     [
         "parceldelivery",
         {
-            _id: "ParcelDelivery",
             _name: "ParcelDelivery",
             _parent: [
                 "Intangible"
@@ -1766,7 +1730,6 @@ export const schemaMap = new Map([
     [
         "invoice",
         {
-            _id: "Invoice",
             _name: "Invoice",
             _parent: [
                 "Intangible"
@@ -1831,7 +1794,6 @@ export const schemaMap = new Map([
     [
         "reservation",
         {
-            _id: "Reservation",
             _name: "Reservation",
             _parent: [
                 "Intangible"
@@ -1882,7 +1844,6 @@ export const schemaMap = new Map([
     [
         "medicaltherapy",
         {
-            _id: "MedicalTherapy",
             _name: "MedicalTherapy",
             _parent: [
                 "TherapeuticProcedure"
@@ -1902,7 +1863,6 @@ export const schemaMap = new Map([
     [
         "therapeuticprocedure",
         {
-            _id: "TherapeuticProcedure",
             _name: "TherapeuticProcedure",
             _parent: [
                 "MedicalProcedure"
@@ -1921,7 +1881,6 @@ export const schemaMap = new Map([
     [
         "medicalprocedure",
         {
-            _id: "MedicalProcedure",
             _name: "MedicalProcedure",
             _parent: [
                 "MedicalEntity"
@@ -1952,7 +1911,6 @@ export const schemaMap = new Map([
     [
         "nutritioninformation",
         {
-            _id: "NutritionInformation",
             _name: "NutritionInformation",
             _parent: [
                 "StructuredValue"
@@ -1998,7 +1956,6 @@ export const schemaMap = new Map([
     [
         "mass",
         {
-            _id: "Mass",
             _name: "Mass",
             _parent: [
                 "Quantity"
@@ -2008,7 +1965,6 @@ export const schemaMap = new Map([
     [
         "vehicle",
         {
-            _id: "Vehicle",
             _name: "Vehicle",
             _parent: [
                 "Product"
@@ -2149,7 +2105,6 @@ export const schemaMap = new Map([
     [
         "bikestore",
         {
-            _id: "BikeStore",
             _name: "BikeStore",
             _parent: [
                 "Store"
@@ -2159,7 +2114,6 @@ export const schemaMap = new Map([
     [
         "store",
         {
-            _id: "Store",
             _name: "Store",
             _parent: [
                 "LocalBusiness"
@@ -2169,7 +2123,6 @@ export const schemaMap = new Map([
     [
         "localbusiness",
         {
-            _id: "LocalBusiness",
             _name: "LocalBusiness",
             _parent: [
                 "Organization",
@@ -2192,7 +2145,6 @@ export const schemaMap = new Map([
     [
         "lodgingreservation",
         {
-            _id: "LodgingReservation",
             _name: "LodgingReservation",
             _parent: [
                 "Reservation"
@@ -2225,7 +2177,6 @@ export const schemaMap = new Map([
     [
         "order",
         {
-            _id: "Order",
             _name: "Order",
             _parent: [
                 "Intangible"
@@ -2303,7 +2254,6 @@ export const schemaMap = new Map([
     [
         "softwaresourcecode",
         {
-            _id: "SoftwareSourceCode",
             _name: "SoftwareSourceCode",
             _parent: [
                 "CreativeWork"
@@ -2329,7 +2279,6 @@ export const schemaMap = new Map([
     [
         "buddhisttemple",
         {
-            _id: "BuddhistTemple",
             _name: "BuddhistTemple",
             _parent: [
                 "PlaceOfWorship"
@@ -2339,7 +2288,6 @@ export const schemaMap = new Map([
     [
         "placeofworship",
         {
-            _id: "PlaceOfWorship",
             _name: "PlaceOfWorship",
             _parent: [
                 "CivicStructure"
@@ -2349,7 +2297,6 @@ export const schemaMap = new Map([
     [
         "civicstructure",
         {
-            _id: "CivicStructure",
             _name: "CivicStructure",
             _parent: [
                 "Place"
@@ -2362,7 +2309,6 @@ export const schemaMap = new Map([
     [
         "medicaldevice",
         {
-            _id: "MedicalDevice",
             _name: "MedicalDevice",
             _parent: [
                 "MedicalEntity"
@@ -2391,7 +2337,6 @@ export const schemaMap = new Map([
     [
         "patient",
         {
-            _id: "Patient",
             _name: "Patient",
             _parent: [
                 "MedicalAudience",
@@ -2411,7 +2356,6 @@ export const schemaMap = new Map([
     [
         "medicalaudience",
         {
-            _id: "MedicalAudience",
             _name: "MedicalAudience",
             _parent: [
                 "PeopleAudience",
@@ -2422,7 +2366,6 @@ export const schemaMap = new Map([
     [
         "peopleaudience",
         {
-            _id: "PeopleAudience",
             _name: "PeopleAudience",
             _parent: [
                 "Audience"
@@ -2453,7 +2396,6 @@ export const schemaMap = new Map([
     [
         "audience",
         {
-            _id: "Audience",
             _name: "Audience",
             _parent: [
                 "Intangible"
@@ -2469,7 +2411,6 @@ export const schemaMap = new Map([
     [
         "drugclass",
         {
-            _id: "DrugClass",
             _name: "DrugClass",
             _parent: [
                 "MedicalEntity"
@@ -2482,7 +2423,6 @@ export const schemaMap = new Map([
     [
         "medicalcondition",
         {
-            _id: "MedicalCondition",
             _name: "MedicalCondition",
             _parent: [
                 "MedicalEntity"
@@ -2544,7 +2484,6 @@ export const schemaMap = new Map([
     [
         "drug",
         {
-            _id: "Drug",
             _name: "Drug",
             _parent: [
                 "Substance"
@@ -2642,7 +2581,6 @@ export const schemaMap = new Map([
     [
         "substance",
         {
-            _id: "Substance",
             _name: "Substance",
             _parent: [
                 "MedicalEntity"
@@ -2658,7 +2596,6 @@ export const schemaMap = new Map([
     [
         "action",
         {
-            _id: "Action",
             _name: "Action",
             _parent: [
                 "Thing"
@@ -2707,7 +2644,6 @@ export const schemaMap = new Map([
     [
         "medicalstudy",
         {
-            _id: "MedicalStudy",
             _name: "MedicalStudy",
             _parent: [
                 "MedicalEntity"
@@ -2735,7 +2671,6 @@ export const schemaMap = new Map([
     [
         "medicaltest",
         {
-            _id: "MedicalTest",
             _name: "MedicalTest",
             _parent: [
                 "MedicalEntity"
@@ -2761,7 +2696,6 @@ export const schemaMap = new Map([
     [
         "monetaryamount",
         {
-            _id: "MonetaryAmount",
             _name: "MonetaryAmount",
             _parent: [
                 "StructuredValue"
@@ -2794,7 +2728,6 @@ export const schemaMap = new Map([
     [
         "deliverychargespecification",
         {
-            _id: "DeliveryChargeSpecification",
             _name: "DeliveryChargeSpecification",
             _parent: [
                 "PriceSpecification"
@@ -2818,7 +2751,6 @@ export const schemaMap = new Map([
     [
         "pricespecification",
         {
-            _id: "PriceSpecification",
             _name: "PriceSpecification",
             _parent: [
                 "StructuredValue"
@@ -2858,7 +2790,6 @@ export const schemaMap = new Map([
     [
         "gardenstore",
         {
-            _id: "GardenStore",
             _name: "GardenStore",
             _parent: [
                 "Store"
@@ -2868,7 +2799,6 @@ export const schemaMap = new Map([
     [
         "airport",
         {
-            _id: "Airport",
             _name: "Airport",
             _parent: [
                 "CivicStructure"
@@ -2884,7 +2814,6 @@ export const schemaMap = new Map([
     [
         "medicalguideline",
         {
-            _id: "MedicalGuideline",
             _name: "MedicalGuideline",
             _parent: [
                 "MedicalEntity"
@@ -2906,7 +2835,6 @@ export const schemaMap = new Map([
     [
         "foodestablishmentreservation",
         {
-            _id: "FoodEstablishmentReservation",
             _name: "FoodEstablishmentReservation",
             _parent: [
                 "Reservation"
@@ -2928,7 +2856,6 @@ export const schemaMap = new Map([
     [
         "mediaobject",
         {
-            _id: "MediaObject",
             _name: "MediaObject",
             _parent: [
                 "CreativeWork"
@@ -2995,7 +2922,6 @@ export const schemaMap = new Map([
     [
         "movieseries",
         {
-            _id: "MovieSeries",
             _name: "MovieSeries",
             _parent: [
                 "CreativeWorkSeries"
@@ -3021,7 +2947,6 @@ export const schemaMap = new Map([
     [
         "postaladdress",
         {
-            _id: "PostalAddress",
             _name: "PostalAddress",
             _parent: [
                 "ContactPoint"
@@ -3050,7 +2975,6 @@ export const schemaMap = new Map([
     [
         "contactpoint",
         {
-            _id: "ContactPoint",
             _name: "ContactPoint",
             _parent: [
                 "StructuredValue"
@@ -3092,7 +3016,6 @@ export const schemaMap = new Map([
     [
         "sportsteam",
         {
-            _id: "SportsTeam",
             _name: "SportsTeam",
             _parent: [
                 "SportsOrganization"
@@ -3108,7 +3031,6 @@ export const schemaMap = new Map([
     [
         "sportsorganization",
         {
-            _id: "SportsOrganization",
             _name: "SportsOrganization",
             _parent: [
                 "Organization"
@@ -3118,7 +3040,6 @@ export const schemaMap = new Map([
     [
         "quantitativevalue",
         {
-            _id: "QuantitativeValue",
             _name: "QuantitativeValue",
             _parent: [
                 "StructuredValue"
@@ -3157,7 +3078,6 @@ export const schemaMap = new Map([
     [
         "visualartwork",
         {
-            _id: "VisualArtwork",
             _name: "VisualArtwork",
             _parent: [
                 "CreativeWork"
@@ -3210,7 +3130,6 @@ export const schemaMap = new Map([
     [
         "comicissue",
         {
-            _id: "ComicIssue",
             _name: "ComicIssue",
             _parent: [
                 "PublicationIssue"
@@ -3238,7 +3157,6 @@ export const schemaMap = new Map([
     [
         "publicationissue",
         {
-            _id: "PublicationIssue",
             _name: "PublicationIssue",
             _parent: [
                 "CreativeWork"
@@ -3263,7 +3181,6 @@ export const schemaMap = new Map([
     [
         "comicstory",
         {
-            _id: "ComicStory",
             _name: "ComicStory",
             _parent: [
                 "CreativeWork"
@@ -3288,7 +3205,6 @@ export const schemaMap = new Map([
     [
         "locationfeaturespecification",
         {
-            _id: "LocationFeatureSpecification",
             _name: "LocationFeatureSpecification",
             _parent: [
                 "PropertyValue"
@@ -3309,7 +3225,6 @@ export const schemaMap = new Map([
     [
         "propertyvalue",
         {
-            _id: "PropertyValue",
             _name: "PropertyValue",
             _parent: [
                 "StructuredValue"
@@ -3349,7 +3264,6 @@ export const schemaMap = new Map([
     [
         "openinghoursspecification",
         {
-            _id: "OpeningHoursSpecification",
             _name: "OpeningHoursSpecification",
             _parent: [
                 "StructuredValue"
@@ -3376,7 +3290,6 @@ export const schemaMap = new Map([
     [
         "broadcastevent",
         {
-            _id: "BroadcastEvent",
             _name: "BroadcastEvent",
             _parent: [
                 "PublicationEvent"
@@ -3395,7 +3308,6 @@ export const schemaMap = new Map([
     [
         "publicationevent",
         {
-            _id: "PublicationEvent",
             _name: "PublicationEvent",
             _parent: [
                 "Event"
@@ -3412,7 +3324,6 @@ export const schemaMap = new Map([
     [
         "quantitativevaluedistribution",
         {
-            _id: "QuantitativeValueDistribution",
             _name: "QuantitativeValueDistribution",
             _parent: [
                 "StructuredValue"
@@ -3440,7 +3351,6 @@ export const schemaMap = new Map([
     [
         "flightreservation",
         {
-            _id: "FlightReservation",
             _name: "FlightReservation",
             _parent: [
                 "Reservation"
@@ -3463,7 +3373,6 @@ export const schemaMap = new Map([
     [
         "traintrip",
         {
-            _id: "TrainTrip",
             _name: "TrainTrip",
             _parent: [
                 "Trip"
@@ -3491,7 +3400,6 @@ export const schemaMap = new Map([
     [
         "consumeaction",
         {
-            _id: "ConsumeAction",
             _name: "ConsumeAction",
             _parent: [
                 "Action"
@@ -3507,7 +3415,6 @@ export const schemaMap = new Map([
     [
         "actionaccessspecification",
         {
-            _id: "ActionAccessSpecification",
             _name: "ActionAccessSpecification",
             _parent: [
                 "Intangible"
@@ -3545,7 +3452,6 @@ export const schemaMap = new Map([
     [
         "broadcastfrequencyspecification",
         {
-            _id: "BroadcastFrequencySpecification",
             _name: "BroadcastFrequencySpecification",
             _parent: [
                 "Intangible"
@@ -3559,7 +3465,6 @@ export const schemaMap = new Map([
     [
         "webpage",
         {
-            _id: "WebPage",
             _name: "WebPage",
             _parent: [
                 "CreativeWork"
@@ -3599,7 +3504,6 @@ export const schemaMap = new Map([
     [
         "movie",
         {
-            _id: "Movie",
             _name: "Movie",
             _parent: [
                 "CreativeWork"
@@ -3631,7 +3535,6 @@ export const schemaMap = new Map([
     [
         "website",
         {
-            _id: "WebSite",
             _name: "WebSite",
             _parent: [
                 "CreativeWork"
@@ -3644,7 +3547,6 @@ export const schemaMap = new Map([
     [
         "autorental",
         {
-            _id: "AutoRental",
             _name: "AutoRental",
             _parent: [
                 "AutomotiveBusiness"
@@ -3654,7 +3556,6 @@ export const schemaMap = new Map([
     [
         "automotivebusiness",
         {
-            _id: "AutomotiveBusiness",
             _name: "AutomotiveBusiness",
             _parent: [
                 "LocalBusiness"
@@ -3664,7 +3565,6 @@ export const schemaMap = new Map([
     [
         "medicalbusiness",
         {
-            _id: "MedicalBusiness",
             _name: "MedicalBusiness",
             _parent: [
                 "LocalBusiness"
@@ -3674,7 +3574,6 @@ export const schemaMap = new Map([
     [
         "productmodel",
         {
-            _id: "ProductModel",
             _name: "ProductModel",
             _parent: [
                 "Product"
@@ -3693,7 +3592,6 @@ export const schemaMap = new Map([
     [
         "nerve",
         {
-            _id: "Nerve",
             _name: "Nerve",
             _parent: [
                 "AnatomicalStructure"
@@ -3713,7 +3611,6 @@ export const schemaMap = new Map([
     [
         "anatomicalstructure",
         {
-            _id: "AnatomicalStructure",
             _name: "AnatomicalStructure",
             _parent: [
                 "MedicalEntity"
@@ -3747,7 +3644,6 @@ export const schemaMap = new Map([
     [
         "brainstructure",
         {
-            _id: "BrainStructure",
             _name: "BrainStructure",
             _parent: [
                 "AnatomicalStructure"
@@ -3757,7 +3653,6 @@ export const schemaMap = new Map([
     [
         "lymphaticvessel",
         {
-            _id: "LymphaticVessel",
             _name: "LymphaticVessel",
             _parent: [
                 "Vessel"
@@ -3777,7 +3672,6 @@ export const schemaMap = new Map([
     [
         "vessel",
         {
-            _id: "Vessel",
             _name: "Vessel",
             _parent: [
                 "AnatomicalStructure"
@@ -3787,7 +3681,6 @@ export const schemaMap = new Map([
     [
         "treatmentindication",
         {
-            _id: "TreatmentIndication",
             _name: "TreatmentIndication",
             _parent: [
                 "MedicalIndication"
@@ -3797,7 +3690,6 @@ export const schemaMap = new Map([
     [
         "medicalindication",
         {
-            _id: "MedicalIndication",
             _name: "MedicalIndication",
             _parent: [
                 "MedicalEntity"
@@ -3807,7 +3699,6 @@ export const schemaMap = new Map([
     [
         "programmembership",
         {
-            _id: "ProgramMembership",
             _name: "ProgramMembership",
             _parent: [
                 "Intangible"
@@ -3830,7 +3721,6 @@ export const schemaMap = new Map([
     [
         "restaurant",
         {
-            _id: "Restaurant",
             _name: "Restaurant",
             _parent: [
                 "FoodEstablishment"
@@ -3840,7 +3730,6 @@ export const schemaMap = new Map([
     [
         "foodestablishment",
         {
-            _id: "FoodEstablishment",
             _name: "FoodEstablishment",
             _parent: [
                 "LocalBusiness"
@@ -3866,7 +3755,6 @@ export const schemaMap = new Map([
     [
         "organizeaction",
         {
-            _id: "OrganizeAction",
             _name: "OrganizeAction",
             _parent: [
                 "Action"
@@ -3876,7 +3764,6 @@ export const schemaMap = new Map([
     [
         "apartmentcomplex",
         {
-            _id: "ApartmentComplex",
             _name: "ApartmentComplex",
             _parent: [
                 "Residence"
@@ -3890,7 +3777,6 @@ export const schemaMap = new Map([
     [
         "residence",
         {
-            _id: "Residence",
             _name: "Residence",
             _parent: [
                 "Place"
@@ -3900,7 +3786,6 @@ export const schemaMap = new Map([
     [
         "softwareapplication",
         {
-            _id: "SoftwareApplication",
             _name: "SoftwareApplication",
             _parent: [
                 "CreativeWork"
@@ -3984,7 +3869,6 @@ export const schemaMap = new Map([
     [
         "message",
         {
-            _id: "Message",
             _name: "Message",
             _parent: [
                 "CreativeWork"
@@ -4034,7 +3918,6 @@ export const schemaMap = new Map([
     [
         "communicateaction",
         {
-            _id: "CommunicateAction",
             _name: "CommunicateAction",
             _parent: [
                 "InteractAction"
@@ -4057,7 +3940,6 @@ export const schemaMap = new Map([
     [
         "interactaction",
         {
-            _id: "InteractAction",
             _name: "InteractAction",
             _parent: [
                 "Action"
@@ -4067,7 +3949,6 @@ export const schemaMap = new Map([
     [
         "payaction",
         {
-            _id: "PayAction",
             _name: "PayAction",
             _parent: [
                 "TradeAction"
@@ -4083,7 +3964,6 @@ export const schemaMap = new Map([
     [
         "tradeaction",
         {
-            _id: "TradeAction",
             _name: "TradeAction",
             _parent: [
                 "Action"
@@ -4103,7 +3983,6 @@ export const schemaMap = new Map([
     [
         "donateaction",
         {
-            _id: "DonateAction",
             _name: "DonateAction",
             _parent: [
                 "TradeAction"
@@ -4119,7 +3998,6 @@ export const schemaMap = new Map([
     [
         "sendaction",
         {
-            _id: "SendAction",
             _name: "SendAction",
             _parent: [
                 "TransferAction"
@@ -4138,7 +4016,6 @@ export const schemaMap = new Map([
     [
         "transferaction",
         {
-            _id: "TransferAction",
             _name: "TransferAction",
             _parent: [
                 "Action"
@@ -4154,7 +4031,6 @@ export const schemaMap = new Map([
     [
         "authorizeaction",
         {
-            _id: "AuthorizeAction",
             _name: "AuthorizeAction",
             _parent: [
                 "AllocateAction"
@@ -4170,7 +4046,6 @@ export const schemaMap = new Map([
     [
         "allocateaction",
         {
-            _id: "AllocateAction",
             _name: "AllocateAction",
             _parent: [
                 "OrganizeAction"
@@ -4180,7 +4055,6 @@ export const schemaMap = new Map([
     [
         "giveaction",
         {
-            _id: "GiveAction",
             _name: "GiveAction",
             _parent: [
                 "TransferAction"
@@ -4196,7 +4070,6 @@ export const schemaMap = new Map([
     [
         "tipaction",
         {
-            _id: "TipAction",
             _name: "TipAction",
             _parent: [
                 "TradeAction"
@@ -4212,7 +4085,6 @@ export const schemaMap = new Map([
     [
         "returnaction",
         {
-            _id: "ReturnAction",
             _name: "ReturnAction",
             _parent: [
                 "TransferAction"
@@ -4228,7 +4100,6 @@ export const schemaMap = new Map([
     [
         "jobposting",
         {
-            _id: "JobPosting",
             _name: "JobPosting",
             _parent: [
                 "Intangible"
@@ -4298,7 +4169,6 @@ export const schemaMap = new Map([
     [
         "enginespecification",
         {
-            _id: "EngineSpecification",
             _name: "EngineSpecification",
             _parent: [
                 "StructuredValue"
@@ -4327,7 +4197,6 @@ export const schemaMap = new Map([
     [
         "offer",
         {
-            _id: "Offer",
             _name: "Offer",
             _parent: [
                 "Intangible"
@@ -4478,7 +4347,6 @@ export const schemaMap = new Map([
     [
         "demand",
         {
-            _id: "Demand",
             _name: "Demand",
             _parent: [
                 "Intangible"
@@ -4600,7 +4468,6 @@ export const schemaMap = new Map([
     [
         "useaction",
         {
-            _id: "UseAction",
             _name: "UseAction",
             _parent: [
                 "ConsumeAction"
@@ -4610,7 +4477,6 @@ export const schemaMap = new Map([
     [
         "apireference",
         {
-            _id: "APIReference",
             _name: "APIReference",
             _parent: [
                 "TechArticle"
@@ -4632,7 +4498,6 @@ export const schemaMap = new Map([
     [
         "techarticle",
         {
-            _id: "TechArticle",
             _name: "TechArticle",
             _parent: [
                 "Article"
@@ -4648,7 +4513,6 @@ export const schemaMap = new Map([
     [
         "filmaction",
         {
-            _id: "FilmAction",
             _name: "FilmAction",
             _parent: [
                 "CreateAction"
@@ -4658,7 +4522,6 @@ export const schemaMap = new Map([
     [
         "createaction",
         {
-            _id: "CreateAction",
             _name: "CreateAction",
             _parent: [
                 "Action"
@@ -4668,7 +4531,6 @@ export const schemaMap = new Map([
     [
         "bustrip",
         {
-            _id: "BusTrip",
             _name: "BusTrip",
             _parent: [
                 "Trip"
@@ -4692,7 +4554,6 @@ export const schemaMap = new Map([
     [
         "busstop",
         {
-            _id: "BusStop",
             _name: "BusStop",
             _parent: [
                 "CivicStructure"
@@ -4702,7 +4563,6 @@ export const schemaMap = new Map([
     [
         "busstation",
         {
-            _id: "BusStation",
             _name: "BusStation",
             _parent: [
                 "CivicStructure"
@@ -4712,7 +4572,6 @@ export const schemaMap = new Map([
     [
         "computerlanguage",
         {
-            _id: "ComputerLanguage",
             _name: "ComputerLanguage",
             _parent: [
                 "Intangible"
@@ -4722,7 +4581,6 @@ export const schemaMap = new Map([
     [
         "room",
         {
-            _id: "Room",
             _name: "Room",
             _parent: [
                 "Accommodation"
@@ -4732,7 +4590,6 @@ export const schemaMap = new Map([
     [
         "accommodation",
         {
-            _id: "Accommodation",
             _name: "Accommodation",
             _parent: [
                 "Place"
@@ -4759,7 +4616,6 @@ export const schemaMap = new Map([
     [
         "medicalscholarlyarticle",
         {
-            _id: "MedicalScholarlyArticle",
             _name: "MedicalScholarlyArticle",
             _parent: [
                 "ScholarlyArticle"
@@ -4772,7 +4628,6 @@ export const schemaMap = new Map([
     [
         "scholarlyarticle",
         {
-            _id: "ScholarlyArticle",
             _name: "ScholarlyArticle",
             _parent: [
                 "Article"
@@ -4782,7 +4637,6 @@ export const schemaMap = new Map([
     [
         "educationevent",
         {
-            _id: "EducationEvent",
             _name: "EducationEvent",
             _parent: [
                 "Event"
@@ -4792,7 +4646,6 @@ export const schemaMap = new Map([
     [
         "speakablespecification",
         {
-            _id: "SpeakableSpecification",
             _name: "SpeakableSpecification",
             _parent: [
                 "Intangible"
@@ -4808,7 +4661,6 @@ export const schemaMap = new Map([
     [
         "sportinggoodsstore",
         {
-            _id: "SportingGoodsStore",
             _name: "SportingGoodsStore",
             _parent: [
                 "Store"
@@ -4818,7 +4670,6 @@ export const schemaMap = new Map([
     [
         "individualproduct",
         {
-            _id: "IndividualProduct",
             _name: "IndividualProduct",
             _parent: [
                 "Product"
@@ -4831,7 +4682,6 @@ export const schemaMap = new Map([
     [
         "videogame",
         {
-            _id: "VideoGame",
             _name: "VideoGame",
             _parent: [
                 "SoftwareApplication",
@@ -4872,7 +4722,6 @@ export const schemaMap = new Map([
     [
         "game",
         {
-            _id: "Game",
             _name: "Game",
             _parent: [
                 "CreativeWork"
@@ -4899,7 +4748,6 @@ export const schemaMap = new Map([
     [
         "medicaltestpanel",
         {
-            _id: "MedicalTestPanel",
             _name: "MedicalTestPanel",
             _parent: [
                 "MedicalTest"
@@ -4912,7 +4760,6 @@ export const schemaMap = new Map([
     [
         "warrantypromise",
         {
-            _id: "WarrantyPromise",
             _name: "WarrantyPromise",
             _parent: [
                 "StructuredValue"
@@ -4928,7 +4775,6 @@ export const schemaMap = new Map([
     [
         "taxireservation",
         {
-            _id: "TaxiReservation",
             _name: "TaxiReservation",
             _parent: [
                 "Reservation"
@@ -4948,7 +4794,6 @@ export const schemaMap = new Map([
     [
         "question",
         {
-            _id: "Question",
             _name: "Question",
             _parent: [
                 "Comment"
@@ -4969,7 +4814,6 @@ export const schemaMap = new Map([
     [
         "comment",
         {
-            _id: "Comment",
             _name: "Comment",
             _parent: [
                 "CreativeWork"
@@ -4988,7 +4832,6 @@ export const schemaMap = new Map([
     [
         "answer",
         {
-            _id: "Answer",
             _name: "Answer",
             _parent: [
                 "Comment"
@@ -4998,7 +4841,6 @@ export const schemaMap = new Map([
     [
         "itemlist",
         {
-            _id: "ItemList",
             _name: "ItemList",
             _parent: [
                 "Intangible"
@@ -5020,7 +4862,6 @@ export const schemaMap = new Map([
     [
         "employeerole",
         {
-            _id: "EmployeeRole",
             _name: "EmployeeRole",
             _parent: [
                 "OrganizationRole"
@@ -5038,7 +4879,6 @@ export const schemaMap = new Map([
     [
         "organizationrole",
         {
-            _id: "OrganizationRole",
             _name: "OrganizationRole",
             _parent: [
                 "Role"
@@ -5051,7 +4891,6 @@ export const schemaMap = new Map([
     [
         "role",
         {
-            _id: "Role",
             _name: "Role",
             _parent: [
                 "Intangible"
@@ -5073,7 +4912,6 @@ export const schemaMap = new Map([
     [
         "someproducts",
         {
-            _id: "SomeProducts",
             _name: "SomeProducts",
             _parent: [
                 "Product"
@@ -5086,7 +4924,6 @@ export const schemaMap = new Map([
     [
         "planaction",
         {
-            _id: "PlanAction",
             _name: "PlanAction",
             _parent: [
                 "OrganizeAction"
@@ -5099,7 +4936,6 @@ export const schemaMap = new Map([
     [
         "waterfall",
         {
-            _id: "Waterfall",
             _name: "Waterfall",
             _parent: [
                 "BodyOfWater"
@@ -5109,7 +4945,6 @@ export const schemaMap = new Map([
     [
         "bodyofwater",
         {
-            _id: "BodyOfWater",
             _name: "BodyOfWater",
             _parent: [
                 "Landform"
@@ -5119,7 +4954,6 @@ export const schemaMap = new Map([
     [
         "landform",
         {
-            _id: "Landform",
             _name: "Landform",
             _parent: [
                 "Place"
@@ -5129,7 +4963,6 @@ export const schemaMap = new Map([
     [
         "review",
         {
-            _id: "Review",
             _name: "Review",
             _parent: [
                 "CreativeWork"
@@ -5151,7 +4984,6 @@ export const schemaMap = new Map([
     [
         "aggregaterating",
         {
-            _id: "AggregateRating",
             _name: "AggregateRating",
             _parent: [
                 "Rating"
@@ -5170,7 +5002,6 @@ export const schemaMap = new Map([
     [
         "rating",
         {
-            _id: "Rating",
             _name: "Rating",
             _parent: [
                 "Intangible"
@@ -5199,7 +5030,6 @@ export const schemaMap = new Map([
     [
         "autowash",
         {
-            _id: "AutoWash",
             _name: "AutoWash",
             _parent: [
                 "AutomotiveBusiness"
@@ -5209,7 +5039,6 @@ export const schemaMap = new Map([
     [
         "officeequipmentstore",
         {
-            _id: "OfficeEquipmentStore",
             _name: "OfficeEquipmentStore",
             _parent: [
                 "Store"
@@ -5219,7 +5048,6 @@ export const schemaMap = new Map([
     [
         "gatedresidencecommunity",
         {
-            _id: "GatedResidenceCommunity",
             _name: "GatedResidenceCommunity",
             _parent: [
                 "Residence"
@@ -5229,7 +5057,6 @@ export const schemaMap = new Map([
     [
         "bakery",
         {
-            _id: "Bakery",
             _name: "Bakery",
             _parent: [
                 "FoodEstablishment"
@@ -5239,7 +5066,6 @@ export const schemaMap = new Map([
     [
         "medicalconditionstage",
         {
-            _id: "MedicalConditionStage",
             _name: "MedicalConditionStage",
             _parent: [
                 "MedicalIntangible"
@@ -5255,7 +5081,6 @@ export const schemaMap = new Map([
     [
         "medicalintangible",
         {
-            _id: "MedicalIntangible",
             _name: "MedicalIntangible",
             _parent: [
                 "MedicalEntity"
@@ -5265,7 +5090,6 @@ export const schemaMap = new Map([
     [
         "country",
         {
-            _id: "Country",
             _name: "Country",
             _parent: [
                 "AdministrativeArea"
@@ -5275,7 +5099,6 @@ export const schemaMap = new Map([
     [
         "administrativearea",
         {
-            _id: "AdministrativeArea",
             _name: "AdministrativeArea",
             _parent: [
                 "Place"
@@ -5285,7 +5108,6 @@ export const schemaMap = new Map([
     [
         "movietheater",
         {
-            _id: "MovieTheater",
             _name: "MovieTheater",
             _parent: [
                 "EntertainmentBusiness",
@@ -5299,7 +5121,6 @@ export const schemaMap = new Map([
     [
         "entertainmentbusiness",
         {
-            _id: "EntertainmentBusiness",
             _name: "EntertainmentBusiness",
             _parent: [
                 "LocalBusiness"
@@ -5309,7 +5130,6 @@ export const schemaMap = new Map([
     [
         "sellaction",
         {
-            _id: "SellAction",
             _name: "SellAction",
             _parent: [
                 "TradeAction"
@@ -5322,7 +5142,6 @@ export const schemaMap = new Map([
     [
         "menuitem",
         {
-            _id: "MenuItem",
             _name: "MenuItem",
             _parent: [
                 "Intangible"
@@ -5346,7 +5165,6 @@ export const schemaMap = new Map([
     [
         "menusection",
         {
-            _id: "MenuSection",
             _name: "MenuSection",
             _parent: [
                 "CreativeWork"
@@ -5362,7 +5180,6 @@ export const schemaMap = new Map([
     [
         "collectionpage",
         {
-            _id: "CollectionPage",
             _name: "CollectionPage",
             _parent: [
                 "WebPage"
@@ -5372,7 +5189,6 @@ export const schemaMap = new Map([
     [
         "mountain",
         {
-            _id: "Mountain",
             _name: "Mountain",
             _parent: [
                 "Landform"
@@ -5382,7 +5198,6 @@ export const schemaMap = new Map([
     [
         "recipe",
         {
-            _id: "Recipe",
             _name: "Recipe",
             _parent: [
                 "HowTo"
@@ -5422,7 +5237,6 @@ export const schemaMap = new Map([
     [
         "howto",
         {
-            _id: "HowTo",
             _name: "HowTo",
             _parent: [
                 "CreativeWork"
@@ -5463,7 +5277,6 @@ export const schemaMap = new Map([
     [
         "howtodirection",
         {
-            _id: "HowToDirection",
             _name: "HowToDirection",
             _parent: [
                 "CreativeWork",
@@ -5503,7 +5316,6 @@ export const schemaMap = new Map([
     [
         "listitem",
         {
-            _id: "ListItem",
             _name: "ListItem",
             _parent: [
                 "Intangible"
@@ -5526,7 +5338,6 @@ export const schemaMap = new Map([
     [
         "howtosupply",
         {
-            _id: "HowToSupply",
             _name: "HowToSupply",
             _parent: [
                 "HowToItem"
@@ -5540,7 +5351,6 @@ export const schemaMap = new Map([
     [
         "howtoitem",
         {
-            _id: "HowToItem",
             _name: "HowToItem",
             _parent: [
                 "ListItem"
@@ -5555,7 +5365,6 @@ export const schemaMap = new Map([
     [
         "howtotip",
         {
-            _id: "HowToTip",
             _name: "HowToTip",
             _parent: [
                 "CreativeWork",
@@ -5566,7 +5375,6 @@ export const schemaMap = new Map([
     [
         "medicalriskfactor",
         {
-            _id: "MedicalRiskFactor",
             _name: "MedicalRiskFactor",
             _parent: [
                 "MedicalEntity"
@@ -5579,7 +5387,6 @@ export const schemaMap = new Map([
     [
         "performancerole",
         {
-            _id: "PerformanceRole",
             _name: "PerformanceRole",
             _parent: [
                 "Role"
@@ -5592,7 +5399,6 @@ export const schemaMap = new Map([
     [
         "hospital",
         {
-            _id: "Hospital",
             _name: "Hospital",
             _parent: [
                 "EmergencyService",
@@ -5612,7 +5418,6 @@ export const schemaMap = new Map([
     [
         "emergencyservice",
         {
-            _id: "EmergencyService",
             _name: "EmergencyService",
             _parent: [
                 "LocalBusiness"
@@ -5622,7 +5427,6 @@ export const schemaMap = new Map([
     [
         "medicalorganization",
         {
-            _id: "MedicalOrganization",
             _name: "MedicalOrganization",
             _parent: [
                 "Organization"
@@ -5635,7 +5439,6 @@ export const schemaMap = new Map([
     [
         "dataset",
         {
-            _id: "Dataset",
             _name: "Dataset",
             _parent: [
                 "CreativeWork"
@@ -5654,7 +5457,6 @@ export const schemaMap = new Map([
     [
         "unitpricespecification",
         {
-            _id: "UnitPriceSpecification",
             _name: "UnitPriceSpecification",
             _parent: [
                 "PriceSpecification"
@@ -5680,7 +5482,6 @@ export const schemaMap = new Map([
     [
         "screeningevent",
         {
-            _id: "ScreeningEvent",
             _name: "ScreeningEvent",
             _parent: [
                 "Event"
@@ -5696,7 +5497,6 @@ export const schemaMap = new Map([
     [
         "language",
         {
-            _id: "Language",
             _name: "Language",
             _parent: [
                 "Intangible"
@@ -5706,7 +5506,6 @@ export const schemaMap = new Map([
     [
         "brand",
         {
-            _id: "Brand",
             _name: "Brand",
             _parent: [
                 "Intangible"
@@ -5729,7 +5528,6 @@ export const schemaMap = new Map([
     [
         "receiveaction",
         {
-            _id: "ReceiveAction",
             _name: "ReceiveAction",
             _parent: [
                 "TransferAction"
@@ -5747,7 +5545,6 @@ export const schemaMap = new Map([
     [
         "videogameclip",
         {
-            _id: "VideoGameClip",
             _name: "VideoGameClip",
             _parent: [
                 "Clip"
@@ -5757,7 +5554,6 @@ export const schemaMap = new Map([
     [
         "musicrecording",
         {
-            _id: "MusicRecording",
             _name: "MusicRecording",
             _parent: [
                 "CreativeWork"
@@ -5786,7 +5582,6 @@ export const schemaMap = new Map([
     [
         "musicalbum",
         {
-            _id: "MusicAlbum",
             _name: "MusicAlbum",
             _parent: [
                 "MusicPlaylist"
@@ -5809,7 +5604,6 @@ export const schemaMap = new Map([
     [
         "musicplaylist",
         {
-            _id: "MusicPlaylist",
             _name: "MusicPlaylist",
             _parent: [
                 "CreativeWork"
@@ -5826,7 +5620,6 @@ export const schemaMap = new Map([
     [
         "medicalriskscore",
         {
-            _id: "MedicalRiskScore",
             _name: "MedicalRiskScore",
             _parent: [
                 "MedicalRiskEstimator"
@@ -5839,7 +5632,6 @@ export const schemaMap = new Map([
     [
         "medicalriskestimator",
         {
-            _id: "MedicalRiskEstimator",
             _name: "MedicalRiskEstimator",
             _parent: [
                 "MedicalEntity"
@@ -5855,7 +5647,6 @@ export const schemaMap = new Map([
     [
         "imageobject",
         {
-            _id: "ImageObject",
             _name: "ImageObject",
             _parent: [
                 "MediaObject"
@@ -5879,7 +5670,6 @@ export const schemaMap = new Map([
     [
         "musicstore",
         {
-            _id: "MusicStore",
             _name: "MusicStore",
             _parent: [
                 "Store"
@@ -5889,7 +5679,6 @@ export const schemaMap = new Map([
     [
         "howtostep",
         {
-            _id: "HowToStep",
             _name: "HowToStep",
             _parent: [
                 "ItemList",
@@ -5901,7 +5690,6 @@ export const schemaMap = new Map([
     [
         "howtosection",
         {
-            _id: "HowToSection",
             _name: "HowToSection",
             _parent: [
                 "CreativeWork",
@@ -5913,7 +5701,6 @@ export const schemaMap = new Map([
     [
         "physicaltherapy",
         {
-            _id: "PhysicalTherapy",
             _name: "PhysicalTherapy",
             _parent: [
                 "MedicalTherapy"
@@ -5923,7 +5710,6 @@ export const schemaMap = new Map([
     [
         "quoteaction",
         {
-            _id: "QuoteAction",
             _name: "QuoteAction",
             _parent: [
                 "TradeAction"
@@ -5933,7 +5719,6 @@ export const schemaMap = new Map([
     [
         "datatype",
         {
-            _id: "DataType",
             _name: "DataType",
             _parent: [
                 "rdfs:Class"
@@ -5943,7 +5728,6 @@ export const schemaMap = new Map([
     [
         "preorderaction",
         {
-            _id: "PreOrderAction",
             _name: "PreOrderAction",
             _parent: [
                 "TradeAction"
@@ -5953,7 +5737,6 @@ export const schemaMap = new Map([
     [
         "blog",
         {
-            _id: "Blog",
             _name: "Blog",
             _parent: [
                 "CreativeWork"
@@ -5969,7 +5752,6 @@ export const schemaMap = new Map([
     [
         "mediasubscription",
         {
-            _id: "MediaSubscription",
             _name: "MediaSubscription",
             _parent: [
                 "Intangible"
@@ -5985,7 +5767,6 @@ export const schemaMap = new Map([
     [
         "presentationdigitaldocument",
         {
-            _id: "PresentationDigitalDocument",
             _name: "PresentationDigitalDocument",
             _parent: [
                 "DigitalDocument"
@@ -5995,7 +5776,6 @@ export const schemaMap = new Map([
     [
         "digitaldocument",
         {
-            _id: "DigitalDocument",
             _name: "DigitalDocument",
             _parent: [
                 "CreativeWork"
@@ -6008,7 +5788,6 @@ export const schemaMap = new Map([
     [
         "contactpage",
         {
-            _id: "ContactPage",
             _name: "ContactPage",
             _parent: [
                 "WebPage"
@@ -6018,7 +5797,6 @@ export const schemaMap = new Map([
     [
         "medicaltrial",
         {
-            _id: "MedicalTrial",
             _name: "MedicalTrial",
             _parent: [
                 "MedicalStudy"
@@ -6031,7 +5809,6 @@ export const schemaMap = new Map([
     [
         "webapplication",
         {
-            _id: "WebApplication",
             _name: "WebApplication",
             _parent: [
                 "SoftwareApplication"
@@ -6044,7 +5821,6 @@ export const schemaMap = new Map([
     [
         "palliativeprocedure",
         {
-            _id: "PalliativeProcedure",
             _name: "PalliativeProcedure",
             _parent: [
                 "MedicalTherapy",
@@ -6055,7 +5831,6 @@ export const schemaMap = new Map([
     [
         "exerciseplan",
         {
-            _id: "ExercisePlan",
             _name: "ExercisePlan",
             _parent: [
                 "PhysicalActivity",
@@ -6096,7 +5871,6 @@ export const schemaMap = new Map([
     [
         "physicalactivity",
         {
-            _id: "PhysicalActivity",
             _name: "PhysicalActivity",
             _parent: [
                 "LifestyleModification"
@@ -6123,7 +5897,6 @@ export const schemaMap = new Map([
     [
         "lifestylemodification",
         {
-            _id: "LifestyleModification",
             _name: "LifestyleModification",
             _parent: [
                 "MedicalEntity"
@@ -6133,7 +5906,6 @@ export const schemaMap = new Map([
     [
         "newsarticle",
         {
-            _id: "NewsArticle",
             _name: "NewsArticle",
             _parent: [
                 "Article"
@@ -6158,7 +5930,6 @@ export const schemaMap = new Map([
     [
         "ticket",
         {
-            _id: "Ticket",
             _name: "Ticket",
             _parent: [
                 "Intangible"
@@ -6197,7 +5968,6 @@ export const schemaMap = new Map([
     [
         "medicalclinic",
         {
-            _id: "MedicalClinic",
             _name: "MedicalClinic",
             _parent: [
                 "MedicalBusiness",
@@ -6216,7 +5986,6 @@ export const schemaMap = new Map([
     [
         "infectiousdisease",
         {
-            _id: "InfectiousDisease",
             _name: "InfectiousDisease",
             _parent: [
                 "MedicalCondition"
@@ -6235,7 +6004,6 @@ export const schemaMap = new Map([
     [
         "report",
         {
-            _id: "Report",
             _name: "Report",
             _parent: [
                 "Article"
@@ -6248,7 +6016,6 @@ export const schemaMap = new Map([
     [
         "geoshape",
         {
-            _id: "GeoShape",
             _name: "GeoShape",
             _parent: [
                 "StructuredValue"
@@ -6285,7 +6052,6 @@ export const schemaMap = new Map([
     [
         "touristattraction",
         {
-            _id: "TouristAttraction",
             _name: "TouristAttraction",
             _parent: [
                 "Place"
@@ -6303,7 +6069,6 @@ export const schemaMap = new Map([
     [
         "musicrelease",
         {
-            _id: "MusicRelease",
             _name: "MusicRelease",
             _parent: [
                 "MusicPlaylist"
@@ -6332,7 +6097,6 @@ export const schemaMap = new Map([
     [
         "saleevent",
         {
-            _id: "SaleEvent",
             _name: "SaleEvent",
             _parent: [
                 "Event"
@@ -6342,7 +6106,6 @@ export const schemaMap = new Map([
     [
         "seat",
         {
-            _id: "Seat",
             _name: "Seat",
             _parent: [
                 "Intangible"
@@ -6365,7 +6128,6 @@ export const schemaMap = new Map([
     [
         "bedandbreakfast",
         {
-            _id: "BedAndBreakfast",
             _name: "BedAndBreakfast",
             _parent: [
                 "LodgingBusiness"
@@ -6375,7 +6137,6 @@ export const schemaMap = new Map([
     [
         "lodgingbusiness",
         {
-            _id: "LodgingBusiness",
             _name: "LodgingBusiness",
             _parent: [
                 "LocalBusiness"
@@ -6414,7 +6175,6 @@ export const schemaMap = new Map([
     [
         "sculpture",
         {
-            _id: "Sculpture",
             _name: "Sculpture",
             _parent: [
                 "CreativeWork"
@@ -6424,7 +6184,6 @@ export const schemaMap = new Map([
     [
         "computerstore",
         {
-            _id: "ComputerStore",
             _name: "ComputerStore",
             _parent: [
                 "Store"
@@ -6434,7 +6193,6 @@ export const schemaMap = new Map([
     [
         "chooseaction",
         {
-            _id: "ChooseAction",
             _name: "ChooseAction",
             _parent: [
                 "AssessAction"
@@ -6448,7 +6206,6 @@ export const schemaMap = new Map([
     [
         "assessaction",
         {
-            _id: "AssessAction",
             _name: "AssessAction",
             _parent: [
                 "Action"
@@ -6458,7 +6215,6 @@ export const schemaMap = new Map([
     [
         "radiostation",
         {
-            _id: "RadioStation",
             _name: "RadioStation",
             _parent: [
                 "LocalBusiness"
@@ -6468,7 +6224,6 @@ export const schemaMap = new Map([
     [
         "drugstrength",
         {
-            _id: "DrugStrength",
             _name: "DrugStrength",
             _parent: [
                 "MedicalIntangible"
@@ -6493,7 +6248,6 @@ export const schemaMap = new Map([
     [
         "dietarysupplement",
         {
-            _id: "DietarySupplement",
             _name: "DietarySupplement",
             _parent: [
                 "Substance"
@@ -6538,7 +6292,6 @@ export const schemaMap = new Map([
     [
         "distance",
         {
-            _id: "Distance",
             _name: "Distance",
             _parent: [
                 "Quantity"
@@ -6548,7 +6301,6 @@ export const schemaMap = new Map([
     [
         "golfcourse",
         {
-            _id: "GolfCourse",
             _name: "GolfCourse",
             _parent: [
                 "SportsActivityLocation"
@@ -6558,7 +6310,6 @@ export const schemaMap = new Map([
     [
         "sportsactivitylocation",
         {
-            _id: "SportsActivityLocation",
             _name: "SportsActivityLocation",
             _parent: [
                 "LocalBusiness"
@@ -6568,7 +6319,6 @@ export const schemaMap = new Map([
     [
         "cookaction",
         {
-            _id: "CookAction",
             _name: "CookAction",
             _parent: [
                 "CreateAction"
@@ -6588,7 +6338,6 @@ export const schemaMap = new Map([
     [
         "videogameseries",
         {
-            _id: "VideoGameSeries",
             _name: "VideoGameSeries",
             _parent: [
                 "CreativeWorkSeries"
@@ -6654,7 +6403,6 @@ export const schemaMap = new Map([
     [
         "videoobject",
         {
-            _id: "VideoObject",
             _name: "VideoObject",
             _parent: [
                 "MediaObject"
@@ -6690,7 +6438,6 @@ export const schemaMap = new Map([
     [
         "radioseries",
         {
-            _id: "RadioSeries",
             _name: "RadioSeries",
             _parent: [
                 "CreativeWorkSeries"
@@ -6728,7 +6475,6 @@ export const schemaMap = new Map([
     [
         "musicgroup",
         {
-            _id: "MusicGroup",
             _name: "MusicGroup",
             _parent: [
                 "PerformingGroup"
@@ -6749,7 +6495,6 @@ export const schemaMap = new Map([
     [
         "performinggroup",
         {
-            _id: "PerformingGroup",
             _name: "PerformingGroup",
             _parent: [
                 "Organization"
@@ -6759,7 +6504,6 @@ export const schemaMap = new Map([
     [
         "followaction",
         {
-            _id: "FollowAction",
             _name: "FollowAction",
             _parent: [
                 "InteractAction"
@@ -6773,7 +6517,6 @@ export const schemaMap = new Map([
     [
         "anatomicalsystem",
         {
-            _id: "AnatomicalSystem",
             _name: "AnatomicalSystem",
             _parent: [
                 "MedicalEntity"
@@ -6799,7 +6542,6 @@ export const schemaMap = new Map([
     [
         "superficialanatomy",
         {
-            _id: "SuperficialAnatomy",
             _name: "SuperficialAnatomy",
             _parent: [
                 "MedicalEntity"
@@ -6825,7 +6567,6 @@ export const schemaMap = new Map([
     [
         "departaction",
         {
-            _id: "DepartAction",
             _name: "DepartAction",
             _parent: [
                 "MoveAction"
@@ -6835,7 +6576,6 @@ export const schemaMap = new Map([
     [
         "moveaction",
         {
-            _id: "MoveAction",
             _name: "MoveAction",
             _parent: [
                 "Action"
@@ -6851,7 +6591,6 @@ export const schemaMap = new Map([
     [
         "map",
         {
-            _id: "Map",
             _name: "Map",
             _parent: [
                 "CreativeWork"
@@ -6864,7 +6603,6 @@ export const schemaMap = new Map([
     [
         "courseinstance",
         {
-            _id: "CourseInstance",
             _name: "CourseInstance",
             _parent: [
                 "Event"
@@ -6881,7 +6619,6 @@ export const schemaMap = new Map([
     [
         "menu",
         {
-            _id: "Menu",
             _name: "Menu",
             _parent: [
                 "CreativeWork"
@@ -6897,7 +6634,6 @@ export const schemaMap = new Map([
     [
         "servicechannel",
         {
-            _id: "ServiceChannel",
             _name: "ServiceChannel",
             _parent: [
                 "Intangible"
@@ -6932,7 +6668,6 @@ export const schemaMap = new Map([
     [
         "wpsidebar",
         {
-            _id: "WPSideBar",
             _name: "WPSideBar",
             _parent: [
                 "WebPageElement"
@@ -6942,7 +6677,6 @@ export const schemaMap = new Map([
     [
         "webpageelement",
         {
-            _id: "WebPageElement",
             _name: "WebPageElement",
             _parent: [
                 "CreativeWork"
@@ -6958,7 +6692,6 @@ export const schemaMap = new Map([
     [
         "financialservice",
         {
-            _id: "FinancialService",
             _name: "FinancialService",
             _parent: [
                 "LocalBusiness"
@@ -6972,7 +6705,6 @@ export const schemaMap = new Map([
     [
         "financialproduct",
         {
-            _id: "FinancialProduct",
             _name: "FinancialProduct",
             _parent: [
                 "Service"
@@ -6994,7 +6726,6 @@ export const schemaMap = new Map([
     [
         "shoestore",
         {
-            _id: "ShoeStore",
             _name: "ShoeStore",
             _parent: [
                 "Store"
@@ -7004,7 +6735,6 @@ export const schemaMap = new Map([
     [
         "datafeed",
         {
-            _id: "DataFeed",
             _name: "DataFeed",
             _parent: [
                 "Dataset"
@@ -7019,7 +6749,6 @@ export const schemaMap = new Map([
     [
         "petstore",
         {
-            _id: "PetStore",
             _name: "PetStore",
             _parent: [
                 "Store"
@@ -7029,7 +6758,6 @@ export const schemaMap = new Map([
     [
         "ondemandevent",
         {
-            _id: "OnDemandEvent",
             _name: "OnDemandEvent",
             _parent: [
                 "PublicationEvent"
@@ -7039,7 +6767,6 @@ export const schemaMap = new Map([
     [
         "aggregateoffer",
         {
-            _id: "AggregateOffer",
             _name: "AggregateOffer",
             _parent: [
                 "Offer"
@@ -7064,7 +6791,6 @@ export const schemaMap = new Map([
     [
         "alignmentobject",
         {
-            _id: "AlignmentObject",
             _name: "AlignmentObject",
             _parent: [
                 "Intangible"
@@ -7089,7 +6815,6 @@ export const schemaMap = new Map([
     [
         "clothingstore",
         {
-            _id: "ClothingStore",
             _name: "ClothingStore",
             _parent: [
                 "Store"
@@ -7099,7 +6824,6 @@ export const schemaMap = new Map([
     [
         "course",
         {
-            _id: "Course",
             _name: "Course",
             _parent: [
                 "CreativeWork",
@@ -7125,7 +6849,6 @@ export const schemaMap = new Map([
     [
         "governmentoffice",
         {
-            _id: "GovernmentOffice",
             _name: "GovernmentOffice",
             _parent: [
                 "LocalBusiness"
@@ -7135,7 +6858,6 @@ export const schemaMap = new Map([
     [
         "leaveaction",
         {
-            _id: "LeaveAction",
             _name: "LeaveAction",
             _parent: [
                 "InteractAction"
@@ -7148,7 +6870,6 @@ export const schemaMap = new Map([
     [
         "chapter",
         {
-            _id: "Chapter",
             _name: "Chapter",
             _parent: [
                 "CreativeWork"
@@ -7169,7 +6890,6 @@ export const schemaMap = new Map([
     [
         "publicationvolume",
         {
-            _id: "PublicationVolume",
             _name: "PublicationVolume",
             _parent: [
                 "CreativeWork"
@@ -7194,7 +6914,6 @@ export const schemaMap = new Map([
     [
         "mosque",
         {
-            _id: "Mosque",
             _name: "Mosque",
             _parent: [
                 "PlaceOfWorship"
@@ -7204,7 +6923,6 @@ export const schemaMap = new Map([
     [
         "claimreview",
         {
-            _id: "ClaimReview",
             _name: "ClaimReview",
             _parent: [
                 "Review"
@@ -7217,7 +6935,6 @@ export const schemaMap = new Map([
     [
         "gasstation",
         {
-            _id: "GasStation",
             _name: "GasStation",
             _parent: [
                 "AutomotiveBusiness"
@@ -7227,7 +6944,6 @@ export const schemaMap = new Map([
     [
         "commentaction",
         {
-            _id: "CommentAction",
             _name: "CommentAction",
             _parent: [
                 "CommunicateAction"
@@ -7240,7 +6956,6 @@ export const schemaMap = new Map([
     [
         "entrypoint",
         {
-            _id: "EntryPoint",
             _name: "EntryPoint",
             _parent: [
                 "Intangible"
@@ -7269,7 +6984,6 @@ export const schemaMap = new Map([
     [
         "musiccomposition",
         {
-            _id: "MusicComposition",
             _name: "MusicComposition",
             _parent: [
                 "CreativeWork"
@@ -7310,7 +7024,6 @@ export const schemaMap = new Map([
     [
         "school",
         {
-            _id: "School",
             _name: "School",
             _parent: [
                 "EducationalOrganization"
@@ -7320,7 +7033,6 @@ export const schemaMap = new Map([
     [
         "educationalorganization",
         {
-            _id: "EducationalOrganization",
             _name: "EducationalOrganization",
             _parent: [
                 "Organization",
@@ -7334,7 +7046,6 @@ export const schemaMap = new Map([
     [
         "photograph",
         {
-            _id: "Photograph",
             _name: "Photograph",
             _parent: [
                 "CreativeWork"
@@ -7344,7 +7055,6 @@ export const schemaMap = new Map([
     [
         "continent",
         {
-            _id: "Continent",
             _name: "Continent",
             _parent: [
                 "Landform"
@@ -7354,7 +7064,6 @@ export const schemaMap = new Map([
     [
         "library",
         {
-            _id: "Library",
             _name: "Library",
             _parent: [
                 "LocalBusiness"
@@ -7364,7 +7073,6 @@ export const schemaMap = new Map([
     [
         "touristinformationcenter",
         {
-            _id: "TouristInformationCenter",
             _name: "TouristInformationCenter",
             _parent: [
                 "LocalBusiness"
@@ -7374,7 +7082,6 @@ export const schemaMap = new Map([
     [
         "propertyvaluespecification",
         {
-            _id: "PropertyValueSpecification",
             _name: "PropertyValueSpecification",
             _parent: [
                 "Intangible"
@@ -7418,7 +7125,6 @@ export const schemaMap = new Map([
     [
         "maximumdoseschedule",
         {
-            _id: "MaximumDoseSchedule",
             _name: "MaximumDoseSchedule",
             _parent: [
                 "DoseSchedule"
@@ -7428,7 +7134,6 @@ export const schemaMap = new Map([
     [
         "doseschedule",
         {
-            _id: "DoseSchedule",
             _name: "DoseSchedule",
             _parent: [
                 "MedicalIntangible"
@@ -7451,7 +7156,6 @@ export const schemaMap = new Map([
     [
         "ddxelement",
         {
-            _id: "DDxElement",
             _name: "DDxElement",
             _parent: [
                 "MedicalIntangible"
@@ -7467,7 +7171,6 @@ export const schemaMap = new Map([
     [
         "orderitem",
         {
-            _id: "OrderItem",
             _name: "OrderItem",
             _parent: [
                 "Intangible"
@@ -7494,7 +7197,6 @@ export const schemaMap = new Map([
     [
         "aquarium",
         {
-            _id: "Aquarium",
             _name: "Aquarium",
             _parent: [
                 "CivicStructure"
@@ -7504,7 +7206,6 @@ export const schemaMap = new Map([
     [
         "selfstorage",
         {
-            _id: "SelfStorage",
             _name: "SelfStorage",
             _parent: [
                 "LocalBusiness"
@@ -7514,7 +7215,6 @@ export const schemaMap = new Map([
     [
         "breadcrumblist",
         {
-            _id: "BreadcrumbList",
             _name: "BreadcrumbList",
             _parent: [
                 "ItemList"
@@ -7524,7 +7224,6 @@ export const schemaMap = new Map([
     [
         "preschool",
         {
-            _id: "Preschool",
             _name: "Preschool",
             _parent: [
                 "EducationalOrganization"
@@ -7534,7 +7233,6 @@ export const schemaMap = new Map([
     [
         "howtotool",
         {
-            _id: "HowToTool",
             _name: "HowToTool",
             _parent: [
                 "HowToItem"
@@ -7544,7 +7242,6 @@ export const schemaMap = new Map([
     [
         "buyaction",
         {
-            _id: "BuyAction",
             _name: "BuyAction",
             _parent: [
                 "TradeAction"
@@ -7558,7 +7255,6 @@ export const schemaMap = new Map([
     [
         "broadcastchannel",
         {
-            _id: "BroadcastChannel",
             _name: "BroadcastChannel",
             _parent: [
                 "Intangible"
@@ -7588,7 +7284,6 @@ export const schemaMap = new Map([
     [
         "florist",
         {
-            _id: "Florist",
             _name: "Florist",
             _parent: [
                 "Store"
@@ -7598,7 +7293,6 @@ export const schemaMap = new Map([
     [
         "occupation",
         {
-            _id: "Occupation",
             _name: "Occupation",
             _parent: [
                 "Intangible"
@@ -7625,7 +7319,6 @@ export const schemaMap = new Map([
     [
         "cableorsatelliteservice",
         {
-            _id: "CableOrSatelliteService",
             _name: "CableOrSatelliteService",
             _parent: [
                 "Service"
@@ -7635,7 +7328,6 @@ export const schemaMap = new Map([
     [
         "preventionindication",
         {
-            _id: "PreventionIndication",
             _name: "PreventionIndication",
             _parent: [
                 "MedicalIndication"
@@ -7645,7 +7337,6 @@ export const schemaMap = new Map([
     [
         "exerciseaction",
         {
-            _id: "ExerciseAction",
             _name: "ExerciseAction",
             _parent: [
                 "PlayAction"
@@ -7691,7 +7382,6 @@ export const schemaMap = new Map([
     [
         "playaction",
         {
-            _id: "PlayAction",
             _name: "PlayAction",
             _parent: [
                 "Action"
@@ -7707,7 +7397,6 @@ export const schemaMap = new Map([
     [
         "sportsevent",
         {
-            _id: "SportsEvent",
             _name: "SportsEvent",
             _parent: [
                 "Event"
@@ -7729,7 +7418,6 @@ export const schemaMap = new Map([
     [
         "replyaction",
         {
-            _id: "ReplyAction",
             _name: "ReplyAction",
             _parent: [
                 "CommunicateAction"
@@ -7742,7 +7430,6 @@ export const schemaMap = new Map([
     [
         "travelaction",
         {
-            _id: "TravelAction",
             _name: "TravelAction",
             _parent: [
                 "MoveAction"
@@ -7755,7 +7442,6 @@ export const schemaMap = new Map([
     [
         "reservoir",
         {
-            _id: "Reservoir",
             _name: "Reservoir",
             _parent: [
                 "BodyOfWater"
@@ -7765,7 +7451,6 @@ export const schemaMap = new Map([
     [
         "diet",
         {
-            _id: "Diet",
             _name: "Diet",
             _parent: [
                 "LifestyleModification",
@@ -7792,7 +7477,6 @@ export const schemaMap = new Map([
     [
         "geocoordinates",
         {
-            _id: "GeoCoordinates",
             _name: "GeoCoordinates",
             _parent: [
                 "StructuredValue"
@@ -7825,7 +7509,6 @@ export const schemaMap = new Map([
     [
         "offercatalog",
         {
-            _id: "OfferCatalog",
             _name: "OfferCatalog",
             _parent: [
                 "ItemList"
@@ -7835,7 +7518,6 @@ export const schemaMap = new Map([
     [
         "loanorcredit",
         {
-            _id: "LoanOrCredit",
             _name: "LoanOrCredit",
             _parent: [
                 "FinancialProduct"
@@ -7859,7 +7541,6 @@ export const schemaMap = new Map([
     [
         "collection",
         {
-            _id: "Collection",
             _name: "Collection",
             _parent: [
                 "CreativeWork"
@@ -7869,7 +7550,6 @@ export const schemaMap = new Map([
     [
         "typeandquantitynode",
         {
-            _id: "TypeAndQuantityNode",
             _name: "TypeAndQuantityNode",
             _parent: [
                 "StructuredValue"
@@ -7896,7 +7576,6 @@ export const schemaMap = new Map([
     [
         "unregisteraction",
         {
-            _id: "UnRegisterAction",
             _name: "UnRegisterAction",
             _parent: [
                 "InteractAction"
@@ -7906,7 +7585,6 @@ export const schemaMap = new Map([
     [
         "aboutpage",
         {
-            _id: "AboutPage",
             _name: "AboutPage",
             _parent: [
                 "WebPage"
@@ -7916,7 +7594,6 @@ export const schemaMap = new Map([
     [
         "loseaction",
         {
-            _id: "LoseAction",
             _name: "LoseAction",
             _parent: [
                 "AchieveAction"
@@ -7929,7 +7606,6 @@ export const schemaMap = new Map([
     [
         "achieveaction",
         {
-            _id: "AchieveAction",
             _name: "AchieveAction",
             _parent: [
                 "Action"
@@ -7939,7 +7615,6 @@ export const schemaMap = new Map([
     [
         "shoppingcenter",
         {
-            _id: "ShoppingCenter",
             _name: "ShoppingCenter",
             _parent: [
                 "LocalBusiness"
@@ -7949,7 +7624,6 @@ export const schemaMap = new Map([
     [
         "compoundpricespecification",
         {
-            _id: "CompoundPriceSpecification",
             _name: "CompoundPriceSpecification",
             _parent: [
                 "PriceSpecification"
@@ -7962,7 +7636,6 @@ export const schemaMap = new Map([
     [
         "medicalsignorsymptom",
         {
-            _id: "MedicalSignOrSymptom",
             _name: "MedicalSignOrSymptom",
             _parent: [
                 "MedicalCondition"
@@ -7975,7 +7648,6 @@ export const schemaMap = new Map([
     [
         "state",
         {
-            _id: "State",
             _name: "State",
             _parent: [
                 "AdministrativeArea"
@@ -7985,7 +7657,6 @@ export const schemaMap = new Map([
     [
         "playground",
         {
-            _id: "Playground",
             _name: "Playground",
             _parent: [
                 "CivicStructure"
@@ -7995,7 +7666,6 @@ export const schemaMap = new Map([
     [
         "appendaction",
         {
-            _id: "AppendAction",
             _name: "AppendAction",
             _parent: [
                 "InsertAction"
@@ -8005,7 +7675,6 @@ export const schemaMap = new Map([
     [
         "insertaction",
         {
-            _id: "InsertAction",
             _name: "InsertAction",
             _parent: [
                 "AddAction"
@@ -8018,7 +7687,6 @@ export const schemaMap = new Map([
     [
         "addaction",
         {
-            _id: "AddAction",
             _name: "AddAction",
             _parent: [
                 "UpdateAction"
@@ -8028,7 +7696,6 @@ export const schemaMap = new Map([
     [
         "updateaction",
         {
-            _id: "UpdateAction",
             _name: "UpdateAction",
             _parent: [
                 "Action"
@@ -8041,7 +7708,6 @@ export const schemaMap = new Map([
     [
         "eventreservation",
         {
-            _id: "EventReservation",
             _name: "EventReservation",
             _parent: [
                 "Reservation"
@@ -8051,7 +7717,6 @@ export const schemaMap = new Map([
     [
         "museum",
         {
-            _id: "Museum",
             _name: "Museum",
             _parent: [
                 "CivicStructure"
@@ -8061,7 +7726,6 @@ export const schemaMap = new Map([
     [
         "beautysalon",
         {
-            _id: "BeautySalon",
             _name: "BeautySalon",
             _parent: [
                 "HealthAndBeautyBusiness"
@@ -8071,7 +7735,6 @@ export const schemaMap = new Map([
     [
         "healthandbeautybusiness",
         {
-            _id: "HealthAndBeautyBusiness",
             _name: "HealthAndBeautyBusiness",
             _parent: [
                 "LocalBusiness"
@@ -8081,7 +7744,6 @@ export const schemaMap = new Map([
     [
         "medicalsign",
         {
-            _id: "MedicalSign",
             _name: "MedicalSign",
             _parent: [
                 "MedicalSignOrSymptom"
@@ -8097,7 +7759,6 @@ export const schemaMap = new Map([
     [
         "bookseries",
         {
-            _id: "BookSeries",
             _name: "BookSeries",
             _parent: [
                 "CreativeWorkSeries"
@@ -8107,7 +7768,6 @@ export const schemaMap = new Map([
     [
         "replaceaction",
         {
-            _id: "ReplaceAction",
             _name: "ReplaceAction",
             _parent: [
                 "UpdateAction"
@@ -8123,7 +7783,6 @@ export const schemaMap = new Map([
     [
         "parkingfacility",
         {
-            _id: "ParkingFacility",
             _name: "ParkingFacility",
             _parent: [
                 "CivicStructure"
@@ -8133,7 +7792,6 @@ export const schemaMap = new Map([
     [
         "highschool",
         {
-            _id: "HighSchool",
             _name: "HighSchool",
             _parent: [
                 "EducationalOrganization"
@@ -8143,7 +7801,6 @@ export const schemaMap = new Map([
     [
         "bankaccount",
         {
-            _id: "BankAccount",
             _name: "BankAccount",
             _parent: [
                 "FinancialProduct"
@@ -8153,7 +7810,6 @@ export const schemaMap = new Map([
     [
         "datafeeditem",
         {
-            _id: "DataFeedItem",
             _name: "DataFeedItem",
             _parent: [
                 "Intangible"
@@ -8178,7 +7834,6 @@ export const schemaMap = new Map([
     [
         "pawnshop",
         {
-            _id: "PawnShop",
             _name: "PawnShop",
             _parent: [
                 "Store"
@@ -8188,7 +7843,6 @@ export const schemaMap = new Map([
     [
         "physician",
         {
-            _id: "Physician",
             _name: "Physician",
             _parent: [
                 "MedicalBusiness",
@@ -8210,7 +7864,6 @@ export const schemaMap = new Map([
     [
         "assignaction",
         {
-            _id: "AssignAction",
             _name: "AssignAction",
             _parent: [
                 "AllocateAction"
@@ -8220,7 +7873,6 @@ export const schemaMap = new Map([
     [
         "conversation",
         {
-            _id: "Conversation",
             _name: "Conversation",
             _parent: [
                 "CreativeWork"
@@ -8230,7 +7882,6 @@ export const schemaMap = new Map([
     [
         "trainstation",
         {
-            _id: "TrainStation",
             _name: "TrainStation",
             _parent: [
                 "CivicStructure"
@@ -8240,7 +7891,6 @@ export const schemaMap = new Map([
     [
         "ownershipinfo",
         {
-            _id: "OwnershipInfo",
             _name: "OwnershipInfo",
             _parent: [
                 "StructuredValue"
@@ -8264,7 +7914,6 @@ export const schemaMap = new Map([
     [
         "permit",
         {
-            _id: "Permit",
             _name: "Permit",
             _parent: [
                 "Intangible"
@@ -8296,7 +7945,6 @@ export const schemaMap = new Map([
     [
         "sportsclub",
         {
-            _id: "SportsClub",
             _name: "SportsClub",
             _parent: [
                 "SportsActivityLocation"
@@ -8306,7 +7954,6 @@ export const schemaMap = new Map([
     [
         "bridge",
         {
-            _id: "Bridge",
             _name: "Bridge",
             _parent: [
                 "CivicStructure"
@@ -8316,7 +7963,6 @@ export const schemaMap = new Map([
     [
         "businessaudience",
         {
-            _id: "BusinessAudience",
             _name: "BusinessAudience",
             _parent: [
                 "Audience"
@@ -8335,7 +7981,6 @@ export const schemaMap = new Map([
     [
         "volcano",
         {
-            _id: "Volcano",
             _name: "Volcano",
             _parent: [
                 "Landform"
@@ -8345,7 +7990,6 @@ export const schemaMap = new Map([
     [
         "cafeorcoffeeshop",
         {
-            _id: "CafeOrCoffeeShop",
             _name: "CafeOrCoffeeShop",
             _parent: [
                 "FoodEstablishment"
@@ -8355,7 +7999,6 @@ export const schemaMap = new Map([
     [
         "medicalwebpage",
         {
-            _id: "MedicalWebPage",
             _name: "MedicalWebPage",
             _parent: [
                 "WebPage"
@@ -8369,7 +8012,6 @@ export const schemaMap = new Map([
     [
         "atlas",
         {
-            _id: "Atlas",
             _name: "Atlas",
             _parent: [
                 "CreativeWork"
@@ -8379,7 +8021,6 @@ export const schemaMap = new Map([
     [
         "book",
         {
-            _id: "Book",
             _name: "Book",
             _parent: [
                 "CreativeWork"
@@ -8407,7 +8048,6 @@ export const schemaMap = new Map([
     [
         "grocerystore",
         {
-            _id: "GroceryStore",
             _name: "GroceryStore",
             _parent: [
                 "Store"
@@ -8417,7 +8057,6 @@ export const schemaMap = new Map([
     [
         "insuranceagency",
         {
-            _id: "InsuranceAgency",
             _name: "InsuranceAgency",
             _parent: [
                 "FinancialService"
@@ -8427,7 +8066,6 @@ export const schemaMap = new Map([
     [
         "audioobject",
         {
-            _id: "AudioObject",
             _name: "AudioObject",
             _parent: [
                 "MediaObject"
@@ -8444,7 +8082,6 @@ export const schemaMap = new Map([
     [
         "stadiumorarena",
         {
-            _id: "StadiumOrArena",
             _name: "StadiumOrArena",
             _parent: [
                 "CivicStructure",
@@ -8455,7 +8092,6 @@ export const schemaMap = new Map([
     [
         "conveniencestore",
         {
-            _id: "ConvenienceStore",
             _name: "ConvenienceStore",
             _parent: [
                 "Store"
@@ -8465,7 +8101,6 @@ export const schemaMap = new Map([
     [
         "vein",
         {
-            _id: "Vein",
             _name: "Vein",
             _parent: [
                 "Vessel"
@@ -8485,7 +8120,6 @@ export const schemaMap = new Map([
     [
         "muscle",
         {
-            _id: "Muscle",
             _name: "Muscle",
             _parent: [
                 "AnatomicalStructure"
@@ -8510,7 +8144,6 @@ export const schemaMap = new Map([
     [
         "autopartsstore",
         {
-            _id: "AutoPartsStore",
             _name: "AutoPartsStore",
             _parent: [
                 "Store",
@@ -8521,7 +8154,6 @@ export const schemaMap = new Map([
     [
         "wpadblock",
         {
-            _id: "WPAdBlock",
             _name: "WPAdBlock",
             _parent: [
                 "WebPageElement"
@@ -8531,7 +8163,6 @@ export const schemaMap = new Map([
     [
         "recommendeddoseschedule",
         {
-            _id: "RecommendedDoseSchedule",
             _name: "RecommendedDoseSchedule",
             _parent: [
                 "DoseSchedule"
@@ -8541,7 +8172,6 @@ export const schemaMap = new Map([
     [
         "borrowaction",
         {
-            _id: "BorrowAction",
             _name: "BorrowAction",
             _parent: [
                 "TransferAction"
@@ -8555,7 +8185,6 @@ export const schemaMap = new Map([
     [
         "ligament",
         {
-            _id: "Ligament",
             _name: "Ligament",
             _parent: [
                 "AnatomicalStructure"
@@ -8565,7 +8194,6 @@ export const schemaMap = new Map([
     [
         "qapage",
         {
-            _id: "QAPage",
             _name: "QAPage",
             _parent: [
                 "WebPage"
@@ -8575,7 +8203,6 @@ export const schemaMap = new Map([
     [
         "searchaction",
         {
-            _id: "SearchAction",
             _name: "SearchAction",
             _parent: [
                 "Action"
@@ -8588,7 +8215,6 @@ export const schemaMap = new Map([
     [
         "pathologytest",
         {
-            _id: "PathologyTest",
             _name: "PathologyTest",
             _parent: [
                 "MedicalTest"
@@ -8601,7 +8227,6 @@ export const schemaMap = new Map([
     [
         "jewelrystore",
         {
-            _id: "JewelryStore",
             _name: "JewelryStore",
             _parent: [
                 "Store"
@@ -8611,7 +8236,6 @@ export const schemaMap = new Map([
     [
         "viewaction",
         {
-            _id: "ViewAction",
             _name: "ViewAction",
             _parent: [
                 "ConsumeAction"
@@ -8621,7 +8245,6 @@ export const schemaMap = new Map([
     [
         "wpfooter",
         {
-            _id: "WPFooter",
             _name: "WPFooter",
             _parent: [
                 "WebPageElement"
@@ -8631,7 +8254,6 @@ export const schemaMap = new Map([
     [
         "likeaction",
         {
-            _id: "LikeAction",
             _name: "LikeAction",
             _parent: [
                 "ReactAction"
@@ -8641,7 +8263,6 @@ export const schemaMap = new Map([
     [
         "reactaction",
         {
-            _id: "ReactAction",
             _name: "ReactAction",
             _parent: [
                 "AssessAction"
@@ -8651,7 +8272,6 @@ export const schemaMap = new Map([
     [
         "mobileapplication",
         {
-            _id: "MobileApplication",
             _name: "MobileApplication",
             _parent: [
                 "SoftwareApplication"
@@ -8664,7 +8284,6 @@ export const schemaMap = new Map([
     [
         "downloadaction",
         {
-            _id: "DownloadAction",
             _name: "DownloadAction",
             _parent: [
                 "TransferAction"
@@ -8674,7 +8293,6 @@ export const schemaMap = new Map([
     [
         "synagogue",
         {
-            _id: "Synagogue",
             _name: "Synagogue",
             _parent: [
                 "PlaceOfWorship"
@@ -8684,7 +8302,6 @@ export const schemaMap = new Map([
     [
         "tireshop",
         {
-            _id: "TireShop",
             _name: "TireShop",
             _parent: [
                 "Store"
@@ -8694,7 +8311,6 @@ export const schemaMap = new Map([
     [
         "policestation",
         {
-            _id: "PoliceStation",
             _name: "PoliceStation",
             _parent: [
                 "CivicStructure",
@@ -8705,7 +8321,6 @@ export const schemaMap = new Map([
     [
         "healthclub",
         {
-            _id: "HealthClub",
             _name: "HealthClub",
             _parent: [
                 "SportsActivityLocation",
@@ -8716,7 +8331,6 @@ export const schemaMap = new Map([
     [
         "animalshelter",
         {
-            _id: "AnimalShelter",
             _name: "AnimalShelter",
             _parent: [
                 "LocalBusiness"
@@ -8726,7 +8340,6 @@ export const schemaMap = new Map([
     [
         "textdigitaldocument",
         {
-            _id: "TextDigitalDocument",
             _name: "TextDigitalDocument",
             _parent: [
                 "DigitalDocument"
@@ -8736,7 +8349,6 @@ export const schemaMap = new Map([
     [
         "thesis",
         {
-            _id: "Thesis",
             _name: "Thesis",
             _parent: [
                 "CreativeWork"
@@ -8749,7 +8361,6 @@ export const schemaMap = new Map([
     [
         "workersunion",
         {
-            _id: "WorkersUnion",
             _name: "WorkersUnion",
             _parent: [
                 "Organization"
@@ -8759,7 +8370,6 @@ export const schemaMap = new Map([
     [
         "lendaction",
         {
-            _id: "LendAction",
             _name: "LendAction",
             _parent: [
                 "TransferAction"
@@ -8772,7 +8382,6 @@ export const schemaMap = new Map([
     [
         "listenaction",
         {
-            _id: "ListenAction",
             _name: "ListenAction",
             _parent: [
                 "ConsumeAction"
@@ -8782,7 +8391,6 @@ export const schemaMap = new Map([
     [
         "hotelroom",
         {
-            _id: "HotelRoom",
             _name: "HotelRoom",
             _parent: [
                 "Room"
@@ -8800,7 +8408,6 @@ export const schemaMap = new Map([
     [
         "apartment",
         {
-            _id: "Apartment",
             _name: "Apartment",
             _parent: [
                 "Accommodation"
@@ -8817,7 +8424,6 @@ export const schemaMap = new Map([
     [
         "suite",
         {
-            _id: "Suite",
             _name: "Suite",
             _parent: [
                 "Accommodation"
@@ -8839,7 +8445,6 @@ export const schemaMap = new Map([
     [
         "singlefamilyresidence",
         {
-            _id: "SingleFamilyResidence",
             _name: "SingleFamilyResidence",
             _parent: [
                 "House"
@@ -8856,7 +8461,6 @@ export const schemaMap = new Map([
     [
         "house",
         {
-            _id: "House",
             _name: "House",
             _parent: [
                 "Accommodation"
@@ -8870,7 +8474,6 @@ export const schemaMap = new Map([
     [
         "deleteaction",
         {
-            _id: "DeleteAction",
             _name: "DeleteAction",
             _parent: [
                 "UpdateAction"
@@ -8880,7 +8483,6 @@ export const schemaMap = new Map([
     [
         "sitenavigationelement",
         {
-            _id: "SiteNavigationElement",
             _name: "SiteNavigationElement",
             _parent: [
                 "WebPageElement"
@@ -8890,7 +8492,6 @@ export const schemaMap = new Map([
     [
         "governmentservice",
         {
-            _id: "GovernmentService",
             _name: "GovernmentService",
             _parent: [
                 "Service"
@@ -8903,7 +8504,6 @@ export const schemaMap = new Map([
     [
         "legalservice",
         {
-            _id: "LegalService",
             _name: "LegalService",
             _parent: [
                 "LocalBusiness"
@@ -8913,7 +8513,6 @@ export const schemaMap = new Map([
     [
         "digitaldocumentpermission",
         {
-            _id: "DigitalDocumentPermission",
             _name: "DigitalDocumentPermission",
             _parent: [
                 "Intangible"
@@ -8932,7 +8531,6 @@ export const schemaMap = new Map([
     [
         "registeraction",
         {
-            _id: "RegisterAction",
             _name: "RegisterAction",
             _parent: [
                 "InteractAction"
@@ -8942,7 +8540,6 @@ export const schemaMap = new Map([
     [
         "housepainter",
         {
-            _id: "HousePainter",
             _name: "HousePainter",
             _parent: [
                 "HomeAndConstructionBusiness"
@@ -8952,7 +8549,6 @@ export const schemaMap = new Map([
     [
         "homeandconstructionbusiness",
         {
-            _id: "HomeAndConstructionBusiness",
             _name: "HomeAndConstructionBusiness",
             _parent: [
                 "LocalBusiness"
@@ -8962,7 +8558,6 @@ export const schemaMap = new Map([
     [
         "diagnosticlab",
         {
-            _id: "DiagnosticLab",
             _name: "DiagnosticLab",
             _parent: [
                 "MedicalOrganization"
@@ -8975,7 +8570,6 @@ export const schemaMap = new Map([
     [
         "gameserver",
         {
-            _id: "GameServer",
             _name: "GameServer",
             _parent: [
                 "Intangible"
@@ -8994,7 +8588,6 @@ export const schemaMap = new Map([
     [
         "attorney",
         {
-            _id: "Attorney",
             _name: "Attorney",
             _parent: [
                 "LegalService"
@@ -9004,7 +8597,6 @@ export const schemaMap = new Map([
     [
         "beddetails",
         {
-            _id: "BedDetails",
             _name: "BedDetails",
             _parent: [
                 "Intangible"
@@ -9021,7 +8613,6 @@ export const schemaMap = new Map([
     [
         "rsvpaction",
         {
-            _id: "RsvpAction",
             _name: "RsvpAction",
             _parent: [
                 "InformAction"
@@ -9040,7 +8631,6 @@ export const schemaMap = new Map([
     [
         "informaction",
         {
-            _id: "InformAction",
             _name: "InformAction",
             _parent: [
                 "CommunicateAction"
@@ -9053,7 +8643,6 @@ export const schemaMap = new Map([
     [
         "toystore",
         {
-            _id: "ToyStore",
             _name: "ToyStore",
             _parent: [
                 "Store"
@@ -9063,7 +8652,6 @@ export const schemaMap = new Map([
     [
         "resumeaction",
         {
-            _id: "ResumeAction",
             _name: "ResumeAction",
             _parent: [
                 "ControlAction"
@@ -9073,7 +8661,6 @@ export const schemaMap = new Map([
     [
         "controlaction",
         {
-            _id: "ControlAction",
             _name: "ControlAction",
             _parent: [
                 "Action"
@@ -9083,7 +8670,6 @@ export const schemaMap = new Map([
     [
         "busorcoach",
         {
-            _id: "BusOrCoach",
             _name: "BusOrCoach",
             _parent: [
                 "Vehicle"
@@ -9099,7 +8685,6 @@ export const schemaMap = new Map([
     [
         "movierentalstore",
         {
-            _id: "MovieRentalStore",
             _name: "MovieRentalStore",
             _parent: [
                 "Store"
@@ -9109,7 +8694,6 @@ export const schemaMap = new Map([
     [
         "winaction",
         {
-            _id: "WinAction",
             _name: "WinAction",
             _parent: [
                 "AchieveAction"
@@ -9122,7 +8706,6 @@ export const schemaMap = new Map([
     [
         "watchaction",
         {
-            _id: "WatchAction",
             _name: "WatchAction",
             _parent: [
                 "ConsumeAction"
@@ -9132,7 +8715,6 @@ export const schemaMap = new Map([
     [
         "performaction",
         {
-            _id: "PerformAction",
             _name: "PerformAction",
             _parent: [
                 "PlayAction"
@@ -9145,7 +8727,6 @@ export const schemaMap = new Map([
     [
         "medicalguidelinecontraindication",
         {
-            _id: "MedicalGuidelineContraindication",
             _name: "MedicalGuidelineContraindication",
             _parent: [
                 "MedicalGuideline"
@@ -9155,7 +8736,6 @@ export const schemaMap = new Map([
     [
         "imagingtest",
         {
-            _id: "ImagingTest",
             _name: "ImagingTest",
             _parent: [
                 "MedicalTest"
@@ -9168,7 +8748,6 @@ export const schemaMap = new Map([
     [
         "investmentordeposit",
         {
-            _id: "InvestmentOrDeposit",
             _name: "InvestmentOrDeposit",
             _parent: [
                 "FinancialProduct"
@@ -9182,7 +8761,6 @@ export const schemaMap = new Map([
     [
         "installaction",
         {
-            _id: "InstallAction",
             _name: "InstallAction",
             _parent: [
                 "ConsumeAction"
@@ -9192,7 +8770,6 @@ export const schemaMap = new Map([
     [
         "distillery",
         {
-            _id: "Distillery",
             _name: "Distillery",
             _parent: [
                 "FoodEstablishment"
@@ -9202,7 +8779,6 @@ export const schemaMap = new Map([
     [
         "medicalcontraindication",
         {
-            _id: "MedicalContraindication",
             _name: "MedicalContraindication",
             _parent: [
                 "MedicalEntity"
@@ -9212,7 +8788,6 @@ export const schemaMap = new Map([
     [
         "postoffice",
         {
-            _id: "PostOffice",
             _name: "PostOffice",
             _parent: [
                 "GovernmentOffice"
@@ -9222,7 +8797,6 @@ export const schemaMap = new Map([
     [
         "checkoutpage",
         {
-            _id: "CheckoutPage",
             _name: "CheckoutPage",
             _parent: [
                 "WebPage"
@@ -9232,7 +8806,6 @@ export const schemaMap = new Map([
     [
         "veterinarycare",
         {
-            _id: "VeterinaryCare",
             _name: "VeterinaryCare",
             _parent: [
                 "MedicalOrganization"
@@ -9242,7 +8815,6 @@ export const schemaMap = new Map([
     [
         "autorepair",
         {
-            _id: "AutoRepair",
             _name: "AutoRepair",
             _parent: [
                 "AutomotiveBusiness"
@@ -9252,7 +8824,6 @@ export const schemaMap = new Map([
     [
         "crematorium",
         {
-            _id: "Crematorium",
             _name: "Crematorium",
             _parent: [
                 "CivicStructure"
@@ -9262,7 +8833,6 @@ export const schemaMap = new Map([
     [
         "parentaudience",
         {
-            _id: "ParentAudience",
             _name: "ParentAudience",
             _parent: [
                 "PeopleAudience"
@@ -9278,7 +8848,6 @@ export const schemaMap = new Map([
     [
         "exercisegym",
         {
-            _id: "ExerciseGym",
             _name: "ExerciseGym",
             _parent: [
                 "SportsActivityLocation"
@@ -9288,7 +8857,6 @@ export const schemaMap = new Map([
     [
         "profilepage",
         {
-            _id: "ProfilePage",
             _name: "ProfilePage",
             _parent: [
                 "WebPage"
@@ -9298,7 +8866,6 @@ export const schemaMap = new Map([
     [
         "approvedindication",
         {
-            _id: "ApprovedIndication",
             _name: "ApprovedIndication",
             _parent: [
                 "MedicalIndication"
@@ -9308,7 +8875,6 @@ export const schemaMap = new Map([
     [
         "reservationpackage",
         {
-            _id: "ReservationPackage",
             _name: "ReservationPackage",
             _parent: [
                 "Reservation"
@@ -9321,7 +8887,6 @@ export const schemaMap = new Map([
     [
         "datacatalog",
         {
-            _id: "DataCatalog",
             _name: "DataCatalog",
             _parent: [
                 "CreativeWork"
@@ -9334,7 +8899,6 @@ export const schemaMap = new Map([
     [
         "checkaction",
         {
-            _id: "CheckAction",
             _name: "CheckAction",
             _parent: [
                 "FindAction"
@@ -9344,7 +8908,6 @@ export const schemaMap = new Map([
     [
         "findaction",
         {
-            _id: "FindAction",
             _name: "FindAction",
             _parent: [
                 "Action"
@@ -9354,7 +8917,6 @@ export const schemaMap = new Map([
     [
         "disagreeaction",
         {
-            _id: "DisagreeAction",
             _name: "DisagreeAction",
             _parent: [
                 "ReactAction"
@@ -9364,7 +8926,6 @@ export const schemaMap = new Map([
     [
         "itempage",
         {
-            _id: "ItemPage",
             _name: "ItemPage",
             _parent: [
                 "WebPage"
@@ -9374,7 +8935,6 @@ export const schemaMap = new Map([
     [
         "discussionforumposting",
         {
-            _id: "DiscussionForumPosting",
             _name: "DiscussionForumPosting",
             _parent: [
                 "SocialMediaPosting"
@@ -9384,7 +8944,6 @@ export const schemaMap = new Map([
     [
         "car",
         {
-            _id: "Car",
             _name: "Car",
             _parent: [
                 "Vehicle"
@@ -9400,7 +8959,6 @@ export const schemaMap = new Map([
     [
         "dancegroup",
         {
-            _id: "DanceGroup",
             _name: "DanceGroup",
             _parent: [
                 "PerformingGroup"
@@ -9410,7 +8968,6 @@ export const schemaMap = new Map([
     [
         "datadownload",
         {
-            _id: "DataDownload",
             _name: "DataDownload",
             _parent: [
                 "MediaObject"
@@ -9420,7 +8977,6 @@ export const schemaMap = new Map([
     [
         "cancelaction",
         {
-            _id: "CancelAction",
             _name: "CancelAction",
             _parent: [
                 "PlanAction"
@@ -9430,7 +8986,6 @@ export const schemaMap = new Map([
     [
         "rentaction",
         {
-            _id: "RentAction",
             _name: "RentAction",
             _parent: [
                 "TradeAction"
@@ -9447,7 +9002,6 @@ export const schemaMap = new Map([
     [
         "joint",
         {
-            _id: "Joint",
             _name: "Joint",
             _parent: [
                 "AnatomicalStructure"
@@ -9467,7 +9021,6 @@ export const schemaMap = new Map([
     [
         "drawaction",
         {
-            _id: "DrawAction",
             _name: "DrawAction",
             _parent: [
                 "CreateAction"
@@ -9477,7 +9030,6 @@ export const schemaMap = new Map([
     [
         "motorcycledealer",
         {
-            _id: "MotorcycleDealer",
             _name: "MotorcycleDealer",
             _parent: [
                 "AutomotiveBusiness"
@@ -9487,7 +9039,6 @@ export const schemaMap = new Map([
     [
         "optician",
         {
-            _id: "Optician",
             _name: "Optician",
             _parent: [
                 "MedicalBusiness"
@@ -9497,7 +9048,6 @@ export const schemaMap = new Map([
     [
         "checkoutaction",
         {
-            _id: "CheckOutAction",
             _name: "CheckOutAction",
             _parent: [
                 "CommunicateAction"
@@ -9507,7 +9057,6 @@ export const schemaMap = new Map([
     [
         "ignoreaction",
         {
-            _id: "IgnoreAction",
             _name: "IgnoreAction",
             _parent: [
                 "AssessAction"
@@ -9517,7 +9066,6 @@ export const schemaMap = new Map([
     [
         "druglegalstatus",
         {
-            _id: "DrugLegalStatus",
             _name: "DrugLegalStatus",
             _parent: [
                 "MedicalIntangible"
@@ -9530,7 +9078,6 @@ export const schemaMap = new Map([
     [
         "realestateagent",
         {
-            _id: "RealEstateAgent",
             _name: "RealEstateAgent",
             _parent: [
                 "LocalBusiness"
@@ -9540,7 +9087,6 @@ export const schemaMap = new Map([
     [
         "applyaction",
         {
-            _id: "ApplyAction",
             _name: "ApplyAction",
             _parent: [
                 "OrganizeAction"
@@ -9550,7 +9096,6 @@ export const schemaMap = new Map([
     [
         "endorseaction",
         {
-            _id: "EndorseAction",
             _name: "EndorseAction",
             _parent: [
                 "ReactAction"
@@ -9564,7 +9109,6 @@ export const schemaMap = new Map([
     [
         "currencyconversionservice",
         {
-            _id: "CurrencyConversionService",
             _name: "CurrencyConversionService",
             _parent: [
                 "FinancialProduct"
@@ -9574,7 +9118,6 @@ export const schemaMap = new Map([
     [
         "medicalguidelinerecommendation",
         {
-            _id: "MedicalGuidelineRecommendation",
             _name: "MedicalGuidelineRecommendation",
             _parent: [
                 "MedicalGuideline"
@@ -9587,7 +9130,6 @@ export const schemaMap = new Map([
     [
         "medicalsymptom",
         {
-            _id: "MedicalSymptom",
             _name: "MedicalSymptom",
             _parent: [
                 "MedicalSignOrSymptom"
@@ -9597,7 +9139,6 @@ export const schemaMap = new Map([
     [
         "hindutemple",
         {
-            _id: "HinduTemple",
             _name: "HinduTemple",
             _parent: [
                 "PlaceOfWorship"
@@ -9607,7 +9148,6 @@ export const schemaMap = new Map([
     [
         "searchresultspage",
         {
-            _id: "SearchResultsPage",
             _name: "SearchResultsPage",
             _parent: [
                 "WebPage"
@@ -9617,7 +9157,6 @@ export const schemaMap = new Map([
     [
         "deliveryevent",
         {
-            _id: "DeliveryEvent",
             _name: "DeliveryEvent",
             _parent: [
                 "Event"
@@ -9639,7 +9178,6 @@ export const schemaMap = new Map([
     [
         "educationalaudience",
         {
-            _id: "EducationalAudience",
             _name: "EducationalAudience",
             _parent: [
                 "Audience"
@@ -9652,7 +9190,6 @@ export const schemaMap = new Map([
     [
         "danceevent",
         {
-            _id: "DanceEvent",
             _name: "DanceEvent",
             _parent: [
                 "Event"
@@ -9662,7 +9199,6 @@ export const schemaMap = new Map([
     [
         "occupationaltherapy",
         {
-            _id: "OccupationalTherapy",
             _name: "OccupationalTherapy",
             _parent: [
                 "MedicalTherapy"
@@ -9672,7 +9208,6 @@ export const schemaMap = new Map([
     [
         "medicalobservationalstudy",
         {
-            _id: "MedicalObservationalStudy",
             _name: "MedicalObservationalStudy",
             _parent: [
                 "MedicalStudy"
@@ -9685,7 +9220,6 @@ export const schemaMap = new Map([
     [
         "embassy",
         {
-            _id: "Embassy",
             _name: "Embassy",
             _parent: [
                 "GovernmentBuilding"
@@ -9695,7 +9229,6 @@ export const schemaMap = new Map([
     [
         "governmentbuilding",
         {
-            _id: "GovernmentBuilding",
             _name: "GovernmentBuilding",
             _parent: [
                 "CivicStructure"
@@ -9705,7 +9238,6 @@ export const schemaMap = new Map([
     [
         "foodevent",
         {
-            _id: "FoodEvent",
             _name: "FoodEvent",
             _parent: [
                 "Event"
@@ -9715,7 +9247,6 @@ export const schemaMap = new Map([
     [
         "outletstore",
         {
-            _id: "OutletStore",
             _name: "OutletStore",
             _parent: [
                 "Store"
@@ -9725,7 +9256,6 @@ export const schemaMap = new Map([
     [
         "inviteaction",
         {
-            _id: "InviteAction",
             _name: "InviteAction",
             _parent: [
                 "CommunicateAction"
@@ -9738,7 +9268,6 @@ export const schemaMap = new Map([
     [
         "artery",
         {
-            _id: "Artery",
             _name: "Artery",
             _parent: [
                 "Vessel"
@@ -9754,7 +9283,6 @@ export const schemaMap = new Map([
     [
         "paymentchargespecification",
         {
-            _id: "PaymentChargeSpecification",
             _name: "PaymentChargeSpecification",
             _parent: [
                 "PriceSpecification"
@@ -9770,7 +9298,6 @@ export const schemaMap = new Map([
     [
         "casino",
         {
-            _id: "Casino",
             _name: "Casino",
             _parent: [
                 "EntertainmentBusiness"
@@ -9780,7 +9307,6 @@ export const schemaMap = new Map([
     [
         "amusementpark",
         {
-            _id: "AmusementPark",
             _name: "AmusementPark",
             _parent: [
                 "EntertainmentBusiness"
@@ -9790,7 +9316,6 @@ export const schemaMap = new Map([
     [
         "depositaccount",
         {
-            _id: "DepositAccount",
             _name: "DepositAccount",
             _parent: [
                 "InvestmentOrDeposit",
@@ -9801,7 +9326,6 @@ export const schemaMap = new Map([
     [
         "motel",
         {
-            _id: "Motel",
             _name: "Motel",
             _parent: [
                 "LodgingBusiness"
@@ -9811,7 +9335,6 @@ export const schemaMap = new Map([
     [
         "subscribeaction",
         {
-            _id: "SubscribeAction",
             _name: "SubscribeAction",
             _parent: [
                 "InteractAction"
@@ -9821,7 +9344,6 @@ export const schemaMap = new Map([
     [
         "businessevent",
         {
-            _id: "BusinessEvent",
             _name: "BusinessEvent",
             _parent: [
                 "Event"
@@ -9831,7 +9353,6 @@ export const schemaMap = new Map([
     [
         "childcare",
         {
-            _id: "ChildCare",
             _name: "ChildCare",
             _parent: [
                 "LocalBusiness"
@@ -9841,7 +9362,6 @@ export const schemaMap = new Map([
     [
         "medicalcode",
         {
-            _id: "MedicalCode",
             _name: "MedicalCode",
             _parent: [
                 "MedicalIntangible",
@@ -9855,7 +9375,6 @@ export const schemaMap = new Map([
     [
         "audiobook",
         {
-            _id: "Audiobook",
             _name: "Audiobook",
             _parent: [
                 "Book",
@@ -9872,7 +9391,6 @@ export const schemaMap = new Map([
     [
         "bookmarkaction",
         {
-            _id: "BookmarkAction",
             _name: "BookmarkAction",
             _parent: [
                 "OrganizeAction"
@@ -9882,7 +9400,6 @@ export const schemaMap = new Map([
     [
         "internetcafe",
         {
-            _id: "InternetCafe",
             _name: "InternetCafe",
             _parent: [
                 "LocalBusiness"
@@ -9892,7 +9409,6 @@ export const schemaMap = new Map([
     [
         "theaterevent",
         {
-            _id: "TheaterEvent",
             _name: "TheaterEvent",
             _parent: [
                 "Event"
@@ -9902,7 +9418,6 @@ export const schemaMap = new Map([
     [
         "defenceestablishment",
         {
-            _id: "DefenceEstablishment",
             _name: "DefenceEstablishment",
             _parent: [
                 "GovernmentBuilding"
@@ -9912,7 +9427,6 @@ export const schemaMap = new Map([
     [
         "church",
         {
-            _id: "Church",
             _name: "Church",
             _parent: [
                 "PlaceOfWorship"
@@ -9922,7 +9436,6 @@ export const schemaMap = new Map([
     [
         "liquorstore",
         {
-            _id: "LiquorStore",
             _name: "LiquorStore",
             _parent: [
                 "Store"
@@ -9932,7 +9445,6 @@ export const schemaMap = new Map([
     [
         "reporteddoseschedule",
         {
-            _id: "ReportedDoseSchedule",
             _name: "ReportedDoseSchedule",
             _parent: [
                 "DoseSchedule"
@@ -9942,7 +9454,6 @@ export const schemaMap = new Map([
     [
         "reserveaction",
         {
-            _id: "ReserveAction",
             _name: "ReserveAction",
             _parent: [
                 "PlanAction"
@@ -9952,7 +9463,6 @@ export const schemaMap = new Map([
     [
         "monetaryamountdistribution",
         {
-            _id: "MonetaryAmountDistribution",
             _name: "MonetaryAmountDistribution",
             _parent: [
                 "QuantitativeValueDistribution"
@@ -9965,7 +9475,6 @@ export const schemaMap = new Map([
     [
         "wantaction",
         {
-            _id: "WantAction",
             _name: "WantAction",
             _parent: [
                 "ReactAction"
@@ -9975,7 +9484,6 @@ export const schemaMap = new Map([
     [
         "taxiservice",
         {
-            _id: "TaxiService",
             _name: "TaxiService",
             _parent: [
                 "Service"
@@ -9985,7 +9493,6 @@ export const schemaMap = new Map([
     [
         "readaction",
         {
-            _id: "ReadAction",
             _name: "ReadAction",
             _parent: [
                 "ConsumeAction"
@@ -9995,7 +9502,6 @@ export const schemaMap = new Map([
     [
         "plumber",
         {
-            _id: "Plumber",
             _name: "Plumber",
             _parent: [
                 "HomeAndConstructionBusiness"
@@ -10005,7 +9511,6 @@ export const schemaMap = new Map([
     [
         "rentalcarreservation",
         {
-            _id: "RentalCarReservation",
             _name: "RentalCarReservation",
             _parent: [
                 "Reservation"
@@ -10027,7 +9532,6 @@ export const schemaMap = new Map([
     [
         "artgallery",
         {
-            _id: "ArtGallery",
             _name: "ArtGallery",
             _parent: [
                 "EntertainmentBusiness"
@@ -10037,7 +9541,6 @@ export const schemaMap = new Map([
     [
         "geocircle",
         {
-            _id: "GeoCircle",
             _name: "GeoCircle",
             _parent: [
                 "GeoShape"
@@ -10055,7 +9558,6 @@ export const schemaMap = new Map([
     [
         "tattooparlor",
         {
-            _id: "TattooParlor",
             _name: "TattooParlor",
             _parent: [
                 "HealthAndBeautyBusiness"
@@ -10065,7 +9567,6 @@ export const schemaMap = new Map([
     [
         "joinaction",
         {
-            _id: "JoinAction",
             _name: "JoinAction",
             _parent: [
                 "InteractAction"
@@ -10078,7 +9579,6 @@ export const schemaMap = new Map([
     [
         "dentist",
         {
-            _id: "Dentist",
             _name: "Dentist",
             _parent: [
                 "MedicalOrganization",
@@ -10090,7 +9590,6 @@ export const schemaMap = new Map([
     [
         "motorcyclerepair",
         {
-            _id: "MotorcycleRepair",
             _name: "MotorcycleRepair",
             _parent: [
                 "AutomotiveBusiness"
@@ -10100,7 +9599,6 @@ export const schemaMap = new Map([
     [
         "foodservice",
         {
-            _id: "FoodService",
             _name: "FoodService",
             _parent: [
                 "Service"
@@ -10110,7 +9608,6 @@ export const schemaMap = new Map([
     [
         "furniturestore",
         {
-            _id: "FurnitureStore",
             _name: "FurnitureStore",
             _parent: [
                 "Store"
@@ -10120,7 +9617,6 @@ export const schemaMap = new Map([
     [
         "professionalservice",
         {
-            _id: "ProfessionalService",
             _name: "ProfessionalService",
             _parent: [
                 "LocalBusiness"
@@ -10130,7 +9626,6 @@ export const schemaMap = new Map([
     [
         "energy",
         {
-            _id: "Energy",
             _name: "Energy",
             _parent: [
                 "Quantity"
@@ -10140,7 +9635,6 @@ export const schemaMap = new Map([
     [
         "rejectaction",
         {
-            _id: "RejectAction",
             _name: "RejectAction",
             _parent: [
                 "AllocateAction"
@@ -10150,7 +9644,6 @@ export const schemaMap = new Map([
     [
         "resort",
         {
-            _id: "Resort",
             _name: "Resort",
             _parent: [
                 "LodgingBusiness"
@@ -10160,7 +9653,6 @@ export const schemaMap = new Map([
     [
         "governmentpermit",
         {
-            _id: "GovernmentPermit",
             _name: "GovernmentPermit",
             _parent: [
                 "Permit"
@@ -10170,7 +9662,6 @@ export const schemaMap = new Map([
     [
         "table",
         {
-            _id: "Table",
             _name: "Table",
             _parent: [
                 "WebPageElement"
@@ -10180,7 +9671,6 @@ export const schemaMap = new Map([
     [
         "writeaction",
         {
-            _id: "WriteAction",
             _name: "WriteAction",
             _parent: [
                 "CreateAction"
@@ -10194,7 +9684,6 @@ export const schemaMap = new Map([
     [
         "governmentorganization",
         {
-            _id: "GovernmentOrganization",
             _name: "GovernmentOrganization",
             _parent: [
                 "Organization"
@@ -10204,7 +9693,6 @@ export const schemaMap = new Map([
     [
         "busreservation",
         {
-            _id: "BusReservation",
             _name: "BusReservation",
             _parent: [
                 "Reservation"
@@ -10214,7 +9702,6 @@ export const schemaMap = new Map([
     [
         "notedigitaldocument",
         {
-            _id: "NoteDigitalDocument",
             _name: "NoteDigitalDocument",
             _parent: [
                 "DigitalDocument"
@@ -10224,7 +9711,6 @@ export const schemaMap = new Map([
     [
         "drinkaction",
         {
-            _id: "DrinkAction",
             _name: "DrinkAction",
             _parent: [
                 "ConsumeAction"
@@ -10234,7 +9720,6 @@ export const schemaMap = new Map([
     [
         "tenniscomplex",
         {
-            _id: "TennisComplex",
             _name: "TennisComplex",
             _parent: [
                 "SportsActivityLocation"
@@ -10244,7 +9729,6 @@ export const schemaMap = new Map([
     [
         "bookstore",
         {
-            _id: "BookStore",
             _name: "BookStore",
             _parent: [
                 "Store"
@@ -10254,7 +9738,6 @@ export const schemaMap = new Map([
     [
         "subwaystation",
         {
-            _id: "SubwayStation",
             _name: "SubwayStation",
             _parent: [
                 "CivicStructure"
@@ -10264,7 +9747,6 @@ export const schemaMap = new Map([
     [
         "campground",
         {
-            _id: "Campground",
             _name: "Campground",
             _parent: [
                 "CivicStructure",
@@ -10275,7 +9757,6 @@ export const schemaMap = new Map([
     [
         "courthouse",
         {
-            _id: "Courthouse",
             _name: "Courthouse",
             _parent: [
                 "GovernmentBuilding"
@@ -10285,7 +9766,6 @@ export const schemaMap = new Map([
     [
         "hardwarestore",
         {
-            _id: "HardwareStore",
             _name: "HardwareStore",
             _parent: [
                 "Store"
@@ -10295,7 +9775,6 @@ export const schemaMap = new Map([
     [
         "askaction",
         {
-            _id: "AskAction",
             _name: "AskAction",
             _parent: [
                 "CommunicateAction"
@@ -10308,7 +9787,6 @@ export const schemaMap = new Map([
     [
         "researcher",
         {
-            _id: "Researcher",
             _name: "Researcher",
             _parent: [
                 "Audience"
@@ -10318,7 +9796,6 @@ export const schemaMap = new Map([
     [
         "trackaction",
         {
-            _id: "TrackAction",
             _name: "TrackAction",
             _parent: [
                 "FindAction"
@@ -10331,7 +9808,6 @@ export const schemaMap = new Map([
     [
         "visualartsevent",
         {
-            _id: "VisualArtsEvent",
             _name: "VisualArtsEvent",
             _parent: [
                 "Event"
@@ -10341,7 +9817,6 @@ export const schemaMap = new Map([
     [
         "comicseries",
         {
-            _id: "ComicSeries",
             _name: "ComicSeries",
             _parent: [
                 "Periodical"
@@ -10351,7 +9826,6 @@ export const schemaMap = new Map([
     [
         "periodical",
         {
-            _id: "Periodical",
             _name: "Periodical",
             _parent: [
                 "CreativeWorkSeries"
@@ -10361,7 +9835,6 @@ export const schemaMap = new Map([
     [
         "rvpark",
         {
-            _id: "RVPark",
             _name: "RVPark",
             _parent: [
                 "CivicStructure"
@@ -10371,7 +9844,6 @@ export const schemaMap = new Map([
     [
         "childrensevent",
         {
-            _id: "ChildrensEvent",
             _name: "ChildrensEvent",
             _parent: [
                 "Event"
@@ -10381,7 +9853,6 @@ export const schemaMap = new Map([
     [
         "hobbyshop",
         {
-            _id: "HobbyShop",
             _name: "HobbyShop",
             _parent: [
                 "Store"
@@ -10391,7 +9862,6 @@ export const schemaMap = new Map([
     [
         "seabodyofwater",
         {
-            _id: "SeaBodyOfWater",
             _name: "SeaBodyOfWater",
             _parent: [
                 "BodyOfWater"
@@ -10401,7 +9871,6 @@ export const schemaMap = new Map([
     [
         "medicalcause",
         {
-            _id: "MedicalCause",
             _name: "MedicalCause",
             _parent: [
                 "MedicalEntity"
@@ -10414,7 +9883,6 @@ export const schemaMap = new Map([
     [
         "departmentstore",
         {
-            _id: "DepartmentStore",
             _name: "DepartmentStore",
             _parent: [
                 "Store"
@@ -10424,7 +9892,6 @@ export const schemaMap = new Map([
     [
         "wholesalestore",
         {
-            _id: "WholesaleStore",
             _name: "WholesaleStore",
             _parent: [
                 "Store"
@@ -10434,7 +9901,6 @@ export const schemaMap = new Map([
     [
         "skiresort",
         {
-            _id: "SkiResort",
             _name: "SkiResort",
             _parent: [
                 "Resort",
@@ -10445,7 +9911,6 @@ export const schemaMap = new Map([
     [
         "automatedteller",
         {
-            _id: "AutomatedTeller",
             _name: "AutomatedTeller",
             _parent: [
                 "FinancialService"
@@ -10455,7 +9920,6 @@ export const schemaMap = new Map([
     [
         "canal",
         {
-            _id: "Canal",
             _name: "Canal",
             _parent: [
                 "BodyOfWater"
@@ -10465,7 +9929,6 @@ export const schemaMap = new Map([
     [
         "ngo",
         {
-            _id: "NGO",
             _name: "NGO",
             _parent: [
                 "Organization"
@@ -10475,7 +9938,6 @@ export const schemaMap = new Map([
     [
         "motorizedbicycle",
         {
-            _id: "MotorizedBicycle",
             _name: "MotorizedBicycle",
             _parent: [
                 "Vehicle"
@@ -10485,7 +9947,6 @@ export const schemaMap = new Map([
     [
         "barorpub",
         {
-            _id: "BarOrPub",
             _name: "BarOrPub",
             _parent: [
                 "FoodEstablishment"
@@ -10495,7 +9956,6 @@ export const schemaMap = new Map([
     [
         "float",
         {
-            _id: "Float",
             _name: "Float",
             _parent: [
                 "Number"
@@ -10505,7 +9965,6 @@ export const schemaMap = new Map([
     [
         "barcode",
         {
-            _id: "Barcode",
             _name: "Barcode",
             _parent: [
                 "ImageObject"
@@ -10515,7 +9974,6 @@ export const schemaMap = new Map([
     [
         "acceptaction",
         {
-            _id: "AcceptAction",
             _name: "AcceptAction",
             _parent: [
                 "AllocateAction"
@@ -10525,7 +9983,6 @@ export const schemaMap = new Map([
     [
         "mensclothingstore",
         {
-            _id: "MensClothingStore",
             _name: "MensClothingStore",
             _parent: [
                 "Store"
@@ -10535,7 +9992,6 @@ export const schemaMap = new Map([
     [
         "mediagallery",
         {
-            _id: "MediaGallery",
             _name: "MediaGallery",
             _parent: [
                 "CollectionPage"
@@ -10545,7 +10001,6 @@ export const schemaMap = new Map([
     [
         "nightclub",
         {
-            _id: "NightClub",
             _name: "NightClub",
             _parent: [
                 "EntertainmentBusiness"
@@ -10555,7 +10010,6 @@ export const schemaMap = new Map([
     [
         "brewery",
         {
-            _id: "Brewery",
             _name: "Brewery",
             _parent: [
                 "FoodEstablishment"
@@ -10565,7 +10019,6 @@ export const schemaMap = new Map([
     [
         "confirmaction",
         {
-            _id: "ConfirmAction",
             _name: "ConfirmAction",
             _parent: [
                 "InformAction"
@@ -10575,7 +10028,6 @@ export const schemaMap = new Map([
     [
         "theatergroup",
         {
-            _id: "TheaterGroup",
             _name: "TheaterGroup",
             _parent: [
                 "PerformingGroup"
@@ -10585,7 +10037,6 @@ export const schemaMap = new Map([
     [
         "publicswimmingpool",
         {
-            _id: "PublicSwimmingPool",
             _name: "PublicSwimmingPool",
             _parent: [
                 "SportsActivityLocation"
@@ -10595,7 +10046,6 @@ export const schemaMap = new Map([
     [
         "radiochannel",
         {
-            _id: "RadioChannel",
             _name: "RadioChannel",
             _parent: [
                 "BroadcastChannel"
@@ -10605,7 +10055,6 @@ export const schemaMap = new Map([
     [
         "accountingservice",
         {
-            _id: "AccountingService",
             _name: "AccountingService",
             _parent: [
                 "FinancialService"
@@ -10615,7 +10064,6 @@ export const schemaMap = new Map([
     [
         "cemetery",
         {
-            _id: "Cemetery",
             _name: "Cemetery",
             _parent: [
                 "CivicStructure"
@@ -10625,7 +10073,6 @@ export const schemaMap = new Map([
     [
         "checkinaction",
         {
-            _id: "CheckInAction",
             _name: "CheckInAction",
             _parent: [
                 "CommunicateAction"
@@ -10635,7 +10082,6 @@ export const schemaMap = new Map([
     [
         "recyclingcenter",
         {
-            _id: "RecyclingCenter",
             _name: "RecyclingCenter",
             _parent: [
                 "LocalBusiness"
@@ -10645,7 +10091,6 @@ export const schemaMap = new Map([
     [
         "painting",
         {
-            _id: "Painting",
             _name: "Painting",
             _parent: [
                 "CreativeWork"
@@ -10655,7 +10100,6 @@ export const schemaMap = new Map([
     [
         "festival",
         {
-            _id: "Festival",
             _name: "Festival",
             _parent: [
                 "Event"
@@ -10665,7 +10109,6 @@ export const schemaMap = new Map([
     [
         "roofingcontractor",
         {
-            _id: "RoofingContractor",
             _name: "RoofingContractor",
             _parent: [
                 "HomeAndConstructionBusiness"
@@ -10675,7 +10118,6 @@ export const schemaMap = new Map([
     [
         "radioseason",
         {
-            _id: "RadioSeason",
             _name: "RadioSeason",
             _parent: [
                 "CreativeWorkSeason"
@@ -10685,7 +10127,6 @@ export const schemaMap = new Map([
     [
         "psychologicaltreatment",
         {
-            _id: "PsychologicalTreatment",
             _name: "PsychologicalTreatment",
             _parent: [
                 "TherapeuticProcedure"
@@ -10695,7 +10136,6 @@ export const schemaMap = new Map([
     [
         "catholicchurch",
         {
-            _id: "CatholicChurch",
             _name: "CatholicChurch",
             _parent: [
                 "Church"
@@ -10705,7 +10145,6 @@ export const schemaMap = new Map([
     [
         "emailmessage",
         {
-            _id: "EmailMessage",
             _name: "EmailMessage",
             _parent: [
                 "Message"
@@ -10715,7 +10154,6 @@ export const schemaMap = new Map([
     [
         "mobilephonestore",
         {
-            _id: "MobilePhoneStore",
             _name: "MobilePhoneStore",
             _parent: [
                 "Store"
@@ -10725,7 +10163,6 @@ export const schemaMap = new Map([
     [
         "middleschool",
         {
-            _id: "MiddleSchool",
             _name: "MiddleSchool",
             _parent: [
                 "EducationalOrganization"
@@ -10735,7 +10172,6 @@ export const schemaMap = new Map([
     [
         "bowlingalley",
         {
-            _id: "BowlingAlley",
             _name: "BowlingAlley",
             _parent: [
                 "SportsActivityLocation"
@@ -10745,7 +10181,6 @@ export const schemaMap = new Map([
     [
         "imagegallery",
         {
-            _id: "ImageGallery",
             _name: "ImageGallery",
             _parent: [
                 "MediaGallery"
@@ -10755,7 +10190,6 @@ export const schemaMap = new Map([
     [
         "voteaction",
         {
-            _id: "VoteAction",
             _name: "VoteAction",
             _parent: [
                 "ChooseAction"
@@ -10768,7 +10202,6 @@ export const schemaMap = new Map([
     [
         "socialevent",
         {
-            _id: "SocialEvent",
             _name: "SocialEvent",
             _parent: [
                 "Event"
@@ -10778,7 +10211,6 @@ export const schemaMap = new Map([
     [
         "eataction",
         {
-            _id: "EatAction",
             _name: "EatAction",
             _parent: [
                 "ConsumeAction"
@@ -10788,7 +10220,6 @@ export const schemaMap = new Map([
     [
         "pond",
         {
-            _id: "Pond",
             _name: "Pond",
             _parent: [
                 "BodyOfWater"
@@ -10798,7 +10229,6 @@ export const schemaMap = new Map([
     [
         "literaryevent",
         {
-            _id: "LiteraryEvent",
             _name: "LiteraryEvent",
             _parent: [
                 "Event"
@@ -10808,7 +10238,6 @@ export const schemaMap = new Map([
     [
         "takeaction",
         {
-            _id: "TakeAction",
             _name: "TakeAction",
             _parent: [
                 "TransferAction"
@@ -10818,7 +10247,6 @@ export const schemaMap = new Map([
     [
         "amradiochannel",
         {
-            _id: "AMRadioChannel",
             _name: "AMRadioChannel",
             _parent: [
                 "RadioChannel"
@@ -10828,7 +10256,6 @@ export const schemaMap = new Map([
     [
         "autobodyshop",
         {
-            _id: "AutoBodyShop",
             _name: "AutoBodyShop",
             _parent: [
                 "AutomotiveBusiness"
@@ -10838,7 +10265,6 @@ export const schemaMap = new Map([
     [
         "homegoodsstore",
         {
-            _id: "HomeGoodsStore",
             _name: "HomeGoodsStore",
             _parent: [
                 "Store"
@@ -10848,7 +10274,6 @@ export const schemaMap = new Map([
     [
         "lakebodyofwater",
         {
-            _id: "LakeBodyOfWater",
             _name: "LakeBodyOfWater",
             _parent: [
                 "BodyOfWater"
@@ -10858,7 +10283,6 @@ export const schemaMap = new Map([
     [
         "televisionstation",
         {
-            _id: "TelevisionStation",
             _name: "TelevisionStation",
             _parent: [
                 "LocalBusiness"
@@ -10868,7 +10292,6 @@ export const schemaMap = new Map([
     [
         "paymentservice",
         {
-            _id: "PaymentService",
             _name: "PaymentService",
             _parent: [
                 "FinancialProduct"
@@ -10878,7 +10301,6 @@ export const schemaMap = new Map([
     [
         "radiationtherapy",
         {
-            _id: "RadiationTherapy",
             _name: "RadiationTherapy",
             _parent: [
                 "MedicalTherapy"
@@ -10888,7 +10310,6 @@ export const schemaMap = new Map([
     [
         "beach",
         {
-            _id: "Beach",
             _name: "Beach",
             _parent: [
                 "CivicStructure"
@@ -10898,7 +10319,6 @@ export const schemaMap = new Map([
     [
         "musicvideoobject",
         {
-            _id: "MusicVideoObject",
             _name: "MusicVideoObject",
             _parent: [
                 "MediaObject"
@@ -10908,7 +10328,6 @@ export const schemaMap = new Map([
     [
         "marryaction",
         {
-            _id: "MarryAction",
             _name: "MarryAction",
             _parent: [
                 "InteractAction"
@@ -10918,7 +10337,6 @@ export const schemaMap = new Map([
     [
         "landmarksorhistoricalbuildings",
         {
-            _id: "LandmarksOrHistoricalBuildings",
             _name: "LandmarksOrHistoricalBuildings",
             _parent: [
                 "Place"
@@ -10928,7 +10346,6 @@ export const schemaMap = new Map([
     [
         "generalcontractor",
         {
-            _id: "GeneralContractor",
             _name: "GeneralContractor",
             _parent: [
                 "HomeAndConstructionBusiness"
@@ -10938,7 +10355,6 @@ export const schemaMap = new Map([
     [
         "shareaction",
         {
-            _id: "ShareAction",
             _name: "ShareAction",
             _parent: [
                 "CommunicateAction"
@@ -10948,7 +10364,6 @@ export const schemaMap = new Map([
     [
         "wpheader",
         {
-            _id: "WPHeader",
             _name: "WPHeader",
             _parent: [
                 "WebPageElement"
@@ -10958,7 +10373,6 @@ export const schemaMap = new Map([
     [
         "icecreamshop",
         {
-            _id: "IceCreamShop",
             _name: "IceCreamShop",
             _parent: [
                 "FoodEstablishment"
@@ -10968,7 +10382,6 @@ export const schemaMap = new Map([
     [
         "notary",
         {
-            _id: "Notary",
             _name: "Notary",
             _parent: [
                 "LegalService"
@@ -10978,7 +10391,6 @@ export const schemaMap = new Map([
     [
         "deactivateaction",
         {
-            _id: "DeactivateAction",
             _name: "DeactivateAction",
             _parent: [
                 "ControlAction"
@@ -10988,7 +10400,6 @@ export const schemaMap = new Map([
     [
         "fastfoodrestaurant",
         {
-            _id: "FastFoodRestaurant",
             _name: "FastFoodRestaurant",
             _parent: [
                 "FoodEstablishment"
@@ -10998,7 +10409,6 @@ export const schemaMap = new Map([
     [
         "drycleaningorlaundry",
         {
-            _id: "DryCleaningOrLaundry",
             _name: "DryCleaningOrLaundry",
             _parent: [
                 "LocalBusiness"
@@ -11008,7 +10418,6 @@ export const schemaMap = new Map([
     [
         "corporation",
         {
-            _id: "Corporation",
             _name: "Corporation",
             _parent: [
                 "Organization"
@@ -11021,7 +10430,6 @@ export const schemaMap = new Map([
     [
         "zoo",
         {
-            _id: "Zoo",
             _name: "Zoo",
             _parent: [
                 "CivicStructure"
@@ -11031,7 +10439,6 @@ export const schemaMap = new Map([
     [
         "park",
         {
-            _id: "Park",
             _name: "Park",
             _parent: [
                 "CivicStructure"
@@ -11041,7 +10448,6 @@ export const schemaMap = new Map([
     [
         "exhibitionevent",
         {
-            _id: "ExhibitionEvent",
             _name: "ExhibitionEvent",
             _parent: [
                 "Event"
@@ -11051,7 +10457,6 @@ export const schemaMap = new Map([
     [
         "comedyclub",
         {
-            _id: "ComedyClub",
             _name: "ComedyClub",
             _parent: [
                 "EntertainmentBusiness"
@@ -11061,7 +10466,6 @@ export const schemaMap = new Map([
     [
         "surgicalprocedure",
         {
-            _id: "SurgicalProcedure",
             _name: "SurgicalProcedure",
             _parent: [
                 "MedicalProcedure"
@@ -11071,7 +10475,6 @@ export const schemaMap = new Map([
     [
         "radioclip",
         {
-            _id: "RadioClip",
             _name: "RadioClip",
             _parent: [
                 "Clip"
@@ -11081,7 +10484,6 @@ export const schemaMap = new Map([
     [
         "agreeaction",
         {
-            _id: "AgreeAction",
             _name: "AgreeAction",
             _parent: [
                 "ReactAction"
@@ -11091,7 +10493,6 @@ export const schemaMap = new Map([
     [
         "employmentagency",
         {
-            _id: "EmploymentAgency",
             _name: "EmploymentAgency",
             _parent: [
                 "LocalBusiness"
@@ -11101,7 +10502,6 @@ export const schemaMap = new Map([
     [
         "prependaction",
         {
-            _id: "PrependAction",
             _name: "PrependAction",
             _parent: [
                 "InsertAction"
@@ -11111,7 +10511,6 @@ export const schemaMap = new Map([
     [
         "firestation",
         {
-            _id: "FireStation",
             _name: "FireStation",
             _parent: [
                 "CivicStructure",
@@ -11122,7 +10521,6 @@ export const schemaMap = new Map([
     [
         "hotel",
         {
-            _id: "Hotel",
             _name: "Hotel",
             _parent: [
                 "LodgingBusiness"
@@ -11132,7 +10530,6 @@ export const schemaMap = new Map([
     [
         "comiccoverart",
         {
-            _id: "ComicCoverArt",
             _name: "ComicCoverArt",
             _parent: [
                 "ComicStory",
@@ -11143,7 +10540,6 @@ export const schemaMap = new Map([
     [
         "coverart",
         {
-            _id: "CoverArt",
             _name: "CoverArt",
             _parent: [
                 "VisualArtwork"
@@ -11153,7 +10549,6 @@ export const schemaMap = new Map([
     [
         "electronicsstore",
         {
-            _id: "ElectronicsStore",
             _name: "ElectronicsStore",
             _parent: [
                 "Store"
@@ -11163,7 +10558,6 @@ export const schemaMap = new Map([
     [
         "befriendaction",
         {
-            _id: "BefriendAction",
             _name: "BefriendAction",
             _parent: [
                 "InteractAction"
@@ -11173,7 +10567,6 @@ export const schemaMap = new Map([
     [
         "nailsalon",
         {
-            _id: "NailSalon",
             _name: "NailSalon",
             _parent: [
                 "HealthAndBeautyBusiness"
@@ -11183,7 +10576,6 @@ export const schemaMap = new Map([
     [
         "bloodtest",
         {
-            _id: "BloodTest",
             _name: "BloodTest",
             _parent: [
                 "MedicalTest"
@@ -11193,7 +10585,6 @@ export const schemaMap = new Map([
     [
         "televisionchannel",
         {
-            _id: "TelevisionChannel",
             _name: "TelevisionChannel",
             _parent: [
                 "BroadcastChannel"
@@ -11203,7 +10594,6 @@ export const schemaMap = new Map([
     [
         "photographaction",
         {
-            _id: "PhotographAction",
             _name: "PhotographAction",
             _parent: [
                 "CreateAction"
@@ -11213,7 +10603,6 @@ export const schemaMap = new Map([
     [
         "electrician",
         {
-            _id: "Electrician",
             _name: "Electrician",
             _parent: [
                 "HomeAndConstructionBusiness"
@@ -11223,7 +10612,6 @@ export const schemaMap = new Map([
     [
         "wearaction",
         {
-            _id: "WearAction",
             _name: "WearAction",
             _parent: [
                 "UseAction"
@@ -11233,7 +10621,6 @@ export const schemaMap = new Map([
     [
         "travelagency",
         {
-            _id: "TravelAgency",
             _name: "TravelAgency",
             _parent: [
                 "LocalBusiness"
@@ -11243,7 +10630,6 @@ export const schemaMap = new Map([
     [
         "legislativebuilding",
         {
-            _id: "LegislativeBuilding",
             _name: "LegislativeBuilding",
             _parent: [
                 "GovernmentBuilding"
@@ -11253,7 +10639,6 @@ export const schemaMap = new Map([
     [
         "suspendaction",
         {
-            _id: "SuspendAction",
             _name: "SuspendAction",
             _parent: [
                 "ControlAction"
@@ -11263,7 +10648,6 @@ export const schemaMap = new Map([
     [
         "bankorcreditunion",
         {
-            _id: "BankOrCreditUnion",
             _name: "BankOrCreditUnion",
             _parent: [
                 "FinancialService"
@@ -11273,7 +10657,6 @@ export const schemaMap = new Map([
     [
         "videogallery",
         {
-            _id: "VideoGallery",
             _name: "VideoGallery",
             _parent: [
                 "MediaGallery"
@@ -11283,7 +10666,6 @@ export const schemaMap = new Map([
     [
         "bone",
         {
-            _id: "Bone",
             _name: "Bone",
             _parent: [
                 "AnatomicalStructure"
@@ -11293,7 +10675,6 @@ export const schemaMap = new Map([
     [
         "hostel",
         {
-            _id: "Hostel",
             _name: "Hostel",
             _parent: [
                 "LodgingBusiness"
@@ -11303,7 +10684,6 @@ export const schemaMap = new Map([
     [
         "orderaction",
         {
-            _id: "OrderAction",
             _name: "OrderAction",
             _parent: [
                 "TradeAction"
@@ -11316,7 +10696,6 @@ export const schemaMap = new Map([
     [
         "movingcompany",
         {
-            _id: "MovingCompany",
             _name: "MovingCompany",
             _parent: [
                 "HomeAndConstructionBusiness"
@@ -11326,7 +10705,6 @@ export const schemaMap = new Map([
     [
         "cityhall",
         {
-            _id: "CityHall",
             _name: "CityHall",
             _parent: [
                 "GovernmentBuilding"
@@ -11336,7 +10714,6 @@ export const schemaMap = new Map([
     [
         "campingpitch",
         {
-            _id: "CampingPitch",
             _name: "CampingPitch",
             _parent: [
                 "Accommodation"
@@ -11346,7 +10723,6 @@ export const schemaMap = new Map([
     [
         "comedyevent",
         {
-            _id: "ComedyEvent",
             _name: "ComedyEvent",
             _parent: [
                 "Event"
@@ -11356,7 +10732,6 @@ export const schemaMap = new Map([
     [
         "autodealer",
         {
-            _id: "AutoDealer",
             _name: "AutoDealer",
             _parent: [
                 "AutomotiveBusiness"
@@ -11366,7 +10741,6 @@ export const schemaMap = new Map([
     [
         "reviewaction",
         {
-            _id: "ReviewAction",
             _name: "ReviewAction",
             _parent: [
                 "AssessAction"
@@ -11379,7 +10753,6 @@ export const schemaMap = new Map([
     [
         "fmradiochannel",
         {
-            _id: "FMRadioChannel",
             _name: "FMRadioChannel",
             _parent: [
                 "RadioChannel"
@@ -11389,7 +10762,6 @@ export const schemaMap = new Map([
     [
         "pharmacy",
         {
-            _id: "Pharmacy",
             _name: "Pharmacy",
             _parent: [
                 "MedicalBusiness",
@@ -11400,7 +10772,6 @@ export const schemaMap = new Map([
     [
         "paintaction",
         {
-            _id: "PaintAction",
             _name: "PaintAction",
             _parent: [
                 "CreateAction"
@@ -11410,7 +10781,6 @@ export const schemaMap = new Map([
     [
         "performingartstheater",
         {
-            _id: "PerformingArtsTheater",
             _name: "PerformingArtsTheater",
             _parent: [
                 "CivicStructure"
@@ -11420,7 +10790,6 @@ export const schemaMap = new Map([
     [
         "employeraggregaterating",
         {
-            _id: "EmployerAggregateRating",
             _name: "EmployerAggregateRating",
             _parent: [
                 "AggregateRating"
@@ -11430,7 +10799,6 @@ export const schemaMap = new Map([
     [
         "city",
         {
-            _id: "City",
             _name: "City",
             _parent: [
                 "AdministrativeArea"
@@ -11440,7 +10808,6 @@ export const schemaMap = new Map([
     [
         "adultentertainment",
         {
-            _id: "AdultEntertainment",
             _name: "AdultEntertainment",
             _parent: [
                 "EntertainmentBusiness"
@@ -11450,7 +10817,6 @@ export const schemaMap = new Map([
     [
         "vitalsign",
         {
-            _id: "VitalSign",
             _name: "VitalSign",
             _parent: [
                 "MedicalSign"
@@ -11460,7 +10826,6 @@ export const schemaMap = new Map([
     [
         "scheduleaction",
         {
-            _id: "ScheduleAction",
             _name: "ScheduleAction",
             _parent: [
                 "PlanAction"
@@ -11470,7 +10835,6 @@ export const schemaMap = new Map([
     [
         "arriveaction",
         {
-            _id: "ArriveAction",
             _name: "ArriveAction",
             _parent: [
                 "MoveAction"
@@ -11480,7 +10844,6 @@ export const schemaMap = new Map([
     [
         "musicevent",
         {
-            _id: "MusicEvent",
             _name: "MusicEvent",
             _parent: [
                 "Event"
@@ -11490,7 +10853,6 @@ export const schemaMap = new Map([
     [
         "hairsalon",
         {
-            _id: "HairSalon",
             _name: "HairSalon",
             _parent: [
                 "HealthAndBeautyBusiness"
@@ -11500,7 +10862,6 @@ export const schemaMap = new Map([
     [
         "dayspa",
         {
-            _id: "DaySpa",
             _name: "DaySpa",
             _parent: [
                 "HealthAndBeautyBusiness"
@@ -11510,7 +10871,6 @@ export const schemaMap = new Map([
     [
         "discoveraction",
         {
-            _id: "DiscoverAction",
             _name: "DiscoverAction",
             _parent: [
                 "FindAction"
@@ -11520,7 +10880,6 @@ export const schemaMap = new Map([
     [
         "endorsementrating",
         {
-            _id: "EndorsementRating",
             _name: "EndorsementRating",
             _parent: [
                 "Rating"
@@ -11530,7 +10889,6 @@ export const schemaMap = new Map([
     [
         "elementaryschool",
         {
-            _id: "ElementarySchool",
             _name: "ElementarySchool",
             _parent: [
                 "EducationalOrganization"
@@ -11540,7 +10898,6 @@ export const schemaMap = new Map([
     [
         "activateaction",
         {
-            _id: "ActivateAction",
             _name: "ActivateAction",
             _parent: [
                 "ControlAction"
@@ -11550,7 +10907,6 @@ export const schemaMap = new Map([
     [
         "radioepisode",
         {
-            _id: "RadioEpisode",
             _name: "RadioEpisode",
             _parent: [
                 "Episode"
@@ -11560,7 +10916,6 @@ export const schemaMap = new Map([
     [
         "tieaction",
         {
-            _id: "TieAction",
             _name: "TieAction",
             _parent: [
                 "AchieveAction"
@@ -11570,7 +10925,6 @@ export const schemaMap = new Map([
     [
         "dislikeaction",
         {
-            _id: "DislikeAction",
             _name: "DislikeAction",
             _parent: [
                 "ReactAction"
@@ -11580,7 +10934,6 @@ export const schemaMap = new Map([
     [
         "faqpage",
         {
-            _id: "FAQPage",
             _name: "FAQPage",
             _parent: [
                 "WebPage"
@@ -11590,7 +10943,6 @@ export const schemaMap = new Map([
     [
         "winery",
         {
-            _id: "Winery",
             _name: "Winery",
             _parent: [
                 "FoodEstablishment"
@@ -11600,7 +10952,6 @@ export const schemaMap = new Map([
     [
         "diagnosticprocedure",
         {
-            _id: "DiagnosticProcedure",
             _name: "DiagnosticProcedure",
             _parent: [
                 "MedicalProcedure"
@@ -11610,7 +10961,6 @@ export const schemaMap = new Map([
     [
         "riverbodyofwater",
         {
-            _id: "RiverBodyOfWater",
             _name: "RiverBodyOfWater",
             _parent: [
                 "BodyOfWater"
@@ -11620,7 +10970,6 @@ export const schemaMap = new Map([
     [
         "newspaper",
         {
-            _id: "Newspaper",
             _name: "Newspaper",
             _parent: [
                 "Periodical"
@@ -11630,7 +10979,6 @@ export const schemaMap = new Map([
     [
         "meetingroom",
         {
-            _id: "MeetingRoom",
             _name: "MeetingRoom",
             _parent: [
                 "Room"
@@ -11640,7 +10988,6 @@ export const schemaMap = new Map([
     [
         "eventvenue",
         {
-            _id: "EventVenue",
             _name: "EventVenue",
             _parent: [
                 "CivicStructure"
@@ -11650,7 +10997,6 @@ export const schemaMap = new Map([
     [
         "movieclip",
         {
-            _id: "MovieClip",
             _name: "MovieClip",
             _parent: [
                 "Clip"
@@ -11660,7 +11006,6 @@ export const schemaMap = new Map([
     [
         "hvacbusiness",
         {
-            _id: "HVACBusiness",
             _name: "HVACBusiness",
             _parent: [
                 "HomeAndConstructionBusiness"
@@ -11670,7 +11015,6 @@ export const schemaMap = new Map([
     [
         "taxistand",
         {
-            _id: "TaxiStand",
             _name: "TaxiStand",
             _parent: [
                 "CivicStructure"
@@ -11680,7 +11024,6 @@ export const schemaMap = new Map([
     [
         "medicalriskcalculator",
         {
-            _id: "MedicalRiskCalculator",
             _name: "MedicalRiskCalculator",
             _parent: [
                 "MedicalRiskEstimator"
@@ -11690,7 +11033,6 @@ export const schemaMap = new Map([
     [
         "locksmith",
         {
-            _id: "Locksmith",
             _name: "Locksmith",
             _parent: [
                 "HomeAndConstructionBusiness"
@@ -11700,7 +11042,6 @@ export const schemaMap = new Map([
     [
         "trainreservation",
         {
-            _id: "TrainReservation",
             _name: "TrainReservation",
             _parent: [
                 "Reservation"
@@ -11710,7 +11051,6 @@ export const schemaMap = new Map([
     [
         "musicvenue",
         {
-            _id: "MusicVenue",
             _name: "MusicVenue",
             _parent: [
                 "CivicStructure"
@@ -11720,7 +11060,6 @@ export const schemaMap = new Map([
     [
         "oceanbodyofwater",
         {
-            _id: "OceanBodyOfWater",
             _name: "OceanBodyOfWater",
             _parent: [
                 "BodyOfWater"
@@ -11730,7 +11069,6 @@ export const schemaMap = new Map([
     [
         "spreadsheetdigitaldocument",
         {
-            _id: "SpreadsheetDigitalDocument",
             _name: "SpreadsheetDigitalDocument",
             _parent: [
                 "DigitalDocument"
@@ -11740,7 +11078,6 @@ export const schemaMap = new Map([
     [
         "motorcycle",
         {
-            _id: "Motorcycle",
             _name: "Motorcycle",
             _parent: [
                 "Vehicle"
@@ -11750,7 +11087,6 @@ export const schemaMap = new Map([
     [
         "collegeoruniversity",
         {
-            _id: "CollegeOrUniversity",
             _name: "CollegeOrUniversity",
             _parent: [
                 "EducationalOrganization"
@@ -11760,7 +11096,6 @@ export const schemaMap = new Map([
     [
         "qualitativevalue",
         {
-            _id: "QualitativeValue",
             _name: "QualitativeValue",
             _parent: [
                 "Enumeration"
