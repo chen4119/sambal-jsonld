@@ -69,3 +69,9 @@ export function isSchemaOrgEnumeration(absTypeIRI: string) {
     }
     return false;
 }
+
+export function flatMap(array: any[]) {
+    return array.reduce((acc, val) => {
+        return acc.concat(Array.isArray(val) ? flatMap(val) : val);
+    }, []);
+}

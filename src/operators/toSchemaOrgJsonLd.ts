@@ -1,4 +1,4 @@
-import moment from 'moment';
+import {DateTime} from 'luxon';
 import JsonLd, {Node} from "../JsonLd";
 import {
     SCHEMA_CONTEXT,
@@ -56,7 +56,7 @@ export function toSchemaOrgJsonLd(json: any, type: string, context?: any) {
     return objectToSchemaOrgType(json, type, context);
 }
 
-function objectToSchemaOrgType(json: object, type: string, context?: any) {
+function objectToSchemaOrgType(json: unknown, type: string, context?: any) {
     const jsonld = new JsonLd(json, context ? [SCHEMA_CONTEXT, context] : SCHEMA_CONTEXT);
     let nodeId;
     if (json[JSONLD_ID]) {
@@ -101,7 +101,7 @@ function nodeToSchemaOrgType(node: Node, type: string, baseIRI: string) {
     return populateSchemaOrgType(node, typeName, typeProps, baseIRI);
 }
 
-function populateSchemaOrgType(node: Node, typeName: string, typeProps: object, baseIRI: string) {
+function populateSchemaOrgType(node: Node, typeName: string, typeProps: unknown, baseIRI: string) {
     const schemaOrgJsonLd = {
         [JSONLD_TYPE]: typeName
     };
@@ -139,7 +139,7 @@ function getAbsoluteNodeID(baseIRI: string, nodeId: string) {
     return nodeId;
 }
 
-function setSchemaOrgPropValue(schemaOrgJsonLd: object, propName: string, propValue: any, isArray: boolean) {
+function setSchemaOrgPropValue(schemaOrgJsonLd: unknown, propName: string, propValue: any, isArray: boolean) {
     if (propValue) {
         if (isArray) {
             schemaOrgJsonLd[propName] = Array.isArray(schemaOrgJsonLd[propName]) ? [...schemaOrgJsonLd[propName], propValue] : [propValue];
@@ -172,11 +172,11 @@ function validateDate(value: Date, propTypes: string[]) {
     const isAllowDate = propTypes.indexOf(SCHEMA_DATE) >= 0;
     const isAllowTime = propTypes.indexOf(SCHEMA_TIME) >= 0;
     if (isAllowDateTime) {
-        return moment(value).toISOString();
+        return DateTime.fromJSDate(value).toISO();
     } else if (isAllowDate) {
-        return moment(value).format("YYYY-MM-DD");
+        return DateTime.fromJSDate(value).toISODate();
     } else if (isAllowTime) {
-        return moment(value).format("HH:mm:ss");
+        return DateTime.fromJSDate(value).toISOTime();
     }
     return null;
 }
@@ -195,21 +195,21 @@ function validateString(value: string, propTypes: string[]) {
     const isAllowDate = propTypes.indexOf(SCHEMA_DATE) >= 0;
     const isAllowTime = propTypes.indexOf(SCHEMA_TIME) >= 0;
     if (isAllowDateTime || isAllowDate || isAllowTime) {
-        const d = moment(value, moment.ISO_8601);
-        if (!d.isValid()) {
+        const d = DateTime.fromISO(value);
+        if (!d.isValid) {
             return null;
         }
         if ((isAllowDate && DATE_FORMAT_REGEX.test(value)) || (isAllowTime && TIME_FORMAT_REGEX.test(value))) {
             return value;
         }  
-        return validateDate(d.toDate(), propTypes);
+        return validateDate(d.toJSDate(), propTypes);
     }
     return value;
 }
 
 function getPrimitiveType(value: any) {
     const typeOf = typeof(value);
-    if (moment.isDate(value)) {
+    if (value instanceof Date) {
         return SCHEMA_DATETIME;
     } else if (typeOf === "number") {
         return SCHEMA_NUMBER;

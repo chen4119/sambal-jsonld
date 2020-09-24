@@ -1,7 +1,7 @@
 import {isObjectLiteral} from "../utils";
 import JsonLd from "../JsonLd";
 
-export async function hydrateJsonLd(json: object, fetcher: (url) => Promise<any>, context?: any) {
+export async function hydrateJsonLd(json: unknown, fetcher: (url) => Promise<any>, context?: any) {
     if (Array.isArray(json)) {
         const resolvedArray = [];
         for (const item of json) {

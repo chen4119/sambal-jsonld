@@ -1,6 +1,5 @@
 import {JSONLD_ID, JSONLD_CONTEXT, JSONLD_TYPE, JSONLD_GRAPH, JSONLD_VALUE, JSONLD_BASE} from "./constants";
-import {isObjectLiteral, isUrl, makeAbsoluteIRI, isBlankNodeIRI} from "./utils";
-import {flatMap} from "lodash";
+import {isObjectLiteral, isUrl, makeAbsoluteIRI, isBlankNodeIRI, flatMap} from "./utils";
 
 export type Node = {
     links: Link[],
@@ -26,7 +25,7 @@ class JsonLd {
     private base: string;
     private contextTermMap: Map<string, Term>;
     private graph: Map<string, Node>;
-    constructor(private json: object, private context?: any) {
+    constructor(private json: unknown, private context?: any) {
         this.blankNodeIndex = 1;
         this.graph = new Map<string, Node>();
         this.contextTermMap = new Map<string, Node>();
@@ -58,7 +57,7 @@ class JsonLd {
     }
 
     flatten() {
-        const flattenNodeMap: Map<string, object> = new Map<string, object>();
+        const flattenNodeMap: Map<string, unknown> = new Map<string, unknown>();
         for (const nodeId of this.graph.keys()) {
             const nodeObj = this.getCondensedNode(nodeId, false);
             flattenNodeMap.set(nodeId, nodeObj);
@@ -110,7 +109,7 @@ class JsonLd {
         return obj;
     }
 
-    private setNodeObjectProp(obj: object, propName: string, node: Node, recurse: boolean) {
+    private setNodeObjectProp(obj: unknown, propName: string, node: Node, recurse: boolean) {
         let propValue = node.data;
         if (node.id) {
             if (recurse) {
@@ -167,7 +166,7 @@ class JsonLd {
         return node;
     }
 
-    private findNodeById(id: string, json: object) {
+    private findNodeById(id: string, json: unknown) {
         if (Array.isArray(json)) {
             return flatMap(json.map(item => this.findNodeById(id, item)));
         } else if (isObjectLiteral(json) && json[JSONLD_GRAPH]) {
@@ -181,7 +180,7 @@ class JsonLd {
         return json;
     }
 
-    private parse(json: object, context?: any) {
+    private parse(json: unknown, context?: any) {
         if (json[JSONLD_CONTEXT]) {
             this.parseContext(json[JSONLD_CONTEXT]);
         } else if (context) {
@@ -212,7 +211,7 @@ class JsonLd {
         }
     }
 
-    private parseContextObject(context: object) {
+    private parseContextObject(context: unknown) {
         for (const key of Object.keys(context)) {
             const contextValue = context[key];
             if (key === JSONLD_BASE) {
@@ -306,7 +305,7 @@ class JsonLd {
         return `_:${this.blankNodeIndex++}`;
     }
 
-    private isReferencingOtherNode(data: object) {
+    private isReferencingOtherNode(data: unknown) {
         return Object.keys(data).length === 1 && data[JSONLD_ID];
     }
 

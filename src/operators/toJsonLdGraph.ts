@@ -4,12 +4,12 @@ import {
     JSONLD_GRAPH
 } from "../constants";
 
-export function toJsonLdGraph(jsonlds: object[], context: any) {
+export function toJsonLdGraph(jsonlds: unknown[], context: any) {
     if (jsonlds.length === 0) {
         return null;
     }
     const jsonLd = new JsonLd(jsonlds, context);
-    const graph: Map<string, object> = jsonLd.flatten();
+    const graph: Map<string, unknown> = jsonLd.flatten();
     return {
         [JSONLD_CONTEXT]: context,
         [JSONLD_GRAPH]: [...graph.values()]

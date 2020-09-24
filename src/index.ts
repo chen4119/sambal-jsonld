@@ -14,6 +14,7 @@ export {
     makeRelativeIRI
 } from "./utils";
 export {schemaTypeArray} from "./schemaTypeArray";
+export {schemaTypeChildren} from "./schemaTypeChildren";
 export {
     JSONLD_ID,
     JSONLD_TYPE,

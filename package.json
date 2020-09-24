@@ -1,7 +1,7 @@
 {
   "name": "sambal-jsonld",
-  "version": "0.0.15",
-  "description": "Sambal json-ld and schema.org utilities",
+  "version": "0.0.16",
+  "description": "Json-ld and schema.org utilities",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
@@ -23,17 +23,15 @@
     "dist"
   ],
   "scripts": {
-    "start": "ts-node src/test.ts",
     "schema": "ts-node src/generate.ts",
     "build": "npm run clean && tsc",
     "clean": "rimraf ./dist",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "lint": "tslint -c tslint.json 'src/**/*.ts'"
+    "lint": "eslint src/** tests/** --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "lodash": "4.17.19",
-    "moment": "2.24.0"
+    "luxon": "1.25.0"
   },
   "devDependencies": {
     "@babel/core": "7.9.6",
@@ -42,10 +40,12 @@
     "@types/jest": "25.2.1",
     "@types/node": "10.17.21",
     "@types/lodash": "4.14.151",
+    "@typescript-eslint/parser": "4.2.0",
+    "@typescript-eslint/eslint-plugin": "4.2.0",
     "babel-jest": "25.5.1",
+    "eslint": "7.9.0",
     "jest": "25.5.4",
     "rimraf": "3.0.0",
-    "tslint": "6.1.2",
     "ts-node": "7.0.1",
     "typescript": "3.5.3"
   }
