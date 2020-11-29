@@ -8,7 +8,7 @@ export function graphToCondensedJsonLd(jsonldGraph: unknown, id?: string) {
     if (isObjectLiteral(jsonldGraph) && jsonldGraph[JSONLD_GRAPH]) {
         const jsonld = new JsonLd(jsonldGraph);
         if (id) {
-            return jsonld.getCondensedNode(id, true);
+            return jsonld.getNode(id, true);
         }
         return jsonld.getGraphRootNodes();
     }

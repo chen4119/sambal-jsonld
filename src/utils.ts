@@ -44,19 +44,23 @@ export function getSchemaOrgType(absTypeIRI: string) {
 }
 
 export function getSchemaOrgParentTypes(absTypeIRI: string) {
-    const parents = new Set<string>();
+    const parents = [];
     if (isSchemaOrgType(absTypeIRI)) {
         getParentTypes(getSchemaOrgType(absTypeIRI), parents);
     }
-    return [...parents.values()];
+    return [...parents, "Thing"];
 }
 
-function getParentTypes(schema, parents: Set<string>) {
+function getParentTypes(schema, parents: string[]) {
     const schemaParents = schema[SAMBAL_PARENT];
     if (schemaParents) {
         for (const parentName of schemaParents) {
+            if (parents.indexOf(parentName) < 0 && parentName !== "Thing") {
+                parents.push(parentName);
+            }
+        }
+        for (const parentName of schemaParents) {
             const parentSchema = getSchemaOrgType(`${SCHEMA_CONTEXT}/${parentName}`);
-            parents.add(parentName);
             getParentTypes(parentSchema, parents);
         }
     }

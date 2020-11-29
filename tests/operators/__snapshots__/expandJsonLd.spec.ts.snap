@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expandJsonLd BlogPost expand blogpost 1`] = `
+Object {
+  "@context": "https://schema.org",
+  "@id": "blogpost",
+  "https://schema.org/author": Object {
+    "@id": "author",
+    "https://schema.org/name": "Jane Doe",
+    "https://schema.org/telephone": "(425) 123-4567",
+    "https://schema.org/url": "http://www.janedoe.com",
+  },
+  "https://schema.org/dateCreated": "2019-09-06",
+  "https://schema.org/description": "Some description",
+  "https://schema.org/headline": "Fourth post",
+  "https://schema.org/keywords": Array [
+    "schema.org",
+  ],
+}
+`;

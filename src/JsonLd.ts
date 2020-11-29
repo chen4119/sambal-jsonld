@@ -59,7 +59,7 @@ class JsonLd {
     flatten() {
         const flattenNodeMap: Map<string, unknown> = new Map<string, unknown>();
         for (const nodeId of this.graph.keys()) {
-            const nodeObj = this.getCondensedNode(nodeId, false);
+            const nodeObj = this.getNode(nodeId, false);
             flattenNodeMap.set(nodeId, nodeObj);
         }
         return flattenNodeMap;
@@ -78,7 +78,7 @@ class JsonLd {
         const rootNodes = [];
         for (const nodeId of this.graph.keys()) {
             if (!childNodeSet.has(nodeId)) {
-                rootNodes.push(this.getCondensedNode(nodeId, true));
+                rootNodes.push(this.getNode(nodeId, true));
             }
         }
         if (rootNodes.length === 1) {
@@ -87,15 +87,15 @@ class JsonLd {
         return rootNodes;
     }
 
-    getCondensedNode(nodeId: string, recurse: boolean) {
+    getNode(nodeId: string, recurse: boolean, expand: boolean = false) {
         if (!this.graph.has(nodeId)) {
             return null;
         }
         const node: Node = this.graph.get(nodeId);
         const obj = {};
         for (const link of node.links) {
-            const propName = this.getCondensedPropName(link.edge);
-            this.setNodeObjectProp(obj, propName, link.node, recurse);
+            const propName = expand ? link.edge : this.getCondensedPropName(link.edge);
+            this.setNodeObjectProp(obj, propName, link.node, recurse, expand);
         }
         // set generated id first.  If an actual id is specified, will override from node.data
         if (node.id) {
@@ -109,11 +109,11 @@ class JsonLd {
         return obj;
     }
 
-    private setNodeObjectProp(obj: unknown, propName: string, node: Node, recurse: boolean) {
+    private setNodeObjectProp(obj: unknown, propName: string, node: Node, recurse: boolean, expand: boolean) {
         let propValue = node.data;
         if (node.id) {
             if (recurse) {
-                propValue = this.getCondensedNode(node.id, recurse);
+                propValue = this.getNode(node.id, recurse, expand);
             } else {
                 propValue = {[JSONLD_ID]: node.id};
             }
@@ -171,7 +171,7 @@ class JsonLd {
             return flatMap(json.map(item => this.findNodeById(id, item)));
         } else if (isObjectLiteral(json) && json[JSONLD_GRAPH]) {
             const jsonld = new JsonLd(json);
-            const found = jsonld.getCondensedNode(id, true);
+            const found = jsonld.getNode(id, true);
             if (found) {
                 return found;
             }

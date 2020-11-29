@@ -31,6 +31,14 @@ describe("utils", () => {
             expect(parents.length).toBe(5);
             expect(parents.indexOf("CreativeWork")).toBeGreaterThanOrEqual(0);
             expect(parents.indexOf("Intangible")).toBeGreaterThanOrEqual(0);
+            expect(parents.indexOf("Thing")).toBe(4);
+        });
+
+        it("Order of parents for Restaurant is correct", () => {
+            const parents = getSchemaOrgParentTypes(makeAbsoluteSchemaOrgIRI("Restaurant"));
+            expect(parents.indexOf("FoodEstablishment")).toBe(0);
+            expect(parents.indexOf("LocalBusiness")).toBe(1);
+            expect(parents.indexOf("Thing")).toBe(4);
         });
     });
 
