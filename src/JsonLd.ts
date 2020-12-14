@@ -113,14 +113,15 @@ class JsonLd {
         let propValue = node.data;
         if (node.id) {
             if (recurse) {
-                propValue = this.getNode(node.id, recurse, expand);
+                const childNode = this.getNode(node.id, recurse, expand);
+                propValue = childNode ? childNode : {[JSONLD_ID]: node.id};
             } else {
                 propValue = {[JSONLD_ID]: node.id};
             }
         }
         if (node.isArray) {
             obj[propName] = Array.isArray(obj[propName]) ? [...obj[propName], propValue] : [propValue];
-        } else {
+        } else if (propValue !== undefined) {
             obj[propName] = propValue;
         }
     }
