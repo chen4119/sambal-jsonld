@@ -1,8 +1,27 @@
-import ts from "typescript";
+import {
+    factory,
+    SyntaxKind,
+    Expression,
+    ObjectLiteralExpression,
+    ArrayLiteralExpression,
+    PropertyAssignment,
+    NewExpression,
+    Identifier,
+    StringLiteral,
+    NumericLiteral,
+    BooleanLiteral,
+    Modifier,
+    VariableStatement,
+    NodeFlags,
+    TypeReferenceNode,
+    TypeNode,
+    KeywordTypeNode,
+    ArrayTypeNode
+} from "typescript";
 
-export const EXPORT_MODIFIER = ts.createModifier(ts.SyntaxKind.ExportKeyword);
+export const EXPORT_MODIFIER = factory.createModifier(SyntaxKind.ExportKeyword);
 
-export function makeValueLiteral(value: any): ts.Expression {
+export function makeValueLiteral(value: any): Expression {
     if (Array.isArray(value)) {
         return arrayToArrayLiteral(value);
     }
@@ -22,7 +41,7 @@ export function makeValueLiteral(value: any): ts.Expression {
     }
 }
 
-export function objectToObjectLiteral(object: any): ts.ObjectLiteralExpression {
+export function objectToObjectLiteral(object: any): ObjectLiteralExpression {
     const properties = [];
     for (const prop of Object.keys(object)) {
         properties.push(makePropertyAssignment(prop, makeValueLiteral(object[prop])));
@@ -30,66 +49,92 @@ export function objectToObjectLiteral(object: any): ts.ObjectLiteralExpression {
     return makeObjectLiteral(properties);
 }
 
-export function arrayToArrayLiteral(array: any[]): ts.ArrayLiteralExpression {
+export function arrayToArrayLiteral(array: any[]): ArrayLiteralExpression {
     const values = array.map((v) => makeValueLiteral(v));
     return makeArrayLiteral(values);
 }
 
-export function makeObjectLiteral(properties): ts.ObjectLiteralExpression {
-    return ts.createObjectLiteral(properties, true);
+export function makeObjectLiteral(properties): ObjectLiteralExpression {
+    return factory.createObjectLiteralExpression(properties, true);
 }
 
-export function makeArrayLiteral(values: ts.Expression[]): ts.ArrayLiteralExpression {
-    return ts.createArrayLiteral(values, true);
+export function makeArrayLiteral(values: Expression[]): ArrayLiteralExpression {
+    return factory.createArrayLiteralExpression(values, true);
 }
 
-export function makePropertyAssignment(propName: string, initializer): ts.PropertyAssignment{
-    return ts.createPropertyAssignment(
+export function makePropertyAssignment(propName: string, initializer): PropertyAssignment{
+    return factory.createPropertyAssignment(
         makeIdentifier(propName),
         initializer
     );
 }
 
-export function makeIdentifier(text: string): ts.Identifier {
-    return ts.createIdentifier(text);
+export function makeIdentifier(text: string): Identifier {
+    return factory.createIdentifier(text);
 }
 
-export function makeStringLiteral(text: string): ts.StringLiteral {
-    return ts.createStringLiteral(text);
+export function makeStringLiteral(text: string): StringLiteral {
+    return factory.createStringLiteral(text);
 }
 
-export function makeNumericLiteral(number: number): ts.NumericLiteral {
-    return ts.createNumericLiteral(String(number));
+export function makeNumericLiteral(number: number): NumericLiteral {
+    return factory.createNumericLiteral(String(number));
 }
 
-export function makeBooleanLiteral(bool: boolean): ts.BooleanLiteral {
-    return bool ? ts.createTrue() : ts.createFalse();
+export function makeBooleanLiteral(bool: boolean): BooleanLiteral {
+    return bool ? factory.createTrue() : factory.createFalse();
 }
 
-export function makeVariableStatement(modifiers: ts.Modifier[], variableName: string, variableInitializer, flag = ts.NodeFlags.Const): ts.VariableStatement {
-    return ts.createVariableStatement(
+export function makeTypeReferenceNode(typeName: string, args: TypeNode[]): TypeReferenceNode {
+    return factory.createTypeReferenceNode(
+        makeIdentifier(typeName),
+        args
+    );
+}
+
+export function makeStringKeywordTypeNode(): KeywordTypeNode<SyntaxKind.StringKeyword> {
+    return factory.createKeywordTypeNode(SyntaxKind.StringKeyword);
+}
+
+export function makeUnknownKeywordTypeNode(): KeywordTypeNode<SyntaxKind.UnknownKeyword> {
+    return factory.createKeywordTypeNode(SyntaxKind.UnknownKeyword);
+}
+
+export function makeArrayTypeNode(node: KeywordTypeNode | ArrayTypeNode): ArrayTypeNode {
+    return factory.createArrayTypeNode(node);
+}
+
+export function makeVariableStatement(
+        modifiers: Modifier[],
+        variableName: string,
+        typeRef: TypeReferenceNode | ArrayTypeNode,
+        variableInitializer: Expression,
+        flag = NodeFlags.Const
+    ): VariableStatement {
+    return factory.createVariableStatement(
         modifiers,
-        ts.createVariableDeclarationList(
-            [ts.createVariableDeclaration(
+        factory.createVariableDeclarationList(
+            [factory.createVariableDeclaration(
                 makeIdentifier(variableName),
                 undefined,
+                typeRef,
                 variableInitializer
             )], flag
         )
     );
 }
 
-export function makeEnum(modifiers: ts.Modifier[], enumName: string, values: string[]) {
-    return ts.createEnumDeclaration(
+export function makeEnum(modifiers: Modifier[], enumName: string, values: string[]) {
+    return factory.createEnumDeclaration(
         undefined,
         modifiers,
         makeIdentifier(enumName),
-        values.map((v) => ts.createEnumMember(makeIdentifier(v), undefined))
+        values.map((v) => factory.createEnumMember(makeIdentifier(v), undefined))
     );
 }
 
-export function makeNew(expression: ts.Expression, args: ts.Expression[]): ts.NewExpression {
-    return ts.createNew(
+export function makeNew(expression: Expression, args: Expression[]): NewExpression {
+    return factory.createNewExpression(
         expression,
         undefined,
         args

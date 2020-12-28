@@ -9,6 +9,9 @@ import {
     makeArrayLiteral,
     makeNew,
     makeIdentifier,
+    makeTypeReferenceNode,
+    makeArrayTypeNode,
+    makeStringKeywordTypeNode,
     EXPORT_MODIFIER
 } from "./ast";
 
@@ -58,7 +61,12 @@ class TypeHierarchyGenerator {
             console.log(children);
             mappings.push(makeArrayLiteral([makeStringLiteral(typeName), arrayToArrayLiteral(children)]));
         }
-        return makeVariableStatement([EXPORT_MODIFIER], "schemaTypeChildren", makeNew(makeIdentifier("Map"), [makeArrayLiteral(mappings)]));
+        return makeVariableStatement(
+            [EXPORT_MODIFIER],
+            "schemaTypeChildren", 
+            makeTypeReferenceNode("Map", [makeStringKeywordTypeNode(), makeArrayTypeNode(makeStringKeywordTypeNode())]),
+            makeNew(makeIdentifier("Map"), [makeArrayLiteral(mappings)])
+        );
     }
 
     private getAllChildren(nodeName: string, childrenSet: Set<string>) {
@@ -116,7 +124,12 @@ class TypeHierarchyGenerator {
         for (const typeArray of types) {
             statements.push(arrayToArrayLiteral(typeArray));
         }
-        return makeVariableStatement([EXPORT_MODIFIER], "schemaTypeArray", makeArrayLiteral(statements));
+        return makeVariableStatement(
+            [EXPORT_MODIFIER],
+            "schemaTypeArray",
+            makeArrayTypeNode(makeArrayTypeNode(makeStringKeywordTypeNode())),
+            makeArrayLiteral(statements)
+        );
     }
 
     private writeJavascript(statements, output) {

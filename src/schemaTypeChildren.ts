@@ -1,4 +1,4 @@
-export const schemaTypeChildren = new Map([
+export const schemaTypeChildren: Map<string, string[]> = new Map([
     [
         "Thing",
         [

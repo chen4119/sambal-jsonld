@@ -1,4 +1,4 @@
-export const schemaTypeArray = [
+export const schemaTypeArray: string[][] = [
     [
         "Action",
         "AchieveAction",

@@ -1,4 +1,4 @@
-export const schemaMap = new Map([
+export const schemaMap: Map<string, unknown> = new Map([
     [
         "enumeration",
         {
