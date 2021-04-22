@@ -1,29 +1,6 @@
 import {toSchemaOrgJsonLd} from "../../src/operators/toSchemaOrgJsonLd";
 
 describe('toSchemaOrgJsonLd', () => {
-    
-    describe('person', () => {
-        const person = {
-            "name": "Jane Doe",
-            "firstName": "Wan Chun",
-            "telephone": "(425) 123-4567",
-            "url": "http://www.janedoe.com",
-            "sameAs": [
-                "https://github.com/chen4119",
-                "https://www.linkedin.com/in/wan-chun-chen-9a95a010"
-            ]
-        };
-    
-        it("to schema.org", () => {
-            const schema = toSchemaOrgJsonLd(person, "Person");
-            expect(schema).toMatchSnapshot();
-        });
-
-        it("to schema.org with givenName", () => {
-            const schema = toSchemaOrgJsonLd(person, "Person", {firstName: "http://schema.org/givenName"});
-            expect(schema).toMatchSnapshot();
-        });
-    });
 
     describe('blogpost', () => {
         const blogPost = {

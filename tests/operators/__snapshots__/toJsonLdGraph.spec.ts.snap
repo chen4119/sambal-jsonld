@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`toJsonLdGraph BlogPost to schema.org 1`] = `
+exports[`toJsonLdGraph BlogPost has 2 objects in graph 1`] = `
 Object {
   "@context": "https://schema.org",
   "@graph": Array [
@@ -21,6 +21,40 @@ Object {
       "name": "Jane Doe",
       "telephone": "(425) 123-4567",
       "url": "http://www.janedoe.com",
+    },
+  ],
+}
+`;
+
+exports[`toJsonLdGraph Nested object without @id SiteNavigationElement has no @id so not flatten in graph 1`] = `
+Object {
+  "@context": "https://schema.org",
+  "@graph": Array [
+    Object {
+      "@id": "https://example.com",
+      "@type": "Website",
+      "hasPart": Array [
+        Object {
+          "@id": "header",
+        },
+      ],
+      "headline": "My site",
+    },
+    Object {
+      "@id": "header",
+      "@type": "WPHeader",
+      "hasPart": Array [
+        Object {
+          "@type": "SiteNavigationElement",
+          "name": "About",
+          "url": "/about",
+        },
+        Object {
+          "@type": "SiteNavigationElement",
+          "name": "Docs",
+          "url": "/docs",
+        },
+      ],
     },
   ],
 }

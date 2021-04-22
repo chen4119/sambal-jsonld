@@ -1,5 +1,16 @@
-import {JSONLD_ID, JSONLD_CONTEXT, JSONLD_TYPE, JSONLD_GRAPH, JSONLD_VALUE, JSONLD_BASE} from "./constants";
-import {isObjectLiteral, isUrl, makeAbsoluteIRI, isBlankNodeIRI, flatMap} from "./utils";
+import {
+    JSONLD_ID,
+    JSONLD_CONTEXT,
+    JSONLD_TYPE,
+    JSONLD_GRAPH,
+    JSONLD_BASE
+} from "./constants";
+import {
+    isObjectLiteral,
+    isUrl,
+    makeAbsoluteIRI,
+    isJsonLdRef
+} from "./utils";
 
 export type Node = {
     links: Link[],
@@ -30,22 +41,6 @@ class JsonLd {
         this.graph = new Map<string, Node>();
         this.contextTermMap = new Map<string, Node>();
         this.parse(json, context);
-    }
-
-    async resolveJson(fetcher: (url) => Promise<any>) {
-        if (this.isReferencingOtherNode(this.json)) {
-            const link = this.json[JSONLD_ID];
-            return await this.fetchNode(link, fetcher);
-        }
-        for (const propName of this.contextTermMap.keys()) {
-            const term: Term = this.contextTermMap.get(propName);
-            if (term.type === JSONLD_ID) {
-                const link = this.json[propName];
-                const propValue = await this.fetchNode(link, fetcher);
-                this.json[propName] = propValue;
-            }
-        }
-        return this.json;
     }
 
     get baseIRI(): string {
@@ -151,36 +146,6 @@ class JsonLd {
         return suffix;
     }
 
-    private async fetchNode(link: string, fetcher: (url) => Promise<any>) {
-        if (this.graph.has(link)) {
-            return this.graph.get(link);
-        }
-        let url = link;
-        if (isBlankNodeIRI(link)) {
-            url = link.substring(2);
-        }
-        const externalObj = await fetcher(url);
-        const node = this.findNodeById(link, externalObj);
-        if (Array.isArray(node) && node.length === 1) {
-            return node[0];
-        }
-        return node;
-    }
-
-    private findNodeById(id: string, json: unknown) {
-        if (Array.isArray(json)) {
-            return flatMap(json.map(item => this.findNodeById(id, item)));
-        } else if (isObjectLiteral(json) && json[JSONLD_GRAPH]) {
-            const jsonld = new JsonLd(json);
-            const found = jsonld.getNode(id, true);
-            if (found) {
-                return found;
-            }
-            return jsonld.getGraphRootNodes();
-        }
-        return json;
-    }
-
     private parse(json: unknown, context?: any) {
         if (json[JSONLD_CONTEXT]) {
             this.parseContext(json[JSONLD_CONTEXT]);
@@ -244,7 +209,7 @@ class JsonLd {
         if (!data) {
             return null;
         }
-        if (this.isReferencingOtherNode(data)) {
+        if (isJsonLdRef(data)) {
             return;
         }
         if (data[JSONLD_ID]) {
@@ -262,7 +227,7 @@ class JsonLd {
 
     private parseGraphNode(graphMap: Map<string, any>, data: any): Node {
         const nodeId = data[JSONLD_ID] ? data[JSONLD_ID] : this.getNextBlankNodeId();
-        const isReferencingOtherNode = this.isReferencingOtherNode(data);
+        const isReferencingOtherNode = isJsonLdRef(data);
         if (this.graph.has(nodeId)) {
             return this.graph.get(nodeId);
         } else if (isReferencingOtherNode && graphMap.has(nodeId)) {
@@ -290,7 +255,7 @@ class JsonLd {
             return;
         }
         let targetNode;
-        if (isObjectLiteral(value)) {
+        if (isObjectLiteral(value) && value[JSONLD_ID]) {
             targetNode = this.parseGraphNode(graphMap, value);
             targetNode.isArray = isArray;
         } else {
@@ -304,10 +269,6 @@ class JsonLd {
 
     private getNextBlankNodeId() {
         return `_:${this.blankNodeIndex++}`;
-    }
-
-    private isReferencingOtherNode(data: unknown) {
-        return Object.keys(data).length === 1 && data[JSONLD_ID];
     }
 
     private getAbsoluteIRI(propKey: string) {

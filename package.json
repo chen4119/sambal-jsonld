@@ -1,6 +1,6 @@
 {
   "name": "sambal-jsonld",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "Json-ld and schema.org utilities",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -47,7 +47,7 @@ class TypeHierarchyGenerator {
             const childrenSet = new Set<string>();
             this.getAllChildren(nodeName, childrenSet);
             if (childrenSet.size > 0) {
-                typeChildrenMap.set(nodeName, [...childrenSet.values()].sort());
+                typeChildrenMap.set(nodeName.toLowerCase(), [...childrenSet.values()].sort());
             }
         }
         const stmt = this.makeTypeChildrenMap(typeChildrenMap);
@@ -58,7 +58,6 @@ class TypeHierarchyGenerator {
         const mappings = [];
         for (const typeName of typeChildrenMap.keys()) {
             const children = typeChildrenMap.get(typeName);
-            console.log(children);
             mappings.push(makeArrayLiteral([makeStringLiteral(typeName), arrayToArrayLiteral(children)]));
         }
         return makeVariableStatement(
@@ -72,7 +71,7 @@ class TypeHierarchyGenerator {
     private getAllChildren(nodeName: string, childrenSet: Set<string>) {
         const node = this.nodeMap.get(nodeName);
         for (const childName of node.children) {
-            childrenSet.add(childName);
+            childrenSet.add(childName.toLowerCase());
             this.getAllChildren(childName, childrenSet);
         }
     }

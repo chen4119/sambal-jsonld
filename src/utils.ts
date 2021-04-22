@@ -1,8 +1,17 @@
 import {schemaMap} from "./schema";
-import {SAMBAL_PARENT, SCHEMA_CONTEXT, SAMBAL_VALUES} from "./constants";
+import {
+    SAMBAL_PARENT,
+    SCHEMA_CONTEXT,
+    SAMBAL_VALUES,
+    JSONLD_ID
+} from "./constants";
 
 export function isObjectLiteral(obj: any) {
     return obj !== null && typeof(obj) === "object" && Object.getPrototypeOf(obj) === Object.prototype;
+}
+
+export function  isJsonLdRef(value) {
+    return isObjectLiteral(value) && Object.keys(value).length === 1 && typeof (value[JSONLD_ID]) === "string";
 }
 
 export function isUrl(src: string) {

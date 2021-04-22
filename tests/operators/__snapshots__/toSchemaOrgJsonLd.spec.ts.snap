@@ -43,31 +43,3 @@ Object {
   "version": 3,
 }
 `;
-
-exports[`toSchemaOrgJsonLd person to schema.org 1`] = `
-Object {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Jane Doe",
-  "sameAs": Array [
-    "https://github.com/chen4119",
-    "https://www.linkedin.com/in/wan-chun-chen-9a95a010",
-  ],
-  "telephone": "(425) 123-4567",
-  "url": "http://www.janedoe.com",
-}
-`;
-
-exports[`toSchemaOrgJsonLd person to schema.org with givenName 1`] = `
-Object {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Jane Doe",
-  "sameAs": Array [
-    "https://github.com/chen4119",
-    "https://www.linkedin.com/in/wan-chun-chen-9a95a010",
-  ],
-  "telephone": "(425) 123-4567",
-  "url": "http://www.janedoe.com",
-}
-`;
