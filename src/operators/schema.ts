@@ -2,7 +2,7 @@ import { JsonLd, JSONLD_TYPE } from "../constants";
 import { schemaTypeChildren } from "../schemaTypeChildren";
 
 export function isSchemaType(jsonld: JsonLd, type: string, descendants = true) {
-    if (!jsonld[JSONLD_TYPE] || !type) {
+    if (!jsonld || !jsonld[JSONLD_TYPE] || !type) {
         return false;
     }
     const lowerJsonLdType = jsonld[JSONLD_TYPE].toLowerCase();
@@ -15,9 +15,11 @@ export function isSchemaType(jsonld: JsonLd, type: string, descendants = true) {
 }
 
 export function getEntityByType(jsonLdList: JsonLd[], type: string, descendants = true) {
-    for (const jsonld of jsonLdList) {
-        if (isSchemaType(jsonld, type, descendants)) {
-            return jsonld;
+    if (Array.isArray(jsonLdList)) {
+        for (const jsonld of jsonLdList) {
+            if (isSchemaType(jsonld, type, descendants)) {
+                return jsonld;
+            }
         }
     }
     return null;
@@ -25,9 +27,11 @@ export function getEntityByType(jsonLdList: JsonLd[], type: string, descendants 
 
 export function getEntitiesByType(jsonLdList: JsonLd[], type: string, descendants = true) {
     const entities = [];
-    for (const jsonld of jsonLdList) {
-        if (isSchemaType(jsonld, type, descendants)) {
-            entities.push(jsonld);
+    if (Array.isArray(jsonLdList)) {
+        for (const jsonld of jsonLdList) {
+            if (isSchemaType(jsonld, type, descendants)) {
+                entities.push(jsonld);
+            }
         }
     }
     return entities;
