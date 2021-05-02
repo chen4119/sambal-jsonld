@@ -41,9 +41,3 @@ export const SCHEMA_PRIMITIVE_SET = new Set([
 ]);
 
 export const SCHEMA_ENUMERATION = `${SCHEMA_CONTEXT}/Enumeration`;
-
-export type JsonLd = {
-    [JSONLD_ID]: string;
-    [JSONLD_TYPE]: string;
-    [key: string]: any;
-}

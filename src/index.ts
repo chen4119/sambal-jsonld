@@ -1,9 +1,9 @@
 
 // export {hydrateJsonLd} from "./operators/hydrateJsonLd";
 // export {toSchemaOrgJsonLd} from "./operators/toSchemaOrgJsonLd";
-export { toJsonLdGraph } from "./operators/toJsonLdGraph";
-export { graphToCondensedJsonLd } from "./operators/graphToCondensedJsonLd";
-export { expandJsonLd } from "./operators/expandJsonLd";
+// export { toJsonLdGraph } from "./operators/toJsonLdGraph";
+// export { graphToCondensedJsonLd } from "./operators/graphToCondensedJsonLd";
+// export { expandJsonLd } from "./operators/expandJsonLd";
 export { 
     isSchemaType,
     getEntitiesByType,
