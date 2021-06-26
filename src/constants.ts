@@ -41,3 +41,10 @@ export const SCHEMA_PRIMITIVE_SET = new Set([
 ]);
 
 export const SCHEMA_ENUMERATION = `${SCHEMA_CONTEXT}/Enumeration`;
+
+export type URI = {
+    protocol?: string,
+    host?: string,
+    path: string,
+    query?: URLSearchParams
+};

@@ -7,10 +7,13 @@
 export { 
     isSchemaType,
     getEntitiesByType,
-    getEntityByType
+    getEntityByType,
 } from "./operators/schema";
 export {
-    isJsonLdRef
+    isJsonLdRef,
+    normalizeUri,
+    isAbsUri,
+    parseUri
 } from "./utils";
 /*
 export {

@@ -3,8 +3,11 @@ import {
     SAMBAL_PARENT,
     SCHEMA_CONTEXT,
     SAMBAL_VALUES,
-    JSONLD_ID
+    JSONLD_ID,
+    URI
 } from "./constants";
+
+const ABS_URI_REGEX = /^([a-z]+:)?\/\//i;
 
 export function isObjectLiteral(obj: any) {
     return obj !== null && typeof(obj) === "object" && Object.getPrototypeOf(obj) === Object.prototype;
@@ -14,11 +17,60 @@ export function  isJsonLdRef(value) {
     return isObjectLiteral(value) && Object.keys(value).length === 1 && typeof (value[JSONLD_ID]) === "string";
 }
 
+export function isAbsUri(uri: string) {
+    return uri && uri.match(ABS_URI_REGEX);
+}
+
 export function isUrl(src: string) {
     if (!src) {
         return false;
     }
     return src.toLowerCase().startsWith("http://") || src.toLowerCase().startsWith("https://");
+}
+
+export function parseUri(uri: string, baseUrl?: string): URI {
+    if (isAbsUri(uri)) {
+        const url = new URL(uri);
+        return {
+            protocol: url.protocol,
+            host: url.host,
+            path: url.pathname,
+            query: url.searchParams
+        };
+    } else if (baseUrl) {
+        return parseUri(`${baseUrl}${uri}`);
+    }
+
+    const { pathname, query } = getPathnameAndQuery(uri);
+    return {
+        path: pathname,
+        query: query
+    };
+}
+
+export function normalizeUri(uri: string) {
+    const { pathname, query } = getPathnameAndQuery(uri);
+    let beginIndex = 0;
+    if (isAbsUri(pathname)) {
+        beginIndex = pathname.indexOf("//") + 2;
+    }
+    const splitted = pathname.substring(beginIndex).split("/");
+    const normalized = encodeURI(`${pathname.substring(0, beginIndex)}${splitted.filter((d, i) => i === 0 || Boolean(d)).join("/")}`);
+    return `${normalized}${query ? `?${query.toString()}` : ""}`;
+}
+
+function getPathnameAndQuery(uri: string) {
+    let pathname = uri;
+    let query = null;
+    let qIndex = uri.indexOf("?");
+    if (qIndex >= 0) {
+        pathname = uri.substring(0, qIndex);
+        query = new URLSearchParams(uri.substring(qIndex)); 
+    }
+    return {
+        pathname,
+        query
+    };
 }
 
 export function makeAbsoluteIRI(base: string, relativeIRI: string) {
