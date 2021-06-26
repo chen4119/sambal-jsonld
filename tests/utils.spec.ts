@@ -111,13 +111,6 @@ describe("utils", () => {
             expect(result.path).toBe("/sub%20folder/page1");
         });
 
-        it("Parse relative url with base url", () => {
-            const result = parseUri("/sub folder/page1", "https://sambal.dev");
-            expect(result.protocol).toBe("https:");
-            expect(result.host).toBe("sambal.dev");
-            expect(result.path).toBe("/sub%20folder/page1");
-        });
-
     });
 
 });

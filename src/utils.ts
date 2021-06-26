@@ -3,8 +3,7 @@ import {
     SAMBAL_PARENT,
     SCHEMA_CONTEXT,
     SAMBAL_VALUES,
-    JSONLD_ID,
-    URI
+    JSONLD_ID
 } from "./constants";
 
 const ABS_URI_REGEX = /^([a-z]+:)?\/\//i;
@@ -28,7 +27,7 @@ export function isUrl(src: string) {
     return src.toLowerCase().startsWith("http://") || src.toLowerCase().startsWith("https://");
 }
 
-export function parseUri(uri: string, baseUrl?: string): URI {
+export function parseUri(uri: string) {
     if (isAbsUri(uri)) {
         const url = new URL(uri);
         return {
@@ -37,8 +36,6 @@ export function parseUri(uri: string, baseUrl?: string): URI {
             path: url.pathname,
             query: url.searchParams
         };
-    } else if (baseUrl) {
-        return parseUri(`${baseUrl}${uri}`);
     }
 
     const { pathname, query } = getPathnameAndQuery(uri);
