@@ -9,6 +9,7 @@ export {
     getEntitiesByType,
     getEntityByType,
 } from "./operators/schema";
+export { expandUri } from "./operators/expandUri";
 export {
     isJsonLdRef,
     normalizeUri,
